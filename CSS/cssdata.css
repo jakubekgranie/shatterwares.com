@@ -109,3 +109,30 @@ section.defwatek{
 	color: white;
 	width: 100%;
 }
+footer{
+	background-color: #3a3737;
+	position: relative;
+	height: 70px;
+	
+}
+.footercontainer{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 15pt;
+	color: #eeeeee;
+	display: inline-block;
+}
+.footercontainer > p{
+	float: left;
+	border-left:1px dashed rgb(190, 186, 186);
+}
+.footercontainer > p:first-of-type{
+	float: left;
+	border: 0;
+}
+footer::after{
+	clear: both;
+}
