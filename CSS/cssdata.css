@@ -9,9 +9,6 @@ body{
 	background-color: burlywood;
 	margin: 0;
 }
-
-
-
 .container{
 	position: absolute;
 	top: 50%;
@@ -25,17 +22,13 @@ body{
 	left: 15%;
 }
 .nav{
-	
 	width:100%;
-	
 	padding-bottom:40px;
 	text-align:center;
 	border-top: 1px ;
 	border-bottom: 1px ;
 	position: fixed;
 	padding-top:30px;
-	
-	
 }
 ol{
 	padding: 0;
@@ -50,8 +43,6 @@ ol a{
 	color: rgb(167, 102, 24);
 	text-decoration:none;
 	display:block;
-	
-	
 }
 ol > li{
 	float:left;
@@ -61,26 +52,19 @@ ol > li{
     border-radius: 20px;
     margin-left:25px;
 	background-color: aliceblue;
-	
-	
 }
 li:hover {
 	background-color: beige;
 	transition-duration: 0.15s;
     transition-delay: 0.1s;
     transition-timing-function: ease-out;
-  }
-
-
+}
 .napis{
-    
     margin: 0;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-
-
 }
 section.dmuchawiec{
     background: url('../RESOURCES/dmuchawiec.png') no-repeat;
