@@ -1,4 +1,4 @@
-html{
+body{
     width: 100%;
 }
 section{
@@ -24,25 +24,26 @@ body{
 .nav{
 	width:100%;
 	padding-bottom:40px;
-	text-align:center;
+	text-align: center;
 	border-top: 1px ;
 	border-bottom: 1px ;
 	position: fixed;
 	padding-top:30px;
+	z-index: 1;
 }
 ol{
 	padding: 0;
 	margin: 0;
-	list-style-type:none;
+	list-style-type: none;
 	font-size:18px;
 	height:35px;
 	line-height:200%;
-	display:inline-block;
+	display: inline-block;
 }
 ol a{
 	color: rgb(167, 102, 24);
-	text-decoration:none;
-	display:block;
+	text-decoration: none;
+	display: block;
 }
 ol > li{
 	float:left;
@@ -52,6 +53,9 @@ ol > li{
     border-radius: 20px;
     margin-left:25px;
 	background-color: aliceblue;
+}
+ol > li:first-of-type{
+	margin-left: 0;
 }
 li:hover {
 	background-color: beige;
@@ -71,8 +75,8 @@ section.dmuchawiec{
     background-size: 100% 100%;
     width: 100%;
     height: 50vw;
-	font-family: 'Chivo Mono';
 	color: white;
+	font-family: 'Chivo Mono';
 	font-size: 70pt;
 	font-weight: bold;
 	position: relative;
@@ -84,14 +88,6 @@ section.dmuchawiec{
 section.dmuchawiec p:last-of-type{
 	margin-top: 0px;
 	font-size: 20pt;
-}
-section.defwatek{
-	padding-top: 7%;
-	padding-bottom: 7%;
-	padding-left: 10%;
-	padding-right: 10%;
-	color: white;
-	width: 100%;
 }
 footer{
 	background-color: #3a3737;
@@ -119,4 +115,44 @@ footer{
 }
 footer::after{
 	clear: both;
+}
+section.defaultthread{
+	font-family: 'Chivo Mono';
+	font-size: 22pt;
+	background: white;
+	border-bottom: 1px gray dashed;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	height: 34vw;
+}
+section.parted1left{
+	float: left;
+	width: 20%;
+}
+section.parted1right{
+	float: left;
+	width: 80%;
+}
+
+section.parted1right > p{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+section.parted1right::after{
+	clear: both;
+}
+div.circleframe{
+	width: 15vw;
+	margin-top: 110px;
+	margin-left: 60px;
+	height: 15vw;
+	border: 1px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+}
+h1{
+	text-align: center;
+	margin: 12px;
+	font-weight: bold;
+	margin-bottom: 4vh;
 }
