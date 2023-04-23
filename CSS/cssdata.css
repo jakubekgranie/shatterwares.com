@@ -21,11 +21,11 @@ body{
 	top: 30%;
 	left: 15%;
 }
-.nav{
+nav{
 	width:100%;
 	padding-bottom:40px;
 	text-align: center;
-	border-top: 1px ;
+	border-top: 2vh ;
 	border-bottom: 1px ;
 	position: fixed;
 	padding-top:30px;
@@ -34,8 +34,9 @@ body{
 ol{
 	padding: 0;
 	margin: 0;
+	margin-top: 0.5%;
 	list-style-type: none;
-	font-size:18px;
+	font-size:20%;
 	height:35px;
 	line-height:200%;
 	display: inline-block;
@@ -44,15 +45,22 @@ ol a{
 	color: rgb(167, 102, 24);
 	text-decoration: none;
 	display: block;
+	font-size: 2vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
 }
 ol > li{
 	float:left;
-	width:150px;
-	height:40px;
+	width: 10.8vw;
+	height: 4vh;
 	border: 1px;
-    border-radius: 20px;
-    margin-left:25px;
+    border-radius: 4vh;
+    margin-left: 1vw;
 	background-color: aliceblue;
+	position: relative;
 }
 ol > li:first-of-type{
 	margin-left: 0;
@@ -77,22 +85,24 @@ section.dmuchawiec{
     height: 50vw;
 	color: white;
 	font-family: 'Chivo Mono';
-	font-size: 70pt;
 	font-weight: bold;
 	position: relative;
-	padding-top:20px;
+	padding-top:10vh;
 }
-.container2  > p{
-	margin-bottom: 15px;
+h2{
+	margin: 20px 0;
+	font-size: 6vw;
+
 }
-section.dmuchawiec p:last-of-type{
+section.dmuchawiec p{
 	margin-top: 0px;
-	font-size: 20pt;
+	font-size: 3vw;
+	margin-right: 12%;
 }
 footer{
 	background-color: #3a3737;
 	position: relative;
-	height: 70px;
+	height: 6.5vh;
 	
 }
 .footercontainer{
@@ -101,13 +111,16 @@ footer{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-size: 15pt;
+
 	color: #eeeeee;
 	display: inline-block;
 }
 .footercontainer > p{
 	float: left;
-	border-left:1px dashed rgb(190, 186, 186);
+	margin: 0;
+	font-size: 1vw;
+	font-weight: bold;
+	border-left: 1px dashed rgb(190, 186, 186);
 }
 .footercontainer > p:first-of-type{
 	float: left;
@@ -118,7 +131,7 @@ footer::after{
 }
 section.defaultthread{
 	font-family: 'Chivo Mono';
-	font-size: 22pt;
+	font-size: 190%;
 	background: white;
 	border-bottom: 1px gray dashed;
 	padding-top: 4%;
