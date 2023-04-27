@@ -1,3 +1,4 @@
+
 body{
     width: 100%;
 }
@@ -101,7 +102,7 @@ section.dmuchawiec p{
 footer{
 	background-color: #3a3737;
 	position: relative;
-	height: 6.5vh;
+	height: 5vw;
 	
 }
 .footercontainer{
@@ -110,7 +111,6 @@ footer{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-
 	color: #eeeeee;
 	display: inline-block;
 }
@@ -130,41 +130,36 @@ footer::after{
 }
 section.defaultthread{
 	font-family: 'Chivo Mono';
-	font-size: 190%;
+	font-size: 1.5vw;
 	background: white;
 	border-bottom: 1px gray dashed;
 	padding-top: 4%;
 	padding-bottom: 4%;
-	height: 34vw;
+	position: relative;
 }
-section.parted1left{
-	float: left;
-	width: 20%;
+.center{
+	margin: 0;
+	position: absolute;
+	top: 57%;
+	left: 20%;
+	transform: translate(-50%, -50%);
 }
-section.parted1right{
-	float: left;
-	width: 80%;
+img.responsiveimage{
+	width: 20vw;
+	height: 20vw;
 }
-
-section.parted1right > p{
-	padding-left: 10%;
+section.defaultthread > p{
+	padding-left: 40%;
 	padding-right: 10%;
+	margin-bottom: 1vh;
+	display: inline-block;
 }
 section.parted1right::after{
 	clear: both;
-}
-div.circleframe{
-	width: 15vw;
-	margin-top: 110px;
-	margin-left: 60px;
-	height: 15vw;
-	border: 1px white solid;
-	border-radius: 50%;
-	overflow: hidden;
 }
 h1{
 	text-align: center;
 	margin: 12px;
 	font-weight: bold;
-	margin-bottom: 4vh;
+	margin-bottom: 3%;
 }
