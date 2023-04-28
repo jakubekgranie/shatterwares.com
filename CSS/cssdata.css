@@ -129,6 +129,7 @@ footer::after{
 	clear: both;
 }
 section.defaultthread{
+	white-space: pre-line;
 	font-family: 'Chivo Mono';
 	font-size: 1.5vw;
 	background: white;
