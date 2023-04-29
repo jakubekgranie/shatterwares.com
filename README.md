@@ -1,2 +1,5 @@
 # alergie
-Strona dot. alergii opracowana przez kilku niedobitków
+See "about" for more information.
+
+(C) J. Namyślak, J. Tataruch, M. Janiszewski, M. Opałka, O. Skiba
+All right reserved
