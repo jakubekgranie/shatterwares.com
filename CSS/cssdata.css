@@ -1,15 +1,65 @@
 
+html{
+	scroll-behavior: smooth; /*<--- geniusz kuby tatarucha*/
+}
 body{
     width: 100%;
+	
 }
+
 section{
 	display: block;
 }
+
 body{
     font-family: 'Trebuchet MS', sans-serif;
 	background-color: burlywood;
 	margin: 0;
 }
+  
+  .window-scroll .top{
+	display: block;
+  }
+  
+
+  .window-scroll .top{
+	animation: fadeIn 0.3s ease-in-out forwards;
+  }
+  
+  
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  transform: translateX(20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+}
+
+  
+ 
+  .top{
+	background: url('../RESOURCES/up_arrow.png');
+	background-size: cover;
+	width: calc(2vw + 2vh);
+	height: calc(2vw + 2vh);
+	border-radius: 50%;
+	text-align: center;
+	color: rgb(50, 48, 48);
+	font-size: 20px;
+	position: fixed;
+	bottom: 30px;
+	right: 40px;
+	z-index: 1;
+}
+
+  .top:hover {
+	cursor: pointer;
+	
+  }
+
 .container{
 	position: absolute;
 	top: 50%;
@@ -17,11 +67,13 @@ body{
 	transform: translate(-50%, -50%);
 	margin: 0;
 }
+
 .container2{
 	position: absolute;
 	top: 30%;
 	left: 15%;
 }
+
 nav{
 	width:100%;
 	padding-bottom:40px;
@@ -32,6 +84,7 @@ nav{
 	padding-top: 15px;
 	z-index: 1;
 }
+
 ol{
 	padding: 0;
 	margin: 0;
@@ -42,6 +95,7 @@ ol{
 	line-height:200%;
 	display: inline-block;
 }
+
 ol a{
 	color: rgb(167, 102, 24);
 	text-decoration: none;
@@ -53,25 +107,29 @@ ol a{
 	transform: translate(-50%, -50%);
 	margin: 0;
 }
+
 ol > li{
 	float:left;
 	width: 10.8vw;
-	height: 4vh;
+	height: 5vh;
 	border: 1px;
     border-radius: 4vh;
     margin-left: 1vw;
-	background-color: aliceblue;
+	background-color: rgb(243, 243, 243);
 	position: relative;
 }
+
 ol > li:first-of-type{
 	margin-left: 0;
 }
+
 li:hover {
-	background-color: beige;
+	background-color: rgb(220, 220, 204);
 	transition-duration: 0.15s;
     transition-delay: 0.1s;
     transition-timing-function: ease-out;
 }
+
 .napis{
     margin: 0;
     position: absolute;
@@ -79,6 +137,7 @@ li:hover {
     top: 50%;
     transform: translate(-50%,-50%);
 }
+
 section.dmuchawiec{
     background: url('../RESOURCES/dmuchawiec.png') no-repeat;
     background-size: 100% 100%;
@@ -90,21 +149,25 @@ section.dmuchawiec{
 	position: relative;
 	padding-top:10vh;
 }
+
 h2{
 	margin: 20px 0;
 	font-size: 6vw;
-
+	
 }
+
 section.dmuchawiec p{
 	margin-top: 0px;
 	font-size: 2vw;
 }
+
 footer{
 	background-color: #3a3737;
 	position: relative;
 	height: 5vw;
 	
 }
+
 .footercontainer{
 	margin: 0;
 	position: absolute;
@@ -114,6 +177,7 @@ footer{
 	color: #eeeeee;
 	display: inline-block;
 }
+
 .footercontainer > p{
 	float: left;
 	margin: 0;
@@ -121,13 +185,16 @@ footer{
 	font-weight: bold;
 	border-left: 1px dashed rgb(190, 186, 186);
 }
+
 .footercontainer > p:first-of-type{
 	float: left;
 	border: 0;
 }
+
 footer::after{
 	clear: both;
 }
+
 section.defaultthread{
 	white-space: pre-line;
 	font-family: 'Chivo Mono';
@@ -138,29 +205,69 @@ section.defaultthread{
 	padding-bottom: 4%;
 	position: relative;
 }
+
 .center{
 	margin: 0;
 	position: absolute;
-	top: 57%;
+	top: 50%;
 	left: 20%;
 	transform: translate(-50%, -50%);
 }
+
+.centerright{
+	margin: 0;
+	position: absolute;
+	top: 57%;
+	right: 0%;
+	transform: translate(-50%, -50%);
+}
+
 img.responsiveimage{
 	width: 20vw;
 	height: 20vw;
+	border-radius: 14px;
+	transition:all 0.7s ease-in-out;
 }
-section.defaultthread > p{
+img.responsiveimage:hover{
+	transform:scale(1.1);
+
+}
+
+.paragraphleft{
 	padding-left: 40%;
 	padding-right: 10%;
 	margin-bottom: 1vh;
 	display: inline-block;
 }
+
+section.defaultthread p.paragraphleft:first-of-type{
+	margin-top: 0;
+}
+
+.paragraphright{
+	padding-right: 40%;
+	padding-left: 10%;
+	margin-bottom: 1vh;
+	display: inline-block;
+}
+
+section.defaultthread p.paragraphright:first-of-type{
+	margin-top: 0;
+}
+
 section.parted1right::after{
 	clear: both;
 }
+
 h1{
-	text-align: center;
-	margin: 12px;
 	font-weight: bold;
 	margin-bottom: 3%;
+}
+h1.lefth1{
+	padding-left: 40%;
+	margin-left: 0;
+}
+h1.righth1{
+	padding-left: 9.4%;
+	margin-right: 0;
 }
