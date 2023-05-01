@@ -1,0 +1,32 @@
+h1.plhold{
+    font-family: 'Chivo Mono';
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3vw;
+}
+p.plhold{
+    font-family: 'Chivo Mono';
+    font-style: italic;
+    font-weight: light;
+    font-size: 1vw;
+    margin: 0;
+    text-align: center;
+}
+main.placeholdercontainer{
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    border: 3px lightseagreen ridge;
+    padding: 2vh 2vw;
+}
+a{
+    color: lightseagreen;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+    font-weight: bold;
+}
