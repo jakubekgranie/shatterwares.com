@@ -206,6 +206,19 @@ section.defaultthread{
 	position: relative;
 }
 
+iframe.defaultthread{
+	white-space: pre-line;
+	font-family: 'Chivo Mono';
+	font-size: 1.5vw;
+	background: white;
+	border-bottom: 1px gray dashed;
+	width: 100%;
+	height: 75vh;
+	overflow: hidden;
+	position: relative;
+	border: none;
+}
+
 .center{
 	margin: 0;
 	position: absolute;
@@ -270,4 +283,7 @@ h1.lefth1{
 h1.righth1{
 	padding-left: 9.4%;
 	margin-right: 0;
+}
+h1.centerh1{
+	text-align: center;
 }
