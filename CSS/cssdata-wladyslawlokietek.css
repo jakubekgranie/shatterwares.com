@@ -1,32 +1,120 @@
-h1.plhold{
-    font-family: 'Chivo Mono';
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    font-size: 3vw;
+html {
+  scroll-behavior: smooth;
 }
-p.plhold{
-    font-family: 'Chivo Mono';
-    font-style: italic;
-    font-weight: light;
-    font-size: 1vw;
-    margin: 0;
-    text-align: center;
+
+body {
+  background-color: #fbfaf7;
+  margin: 0;
+  font-size: 20px;
 }
-main.placeholdercontainer{
-    margin: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-    border: 3px lightseagreen ridge;
-    padding: 2vh 2vw;
+.dupa{
+  position:fixed;
 }
-a{
-    color: lightseagreen;
-    text-decoration: none;
+nav {
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+  height: 65px;
+  border-bottom: 1px solid #bab9b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
-a:hover{
-    color: blue;
-    font-weight: bold;
+iframe {
+  margin-top: 65px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Dodanie dośrodkowania elementów na osi X */
+}
+
+ul li {
+  list-style: none;
+  margin: 0 15px; /* Dodanie marginesów między elementami */
+}
+
+ul li a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(159, 140, 105);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #dac5b2;
+  transform: scaleX(0);
+  z-index: -1;
+  transform-origin: left;
+  transition: transform.5s;
+}
+
+ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #dac5b2;
+  transform: scaleX(0);
+  z-index: -1;
+  transform-origin: right;
+  transition: transform.5s;
+}
+
+ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+ul li a:hover {
+  color: rgb(96, 75, 47);
+}
+
+.panowanie_tekst {
+  font-size: 20pt;
+}
+
+.zdjecie1 {
+  float: left;
+}
+
+.stopka {
+  margin: auto;
+  border-spacing: 20px;
+}
+
+footer {
+  background-color: #dad9d9;
+  width: 100%;
+  height: 300px;
+  clear: both;
+}
+
+.stopka_tekst {
+  font-size: 20pt;
+  text-align: right;
 }

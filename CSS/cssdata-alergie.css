@@ -112,6 +112,7 @@ ol > li{
 	float:left;
 	width: 10.8vw;
 	height: 5vh;
+	max-height: 5vw;
 	border: 1px;
     border-radius: 4vh;
     margin-left: 1vw;
