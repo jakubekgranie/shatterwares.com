@@ -3,12 +3,50 @@ body{
 	background-size: 100vw 100vh;
     margin: 0;
 }
+
+section.defaultsection{
+	margin: 5% 30%;
+	width: calc(40vw - 1px);
+	border: white 1px solid;
+	border-radius: 20vh;
+	background-color: white;
+    padding: 3vw;
+}
+
+section.textcontainer{
+    font-family: Raleway;
+    display: inline-block;
+    position: absolute;
+    margin-top: 0;
+    margin-left: 2vw;
+}
+section.textcontainer > h1{
+    font-weight: bold;
+    margin: 0;
+    font-size: 2vw;
+    margin-bottom: 0.8vw;
+}
+section.textcontainer > p{
+    font-size: 1vw;
+    margin: 0;
+    white-space: pre-line;
+}
+
+section.defaultsection *{
+    display: inline-block;
+}
+
+img.iconimage{
+    width: 10vw;
+    height: 10vw;
+}
+
 header img{
     display: block;
     margin: auto;
-    margin-bottom: 0.7vh;
     text-align: center;
 }
+
 p.sub{
     font-family: 'Chivo Mono';
     font-style: italic;
@@ -28,6 +66,7 @@ header{
     border-bottom: 3px white solid;
     background-color: white;
 }
+
 @media only screen and (max-width: 768px){
     img{
       width: calc(15vw + 2.0vh);
