@@ -3,15 +3,43 @@ body{
 	background-size: 100% 100%;
     margin: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+a:link{
+    color: black;
+}
+a{
+    color: black;
+}
+
+a section.allergyclmarker:hover, section.defaultsection:hover{
+    box-shadow: 0vw 0vh 2vw burlywood;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+}
+a section.wladislausclmarker:hover, section.defaultsection:hover{
+    box-shadow: 0vw 0vh 2vw #FF5B00;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+}
+section.defaultsection:hover{
+    box-shadow: 0vw 0vh 2vw #04FFD4;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+}
 
 section.defaultsection{
     position: relative;
-	margin: 5% 30%;
+	margin: 5% auto;
 	width: calc(40vw - 1px);
 	border: white 1px solid;
 	border-radius: 20vh;
 	background-color: white;
     padding: 3vw;
+    box-shadow: none;
+    box-shadow: 0vw 0vh 0.5vw grey;
 }
 section.defaultsection:first-of-type{
     margin-top: 10%;
@@ -59,12 +87,15 @@ header{
     width: 100%;
     border-bottom: 3px white solid;
     background-color: white;
+    z-index: 1;
+    box-shadow: 0vw 0vh 0.2vw grey;
 }
 
 footer{
     padding: 2vh 2vw;
     background-color: #dddddd;
     width: 100%;
+    max-height: 3vw;
     box-sizing: border-box;
 }
 footer > p{
@@ -72,4 +103,7 @@ footer > p{
     margin: 0;
     font-family: Raleway;
     font-size: 1vw;
+}
+footer p a{
+    text-decoration: none;
 }
