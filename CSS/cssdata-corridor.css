@@ -7,24 +7,22 @@ html{
     scroll-behavior: smooth;
 }
 
-a:link{
-    color: black;
-}
 a{
     color: black;
+    display: contents;
 }
 
-a section.allergyclmarker:hover, section.defaultsection:hover{
+a section.allergyclmarker:hover{
     box-shadow: 0vw 0vh 2vw burlywood;
     transition-duration: 0.25s;
     transition-timing-function: ease-out;
 }
-a section.wladislausclmarker:hover, section.defaultsection:hover{
+a section.wladislausclmarker:hover{
     box-shadow: 0vw 0vh 2vw #FF5B00;
     transition-duration: 0.25s;
     transition-timing-function: ease-out;
 }
-section.defaultsection:hover{
+section.shpjhclmarker:hover{
     box-shadow: 0vw 0vh 2vw #04FFD4;
     transition-duration: 0.25s;
     transition-timing-function: ease-out;
@@ -33,15 +31,15 @@ section.defaultsection:hover{
 section.defaultsection{
     position: relative;
 	margin: 5% auto;
-	width: calc(40vw - 1px);
+	width: calc(45vw - 1px);
 	border: white 1px solid;
-	border-radius: 20vh;
+	border-radius: 100vh;
 	background-color: white;
     padding: 3vw;
-    box-shadow: none;
     box-shadow: 0vw 0vh 0.5vw grey;
+    box-sizing: border-box;
 }
-section.defaultsection:first-of-type{
+main{
     margin-top: 10%;
 }
 section.textcontainer{
@@ -54,7 +52,7 @@ section.textcontainer{
 section.textcontainer > h1{
     font-weight: bold;
     margin: 0;
-    font-size: 2vw;
+    font-size: 1.3vw;
     margin-bottom: 0.8vw;
     margin-right: 3vw;
 }
@@ -77,15 +75,13 @@ header img{
     margin: auto;
     display: block;
     text-align: center;
-    width: 12vw;
-    height: auto;
-    max-width: 20vh;
+    height: 5vw;
+    width: auto;
 }
 header{
     position: fixed;
     top: 0;
     width: 100%;
-    border-bottom: 3px white solid;
     background-color: white;
     z-index: 1;
     box-shadow: 0vw 0vh 0.2vw grey;
@@ -100,6 +96,7 @@ footer{
 }
 footer > p{
     text-align: center;
+    vertical-align: middle;
     margin: 0;
     font-family: Raleway;
     font-size: 1vw;
@@ -107,3 +104,97 @@ footer > p{
 footer p a{
     text-decoration: none;
 }
+@media only screen and (max-width: 600px)
+{
+    header img
+    {
+        height: 8vw
+    }
+    section.defaultsection.allergyclmarker{
+        background: url('/RESOURCES/wheat-mobile-bg.jpg') center 62% no-repeat;
+        background-size: cover;
+
+    }
+    section.defaultsection.wladislausclmarker{
+        background: url('/RESOURCES/wladyslaw.jpeg') 22% no-repeat;
+        background-size: cover auto;
+        background-position: 50% 20%;
+    }
+    section.defaultsection.shpjhclmarker{
+        background: url('/RESOURCES/stars.png') center no-repeat;
+        background-size: cover;
+        border: none;
+    }
+    section.defaultsection
+    {
+        margin: 0;
+        height: 35vh;
+        width: 100%;
+        box-shadow: none;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 0.4vh white ridge;
+    }
+    main
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-top: 6vw;
+    }
+    section.textcontainer
+    {   
+        position: absolute;
+        top: 25%;
+	    left: 35%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+        margin: 9.8vh 0 0 20%;
+        display: inline-block;
+    }
+    a section.allergyclmarker:hover
+    {
+        box-shadow: none;
+    }
+    a section.wladislausclmarker:hover
+    {
+        box-shadow: none;
+    }
+    section.shpjhclmarker:hover
+    {
+        box-shadow: none;
+    }
+    section.allergyclmarker
+    {
+        color: #302c27;
+    }
+    section.wladislausclmarker
+    {
+        color: white;
+    }
+    section.shpjhclmarker
+    {
+        color: white;
+    }
+    section.defaultsection > img.iconimage
+    {
+        position: absolute;
+        top: 50%;
+	    left: 12%;
+        transform: translate(-50%, -50%);
+        width: 15vw;
+        height: 15vw;
+        display: inline-block;
+        margin: auto;
+    }
+    section.textcontainer > h1
+    {
+        font-size: 3.2vw;
+    }
+    section.textcontainer > p
+    {
+        font-size: 1.7vw;
+    }
+}
+
