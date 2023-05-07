@@ -11,21 +11,19 @@ a{
     color: black;
     display: contents;
 }
-
-a section.allergyclmarker:hover{
-    box-shadow: 0vw 0vh 2vw burlywood;
+a section.allergyclmarker:hover, a section.wladislausclmarker:hover, section.shpjhclmarker:hover
+{
     transition-duration: 0.25s;
     transition-timing-function: ease-out;
+}
+a section.allergyclmarker:hover{
+    box-shadow: 0vw 0vh 2vw burlywood;
 }
 a section.wladislausclmarker:hover{
     box-shadow: 0vw 0vh 2vw #FF5B00;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-out;
 }
 section.shpjhclmarker:hover{
     box-shadow: 0vw 0vh 2vw #04FFD4;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-out;
 }
 
 section.defaultsection{
@@ -113,7 +111,7 @@ footer p a{
 {
     header img
     {
-        height: 8vw
+        height: 12vw
     }
     section.defaultsection.allergyclmarker{
         background: url('/RESOURCES/wheat-mobile-bg.jpg') center 62% no-repeat;
@@ -122,7 +120,7 @@ footer p a{
     }
     section.defaultsection.wladislausclmarker{
         background: url('/RESOURCES/wladyslaw.jpeg') 22% no-repeat;
-        background-size: cover auto;
+        background-size: cover;
         background-position: 50% 20%;
     }
     section.defaultsection.shpjhclmarker{
@@ -146,7 +144,7 @@ footer p a{
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
-        margin-top: 8vw;
+        margin-top: 12vw;
     }
     section.textcontainer
     {   
@@ -158,15 +156,7 @@ footer p a{
         margin: 9.8vh 0 0 20%;
         display: inline-block;
     }
-    a section.allergyclmarker:hover
-    {
-        box-shadow: none;
-    }
-    a section.wladislausclmarker:hover
-    {
-        box-shadow: none;
-    }
-    section.shpjhclmarker:hover
+    section.shpjhclmarker:hover, a section.wladislausclmarker:hover, a section.allergyclmarker:hover
     {
         box-shadow: none;
     }
@@ -174,11 +164,7 @@ footer p a{
     {
         color: #302c27;
     }
-    section.wladislausclmarker
-    {
-        color: white;
-    }
-    section.shpjhclmarker
+    section.shpjhclmarker, section.wladislausclmarker
     {
         color: white;
     }
