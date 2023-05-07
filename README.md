@@ -7,7 +7,7 @@ ShWPJH
 All rights reserved
 
 Alergie
-(C) J. Tataruch, J. Namyślak, M. Janiszewski
+(C) J. Namyślak, J. Tataruch, M. Janiszewski
 All rights reserved
 
 Łokietek: Wladislaus, Dei gracia, Rex Polonie
