@@ -40,25 +40,34 @@ body{
 
   
  
-  .top{
+.top{
 	background: url('../RESOURCES/up_arrow.png');
 	background-size: cover;
 	width: calc(2vw + 2vh);
 	height: calc(2vw + 2vh);
 	border-radius: 50%;
-	text-align: center;
-	color: rgb(50, 48, 48);
-	font-size: 20px;
+	position: fixed;
+	bottom: calc(30px + 2vh + 2vw + 20px);
+	right: 40px;
+	z-index: 1;
+}
+.back{
+	background: url('../RESOURCES/promise.png');
+	background-size: cover;
+	width: calc(2vw + 2vh);
+	height: calc(2vw + 2vh);
+	border-radius: 50%;
 	position: fixed;
 	bottom: 30px;
 	right: 40px;
 	z-index: 1;
+	box-shadow: 0vw 0vh 0.5vw grey;
 }
-
-  .top:hover {
-	cursor: pointer;
-	
-  }
+.back:hover{
+	box-shadow: 0vw 0vh 1vw #04FFD4;
+	transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+}
 
 .container{
 	position: absolute;
