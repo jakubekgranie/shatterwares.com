@@ -7,16 +7,34 @@
 body, p {
     margin: 0;
 }
+h1.colored:hover, .imagery1:hover, main div.contents a{
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+}
+main div.contents a{
+    transition-duration: 0.1s;
+}
+a{
+    text-decoration: none;
+    color: #4C00FF;
+}
+a:visited{
+    color: cadetblue;
+}
+a:hover{
+    box-shadow: 0.4vw 0.4vw 0.6vw grey;
+}
 
 nav{
     position: sticky;
+    background-color: white;
     top: 0px;
 }
 nav div.navcontentcontainer{
     display: flex;
     position: relative;
     height: 5vw;
-    box-shadow: 0 0 1.2vw #04FFD4;
+    box-shadow: 0 0 0.2vw grey;
 }
 nav img{
     width: 14.4791666667vw;
@@ -50,7 +68,8 @@ nav div.buttons div.button p{
 header{
     display: flex;
     width: 100%;
-    height: 65vh;
+    height: 64.9vh;
+    border-bottom: 0.1vw grey dashed;
     min-height: 14vw; /*prevent the image from overflowing*/
     background: url('../RESOURCES/uranus.jpg');
     background-repeat: no-repeat;
@@ -59,7 +78,6 @@ header{
 }
 section.textcontainer{
     margin: auto;
-
     display: flex;
 }
 section.textcontainer img{
@@ -80,15 +98,15 @@ div.insertedtext h1{
     color: white;
     font-size: 3vw;
     margin: 1.2vw 0;
-
+}
+div.insertedtext h1:not(:first-child){
+    font-weight: normal;
 }
 div.insertedtext h1:nth-child(2){
     font-family: Inconsolata;
-    font-weight: normal;
 }
 div.insertedtext h1:nth-child(3){
     font-family: Yellowtail;
-    font-weight: normal;
 }
 div.insertedtext h1:nth-child(4){
     text-transform: uppercase;
@@ -96,4 +114,98 @@ div.insertedtext h1:nth-child(4){
 }
 div.insertedtext h1:nth-child(5){
     font-family: serif;
+}
+
+.mainelement{
+    border-bottom: 0.1vw grey dashed;
+    font-family: Raleway;
+    padding: 4vw 0;
+}
+.mainelement h1{
+    text-align: center;
+    margin-top: 0vw;
+    font-family: Yellowtail, cursive;
+    font-size: 3.5vw;
+    font-weight: lighter;
+}
+.mainelement div.h1container h1:not(:only-of-type){
+    display: inline-block;
+}
+.mainelement div.h1container{
+    text-align: center;
+}
+.mainelement div.h1container h1.colored:hover{
+    color: #04FFD4;
+}
+.mainelement div.contents{
+    display: flex;
+    align-items: center;
+    padding: 4vw 8vw;
+}
+.mainelement div.contents img{
+    width: calc(17vw - 1px);
+    border: 1px white solid;
+    border-radius: 50vw;
+    flex-shrink: 0;
+}
+.mainelement div.contents p{
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 4.5vw;
+    font-size: 2.5vw;
+}
+.backgrounded{
+    background-image: url('../RESOURCES/');
+    background-repeat: no-repeat;
+}
+.oldbanner{
+    background-image: url('../RESOURCES/bgs/absence.jpg');
+    background-size: 100% 100%;
+}
+
+div.flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+div.flex .margin{
+    margin-left: 2vw;
+    margin-bottom: calc(2vw - 1px);
+}
+h1.favorites{
+    color: white; 
+    font-family: readout; 
+    font-weight: bold;
+}
+div.flex .margin:nth-of-type(5n + 1){
+    margin-left: 0;
+}
+div.flex .margin a .imagery1{
+    width: calc(10vw - 1px);
+    height: auto;
+    border-radius: 5vw;
+}
+div.flex hr{
+    width: 100%;
+    height: 1px;
+    visibility: hidden;
+}
+.cllmarker:hover{
+    box-shadow: 0 0 2vw #b23058;
+}
+.prommarker:hover{
+    box-shadow: 0 0 2vw #dedff2;
+}
+.bijapanmarker:hover{
+    box-shadow: 0 0 2vw #e75721;
+}
+.africamarker:hover{
+    box-shadow: 0 0 2vw red;
+}
+.ilmbmarker:hover{
+    box-shadow: 0 0 2vw blue;
+}
+.oarmarker:hover{
+    box-shadow: 0 0 2vw brown;
 }
