@@ -21,7 +21,7 @@ a{
 a:visited{
     color: cadetblue;
 }
-a:hover{
+a.hover:hover{
     box-shadow: 0.4vw 0.4vw 0.6vw grey;
 }
 
@@ -155,7 +155,7 @@ div.insertedtext h1:nth-child(5){
     font-size: 2.5vw;
 }
 .backgrounded{
-    background-image: url('../RESOURCES/');
+
     background-repeat: no-repeat;
 }
 .oldbanner{
@@ -182,15 +182,17 @@ div.flex .margin:nth-of-type(5n + 1){
     margin-left: 0;
 }
 div.flex .margin a .imagery1{
-    width: calc(10vw - 1px);
-    height: auto;
+    width: 10vw;
+    height: 10vw;
     border-radius: 5vw;
 }
 div.flex hr{
     width: 100%;
     height: 1px;
+    margin: 0;
     visibility: hidden;
 }
+
 .cllmarker:hover{
     box-shadow: 0 0 2vw #b23058;
 }
@@ -208,4 +210,34 @@ div.flex hr{
 }
 .oarmarker:hover{
     box-shadow: 0 0 2vw brown;
+}
+.flomarker:hover{
+    box-shadow: 0 0 2vw #b1ff00;
+}
+.farmarker:hover{
+    box-shadow: 0 0 2vw #a51970;
+}
+.freaksmarker:hover{
+    box-shadow: 0 0 2vw #8e8fa4;
+}
+.falxcemarker:hover{
+    box-shadow: 0 0 2vw #d5b4ed;
+}
+.reidmarker:hover{
+    box-shadow: 0 0 2vw #c93f9c;
+}
+.luekmarker:hover{
+    box-shadow: 0 0 2vw #f4cfbd;
+}
+.whitneymarker:hover{
+    box-shadow: 0 0 2vw #56b3f9;
+}
+.redfoomarker:hover{
+    box-shadow: 0 0 2vw #00f600;
+}
+.modjomarker:hover{
+    box-shadow: 0 0 2vw #d6c396;
+}
+.fleetwoodmarker:hover{
+    box-shadow: 0 0 2vw 0.5vw #206ba0;
 }
