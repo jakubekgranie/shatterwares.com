@@ -11,19 +11,22 @@ a{
     color: black;
     display: contents;
 }
-a section.allergyclmarker:hover, a section.wladislausclmarker:hover, section.shpjhclmarker:hover
+section.allergyclmarker:hover, section.wladislausclmarker:hover, section.shpjhclmarker:hover, section.shwhpclmarker:hover
 {
     transition-duration: 0.25s;
     transition-timing-function: ease-out;
 }
-a section.allergyclmarker:hover{
+section.allergyclmarker:hover{
     box-shadow: 0vw 0vh 2vw burlywood;
 }
-a section.wladislausclmarker:hover{
+section.wladislausclmarker:hover{
     box-shadow: 0vw 0vh 2vw #FF5B00;
 }
 section.shpjhclmarker:hover{
     box-shadow: 0vw 0vh 2vw #04FFD4;
+}
+section.shwhpclmarker:hover{
+    box-shadow: 0vw 0vh 2vw blue;
 }
 
 section.defaultsection{
@@ -104,9 +107,6 @@ footer > p{
     font-family: Raleway;
     font-size: 1vw;
 }
-footer p a{
-    text-decoration: none;
-}
 @media only screen and (max-width: 647px)
 {
     header img
@@ -126,12 +126,16 @@ footer p a{
     section.defaultsection.shpjhclmarker{
         background: url('/RESOURCES/stars.png') center no-repeat;
         background-size: cover;
+    }
+    section.defaultsection.shwhpclmarker{
+        background: url('/RESOURCES/bgs/potential-bg4.jpg') center no-repeat;
+        background-size: cover;
         border: none;
     }
     section.defaultsection
     {
         margin: 0;
-        height: 35vh;
+        height: 40vh;
         width: 100%;
         box-shadow: none;
         border: 0;
@@ -156,7 +160,7 @@ footer p a{
         margin: 9.8vh 0 0 20%;
         display: inline-block;
     }
-    section.shpjhclmarker:hover, a section.wladislausclmarker:hover, a section.allergyclmarker:hover
+    section.shpjhclmarker:hover, a section.wladislausclmarker:hover, a section.allergyclmarker:hover, section.shwhpclmarker:hover
     {
         box-shadow: none;
     }
@@ -164,7 +168,7 @@ footer p a{
     {
         color: #302c27;
     }
-    section.shpjhclmarker, section.wladislausclmarker
+    section.shpjhclmarker, section.wladislausclmarker, section.shwhpclmarker
     {
         color: white;
     }
