@@ -74,7 +74,7 @@ header{
     height: 64.9vh;
     border-bottom: 0.1vw grey dashed;
     min-height: 14vw; /*prevent the image from overflowing*/
-    background: url('../RESOURCES/uranus.jpg');
+    background: url('../RESOURCES/SHWHP_RES/uranus.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 20%;
@@ -217,7 +217,7 @@ div.flex hr{
     margin: 0 auto;
 }
 *[class*="marker"]{
-    box-shadow: 0;
+    box-shadow: none;
 }
 .cllmarker:hover{
     box-shadow: 0 0 2vw #b23058;

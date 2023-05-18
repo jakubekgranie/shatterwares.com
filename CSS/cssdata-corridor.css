@@ -11,11 +11,22 @@ a{
     color: black;
     display: contents;
 }
-section.allergyclmarker:hover, section.wladislausclmarker:hover, section.shpjhclmarker:hover, section.shwhpclmarker:hover
+footer p a{
+    display: initial;
+}
+
+*[class*="clmarker"]:hover
 {
     transition-duration: 0.25s;
     transition-timing-function: ease-out;
 }
+
+*[class*="clmarker"]
+{
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+}
+
 section.allergyclmarker:hover{
     box-shadow: 0vw 0vh 2vw burlywood;
 }
@@ -114,21 +125,21 @@ footer > p{
         height: 12vw
     }
     section.defaultsection.allergyclmarker{
-        background: url('/RESOURCES/wheat-mobile-bg.jpg') center 62% no-repeat;
+        background: url('../RESOURCES/CORRIDOR/mobile/wheat-mobile-bg.jpg') center 62% no-repeat;
         background-size: cover;
 
     }
     section.defaultsection.wladislausclmarker{
-        background: url('/RESOURCES/wladyslaw.jpeg') 22% no-repeat;
+        background: url('../RESOURCES/CORRIDOR/mobile/wladyslaw.jpeg') 22% no-repeat;
         background-size: cover;
         background-position: 50% 20%;
     }
     section.defaultsection.shpjhclmarker{
-        background: url('/RESOURCES/stars.png') center no-repeat;
+        background: url('../RESOURCES/CORRIDOR/mobile/stars.png') center no-repeat;
         background-size: cover;
     }
     section.defaultsection.shwhpclmarker{
-        background: url('/RESOURCES/bgs/potential-bg4.jpg') center no-repeat;
+        background: url('../RESOURCES/bgs/potential-bg4.jpg') center no-repeat;
         background-size: cover;
         border: none;
     }

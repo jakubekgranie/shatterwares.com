@@ -42,7 +42,7 @@ body{
   
  
 .top{
-	background: url('../RESOURCES/up_arrow.png');
+	background: url('../RESOURCES/ALLERGIES/upwards_facing_arrow.png');
 	background-size: cover;
 	width: calc(2vw + 2vh);
 	height: calc(2vw + 2vh);
@@ -53,7 +53,7 @@ body{
 	z-index: 1;
 }
 .back{
-	background: url('../RESOURCES/promise.png');
+	background: url('../RESOURCES/PRIMARY/promise.png');
 	background-size: cover;
 	width: calc(2vw + 2vh);
 	height: calc(2vw + 2vh);
@@ -150,7 +150,7 @@ li:hover {
 }
 
 section.dmuchawiec{
-    background: url('../RESOURCES/dmuchawiec.png') no-repeat;
+    background: url('../RESOURCES/ALLERGIES/dmuchawiec.png') no-repeat;
     background-size: 100% 100%;
     width: 100%;
     height: 50vw;
