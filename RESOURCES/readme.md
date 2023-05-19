@@ -2,8 +2,8 @@
 
 ## CAPS - LOCKED
 
-Folders containing **sites' files**.
+Folders containing **site files**.
 
 ## LOWER
 
-Directories containing **files cathegorized by folders' names**.
+Directories containing **files cathegorized by folder names**.

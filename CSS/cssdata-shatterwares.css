@@ -8,11 +8,19 @@
     src: url('../RESOURCES/CUSTOM-FONTS/computerfont.ttf');
 }
 
+.clearborder{
+    border: none !important;
+}
+
 body, p {
     margin: 0;
 }
-h1.colored:hover, .imagery1:hover, main div.contents a, *[class*="marker"]{
+.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover{
     transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+}
+h1.colored:hover, h1.colored, *[class*="gradient"], *[class="gradient"]:hover{
+    transition-duration: 0.20s;
     transition-timing-function: ease-out;
 }
 
@@ -30,6 +38,7 @@ a.hover:hover{
 
 nav{
     position: sticky;
+    z-index: 1;
     background-color: white;
     top: 0px;
 }
@@ -42,18 +51,22 @@ nav div.navcontentcontainer{
 nav img{
     width: 14.4791666667vw;
     position: absolute;
-    left: 2vw;
+    left: 8vw;
 }
 nav div.placeholder{
-    width: 16.4791666667vw;
+    width: 22.4791666667vw;
 }
 nav div.buttons{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     width: 83.5208333333vw;
     height: 5vw;
 }
-nav div.buttons div.button{
+.firstbutton{
+    border-left: 1px grey dashed;
+}
+
+nav div.buttons a div.button{
     width: calc(10vw - 1px);
     display: flex;
     align-items: center;
@@ -61,11 +74,15 @@ nav div.buttons div.button{
     font-size: 1.2vw;
     font-weight: 400;
     height: 5vw;
-    border-right: 1px black solid;
-    background-color: grey;
+    border-right: 1px grey dashed;
 }
-nav div.buttons div.button p{
-    font-family: Raleway;
+nav div.buttons a{
+    color: initial;
+    display: contents;
+}
+nav div.buttons a div.button p{
+    font-family: Abel, sans-serif;
+    font-size: 1.4vw;
 }
 
 header{
@@ -215,6 +232,7 @@ div.flex hr{
     color: white;
     width: 40%;
     margin: 0 auto;
+    margin-bottom: 4vw;
 }
 *[class*="marker"]{
     box-shadow: none;
@@ -271,4 +289,219 @@ div.flex hr{
     background-image: url('../RESOURCES/bgs/unsplash-bg4.jpg');
     background-size: cover;
     background-position-y: 20%;
+}
+
+img.pixelation{
+    image-rendering: pixelated;
+}
+
+div.borderbox{
+    position: relative;
+    width: 12vw;
+    height: 24.5vw;
+    margin-right: 2vw;
+    border-radius: 2vw;
+}
+
+*[class*="gradient"]{
+    z-index: 0;
+}
+
+div.gradientgimp{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-gimp-start.png');
+}
+div.gradientgimp:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-gimp-end.png');
+}
+div.gradientvs{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-vs-start.png');
+}
+div.gradientvs:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-vs-end.png');
+}
+div.gradientvsc{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-vsc-start.png');
+}
+div.gradientvsc:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-vsc-end.png');
+}
+div.gradientxampp{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-xampp-start.png');
+}
+div.gradientxampp:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-xampp-end.png');
+}
+div.gradientgit{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-git-start.png');
+}
+div.gradientgit:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-git-end.png');
+}
+div.gradienthtml{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-html-start.png');
+}
+div.gradienthtml:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-html-end.png');
+}
+div.gradientcss{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-css-start.png');
+}
+div.gradientcss:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-css-end.png');
+}
+div.gradientjs{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-js-start.png');
+}
+div.gradientjs:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-js-end.png');
+}
+div.gradientcpp{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-cpp-start.png');
+}
+div.gradientcpp:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-cpp-end.png');
+}
+div.gradientpython{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-python-start.png');
+}
+div.gradientpython:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-python-end.png');
+}
+
+.netbanner div.flex div.borderbox:nth-of-type(5n + 5){
+    margin-right: 0;
+}
+
+div.softbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 11.75vw;
+    height: 24.25vw;
+    border-radius: 2vw;
+    background-color: rgb(39, 39, 39);
+}
+.paddingnet{
+    padding: 3.125vw;
+    box-sizing: border-box;
+}
+div.softbox img{
+    display: block;
+    width: 5.5vw;
+    height: 5.5vw;
+}
+div.borderbox div.softbox hr{
+    width: 100%;
+    height: 0;
+    border: 0.1vw solid;
+    margin: 1.5625vw auto;
+    visibility: visible;
+}
+
+p.carddefault{
+    text-align: center;
+    font-size: 1vw;
+    color: white;
+    font-family: Inconsolata;
+    white-space: pre-line;
+}
+
+hr.gimpcard{
+    border-color: #625b49 !important;
+}
+hr.vscard{
+    border-color: #905acc !important;
+}
+hr.vsccard{
+    border-color: #1288d2 !important;
+}
+hr.xamppcard{
+    border-color: #fb7b1f !important;
+}
+hr.gitdeskcard{
+    border-color: #75278b !important;
+}
+hr.htmlcard{
+    border-color: #e54c21 !important;
+}
+hr.csscard{
+    border-color: #1758a7 !important;
+}
+hr.jscard{
+    border-color: #e4a125 !important;
+}
+hr.cppcard{
+    border-color: #004283 !important;
+}
+hr.pythoncard{
+    border-color: #4c7b91 !important;
+}
+
+.gameboybanner{
+    background-image: url('../RESOURCES/bgs/unsplash-bg5.jpg');
+    background-size: cover;
+}
+.cardrounded{
+    border-radius: 0.5vw;
+}
+
+section.last{
+    border-bottom: 0.2vw #e5c499 ridge;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    min-height: 3vw;
+    background-color: antiquewhite;
+}
+*[class*="footer"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-left: 0.1vw
+}
+div.footerblock{
+    min-height: inherit;
+}
+div.footerblock:nth-of-type(1){
+    justify-content: left;
+}
+div.footerblock:nth-of-type(2){
+    justify-content: right;
+}
+div.footerblock:nth-of-type(2) img{
+    width: 1.75vw;
+    height: 1.75vw;
+    margin-right: 1.75vw;
+    border-radius: 50%;
+}
+div.footerblock:last-child{
+    margin-right: 3vw;
+}
+div.footerblock p{
+    margin: 0;
+    margin-left: 6vw;
+    font-family: monospace;
+    font-size:  0.75vw;
+}
+div.footerblock p a{
+    display: contents;
+}
+img.footerimage_github:hover{
+    box-shadow: 0vw 0vw 0.6vw inset #6A329F;
+}
+img.footerimage_steam:hover{
+    box-shadow: 0vw 0vw 0.6vw inset #14487b;
+}
+img.footerimage_youtube:hover{
+    box-shadow: 0vw 0vw 0.6vw inset red;
+}
+img.footerimage_spotify:hover{
+    box-shadow: 0vw 0vw 0.6vw inset #1ed860;
+}
+img.footerimage_mail:hover{
+    box-shadow: 0vw 0vw 0.6vw inset #04FFD4;
 }
