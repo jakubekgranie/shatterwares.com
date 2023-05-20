@@ -24,7 +24,7 @@ body, p {
 main div.contents p a{
     text-decoration: none;
 }
-.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover,section.domainnotif p a, section.domainnotif p a:hover{
+.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover,section.domainnotif p a, section.domainnotif p a:hover, div.england, div.poland, div.england:hover, div.poland:hover{
     transition-duration: 0.15s;
     transition-timing-function: ease-out;
 }
@@ -563,4 +563,25 @@ html[lang="pl"] .mainelement div.h1music p, p.prog, html[lang="pl"] .mainelement
 html[lang="pl"] .mainelement div.h1music h1, h1.prog{
     font-family: Raleway;
     font-weight: bolder;
+}
+#langswap{  
+    border-radius: 50%;
+    width: 4.75vw;
+    height: 4.75vw;
+    position: fixed;
+    bottom: 3.75vw;
+    right: 2vw;
+    background-size: 100% 100%;
+}
+div.poland{
+    background-image: url('../RESOURCES/PRIMARY/poland.png');
+}
+div.england{
+    background-image: url('../RESOURCES/PRIMARY/england.png');
+}
+div.poland:hover{
+    box-shadow: 0 0 1.8vw 0.25vw #dd0c39;
+}
+div.england:hover{
+    box-shadow: 0 0 1.8vw 0.25vw #001f7e;
 }
