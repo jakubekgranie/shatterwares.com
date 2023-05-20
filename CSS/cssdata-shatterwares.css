@@ -1,3 +1,7 @@
+@font-face{
+    font-family: "inter";
+    src: url('../RESOURCES/CUSTOM-FONTS/inter.ttf')
+}
 @font-face
 {
     font-family: "readout";
@@ -11,26 +15,33 @@
 .clearborder{
     border: none !important;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body, p {
     margin: 0;
 }
-.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover{
+main div.contents p a{
+    text-decoration: none;
+}
+.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover,section.domainnotif p a, section.domainnotif p a:hover{
     transition-duration: 0.15s;
     transition-timing-function: ease-out;
 }
-h1.colored:hover, h1.colored, *[class*="gradient"], *[class="gradient"]:hover{
+h1.colored:hover, h1.colored, *[class*="gradient"], *[class="gradient"]:hover, nav div.buttons a div.button:hover, nav div.buttons a div.button{
     transition-duration: 0.20s;
     transition-timing-function: ease-out;
 }
-
-a{
+a:not(a[id], section.domainnotif p a, nav div.buttons a, main div.contents p a){
     display: contents;
     text-decoration: none;
     color: #4C00FF;
 }
 a:visited{
     color: cadetblue;
+}
+a[href*="#"],  nav div.buttons a{
+    color: #4C00FF;
 }
 a.hover:hover{
     box-shadow: 0.4vw 0.4vw 0.6vw grey;
@@ -48,7 +59,7 @@ nav div.navcontentcontainer{
     height: 5vw;
     box-shadow: 0 0 0.2vw grey;
 }
-nav img{
+nav img:not(div.button:last-of-type img){
     width: 14.4791666667vw;
     position: absolute;
     left: 8vw;
@@ -65,6 +76,9 @@ nav div.buttons{
 .firstbutton{
     border-left: 1px grey dashed;
 }
+.shwphbutton{
+    background-image: linear-gradient(to right bottom, #7c52f1, #0094ff, #00c0ff, #00e3fc, #04ffd4);
+}
 
 nav div.buttons a div.button{
     width: calc(10vw - 1px);
@@ -76,8 +90,11 @@ nav div.buttons a div.button{
     height: 5vw;
     border-right: 1px grey dashed;
 }
-nav div.buttons a{
-    color: initial;
+nav div.buttons a div.button:last-of-type img{
+    width: 1vw;
+    height: 1vw;
+}
+nav div.buttons a:link{
     display: contents;
 }
 nav div.buttons a div.button p{
@@ -122,17 +139,17 @@ div.insertedtext h1{
 div.insertedtext h1:not(:first-child){
     font-weight: normal;
 }
-div.insertedtext h1:nth-child(2){
+div.insertedtext h1:nth-of-type(4n + 2){
     font-family: Inconsolata;
 }
-div.insertedtext h1:nth-child(3){
+div.insertedtext h1:nth-child(4n + 3){
     font-family: Yellowtail;
 }
-div.insertedtext h1:nth-child(4){
+div.insertedtext h1:nth-child(4n + 4){
     text-transform: uppercase;
     font-family: "Cinzel Decorative";
 }
-div.insertedtext h1:nth-child(5){
+div.insertedtext h1:nth-child(4n + 5){
     font-family: serif;
 }
 
@@ -305,6 +322,7 @@ div.borderbox{
 
 *[class*="gradient"]{
     z-index: 0;
+    background-size: 100% 100%;
 }
 
 div.gradientgimp{
@@ -504,4 +522,45 @@ img.footerimage_spotify:hover{
 }
 img.footerimage_mail:hover{
     box-shadow: 0vw 0vw 0.6vw inset #04FFD4;
+}
+
+section.domainnotif{
+    box-shadow: 0 0 0.2vw grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Abel;
+    font-size: 1.5vw;
+    color: #4C00FF;
+    width: 100%;
+    height: 4vw;
+    background-image: linear-gradient(to left, #b1ff00, #90ff4e, #6eff76, #4dff97, #2affb4, #00f6d8, #00ebf1, #00ddfc, #00bfff, #009bff, #006dff, #4c00ff);
+}
+section.domainnotif p.polish{
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+section.domainnotif p a:visited{
+    color: #4C00FF;
+}
+section.domainnotif p a:hover{
+    color: #FF00B3;
+}
+section.domainnotif p a:active{
+    color: #FF0080;
+}
+
+html[lang="pl"] .english{
+    display: none !important;
+}
+html[lang="en"] .polish{
+    display: none !important;
+}
+html[lang="pl"] .mainelement div.h1music p, p.prog, html[lang="pl"] .mainelement div.h1music h1, h1.prog{
+    font-family: monospace;
+}
+html[lang="pl"] .mainelement div.h1music h1, h1.prog{
+    font-family: Raleway;
+    font-weight: bolder;
 }
