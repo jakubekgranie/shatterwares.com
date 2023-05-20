@@ -585,3 +585,13 @@ div.poland:hover{
 div.england:hover{
     box-shadow: 0 0 1.8vw 0.25vw #001f7e;
 }
+
+div.preload{
+    position: relative;
+    display: none;
+}
+div.preload img{
+    position: absolute;
+    width: 12vw;
+    height: 24.5vw;
+}
