@@ -1,20 +1,31 @@
 function changeLanguage() 
 {
-    var currentlang = document.documentElement.getAttribute("lang");
-    var element = document.getElementById('langswap');
-    var country1 = "england";
-    var country2 = "poland";
-    if(currentlang == "pl")
+    if(document.documentElement.getAttribute("lang") == "pl")
     {
-        element.classList.add(country1);
-        element.classList.remove(country2);
+        document.getElementById('langswap').classList.add("england");
+        document.getElementById('langswap').classList.remove("poland");
         document.documentElement.setAttribute('lang', "en");
     }
     else
     {
-        element.classList.add(country2);
-        element.classList.remove(country1);
+        document.getElementById('langswap').classList.add("poland");
+        document.getElementById('langswap').classList.remove("england");
         document.documentElement.setAttribute('lang', "pl");
+    }
+}
+function discordAnim()
+{
+    if(document.getElementById('dcicon').classList.contains('discordicontransformed') == false)
+    {
+        document.getElementById('footerimagediscord').classList.add('invert');
+        document.getElementById('dcicon').classList.remove('discordicon');
+        document.getElementById('dcicon').classList.add('discordicontransformed');
+    }
+    else
+    {
+        document.getElementById('footerimagediscord').classList.remove('invert');
+        document.getElementById('dcicon').classList.add('discordicon');
+        document.getElementById('dcicon').classList.remove('discordicontransformed');
     }
 }
 

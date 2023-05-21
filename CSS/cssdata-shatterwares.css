@@ -2,11 +2,6 @@
     font-family: "inter";
     src: url('../RESOURCES/CUSTOM-FONTS/inter.ttf')
 }
-@font-face
-{
-    font-family: "readout";
-    src: url('../RESOURCES/CUSTOM-FONTS/readout.ttf')
-}
 @font-face {
     font-family: "computer";
     src: url('../RESOURCES/CUSTOM-FONTS/computerfont.ttf');
@@ -24,7 +19,7 @@ body, p {
 main div.contents p a{
     text-decoration: none;
 }
-.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, #banner p a, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover{
+.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, #banner p a, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, img#footerimagediscord:hover, div.discordicontransformed:hover, div.discordicontransformed, div.discordicontransformed img{
     transition-duration: 0.15s;
     transition-timing-function: ease-out;
 }
@@ -493,12 +488,57 @@ div.footerblock:nth-of-type(1){
 div.footerblock:nth-of-type(2){
     justify-content: right;
 }
-div.footerblock:nth-of-type(2) img{
+div.footerblock:nth-of-type(2) img:not(div.discordicontransformed img){
     width: 1.75vw;
     height: 1.75vw;
     margin-right: 1.75vw;
     border-radius: 50%;
 }
+
+div.footerblock:nth-of-type(2) div.discordicon img{
+    margin-right: 0;
+}
+div.footerblock:nth-of-type(2) div.discordicon{
+    width: 1.75vw;
+    height: 1.75vw;
+    margin-right: 1.75vw;
+}
+div.footerblock:nth-of-type(2) div.discordicon p{
+    display: none;
+}
+/*main*/
+div.discordicontransformed{
+    display: flex;
+    justify-content: left; 
+    align-items: center;
+    width: initial;
+    height: 1.75vw;
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-discord-start.png');
+    background-size: 100% 100%;
+    padding: 0.25vw;
+    margin-right: 1.75vw;
+    border-radius: 5vw;
+}
+div.discordicontransformed img{
+    width: 1.725vw;
+    height: 1.725vw;
+    margin-right: 0;
+    border-radius: 50%;
+}
+.invert{
+    filter: invert(1);
+}
+div.footerblock:nth-of-type(2) div.discordicontransformed p{
+    display: block;
+    font-family: monospace;
+    font-size: 0.75vw;
+    color: white;
+    margin: 0 0.4vw;
+}
+div.discordicon p{
+    display: none;
+}
+
 div.footerblock:last-child{
     margin-right: 3vw;
 }
@@ -522,6 +562,13 @@ img.footerimage_youtube:hover{
 }
 img.footerimage_spotify:hover{
     box-shadow: 0vw 0vw 0.6vw inset #1ed860;
+}
+div.discordicontransformed img#footerimagediscord:hover{
+    box-shadow: 0vw 0vw 0.6vw inset #DAC372;
+}
+div.discordicontransformed:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-discord-end.png');
+    background-size: 100% 100%;
 }
 img.footerimage_mail:hover{
     box-shadow: 0vw 0vw 0.6vw inset #04FFD4;
