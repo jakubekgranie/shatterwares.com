@@ -24,7 +24,7 @@ body, p {
 main div.contents p a{
     text-decoration: none;
 }
-.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover,section.domainnotif p a, section.domainnotif p a:hover, div.england, div.poland, div.england:hover, div.poland:hover{
+.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, #banner p a, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover{
     transition-duration: 0.15s;
     transition-timing-function: ease-out;
 }
@@ -32,7 +32,10 @@ h1.colored:hover, h1.colored, *[class*="gradient"], *[class="gradient"]:hover, n
     transition-duration: 0.20s;
     transition-timing-function: ease-out;
 }
-a:not(a[id], section.domainnotif p a, nav div.buttons a, main div.contents p a){
+div.england, div.poland{
+    transition-timing-function: linear;
+}
+a:not(a[id], #banner p a, nav div.buttons a, main div.contents p a){
     display: contents;
     text-decoration: none;
     color: #4C00FF;
@@ -119,7 +122,7 @@ section.textcontainer{
 }
 section.textcontainer img{
     width: 14vw;
-    height: auto;
+    height: 14vw;
     display: block;
 }
 div.insertedtext{
@@ -524,7 +527,13 @@ img.footerimage_mail:hover{
     box-shadow: 0vw 0vw 0.6vw inset #04FFD4;
 }
 
-section.domainnotif{
+#fixbanner{
+    position: fixed;
+    width: 100%;
+    height: 4vw;
+}
+#banner{
+    position: relative;
     box-shadow: 0 0 0.2vw grey;
     display: flex;
     align-items: center;
@@ -533,22 +542,30 @@ section.domainnotif{
     font-size: 1.5vw;
     color: #4C00FF;
     width: 100%;
-    height: 4vw;
+    height: 100%;
     background-image: linear-gradient(to left, #b1ff00, #90ff4e, #6eff76, #4dff97, #2affb4, #00f6d8, #00ebf1, #00ddfc, #00bfff, #009bff, #006dff, #4c00ff);
 }
-section.domainnotif p.polish{
+img.close{
+    position: absolute;
+    top: 50%;
+    right: 1.5vw;
+    transform: translateY(-50%);
+    width: 2vw;
+    height: 2vw;
+}
+#banner p.polish{
     font-family: Raleway;
     font-weight: bold;
     font-size: 1.2vw;
 }
-section.domainnotif p a:visited{
+#banner p a:visited{
     color: #4C00FF;
 }
-section.domainnotif p a:hover{
+#banner p a:hover{
     color: #FF00B3;
 }
-section.domainnotif p a:active{
-    color: #FF0080;
+#banner p a:active{
+    color: #ff0080;
 }
 
 html[lang="pl"] .english{
@@ -557,10 +574,10 @@ html[lang="pl"] .english{
 html[lang="en"] .polish{
     display: none !important;
 }
-html[lang="pl"] .mainelement div.h1music p, p.prog, html[lang="pl"] .mainelement div.h1music h1, h1.prog{
+html[lang="pl"] .mainelement div.h1music p, html[lang="pl"] p.prog, html[lang="pl"] .mainelement div.h1music h1, html[lang="pl"] h1.prog{
     font-family: monospace;
 }
-html[lang="pl"] .mainelement div.h1music h1, h1.prog{
+html[lang="pl"] .mainelement div.h1music h1, html[lang="pl"] h1.prog{
     font-family: Raleway;
     font-weight: bolder;
 }
@@ -575,10 +592,17 @@ html[lang="pl"] .mainelement div.h1music h1, h1.prog{
 }
 div.poland{
     background-image: url('../RESOURCES/PRIMARY/poland.png');
+    box-shadow: 0 0 0.2vw grey
 }
 div.england{
     background-image: url('../RESOURCES/PRIMARY/england.png');
+    box-shadow: 0 0 0.2vw grey
 }
+
+div.poland:hover, div.england:hover{
+    cursor: pointer;
+}
+
 div.poland:hover{
     box-shadow: 0 0 1.8vw 0.25vw #dd0c39;
 }
