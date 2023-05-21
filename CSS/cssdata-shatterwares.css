@@ -19,7 +19,7 @@ body, p {
 main div.contents p a{
     text-decoration: none;
 }
-.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, #banner p a, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, img#footerimagediscord:hover, div.discordicontransformed:hover, div.discordicontransformed, div.discordicontransformed img{
+.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, #banner p a, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, div.colora, div.colora:hover{
     transition-duration: 0.15s;
     transition-timing-function: ease-out;
 }
@@ -513,7 +513,7 @@ div.discordicontransformed{
     align-items: center;
     width: initial;
     height: 1.75vw;
-    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-discord-start.png');
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-discord.png');
     background-size: 100% 100%;
     padding: 0.25vw;
     margin-right: 1.75vw;
@@ -563,17 +563,24 @@ img.footerimage_youtube:hover{
 img.footerimage_spotify:hover{
     box-shadow: 0vw 0vw 0.6vw inset #1ed860;
 }
-div.discordicontransformed img#footerimagediscord:hover{
-    box-shadow: 0vw 0vw 0.6vw inset #DAC372;
-}
-div.discordicontransformed:hover{
-    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-discord-end.png');
-    background-size: 100% 100%;
+div.discordicon .colora:hover{
+    box-shadow: 0vw 0vw 0.6vw inset #7289DA;
 }
 img.footerimage_mail:hover{
     box-shadow: 0vw 0vw 0.6vw inset #04FFD4;
 }
-
+div#dcolor{
+    border-radius: 50%;
+    width: 1.75vw;
+    height: 1.75vw;
+}
+div.colorb{
+    width: 1.725vw !important;
+    height: 1.725vw !important;
+}
+#dcicon{
+    cursor: pointer;
+}
 #fixbanner{
     position: fixed;
     width: 100%;
