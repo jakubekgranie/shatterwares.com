@@ -6,15 +6,24 @@
     font-family: "computer";
     src: url('../RESOURCES/CUSTOM-FONTS/computerfont.ttf');
 }
-
 .clearborder{
     border: none !important;
+}
+.standardmargin{
+    margin-bottom: 2vw !important;
 }
 html{
     scroll-behavior: smooth;
 }
-body, p {
+body{
     margin: 0;
+}
+p{
+    margin-top: 0;
+}
+.nohorizontalmargin{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 main div.contents p a{
     text-decoration: none;
@@ -30,7 +39,7 @@ h1.colored:hover, h1.colored, *[class*="gradient"], *[class="gradient"]:hover, n
 div.england, div.poland{
     transition-timing-function: linear;
 }
-a:not(a[id], #banner p a, nav div.buttons a, main div.contents p a){
+a.clear{
     display: contents;
     text-decoration: none;
     color: #4C00FF;
@@ -51,21 +60,17 @@ nav{
     background-color: white;
     top: 0px;
 }
-nav div.navcontentcontainer{
+div.navcontentcontainer{
     display: flex;
     position: relative;
     height: 5vw;
     box-shadow: 0 0 0.2vw grey;
 }
-nav img:not(div.button:last-of-type img){
+img.logobanner{
     width: 14.4791666667vw;
-    position: absolute;
-    left: 8vw;
+    margin-left: 8vw;
 }
-nav div.placeholder{
-    width: 22.4791666667vw;
-}
-nav div.buttons{
+div.buttons{
     display: flex;
     justify-content: right;
     width: 83.5208333333vw;
@@ -78,7 +83,7 @@ nav div.buttons{
     background-image: linear-gradient(to right bottom, #7c52f1, #0094ff, #00c0ff, #00e3fc, #04ffd4);
 }
 
-nav div.buttons a div.button{
+div.button{
     width: calc(10vw - 1px);
     display: flex;
     align-items: center;
@@ -107,15 +112,12 @@ header{
     border-bottom: 0.1vw grey dashed;
     min-height: 14vw; /*prevent the image from overflowing*/
     background: url('../RESOURCES/SHWHP_RES/uranus.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 20%;
 }
 section.textcontainer{
     margin: auto;
     display: flex;
 }
-section.textcontainer img{
+img.headerlogo{
     width: 14vw;
     height: 14vw;
     display: block;
@@ -126,13 +128,15 @@ div.insertedtext{
     margin-left: 2vw;
     height: 14vw;
 }
-div.insertedtext h1{
-    display: inline-block;
-    font-family: Raleway;
+.bold{
     font-weight: bold;
+}
+.lighter{
+    font-weight: lighter;
+}
+.ralewayfont{
+    font-family: Raleway;
     color: white;
-    font-size: 3vw;
-    margin: 1.2vw 0;
 }
 div.insertedtext h1:not(:first-child){
     font-weight: normal;
@@ -156,45 +160,43 @@ div.insertedtext h1:nth-child(4n + 5){
     font-family: Raleway;
     padding: 4vw 0;
 }
-.mainelement h1{
-    text-align: center;
-    margin-top: 0vw;
-    font-family: Yellowtail, cursive;
+h1.mainheading{
     font-size: 3.5vw;
-    font-weight: lighter;
+    margin: 0;
 }
-.mainelement div.h1container h1:not(:only-of-type){
+.yellowtail{
+    font-family: Yellowtail, cursive;
+}
+h1.multiple{
     display: inline-block;
 }
-.mainelement div.h1container{
+.tcenter{
     text-align: center;
 }
-.mainelement div.h1container h1.colored:hover{
+h1.colored:hover{
     color: #04FFD4;
 }
-.mainelement div.contents{
+div.contents{
     display: flex;
     align-items: center;
     padding: 4vw 8vw;
 }
-.mainelement div.contents img{
-    width: calc(17vw - 1px);
+img.mainimage{
+    min-width: calc(17vw - 1px);
     border: 1px white solid;
     border-radius: 50vw;
-    flex-shrink: 0;
 }
-.mainelement div.contents p{
+p.maintext{
     text-align: center;
     vertical-align: middle;
     margin-left: 4.5vw;
     font-size: 2.5vw;
 }
-.backgrounded{
-
-    background-repeat: no-repeat;
-}
 .oldbanner{
     background-image: url('../RESOURCES/bgs/unsplash-bg2.jpg');
+}
+.positionedandcover{
+    background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 20%;
 }
@@ -210,44 +212,35 @@ div.flex .margin{
     margin-bottom: calc(2vw - 1px);
 }
 
-h1.favorites{
+.computerfont{
     color: white; 
     font-family: computer; 
-}
-h1.prog{
-    color: white;
-    font-family: computer;
 }
 
 div.flex .margin:nth-of-type(5n + 1){
     margin-left: 0;
 }
-div.flex .margin a .imagery1{
+.imagery1{
     width: 10vw;
     height: 10vw;
     border-radius: 5vw;
 }
-div.flex hr{
+hr{
     width: 100%;
     height: 1px;
     margin: 0;
     visibility: hidden;
 }
-
-.mainelement div.h1music{
+.mb4{
     margin-bottom: 4vw;
 }
-.mainelement div.h1music h1, h1.prog{
-    margin: 0;
-    margin-bottom: 2vw;
-}
-.mainelement div.h1music p, p.prog{
-    font-family: computer;
+.mainparagraph{
     font-size: 1.5vw;
-    color: white;
     width: 40%;
-    margin: 0 auto;
-    margin-bottom: 4vw;
+}
+.mauto{
+    margin-left: auto;
+    margin-right: auto;
 }
 *[class*="marker"]{
     box-shadow: none;
@@ -384,7 +377,7 @@ div.gradientpython:hover{
     background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-python-end.png');
 }
 
-.netbanner div.flex div.borderbox:nth-of-type(5n + 5){
+div.borderbox:nth-of-type(5n + 5){
     margin-right: 0;
 }
 
@@ -491,27 +484,21 @@ div.footerblock:nth-of-type(2){
 div.footerblock:nth-of-type(2) img:not(div.discordicontransformed img){
     width: 1.75vw;
     height: 1.75vw;
-    margin-right: 1.75vw;
     border-radius: 50%;
+    padding: 0;
 }
-
-div.footerblock:nth-of-type(2) div.discordicon img{
-    margin-right: 0;
+div.footerblock:nth-of-type(2) img:not(div.discordicontransformed img, div.discordicon img){
+    margin-right: 1.75vw;
 }
 div.footerblock:nth-of-type(2) div.discordicon{
-    width: 1.75vw;
-    height: 1.75vw;
+    display: flex;
     margin-right: 1.75vw;
-}
-div.footerblock:nth-of-type(2) div.discordicon p{
-    display: none;
 }
 /*main*/
 div.discordicontransformed{
     display: flex;
     justify-content: left; 
     align-items: center;
-    width: initial;
     height: 1.75vw;
     background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-discord.png');
     background-size: 100% 100%;
@@ -520,8 +507,8 @@ div.discordicontransformed{
     border-radius: 5vw;
 }
 div.discordicontransformed img{
-    width: 1.725vw;
-    height: 1.725vw;
+    width: 1.5vw;
+    height: 1.5vw;
     margin-right: 0;
     border-radius: 50%;
 }
@@ -568,15 +555,6 @@ div.discordicon .colora:hover{
 }
 img.footerimage_mail:hover{
     box-shadow: 0vw 0vw 0.6vw inset #04FFD4;
-}
-div#dcolor{
-    border-radius: 50%;
-    width: 1.75vw;
-    height: 1.75vw;
-}
-div.colorb{
-    width: 1.725vw !important;
-    height: 1.725vw !important;
 }
 #dcicon{
     cursor: pointer;
@@ -629,13 +607,6 @@ html[lang="pl"] .english{
 }
 html[lang="en"] .polish{
     display: none !important;
-}
-html[lang="pl"] .mainelement div.h1music p, html[lang="pl"] p.prog, html[lang="pl"] .mainelement div.h1music h1, html[lang="pl"] h1.prog{
-    font-family: monospace;
-}
-html[lang="pl"] .mainelement div.h1music h1, html[lang="pl"] h1.prog{
-    font-family: Raleway;
-    font-weight: bolder;
 }
 #langswap{  
     border-radius: 50%;
