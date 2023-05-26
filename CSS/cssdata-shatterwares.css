@@ -34,12 +34,12 @@ p{
 main div.contents p a{
     text-decoration: none;
 }
-.imagery1:hover, .transition-standard, *[class*="marker"], *[class*="footerimage_"]:not(.footerimage_discord, .footerimage_discord_inv), *[class*="footerimage_"]:hover, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, div.colora, div.colora:hover{
+.imagery1:hover, .transition-standard, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, div.colora, div.colora:hover{
     transition-duration: 0.15s;
     transition-timing-function: ease-out;
 }
 .footerimage_discord, .footerimage_discord_inv{
-    transition: box-shadow 0.15s ease-out;
+    transition-property: box-shadow;
 }
 h1.colored:hover, h1.colored, *[class*="gradient"], *[class="gradient"]:hover, nav div.buttons a div.button:hover, nav div.buttons a div.button{
     transition-duration: 0.20s;
