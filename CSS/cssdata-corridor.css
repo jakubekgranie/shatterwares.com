@@ -39,7 +39,6 @@ section.shpjhclmarker:hover{
 section.shwhpclmarker:hover{
     box-shadow: 0vw 0vh 2vw blue;
 }
-
 section.defaultsection{
     position: relative;
 	margin: 5% auto;
@@ -62,7 +61,7 @@ section.textcontainer{
     margin-left: 2vw;
 }
 section.textcontainer > h1{
-    font-weight: bold;
+    font-weight: 900;
     margin: 0;
     font-size: 1.3vw;
     margin-bottom: 0.8vw;
@@ -70,7 +69,9 @@ section.textcontainer > h1{
 }
 section.textcontainer > p{
     margin: 0;
+    color: #2e2c2a;
     margin-right: 3vw;
+    font-weight: 900;
     font-size: 1vw;
     white-space: pre-line;
 }
@@ -118,11 +119,12 @@ footer > p{
     font-family: Raleway;
     font-size: 1vw;
 }
-@media only screen and (max-width: 647px)
+@media only screen and (max-aspect-ratio: 375/373)
 {
     header img
     {
-        height: 12vw
+        height: 12vw;
+        min-height: 10vh;
     }
     section.defaultsection.allergyclmarker{
         background: url('../RESOURCES/CORRIDOR/mobile/wheat-mobile-bg.jpg') center 62% no-repeat;
@@ -202,7 +204,7 @@ footer > p{
     section.textcontainer > p
     {
         font-size: 2.7vw;
-        font-weight: 600;
+        color: inherit;
     }
     footer > p
     {

@@ -12,6 +12,12 @@
 .standardmargin{
     margin-bottom: 2vw !important;
 }
+.mnsp{
+    font-family: monospace;
+}
+.fs3vw{
+    font-size: 3vw;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -19,7 +25,7 @@ body{
     margin: 0;
 }
 p{
-    margin-top: 0;
+    display: block;
 }
 .nohorizontalmargin{
     margin-top: 0;
@@ -28,9 +34,12 @@ p{
 main div.contents p a{
     text-decoration: none;
 }
-.imagery1:hover, main div.contents a, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, #banner p a, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, div.colora, div.colora:hover{
+.imagery1:hover, .transition-standard, *[class*="marker"], *[class*="footerimage_"]:not(.footerimage_discord, .footerimage_discord_inv), *[class*="footerimage_"]:hover, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, div.colora, div.colora:hover{
     transition-duration: 0.15s;
     transition-timing-function: ease-out;
+}
+.footerimage_discord, .footerimage_discord_inv{
+    transition: box-shadow 0.15s ease-out;
 }
 h1.colored:hover, h1.colored, *[class*="gradient"], *[class="gradient"]:hover, nav div.buttons a div.button:hover, nav div.buttons a div.button{
     transition-duration: 0.20s;
@@ -71,7 +80,6 @@ img.logobanner{
     margin-left: 8vw;
 }
 div.buttons{
-    display: flex;
     justify-content: right;
     width: 83.5208333333vw;
     height: 5vw;
@@ -85,15 +93,10 @@ div.buttons{
 
 div.button{
     width: calc(10vw - 1px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2vw;
-    font-weight: 400;
     height: 5vw;
     border-right: 1px grey dashed;
 }
-nav div.buttons a div.button:last-of-type img{
+img.redirect{
     width: 1vw;
     height: 1vw;
 }
@@ -136,25 +139,19 @@ div.insertedtext{
 }
 .ralewayfont{
     font-family: Raleway;
+}
+.white{
     color: white;
 }
-div.insertedtext h1:not(:first-child){
+.fwnormal{
     font-weight: normal;
 }
-div.insertedtext h1:nth-of-type(4n + 2){
+.inconsolata{
     font-family: Inconsolata;
 }
-div.insertedtext h1:nth-child(4n + 3){
-    font-family: Yellowtail;
-}
-div.insertedtext h1:nth-child(4n + 4){
-    text-transform: uppercase;
+.cinzel{
     font-family: "Cinzel Decorative";
 }
-div.insertedtext h1:nth-child(4n + 5){
-    font-family: serif;
-}
-
 .mainelement{
     border-bottom: 0.1vw grey dashed;
     font-family: Raleway;
@@ -162,6 +159,8 @@ div.insertedtext h1:nth-child(4n + 5){
 }
 h1.mainheading{
     font-size: 3.5vw;
+}
+.nomargin{
     margin: 0;
 }
 .yellowtail{
@@ -176,9 +175,10 @@ h1.multiple{
 h1.colored:hover{
     color: #04FFD4;
 }
+.nowrap{
+    flex-wrap: nowrap !important;
+}
 div.contents{
-    display: flex;
-    align-items: center;
     padding: 4vw 8vw;
 }
 img.mainimage{
@@ -201,9 +201,11 @@ p.maintext{
     background-position-y: 20%;
 }
 
-div.flex{
+.flex{
     display: flex;
     flex-wrap: wrap;
+}
+.full{
     align-items: center;
     justify-content: center;
 }
@@ -460,40 +462,25 @@ section.last{
 }
 
 footer{
-    display: flex;
-    width: 100%;
-    min-height: 3vw;
+    height: 3vw;
     background-color: antiquewhite;
 }
-*[class*="footer"]{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    border-left: 0.1vw
-}
 div.footerblock{
-    min-height: inherit;
+    width: 50%;
 }
-div.footerblock:nth-of-type(1){
+div.first{
     justify-content: left;
 }
-div.footerblock:nth-of-type(2){
+div.second{
     justify-content: right;
 }
-div.footerblock:nth-of-type(2) img:not(div.discordicontransformed img){
+.footericon{
     width: 1.75vw;
+    margin-right: 1.75vw;
     height: 1.75vw;
     border-radius: 50%;
-    padding: 0;
 }
-div.footerblock:nth-of-type(2) img:not(div.discordicontransformed img, div.discordicon img){
-    margin-right: 1.75vw;
-}
-div.footerblock:nth-of-type(2) div.discordicon{
-    display: flex;
-    margin-right: 1.75vw;
-}
+
 /*main*/
 div.discordicontransformed{
     display: flex;
@@ -515,24 +502,20 @@ div.discordicontransformed img{
 .invert{
     filter: invert(1);
 }
-div.footerblock:nth-of-type(2) div.discordicontransformed p{
-    display: block;
-    font-family: monospace;
-    font-size: 0.75vw;
-    color: white;
-    margin: 0 0.4vw;
-}
 div.discordicon p{
     display: none;
 }
-
+.mvert{
+    margin: 0 0.4vw;
+}
 div.footerblock:last-child{
     margin-right: 3vw;
 }
-div.footerblock p{
+.footertext-margin{
     margin: 0;
     margin-left: 6vw;
-    font-family: monospace;
+}
+.fsize-footer{
     font-size:  0.75vw;
 }
 div.footerblock p a{
@@ -550,8 +533,11 @@ img.footerimage_youtube:hover{
 img.footerimage_spotify:hover{
     box-shadow: 0vw 0vw 0.6vw inset #1ed860;
 }
-div.discordicon .colora:hover{
+.footerimage_discord:hover{
     box-shadow: 0vw 0vw 0.6vw inset #7289DA;
+}
+.footerimage_discord_inv:hover{
+    box-shadow: 0vw 0vw 0.6vw inset #DAC372;
 }
 img.footerimage_mail:hover{
     box-shadow: 0vw 0vw 0.6vw inset #04FFD4;
@@ -587,9 +573,7 @@ img.close{
     height: 2vw;
     cursor: pointer;
 }
-#banner p.polish{
-    font-family: Raleway;
-    font-weight: bold;
+.fsize-banner{
     font-size: 1.2vw;
 }
 #banner p a:visited{
