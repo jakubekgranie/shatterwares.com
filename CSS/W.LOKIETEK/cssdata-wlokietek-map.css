@@ -83,7 +83,7 @@
     /*!Border radiuses*/
     /*Shadows*/
         .sh-def{
-            box-shadow: 0vw 0vh 1vw 0.2vw #383737
+            box-shadow: 0vw 0vh 0.5vw #383737
         }
     /*!Shadows*/
     /*Box sizing*/
@@ -473,8 +473,7 @@
             margin: auto;
         }
         .essentials{
-            background-image: url('../../RESOURCES/WLOKIETEK/PRIMARY/blob-scatter-haikei.svg');
-            background-size: 2800px auto;
+            background-image: url('../../RESOURCES/WLOKIETEK/map/background.jpg');
             margin: 0;
             font-family: Raleway;
         }
