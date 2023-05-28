@@ -31,7 +31,7 @@ p{
     margin-top: 0;
     margin-bottom: 0;
 }
-main div.contents p a{
+.dec-none{
     text-decoration: none;
 }
 .imagery1:hover, .transition-standard, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, div.colora, div.colora:hover{
@@ -50,13 +50,11 @@ div.england, div.poland{
 }
 a.clear{
     display: contents;
-    text-decoration: none;
-    color: #4C00FF;
 }
-a:visited{
+.avis-green:visited{
     color: cadetblue;
 }
-a[href*="#"],  nav div.buttons a{
+.ac-def{
     color: #4C00FF;
 }
 a.hover:hover{
@@ -73,7 +71,6 @@ div.navcontentcontainer{
     display: flex;
     position: relative;
     height: 5vw;
-    box-shadow: 0 0 0.2vw grey;
 }
 img.logobanner{
     width: 14.4791666667vw;
@@ -103,8 +100,7 @@ img.redirect{
 nav div.buttons a:link{
     display: contents;
 }
-nav div.buttons a div.button p{
-    font-family: Abel, sans-serif;
+.fsize-button{
     font-size: 1.4vw;
 }
 
@@ -230,14 +226,12 @@ div.flex .margin:nth-of-type(5n + 1){
 hr{
     width: 100%;
     height: 1px;
-    margin: 0;
     visibility: hidden;
 }
 .mb4{
     margin-bottom: 4vw;
 }
 .mainparagraph{
-    font-size: 1.5vw;
     width: 40%;
 }
 .mauto{
@@ -305,17 +299,18 @@ img.pixelation{
     image-rendering: pixelated;
 }
 
-div.borderbox{
+.posrel{
     position: relative;
+}
+div.borderbox{
     width: 12vw;
     height: 24.5vw;
     margin-right: 2vw;
     border-radius: 2vw;
 }
 
-*[class*="gradient"]{
+.z0{
     z-index: 0;
-    background-size: 100% 100%;
 }
 
 div.gradientgimp{
@@ -377,10 +372,6 @@ div.gradientpython{
 }
 div.gradientpython:hover{
     background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-python-end.png');
-}
-
-div.borderbox:nth-of-type(5n + 5){
-    margin-right: 0;
 }
 
 div.softbox{
@@ -474,11 +465,13 @@ div.first{
 div.second{
     justify-content: right;
 }
+.borderrad{
+    border-radius: 50%;
+}
 .footericon{
     width: 1.75vw;
     margin-right: 1.75vw;
     height: 1.75vw;
-    border-radius: 50%;
 }
 
 /*main*/
@@ -496,8 +489,7 @@ div.discordicontransformed{
 div.discordicontransformed img{
     width: 1.5vw;
     height: 1.5vw;
-    margin-right: 0;
-    border-radius: 50%;
+    margin: 0;
 }
 .invert{
     filter: invert(1);
@@ -546,19 +538,20 @@ img.footerimage_mail:hover{
     cursor: pointer;
 }
 #fixbanner{
-    position: fixed;
     width: 100%;
     height: 4vw;
     z-index: 1;
 }
-#banner{
-    position: relative;
-    box-shadow: 0 0 0.2vw grey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.abel{
     font-family: Abel;
+}
+.defaultshadow{
+    box-shadow: 0 0 0.2vw grey;
+}
+.fsize-1p5{
     font-size: 1.5vw;
+}
+#banner{
     color: #4C00FF;
     width: 100%;
     height: 100%;
@@ -592,14 +585,18 @@ html[lang="pl"] .english{
 html[lang="en"] .polish{
     display: none !important;
 }
+.fixed{
+    position: fixed;
+}
+.bgfull{
+    background-size: 100% 100%;
+}
 #langswap{  
-    border-radius: 50%;
     width: 4.75vw;
     height: 4.75vw;
     position: fixed;
     bottom: 3.75vw;
     right: 2vw;
-    background-size: 100% 100%;
 }
 div.poland{
     background-image: url('../RESOURCES/PRIMARY/poland.png');
@@ -622,11 +619,5 @@ div.england:hover{
 }
 
 div.preload{
-    position: relative;
     display: none;
-}
-div.preload img{
-    position: absolute;
-    width: 12vw;
-    height: 24.5vw;
 }

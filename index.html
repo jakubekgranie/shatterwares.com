@@ -29,9 +29,10 @@
     </head>
     <body>
         <!--Define the buttons-->
-        <div id="langswap" class="england" onclick="changeLanguage()">
+        <div id="langswap" class="bgfull england borderrad" onclick="changeLanguage()">
             
         </div>
+
         <div class="preload">
             <img src="RESOURCES/SHWHP_RES/gradients/gradient-cpp-end.png"><img src="RESOURCES/SHWHP_RES/gradients/gradient-cpp-start.png">
             <img src="RESOURCES/SHWHP_RES/gradients/gradient-css-end.png"><img src="RESOURCES/SHWHP_RES/gradients/gradient-css-start.png">
@@ -48,32 +49,32 @@
             <img src="RESOURCES/SHWHP_RES/gradients/gradient-discord.png">
         </div>
         <nav>
-            <div class="navcontentcontainer">
+            <div class="navcontentcontainer fsize-button abel defaultshadow">
                 <img class="logobanner" src="RESOURCES/PRIMARY/logo3.png" alt="logo">
                 <div class="buttons flex">
-                    <a href="#overview">
+                    <a href="#overview" class="ac-def">
                         <div class="button flex full firstbutton">
                             <p class="english nomargin mauto">Overview</p>
                             <p class="polish nomargin mauto">O mnie</p>
                         </div>
                     </a>
-                    <a href="#faves">
+                    <a href="#faves" class="ac-def">
                         <div class="button flex full">
                             <p class="english nomargin mauto">Faves</p>
                             <p class="polish nomargin mauto">Ulubione</p>
                         </div>
                     </a>
-                    <a href="#software">
+                    <a href="#software" class="ac-def">
                         <div class="button flex full">
                             <p>Software</p>
                         </div>
                     </a>
-                    <a href="#langs">
+                    <a href="#langs" class="ac-def">
                         <div class="button flex full">
                             <p>langs</p>
                         </div>
                     </a>
-                    <a href="shwph/" target="_blank">
+                    <a href="shwph/" class="ac-def" target="_blank">
                         <div class="button flex full clearborder shwphbutton">
                             <p>ProjHub&nbsp;</p>
                             <img class="redirect" src="RESOURCES/PRIMARY/redirect.png" alt="redirection">
@@ -82,8 +83,8 @@
                 </div>
             </div>
         </nav>
-        <div id="fixbanner">
-            <section id="banner">
+        <div id="fixbanner" class="fixed">
+            <section id="banner" class="flex full defaultshadow">
                 <p class="english fsize-banner bold ralewayfont">Hey there! Are you here to visit the project hub? Click <a class="transition-standard" href="shwph/">here</a> to redirect!</p>
                 <p class="polish fsize-banner bold ralewayfont">Witaj! Czy jesteś tu, by udać się na ShatterWares Project Hub? Kliknij <a class="transition-standard" href="shwph/">tu</a>!</p>
                 <img class="close" src="RESOURCES/PRIMARY/x.png" onclick="document.getElementById('fixbanner').style.display='none'" alt="X">
@@ -109,19 +110,19 @@
                 <h1 class="polish multiple lighter mainheading nomargin">O mnie</h1>
             </div>
             <div class="contents flex full nowrap">
-                <img class="mainimage" src="https://media.discordapp.net/attachments/1041051627202822165/1110813489137733662/1684907685784.gif" alt="A photo">
-                <p class="polish maintext nohorizontalmargin"><a class="hover transition-standard" href="https://github.com/jakubekgranie" target="_blank" alt="GitHub">Jakubekgranie (znany szerzej jako Jakub)</a> to uczeń kierunku technik-programista w <a class="hover transition-standard" target="_blank" href="http://ekonomik.opole.pl/eko3/" alt="ekonom">ZSEk Opole</a>. Pracujący w celu osiągnięcia szerokiej wiedzy, profesjonalizmu oraz perfekcji, kuje swój los w dzień i noc, by spełnić swe ambicje. Niezapominający i adaptacyjny to idealne słowa opisujące jego charakter.</p>
-                <p class="english maintext nohorizontalmargin"><a class="hover transition-standard" href="https://github.com/jakubekgranie" target="_blank" alt="GitHub">Jakubekgranie (also known as Jakub)</a> is a programming student at <a class="hover transition-standard" target="_blank" href="http://ekonomik.opole.pl/eko3/" alt="ekonom">ZSEk Opole</a>. Striving for vast knowledge and high-end abilities, he works relentlessly at both night and day to fulfill his ambitions of becoming a pro. Never forgetting and adaptive are the perfect words to describe his character.</p>
+                <img class="mainimage" src="https://cdn.discordapp.com/avatars/703646178536849448/13d50af9ff09f02865c6887e69f565e7.webp" alt="A photo">
+                <p class="polish maintext nohorizontalmargin"><a class="hover transition-standard dec-none ac-def avis-green" href="https://github.com/jakubekgranie" target="_blank" alt="GitHub">Jakubekgranie (znany szerzej jako Jakub)</a> to uczeń kierunku technik-programista w <a class="hover transition-standard dec-none ac-def avis-green" target="_blank" href="http://ekonomik.opole.pl/eko3/" alt="ekonom">ZSEk Opole</a>. Pracujący w celu osiągnięcia szerokiej wiedzy, profesjonalizmu oraz perfekcji, kuje swój los w dzień i noc, by spełnić swe ambicje. Niezapominający i adaptacyjny to idealne słowa opisujące jego charakter.</p>
+                <p class="english maintext nohorizontalmargin"><a class="hover transition-standard dec-none ac-def avis-green" href="https://github.com/jakubekgranie" target="_blank" alt="GitHub">Jakubekgranie (also known as Jakub)</a> is a programming student at <a class="hover transition-standard dec-none ac-def avis-green" target="_blank" href="http://ekonomik.opole.pl/eko3/" alt="ekonom">ZSEk Opole</a>. Striving for vast knowledge and high-end abilities, he works relentlessly at both night and day to fulfill his ambitions of becoming a pro. Never forgetting and adaptive are the perfect words to describe his character.</p>
             </div>
             <a id="faves"></a>
         </main>
         <section class="mainelement oldbanner white positionedandcover">
             <div class="h1container h1music">
                 <h1 class="english mainheading standardmargin computerfont lighter tcenter nomargin">Faves</h1>
-                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto">Magnum opus, the top of the top, a work of art. Whatever you call it - that's of your jurisdistion. Enjoy the tracks I value the most.</p>
+                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto fsize-1p5">Magnum opus, the top of the top, a work of art. Whatever you call it - that's of your jurisdistion. Enjoy the tracks I value the most.</p>
 
                 <h1 class="polish mainheading standardmargin tcenter nomargin">Ulubione</h1>
-                <p class=" polish mainparagraph mb4 tcenter nomargin mauto">Magnum opus, najlepsze z najlepszych, arcydzieła. Jakkolwiek je nazwiesz - podlega to twojej jurysdykcji. Ciesz się moimi faworytami.</p>
+                <p class=" polish mainparagraph mb4 tcenter nomargin mauto fsize-1p5">Magnum opus, najlepsze z najlepszych, arcydzieła. Jakkolwiek je nazwiesz - podlega to twojej jurysdykcji. Ciesz się moimi faworytami.</p>
             </div>
             <div class="flex full">
                 <div class="margin">
@@ -270,18 +271,18 @@
         <section class="mainelement netbanner positionedandcover white">
             <div class="h1container">
                 <h1 class="english mainheading standardmargin computerfont lighter tcenter nomargin">Software</h1>
-                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto">Stuff i work on, work with, you get the drill.</p>
+                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto fsize-1p5">Stuff i work on, work with, you get the drill.</p>
 
                 <h1 class="polish mainheading standardmargin tcenter nomargin">Software</h1>
-                <p class="polish mainparagraph mb4 tcenter nomargin mauto">Najlepsze oprogramowanie, na którym pracuję.</p>
+                <p class="polish mainparagraph mb4 tcenter nomargin mauto fsize-1p5">Najlepsze oprogramowanie, na którym pracuję.</p>
             </div>
             <div class="flex full">
 
                 <a href="https://visualstudio.microsoft.com/vs/" target="_blank">
-                <div class="borderbox gradientvs">
+                <div class="borderbox gradientvs bgfull z0 posrel">
                     <div class="softbox paddingnet">
                         <img src="RESOURCES/PRIMARY/visualstudio.png" alt="visual Studio logo">
-                        <hr class="vscard">
+                        <hr class="vscard nomargin">
                         <p class="carddefault english">VStudio 2022
 
                             Used for making executables (mainly) 
@@ -297,10 +298,10 @@
                 </a>
 
                 <a href="https://code.visualstudio.com/" target="_blank">
-                <div class="borderbox gradientvsc">
+                <div class="borderbox gradientvsc bgfull z0 posrel">
                     <div class="softbox paddingnet">
                         <img src="RESOURCES/PRIMARY/visualstudiocode.png" alt="visual Studio Code logo">
-                        <hr class="vsccard">
+                        <hr class="vsccard nomargin">
                         <p class="carddefault english">VS Code
 
                             My favorite tool for editing .html, .css and .js files.
@@ -315,10 +316,10 @@
                 </a>
 
                 <a href="https://www.apachefriends.org/index.html" target="_blank">
-                <div class="borderbox gradientxampp">
+                <div class="borderbox gradientxampp bgfull z0 posrel">
                     <div class="softbox paddingnet">
                         <img src="RESOURCES/PRIMARY/XAMPP.png" alt="XAMPP logo">
-                        <hr class="xamppcard">
+                        <hr class="xamppcard nomargin">
                         <p class="carddefault english">XAMPP
 
                             A simple tool for database edition and management.
@@ -333,10 +334,10 @@
                 </a>
 
                 <a href="https://www.gimp.org/" target="_blank">
-                    <div class="borderbox gradientgimp">
+                    <div class="borderbox gradientgimp bgfull z0 posrel">
                         <div class="softbox paddingnet">
                             <img src="RESOURCES/PRIMARY/gimp.png" alt="GIMP logo">
-                            <hr class="gimpcard">
+                            <hr class="gimpcard nomargin">
                             <p class="carddefault english">GIMP
                                 
                                 A perfect, free editor for all stuff image-like.
@@ -351,10 +352,10 @@
                 </a>
 
                 <a href="https://desktop.github.com/" target="_blank">
-                <div class="borderbox gradientgit">
+                <div class="borderbox gradientgit bgfull z0 posrel">
                     <div class="softbox paddingnet">
                         <img src="RESOURCES/PRIMARY/githubdesktop.png" alt="GitHub Desktop logo">
-                        <hr class="gitdeskcard">
+                        <hr class="gitdeskcard nomargin">
                         <p class="carddefault english">Github Desktop
 
                             A work-optimization app made for remote repository modification.
@@ -373,17 +374,17 @@
         <section class="mainelement gameboybanner positionedandcover white last">
             <div class="h1container">
                 <h1 class="english mainheading standardmargin computerfont lighter tcenter nomargin nomargin">Languages</h1>
-                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto">My very own keys to better future smithed by my relentlessness in self-discipline.</p>
+                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto fsize-1p5">My very own keys to better future smithed by my relentlessness in self-discipline.</p>
 
                 <h1 class="polish mainheading standardmargin tcenter nomargin">Języki</h1>
-                <p class="polish mainparagraph mb4 tcenter nomargin mauto">Moje własne klucze do przyszłości, wykuwane przez pracowitość i samodyscyplinę.</p>
+                <p class="polish mainparagraph mb4 tcenter nomargin mauto fsize-1p5">Moje własne klucze do przyszłości, wykuwane przez pracowitość i samodyscyplinę.</p>
             </div>
             <div class="flex full">
                 <a href="https://www.w3.org/html/" target="_blank">
-                    <div class="borderbox gradienthtml">
+                    <div class="borderbox gradienthtml bgfull z0 posrel">
                         <div class="softbox paddingnet">
                             <img src="RESOURCES/PRIMARY/html5.png" alt="HTML logo">
-                            <hr class="htmlcard">
+                            <hr class="htmlcard nomargin">
                             <p class="carddefault english">HTML
 
                                 <b>Level</b>
@@ -404,10 +405,10 @@
                 </a>
 
                 <a href="https://www.w3.org/Style/CSS/" target="_blank">
-                    <div class="borderbox gradientcss">
+                    <div class="borderbox gradientcss bgfull z0 posrel">
                         <div class="softbox paddingnet">
                             <img src="RESOURCES/PRIMARY/css3.png" alt="CSS3 logo">
-                            <hr class="csscard">
+                            <hr class="csscard nomargin">
                             <p class="carddefault english">CSS
 
                                 <b>Level</b>
@@ -428,10 +429,10 @@
                 </a>
 
                 <a href="https://www.javascript.com/" target="_blank">
-                    <div class="borderbox gradientjs">
+                    <div class="borderbox gradientjs bgfull z0 posrel">
                         <div class="softbox paddingnet">
                             <img src="RESOURCES/PRIMARY/javascript.png" class="cardrounded" alt="JS logo">
-                            <hr class="jscard">
+                            <hr class="jscard nomargin">
                             <p class="carddefault english">JavaScript
 
                                 <b>Level</b>
@@ -452,10 +453,10 @@
                 </a>
 
                 <a href="https://cplusplus.com/" target="_blank">
-                    <div class="borderbox gradientcpp">
+                    <div class="borderbox gradientcpp bgfull z0 posrel">
                         <div class="softbox paddingnet">
                             <img src="RESOURCES/PRIMARY/cpp.png" class="cardrounded" alt="C++ logo">
-                            <hr class="cppcard">
+                            <hr class="cppcard nomargin">
                             <p class="carddefault english">C++
 
                                 <b>Level</b>
@@ -477,10 +478,10 @@
                 </a>
 
                 <a href="https://www.python.org/" target="_blank">
-                    <div class="borderbox gradientpython">
+                    <div class="borderbox gradientpython bgfull z0 posrel">
                         <div class="softbox paddingnet">
                             <img src="RESOURCES/PRIMARY/python.png" class="cardrounded" alt="Python logo">
-                            <hr class="pythoncard">
+                            <hr class="pythoncard nomargin">
                             <p class="carddefault english">Python
 
                                 <b>Level</b>
@@ -511,23 +512,23 @@
             </div>
             <div class="footerblock second flex full">
                 <a href="mailto:kawkayt7@gmail.com" target="_blank">
-                    <img class="footerimage_mail footericon flex" src="RESOURCES/PRIMARY/mail.jpg" alt="spotify">
+                    <img class="footerimage_mail footericon flex borderrad" src="RESOURCES/PRIMARY/mail.jpg" alt="spotify">
                 </a> 
                 <div class="discordicon" id="dcicon" onclick="discordAnim()">
-                    <img id="footerimage_discord" class="footericon flex footerimage_discord" src="RESOURCES/PRIMARY/discord.png" alt="spotify">
+                    <img id="footerimage_discord" class="footericon flex footerimage_discord borderrad" src="RESOURCES/PRIMARY/discord.png" alt="spotify">
                     <p class="mvert fsize-footer mnsp white">soup can#7318</p>
                 </div>
                 <a href="https://open.spotify.com/user/31ytzqdvaeubfcjjitrinmaba52q" target="_blank">
-                    <img class="footerimage_spotify footericon flex" src="RESOURCES/PRIMARY/spotify.png" alt="spotify">
+                    <img class="footerimage_spotify footericon flex borderrad" src="RESOURCES/PRIMARY/spotify.png" alt="spotify">
                 </a>
                 <a href="https://www.youtube.com/channel/UCkGfjx-MIcuONgvoYGDgP9w" target="_blank">
-                    <img class="footerimage_youtube footericon flex" src="RESOURCES/PRIMARY/youtube.png" alt="youtube">
+                    <img class="footerimage_youtube footericon flex borderrad" src="RESOURCES/PRIMARY/youtube.png" alt="youtube">
                 </a>
                 <a href="https://steamcommunity.com/id/wechanged" target="_blank">
-                    <img class="footerimage_steam footericon flex" src="RESOURCES/PRIMARY/steam.png" alt="steam">
+                    <img class="footerimage_steam footericon flex borderrad" src="RESOURCES/PRIMARY/steam.png" alt="steam">
                 </a>
                 <a href="https://github.com/jakubekgranie/projecthub.github.io" target="_blank">
-                    <img class="footerimage_github footericon flex" src="RESOURCES/PRIMARY/github.png" alt="github">
+                    <img class="footerimage_github footericon flex borderrad" src="RESOURCES/PRIMARY/github.png" alt="github">
                 </a>
             </div>
         </footer>
