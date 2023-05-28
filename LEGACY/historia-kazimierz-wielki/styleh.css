@@ -263,7 +263,8 @@ button:hover{
     margin-top:50px;
     padding-bottom:228px;
     padding-right:18px ;
-    background-image:url(genalogia.jpg);
+    background-image:url('genalogia.jpg');
+    background-size: 100% 100%;
     border: solid 3px black;
     border-radius: 30px;
 
