@@ -6,6 +6,52 @@
     font-family: "computer";
     src: url('../RESOURCES/CUSTOM-FONTS/computerfont.ttf');
 }
+@keyframes rainbow{
+    0%
+    {
+        color: #ffffff;
+    }
+    12.5%
+    {
+        color: #FF0000;
+    }
+    25%
+    {
+        color: #FF7F00;
+    }
+    37.5%
+    {
+        color: #FFFF00;
+    }
+    50%
+    {
+        color: #00FF00;
+    }
+    62.5%
+    {
+        color: #0000FF;
+    }
+    75%
+    {
+        color: #4B0082;
+    }
+    87.5%
+    {
+        color: #9400D3;
+    }
+    100%
+    {
+        color: #ffffff;
+    }
+}
+@keyframes hue{
+    0%{
+        filter: hue-rotate(360deg)
+    }
+}
+.rainbow:hover{
+    animation: hue 1.25s linear infinite;
+}
 .clearborder{
     border: none !important;
 }
@@ -211,7 +257,6 @@ div.flex .margin{
 }
 
 .computerfont{
-    color: white; 
     font-family: computer; 
 }
 
@@ -534,7 +579,7 @@ img.footerimage_spotify:hover{
 img.footerimage_mail:hover{
     box-shadow: 0vw 0vw 0.6vw inset #04FFD4;
 }
-#dcicon{
+.c-pointer{
     cursor: pointer;
 }
 #fixbanner{
@@ -564,7 +609,6 @@ img.close{
     transform: translateY(-50%);
     width: 2vw;
     height: 2vw;
-    cursor: pointer;
 }
 .fsize-banner{
     font-size: 1.2vw;
@@ -607,10 +651,6 @@ div.england{
     box-shadow: 0 0 0.2vw grey
 }
 
-div.poland:hover, div.england:hover{
-    cursor: pointer;
-}
-
 div.poland:hover{
     box-shadow: 0 0 1.8vw 0.25vw #dd0c39;
 }
@@ -621,3 +661,4 @@ div.england:hover{
 div.preload{
     display: none;
 }
+

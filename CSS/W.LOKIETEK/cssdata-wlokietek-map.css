@@ -103,7 +103,9 @@
 
 /*Font properties*/
     /*Fonts*/
-
+        .f-tnr{
+            font-family: 'Times New Roman', Times, serif;
+        }
     /*!Fonts*/
     /*Sizes*/
         .fsize-2p5{
@@ -114,9 +116,6 @@
         }
     /*!Sizes*/
     /*Colors*/
-        .fc-white{
-            color: white;
-        }
         .fc-black{
             color: black;
         }
@@ -233,7 +232,7 @@
             left: 0;
         }
         .mapimage{
-            background-image: url('../../RESOURCES/WLOKIETEK/SUBSITES/map.jpg');
+            background-image: url('../../RESOURCES/WLOKIETEK/map/map.jpg');
         }
         /*!map*/
         /*legend*/
@@ -406,10 +405,10 @@
         /*!legend*/
             /*punctors*/
             .borderpunctor{
-                list-style-image: url("../../RESOURCES/WLOKIETEK/SUBSITES/border.jpg");
+                list-style-image: url("../../RESOURCES/WLOKIETEK/map/border.jpg");
             }
             .areapunctor{
-                list-style-image: url("../../RESOURCES/WLOKIETEK/SUBSITES/area.jpg");
+                list-style-image: url("../../RESOURCES/WLOKIETEK/map/area.jpg");
             }
             /*!punctors*/
         /*!legend*/
@@ -421,7 +420,6 @@
             font-size: 3vw;
         }
         .main{
-            background-image: url('../../RESOURCES/WLOKIETEK/SUBSITES/placeholderback.jpg');
             padding: 4vw;
         }
         .navbar{
@@ -446,14 +444,12 @@
         #context::-webkit-scrollbar{
             display: none;
         }
-        .footer{
-            height: 3vw;
-            background-color: #afaeae;
-        }
         .paragraphfooter{
             margin: auto;
         }
         .essentials{
+            background-image: url('../../RESOURCES/WLOKIETEK/PRIMARY/blob-scatter-haikei.svg');
+            background-size: 2800px auto;
             margin: 0;
             font-family: Raleway;
         }
@@ -461,3 +457,150 @@
             transition: all 0.15s ease-in;
         }
 /*[END] Individual properties*/
+
+/*Imported*/
+.menu {
+    color: #633a14;
+    text-decoration: none;
+    position: absolute;
+    left: 25px;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+  }
+  
+  .menu img {
+    margin-right: 10px;
+    width: 37px;
+    height: 37px;
+    border-radius: 18px;
+  }
+  .quiz {
+    font-family: "Roboto", sans-serif;
+    color: #633a14;
+    position: absolute;
+    right: 30px;
+    text-decoration: none;
+    padding: 10px;
+    box-sizing: border-box;
+  
+    background-color: #ffffff;
+    border: 4px solid #dac5b2;
+    border-radius: 20px;
+    box-shadow: 20px #dac5b2;
+  }
+  
+  .quiz:hover {
+    border: 4px solid #dac5b2;
+    color: #dac5b2;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    height: 65px;
+    border-bottom: 1px solid #bab9b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Dodaj z-index, aby nawigacja była zawsze na wierzchu */
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Dodanie dośrodkowania elementów na osi X */
+  }
+  
+  ul li {
+    list-style: none;
+    margin: 0 15px; /* Dodanie marginesów między elementami */
+  }
+  
+  ul li a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(159, 140, 105);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: #dac5b2;
+    transform: scaleX(0);
+    z-index: -1;
+    transform-origin: left;
+    transition: transform.5s;
+  }
+  
+  ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #dac5b2;
+    transform: scaleX(0);
+    z-index: -1;
+    transform-origin: right;
+    transition: transform.5s;
+  }
+  
+  ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  ul li a:hover {
+    color: rgb(96, 75, 47);
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0vw 0vw 0.5vw rgb(96, 75, 47);
+    background-color: #ffffff;
+    width: 100%;
+    height: 80px;
+    padding: 0.5vw 0;
+    clear: both;
+  }
+  footer div p {
+    font-family: Abel;
+    font-size: 1vw;
+    color: black;
+    margin: 0;
+    display: inline-block;
+  }
+  footer div p:not(:last-of-type) {
+    border-right: 2px dashed rgb(90, 88, 88);
+  }
+/*[END] Imported*/
+
+/*!!! Temporary*/
+.temp-fsize-20px{
+    font-size: 20px;
+}
