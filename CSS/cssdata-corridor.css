@@ -39,6 +39,9 @@ section.shpjhclmarker:hover{
 section.shwhpclmarker:hover{
     box-shadow: 0vw 0vh 2vw blue;
 }
+section.legacyhistoryclmarker:hover{
+    box-shadow: 0vw 0vh 2vw #633d0c;
+}
 section.defaultsection{
     position: relative;
 	margin: 5% auto;
@@ -126,24 +129,27 @@ footer > p{
         height: 12vw;
         min-height: 10vh;
     }
-    section.defaultsection.allergyclmarker{
+    .allergyclmarker{
         background: url('../RESOURCES/CORRIDOR/mobile/wheat-mobile-bg.jpg') center 62% no-repeat;
         background-size: cover;
-
+        border: none;
     }
-    section.defaultsection.wladislausclmarker{
+    .wladislausclmarker{
         background: url('../RESOURCES/CORRIDOR/mobile/wladyslaw.jpeg') 22% no-repeat;
         background-size: cover;
         background-position: 50% 20%;
     }
-    section.defaultsection.shpjhclmarker{
+    .shpjhclmarker{
         background: url('../RESOURCES/CORRIDOR/mobile/stars.png') center no-repeat;
         background-size: cover;
     }
-    section.defaultsection.shwhpclmarker{
+    .shwhpclmarker{
         background: url('../RESOURCES/bgs/potential-bg4.jpg') center no-repeat;
         background-size: cover;
-        border: none;
+    }
+    section.legacyhistoryclmarker{
+        background: url('../RESOURCES/CORRIDOR/mobile/kazimierzwielki-bg.jpg') center no-repeat;
+        background-size: cover;
     }
     section.defaultsection
     {
@@ -173,7 +179,7 @@ footer > p{
         margin: 9.8vh 0 0 20%;
         display: inline-block;
     }
-    section.shpjhclmarker:hover, a section.wladislausclmarker:hover, a section.allergyclmarker:hover, section.shwhpclmarker:hover
+    section.shpjhclmarker:hover, section.wladislausclmarker:hover, section.allergyclmarker:hover, section.shwhpclmarker:hover, section.legacyhistoryclmarker:hover
     {
         box-shadow: none;
     }
@@ -181,7 +187,10 @@ footer > p{
     {
         color: #302c27;
     }
-    section.shpjhclmarker, section.wladislausclmarker, section.shwhpclmarker
+    section.legacyhistoryclmarker, section.wladislausclmarker{
+        color: rgb(255, 255, 255);
+    }
+    section.shpjhclmarker, section.shwhpclmarker
     {
         color: white;
     }
