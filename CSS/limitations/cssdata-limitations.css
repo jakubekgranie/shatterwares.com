@@ -1,6 +1,5 @@
 /*Essential settings*/
 body{
-    margin: 0;
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -92,11 +91,11 @@ body{
 .breaker{
     width: 17.5vw;
     height: 0.2vw;
-    background-image: url('../../RESOURCES/SHWHP_RES/gradients/sh-gradient-start.jpg');
+    background-image: linear-gradient(to right bottom, #7854f2, #0094ff, #00bfff, #00e2fc, #04fdd5);
     background-size: 100% 100%;
     border: none;
     border-radius: 2vw;
-    margin: 1vw 0 !important;
+    margin: 1vw 0;
 }
 .f-mnsp{
     font-family: monospace;
@@ -134,3 +133,4 @@ body{
 .cartmaninflation{
     animation: cartmanCore 0.7s linear;
 }
+

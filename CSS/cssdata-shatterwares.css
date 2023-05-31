@@ -1,7 +1,3 @@
-@font-face{
-    font-family: "inter";
-    src: url('../RESOURCES/CUSTOM-FONTS/inter.ttf')
-}
 @font-face {
     font-family: "computer";
     src: url('../RESOURCES/CUSTOM-FONTS/computerfont.ttf');
@@ -49,6 +45,9 @@
         filter: hue-rotate(360deg)
     }
 }
+:visited{
+    color: #4C00FF;
+}
 .rainbow:hover{
     animation: hue 1.25s linear infinite;
 }
@@ -67,12 +66,8 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    margin: 0;
-}
-p{
-    display: block;
-}
+
+
 .nohorizontalmargin{
     margin-top: 0;
     margin-bottom: 0;
@@ -80,16 +75,14 @@ p{
 .dec-none{
     text-decoration: none;
 }
-.imagery1:hover, .transition-standard, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, #banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, div.colora, div.colora:hover{
-    transition-duration: 0.15s;
-    transition-timing-function: ease-out;
+.imagery1:hover, .transition-standard, *[class*="marker"], *[class*="footerimage_"], *[class*="footerimage_"]:hover, .banner p a:hover, div.england, div.poland, div.england:hover, div.poland:hover, div.colora, div.colora:hover{
+    transition: all 0.20s ease-out;
 }
 .footerimage_discord, .footerimage_discord_inv{
     transition-property: box-shadow;
 }
 h1.colored:hover, h1.colored, *[class*="gradient"], *[class="gradient"]:hover, nav div.buttons a div.button:hover, nav div.buttons a div.button{
-    transition-duration: 0.20s;
-    transition-timing-function: ease-out;
+    transition: all 0.15s ease-out;
 }
 div.england, div.poland{
     transition-timing-function: linear;
@@ -109,13 +102,11 @@ a.hover:hover{
 
 nav{
     position: sticky;
-    z-index: 2;
+    z-index: 3;
     background-color: white;
     top: 0px;
 }
-div.navcontentcontainer{
-    display: flex;
-    position: relative;
+.h-5{
     height: 5vw;
 }
 img.logobanner{
@@ -123,9 +114,7 @@ img.logobanner{
     margin-left: 8vw;
 }
 div.buttons{
-    justify-content: right;
     width: 83.5208333333vw;
-    height: 5vw;
 }
 .firstbutton{
     border-left: 1px grey dashed;
@@ -136,42 +125,37 @@ div.buttons{
 
 div.button{
     width: calc(10vw - 1px);
-    height: 5vw;
     border-right: 1px grey dashed;
 }
 img.redirect{
     width: 1vw;
     height: 1vw;
 }
-nav div.buttons a:link{
-    display: contents;
-}
 .fsize-button{
     font-size: 1.4vw;
 }
-
-header{
-    display: flex;
+.w-100per-cent{
     width: 100%;
-    height: 64.9vh;
+}
+.bdr-def{
     border-bottom: 0.1vw grey dashed;
+}
+header{
+    height: 64.9vh;
     min-height: 14vw; /*prevent the image from overflowing*/
     background: url('../RESOURCES/SHWHP_RES/uranus.jpg');
 }
-section.textcontainer{
+.textcontainer{
     margin: auto;
-    display: flex;
+}
+.h-14{
+    height: 14vw;
 }
 img.headerlogo{
     width: 14vw;
-    height: 14vw;
-    display: block;
 }
-div.insertedtext{
-    display: flex;
-    align-items: center;
+.ml-2{
     margin-left: 2vw;
-    height: 14vw;
 }
 .bold{
     font-weight: bold;
@@ -195,11 +179,9 @@ div.insertedtext{
     font-family: "Cinzel Decorative";
 }
 .mainelement{
-    border-bottom: 0.1vw grey dashed;
-    font-family: Raleway;
     padding: 4vw 0;
 }
-h1.mainheading{
+.mainheading{
     font-size: 3.5vw;
 }
 .nomargin{
@@ -208,7 +190,7 @@ h1.mainheading{
 .yellowtail{
     font-family: Yellowtail, cursive;
 }
-h1.multiple{
+.multiple{
     display: inline-block;
 }
 .tcenter{
@@ -229,7 +211,6 @@ img.mainimage{
     border-radius: 50vw;
 }
 p.maintext{
-    text-align: center;
     vertical-align: middle;
     margin-left: 4.5vw;
     font-size: 2.5vw;
@@ -245,31 +226,31 @@ p.maintext{
 
 .flex{
     display: flex;
+}
+.fx-wrap{
     flex-wrap: wrap;
 }
-.full{
+.fx-ai-c{
     align-items: center;
+}
+.full{
     justify-content: center;
 }
-div.flex .margin{
-    margin-left: 2vw;
+.margin{
     margin-bottom: calc(2vw - 1px);
 }
 
 .computerfont{
     font-family: computer; 
 }
-
-div.flex .margin:nth-of-type(5n + 1){
-    margin-left: 0;
+.brad-5{
+    border-radius: 5vw;
 }
 .imagery1{
     width: 10vw;
     height: 10vw;
-    border-radius: 5vw;
 }
 hr{
-    width: 100%;
     height: 1px;
     visibility: hidden;
 }
@@ -336,8 +317,6 @@ hr{
 }
 .netbanner{
     background-image: url('../RESOURCES/bgs/unsplash-bg4.jpg');
-    background-size: cover;
-    background-position-y: 20%;
 }
 
 img.pixelation{
@@ -351,11 +330,9 @@ div.borderbox{
     width: 12vw;
     height: 24.5vw;
     margin-right: 2vw;
-    border-radius: 2vw;
 }
-
-.z0{
-    z-index: 0;
+.brad-2{
+    border-radius: 2vw;
 }
 
 div.gradientgimp{
@@ -418,15 +395,17 @@ div.gradientpython{
 div.gradientpython:hover{
     background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-python-end.png');
 }
-
-div.softbox{
+.pos-abs{
     position: absolute;
+}
+.pos-prop-top-50per-cent{
     top: 50%;
+}
+div.softbox{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 11.75vw;
     height: 24.25vw;
-    border-radius: 2vw;
     background-color: rgb(39, 39, 39);
 }
 .paddingnet{
@@ -434,12 +413,10 @@ div.softbox{
     box-sizing: border-box;
 }
 div.softbox img{
-    display: block;
     width: 5.5vw;
     height: 5.5vw;
 }
 div.borderbox div.softbox hr{
-    width: 100%;
     height: 0;
     border: 0.1vw solid;
     margin: 1.5625vw auto;
@@ -447,10 +424,7 @@ div.borderbox div.softbox hr{
 }
 
 p.carddefault{
-    text-align: center;
     font-size: 1vw;
-    color: white;
-    font-family: Inconsolata;
     white-space: pre-line;
 }
 
@@ -487,7 +461,6 @@ hr.pythoncard{
 
 .gameboybanner{
     background-image: url('../RESOURCES/bgs/unsplash-bg5.jpg');
-    background-size: cover;
 }
 .cardrounded{
     border-radius: 0.5vw;
@@ -504,10 +477,10 @@ footer{
 div.footerblock{
     width: 50%;
 }
-div.first{
+.fx-jc-l{
     justify-content: left;
 }
-div.second{
+.fx-jc-r{
     justify-content: right;
 }
 .borderrad{
@@ -515,49 +488,38 @@ div.second{
 }
 .footericon{
     width: 1.75vw;
+}
+.mr-1p75{
     margin-right: 1.75vw;
+}
+.h-1p75{
     height: 1.75vw;
 }
-
 /*main*/
 div.discordicontransformed{
-    display: flex;
-    justify-content: left; 
-    align-items: center;
-    height: 1.75vw;
     background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-discord.png');
-    background-size: 100% 100%;
     padding: 0.25vw;
-    margin-right: 1.75vw;
-    border-radius: 5vw;
 }
-div.discordicontransformed img{
+.transimage{
     width: 1.5vw;
     height: 1.5vw;
-    margin: 0;
 }
 .invert{
     filter: invert(1);
 }
-div.discordicon p{
-    display: none;
-}
 .mvert{
     margin: 0 0.4vw;
 }
-div.footerblock:last-child{
+.mr-3{
     margin-right: 3vw;
 }
 .footertext-margin{
-    margin: 0;
-    margin-left: 6vw;
+    margin: 0 0 0 6vw;
 }
 .fsize-footer{
     font-size:  0.75vw;
 }
-div.footerblock p a{
-    display: contents;
-}
+
 img.footerimage_github:hover{
     box-shadow: 0vw 0vw 0.6vw inset #6A329F;
 }
@@ -582,9 +544,16 @@ img.footerimage_mail:hover{
 .c-pointer{
     cursor: pointer;
 }
-#fixbanner{
-    width: 100%;
-    height: 4vw;
+.bannercontainer{
+    min-height: 4vw;
+}
+.banner-subsequent-2nd{
+    top: 9vw;
+}
+.z-2{
+    z-index: 2;
+}
+.z-1{
     z-index: 1;
 }
 .abel{
@@ -596,15 +565,13 @@ img.footerimage_mail:hover{
 .fsize-1p5{
     font-size: 1.5vw;
 }
-#banner{
-    color: #4C00FF;
-    width: 100%;
-    height: 100%;
+.bg-newarrivals{
     background-image: linear-gradient(to left, #b1ff00, #90ff4e, #6eff76, #4dff97, #2affb4, #00f6d8, #00ebf1, #00ddfc, #00bfff, #009bff, #006dff, #4c00ff);
 }
+.bg-altsunset{
+    background-image: linear-gradient(to right bottom, #ff0707, #ff0039, #ff005b, #fb007b, #eb1297);
+}
 img.close{
-    position: absolute;
-    top: 50%;
     right: 1.5vw;
     transform: translateY(-50%);
     width: 2vw;
@@ -613,14 +580,23 @@ img.close{
 .fsize-banner{
     font-size: 1.2vw;
 }
-#banner p a:visited{
-    color: #4C00FF;
-}
-#banner p a:hover{
+.ac-pink:hover{
     color: #FF00B3;
 }
-#banner p a:active{
+.ac-pink:active{
     color: #ff0080;
+}
+.c-turquoise{
+    color: #00FFA4;
+}
+.ac-turquoise{
+    color: #00CB75;
+}
+.ac-turquoise:hover{
+    color: #00ffd3;
+}
+.ac-turquoise:active{
+    color: #9cffed;
 }
 
 html[lang="pl"] .english{
@@ -638,17 +614,14 @@ html[lang="en"] .polish{
 #langswap{  
     width: 4.75vw;
     height: 4.75vw;
-    position: fixed;
     bottom: 3.75vw;
     right: 2vw;
 }
-div.poland{
+.poland{
     background-image: url('../RESOURCES/PRIMARY/poland.png');
-    box-shadow: 0 0 0.2vw grey
 }
-div.england{
+.england{
     background-image: url('../RESOURCES/PRIMARY/england.png');
-    box-shadow: 0 0 0.2vw grey
 }
 
 div.poland:hover{
@@ -658,7 +631,6 @@ div.england:hover{
     box-shadow: 0 0 1.8vw 0.25vw #001f7e;
 }
 
-div.preload{
+.preload{
     display: none;
 }
-

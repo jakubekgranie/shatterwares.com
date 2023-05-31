@@ -27,10 +27,11 @@
         <title>ShatterWares: The future starts now.</title>
         <script src="JS/langswap.js"></script>
         <script src="JS/discordanim.js"></script>
+        <script src="JS/bannerclose.js"></script>
     </head>
-    <body>
+    <body class="nomargin">
         <!--Define the buttons-->
-        <div id="langswap" class="bgfull england borderrad c-pointer" onclick="changeLanguage()">
+        <div id="langswap" class="bgfull england defaultshadow borderrad c-pointer fixed" onclick="changeLanguage()">
             
         </div>
 
@@ -46,55 +47,69 @@
             <img src="RESOURCES/SHWHP_RES/gradients/gradient-vsc-end.png"><img src="RESOURCES/SHWHP_RES/gradients/gradient-vsc-start.png">
             <img src="RESOURCES/SHWHP_RES/gradients/gradient-vs-end.png"><img src="RESOURCES/SHWHP_RES/gradients/gradient-vs-start.png">
             <img src="RESOURCES/SHWHP_RES/gradients/gradient-xampp-end.png"><img src="RESOURCES/SHWHP_RES/gradients/gradient-xampp-start.png">
-            <img src="RESOURCES/PRIMARY/england.png">
+            <img src="RESOURCES/PRIMARY/england.png"><img src="RESOURCES/PRIMARY/poland.png">
             <img src="RESOURCES/SHWHP_RES/gradients/gradient-discord.png">
+            <img src="RESOURCES/PRIMARY/x.png">
+            <img src="RESOURCES/PRIMARY/x2.png">
+            <img src="RESOURCES/PRIMARY/logo3.png">
         </div>
         <nav>
-            <div class="navcontentcontainer fsize-button abel defaultshadow">
+            <div class="navcontentcontainer fsize-button abel defaultshadow flex pos-rel h-5">
                 <img class="logobanner" src="RESOURCES/PRIMARY/logo3.png" alt="logo">
-                <div class="buttons flex">
-                    <a href="#overview" class="ac-def">
-                        <div class="button flex full firstbutton">
-                            <p class="english nomargin mauto">Overview</p>
-                            <p class="polish nomargin mauto">O mnie</p>
+                <div class="buttons h-5 flex fx-jc-r">
+                    <a href="#overview" class="ac-def clear">
+                        <div class="button h-5 flex full firstbutton">
+                            <p class="english textcontainer">Overview</p>
+                            <p class="polish textcontainer">O mnie</p>
                         </div>
                     </a>
-                    <a href="#faves" class="ac-def">
+                    <a href="#faves" class="ac-def clear">
                         <div class="button flex full">
-                            <p class="english nomargin mauto">Faves</p>
-                            <p class="polish nomargin mauto">Ulubione</p>
+                            <p class="english textcontainer">Faves</p>
+                            <p class="polish textcontainer">Ulubione</p>
                         </div>
                     </a>
-                    <a href="#software" class="ac-def">
+                    <a href="#software" class="ac-def clear">
                         <div class="button flex full">
-                            <p>Software</p>
+                            <p class="textcontainer">Software</p>
                         </div>
                     </a>
-                    <a href="#langs" class="ac-def">
+                    <a href="#langs" class="ac-def clear">
                         <div class="button flex full">
-                            <p>langs</p>
+                            <p class="textcontainer">langs</p>
                         </div>
                     </a>
-                    <a href="shwph/" class="ac-def" target="_blank">
+                    <a href="shwph/" class="ac-def clear" target="_blank">
                         <div class="button flex full clearborder shwphbutton">
-                            <p>ProjHub&nbsp;</p>
-                            <img class="redirect" src="RESOURCES/PRIMARY/redirect.png" alt="redirection">
+                            <div class="textcontainer">
+                            <p class="nomargin multiple">ProjHub&nbsp;</p>
+                            <img class="redirect multiple" src="RESOURCES/PRIMARY/redirect.png" alt="redirection">
+                            </div>
                         </div>
                     </a>
                 </div>
             </div>
         </nav>
-        <div id="fixbanner" class="fixed">
-            <section id="banner" class="flex full defaultshadow">
-                <p class="english fsize-banner bold ralewayfont">Hey there! Are you here to visit the project hub? Click <a class="transition-standard" href="shwph/">here</a> to redirect!</p>
-                <p class="polish fsize-banner bold ralewayfont">Witaj! Czy jesteś tu, by udać się na ShatterWares Project Hub? Kliknij <a class="transition-standard" href="shwph/">tu</a>!</p>
-                <img class="close c-pointer" src="RESOURCES/PRIMARY/x.png" onclick="document.getElementById('fixbanner').style.display='none'" alt="X">
+
+        <div id="bner1" class="bannercontainer fixed z-2 ac-def w-100per-cent ralewayfont">
+            <section class="bannercontainer banner bg-newarrivals flex full defaultshadow">
+                <p class="english fsize-banner bold">Hey there! Are you here to visit the project hub? Click <a class="ac-pink transition-standard" href="shwph/">here</a> to redirect!</p>
+                <p class="polish fsize-banner bold">Witaj! Czy jesteś tu, by udać się na ShatterWares Project Hub? Kliknij <a class="ac-pink transition-standard" href="shwph/">tu</a>!</p>
+                <img class="close pos-abs pos-prop-top-50per-cent c-pointer" src="RESOURCES/PRIMARY/x.png" onclick="bannerClose('bner1')" alt="X">
             </section>
         </div>
-        <header class="positionedandcover">    
-            <section class="textcontainer">
-                <img src="RESOURCES/PRIMARY/promisenobg.png" class="headerlogo pixelation rainbow" alt="logo">
-                <div class="insertedtext">
+        <div id="bner2" class="bannercontainer banner-subsequent-2nd fixed z-1 c-turquoise w-100per-cent ralewayfont">
+            <section class="bannercontainer banner bg-altsunset flex full defaultshadow">
+                <p class="english fsize-banner bold"><u>NEW</u> arrivals have been planned and scheduled!: <u><em><span title="Don't confuse with 'Faves: featured'!">top</span></em> music section</u>, <u>fav books</u> (?), <u>games</u> and more!</p>
+                <p class="polish fsize-banner bold"><u>NOWE</u> plany zostały zatwierdzone! Na stronie wkrótce znajdziesz sekcje z: <u><em><span title="Nie mylić z 'Ulubione: polecane'!">ulubioną</span></em> muzyką</u>, <u>książkami</u> (?), <u>grami</u> i więcej!</p>
+                <img class="close pos-abs pos-prop-top-50per-cent c-pointer" style="filter: hue-rotate(336.18deg)" src="RESOURCES/PRIMARY/x2.png" onclick="bannerClose('bner2')" alt="X">
+            </section>
+        </div>
+
+        <header class="positionedandcover flex bdr-def">    
+            <section class="textcontainer flex">
+                <img src="RESOURCES/PRIMARY/promisenobg.png" class="headerlogo pixelation rainbow h-14" alt="logo">
+                <div class="flex fx-ai-c h-14">
                     <h1 class="white ralewayfont multiple mainheading bold nomargin">ShatterWares:&nbsp;</h1>
                     <h1 class="white multiple fs3vw mnsp fwnormal nomargin">where&nbsp;</h1>
                     <h1 class="white multiple fs3vw yellowtail fwnormal nomargin">dreams&nbsp;</h1>
@@ -104,163 +119,163 @@
             </section>
         </header>
         <a id="overview"></a>
-        <main class="mainelement">
+        <main class="mainelement bdr-def ralewayfont">
             <div class="tcenter nomargin yellowtail standardmargin">
                 <h1 class="colored multiple mainheading nomargin">✧</h1>
                 <h1 class="english multiple lighter mainheading nomargin">Overview</h1>
                 <h1 class="polish multiple lighter mainheading nomargin">O mnie</h1>
             </div>
-            <div class="contents flex full nowrap">
-                <img class="mainimage" src="https://cdn.discordapp.com/avatars/703646178536849448/13d50af9ff09f02865c6887e69f565e7.webp" alt="A photo">
+            <div class="contents flex full fx-ai-c nowrap tcenter">
+                <img class="mainimage" src="RESOURCES/PRIMARY/pfp.png" alt="le cat">
                 <p class="polish maintext nohorizontalmargin"><a class="hover transition-standard dec-none ac-def avis-green" href="https://github.com/jakubekgranie" target="_blank">Jakubekgranie (znany szerzej jako Jakub)</a> to uczeń kierunku technik-programista w <a class="hover transition-standard dec-none ac-def avis-green" target="_blank" href="http://ekonomik.opole.pl/eko3/">ZSEk Opole</a>. Pracujący w celu osiągnięcia szerokiej wiedzy, profesjonalizmu oraz perfekcji, kuje swój los w dzień i noc, by spełnić swe ambicje. Niezapominający i adaptacyjny to idealne słowa opisujące jego charakter.</p>
                 <p class="english maintext nohorizontalmargin"><a class="hover transition-standard dec-none ac-def avis-green" href="https://github.com/jakubekgranie" target="_blank">Jakubekgranie (also known as Jakub)</a> is a programming student at <a class="hover transition-standard dec-none ac-def avis-green" target="_blank" href="http://ekonomik.opole.pl/eko3/">ZSEk Opole</a>. Striving for vast knowledge and high-end abilities, he works relentlessly at both night and day to fulfill his ambitions of becoming a pro. Never forgetting and adaptive are the perfect words to describe his character.</p>
             </div>
             <a id="faves"></a>
         </main>
-        <section class="mainelement oldbanner white positionedandcover">
+        <section class="mainelement oldbanner white positionedandcover bdr-def ralewayfont">
             <div class="h1container h1music">
-                <h1 class="english mainheading standardmargin computerfont lighter tcenter nomargin">Faves</h1>
-                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto fsize-1p5">Magnum opus, the top of the top, a work of art. Whatever you call it - that's of your jurisdistion. Enjoy the tracks I value the most.</p>
+                <h1 class="english mainheading standardmargin computerfont lighter tcenter nomargin">Faves: featured</h1>
+                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto fsize-1p5">Magnum opus, the top of the top, a work of art. Whatever you call it - that's of your jurisdistion. Enjoy the tracks I (almost) value the most.</p>
 
-                <h1 class="polish mainheading standardmargin tcenter nomargin">Ulubione</h1>
-                <p class=" polish mainparagraph mb4 tcenter nomargin mauto fsize-1p5">Magnum opus, najlepsze z najlepszych, arcydzieła. Jakkolwiek je nazwiesz - podlega to twojej jurysdykcji. Ciesz się moimi faworytami.</p>
+                <h1 class="polish mainheading standardmargin tcenter nomargin">Ulubione: polecane</h1>
+                <p class=" polish mainparagraph mb4 tcenter nomargin mauto fsize-1p5">Magnum opus, najlepsze z najlepszych, arcydzieła. Jakkolwiek je nazwiesz - podlega to twojej jurysdykcji. Ciesz się moimi (prawie) faworytami.</p>
             </div>
-            <div class="flex full">
+            <div class="flex fx-wrap full">
                 <div class="margin">
                     <a class="clear" href="https://www.youtube.com/watch?v=aM90bCM6T3E" target="_blank" title="Call It Love">
-                        <img class="imagery1 cllmarker" src="RESOURCES/SHWHP_RES/mus/callitlove.jpg" alt="callitlove">
+                        <img class="imagery1 brad-5 cllmarker" src="RESOURCES/SHWHP_RES/mus/callitlove.jpg" alt="callitlove">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://youtu.be/aTBSQKh8teE" target="_blank" title="Prom Night">
-                        <img class="imagery1 prommarker" src="RESOURCES/SHWHP_RES/mus/promnight.jpg" alt="promnight">
+                        <img class="imagery1 brad-5 prommarker" src="RESOURCES/SHWHP_RES/mus/promnight.jpg" alt="promnight">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=DdWZKb659K0" target="_blank" title="Big In Japan">
-                        <img class="imagery1 bijapanmarker" src="RESOURCES/SHWHP_RES/mus/biginjapan.jpg" alt="biginjapan">
+                        <img class="imagery1 brad-5 bijapanmarker" src="RESOURCES/SHWHP_RES/mus/biginjapan.jpg" alt="biginjapan">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=FTQbiNvZqaY" target="_blank" title="Africa">
-                        <img class="imagery1 africamarker" src="RESOURCES/SHWHP_RES/mus/africa.jpg" alt="africa">
+                        <img class="imagery1 brad-5 africamarker" src="RESOURCES/SHWHP_RES/mus/africa.jpg" alt="africa">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=BcqxLCWn-CE" target="_blank" title="I Like Me Better">
-                        <img class="imagery1 ilmbmarker" src="RESOURCES/SHWHP_RES/mus/ilikemebetter.jpg" alt="ilikemebetter">
+                        <img class="imagery1 brad-5 ilmbmarker" src="RESOURCES/SHWHP_RES/mus/ilikemebetter.jpg" alt="ilikemebetter">
                     </a>
                 </div>
 
-                <hr>
+                <hr class="w-100per-cent">
 
                 <div class="margin">
                     <a class="clear" href="https://www.youtube.com/watch?v=giXQg1QgzaQ" target="_blank" title="That Was A Crazy Game Of Poker">
-                        <img class="imagery1 oarmarker" src="RESOURCES/SHWHP_RES/mus/oar.jpg" alt="oar">
+                        <img class="imagery1 brad-5 oarmarker" src="RESOURCES/SHWHP_RES/mus/oar.jpg" alt="oar">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=3OnnDqH6Wj8" target="_blank" title="Good Feeling">
-                        <img class="imagery1 flomarker" src="RESOURCES/SHWHP_RES/mus/florida.jpg" alt="florida">
+                        <img class="imagery1 brad-5 flomarker" src="RESOURCES/SHWHP_RES/mus/florida.jpg" alt="florida">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=KKSmHOUaqaQ" target="_blank" title="Wild Child">
-                        <img class="imagery1 prommarker" src="RESOURCES/SHWHP_RES/mus/blackkeys.jpg" alt="black keys">
+                        <img class="imagery1 brad-5 prommarker" src="RESOURCES/SHWHP_RES/mus/blackkeys.jpg" alt="black keys">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=InDbGIE_DWw" target="_blank" title="Somebody That I Used To Know - Farizki Remix">
-                        <img class="imagery1 farmarker" src="RESOURCES/SHWHP_RES/mus/farizki.jpg" alt="farizki">
+                        <img class="imagery1 brad-5 farmarker" src="RESOURCES/SHWHP_RES/mus/farizki.jpg" alt="farizki">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=aGCdLKXNF3w" target="_blank" title="Everybody Wants To Rule The World">
-                        <img class="imagery1 prommarker" src="RESOURCES/SHWHP_RES/mus/everybody.png" alt="tears for tears">
+                        <img class="imagery1 brad-5 prommarker" src="RESOURCES/SHWHP_RES/mus/everybody.png" alt="tears for tears">
                     </a>
                 </div>
 
-                <hr>
+                <hr class="w-100per-cent">
 
                 <div class="margin">
                     <a class="clear" href="https://www.youtube.com/watch?v=RJnMWK9mrgQ" target="_blank" title="Freaks">
-                        <img class="imagery1 freaksmarker" src="RESOURCES/SHWHP_RES/mus/freaks.jpg" alt="surf curse">
+                        <img class="imagery1 brad-5 freaksmarker" src="RESOURCES/SHWHP_RES/mus/freaks.jpg" alt="surf curse">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=BmMm9i8VVJ8" target="_blank" title="Blow With The Hoe">
-                        <img class="imagery1 falxcemarker" src="RESOURCES/SHWHP_RES/mus/falxce.jpg" alt="falxce">
+                        <img class="imagery1 brad-5 falxcemarker" src="RESOURCES/SHWHP_RES/mus/falxce.jpg" alt="falxce">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=Q6ulveGcpWk" target="_blank" title="Out Of Time">
-                        <img class="imagery1 reidmarker" src="RESOURCES/SHWHP_RES/mus/harleyreid.jpg" alt="harley reid">
+                        <img class="imagery1 brad-5 reidmarker" src="RESOURCES/SHWHP_RES/mus/harleyreid.jpg" alt="harley reid">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=vBMiJWledU8" target="_blank" title="Cool For The Summer - Sped Up Remix">
-                        <img class="imagery1 reidmarker" src="RESOURCES/SHWHP_RES/mus/demilovato.jpg" alt="demi lovato">
+                        <img class="imagery1 brad-5 reidmarker" src="RESOURCES/SHWHP_RES/mus/demilovato.jpg" alt="demi lovato">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=vk6014HuxcE" target="_blank" title="Empire State Of Mind">
-                        <img class="imagery1 prommarker" src="RESOURCES/SHWHP_RES/mus/jayz.jpg" alt="jay-z">
+                        <img class="imagery1 brad-5 prommarker" src="RESOURCES/SHWHP_RES/mus/jayz.jpg" alt="jay-z">
                     </a>
                 </div>
 
-                <hr>
+                <hr class="w-100per-cent">
 
                 <div class="margin">
                     <a class="clear" href="https://www.youtube.com/watch?v=hHUbLv4ThOo" target="_blank" title="Timber">
-                        <img class="imagery1 ilmbmarker" src="RESOURCES/SHWHP_RES/mus/pitbull.jpg" alt="pitbull, ke$ha">
+                        <img class="imagery1 brad-5 ilmbmarker" src="RESOURCES/SHWHP_RES/mus/pitbull.jpg" alt="pitbull, ke$ha">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://open.spotify.com/track/19aYl7ppG6MrCLfNJuTVjc?si=fcd03ddc77814156" target="_blank" title="r u fr">
-                        <img class="imagery1 luekmarker" src="RESOURCES/SHWHP_RES/mus/luek.jpg" alt="luek">
+                        <img class="imagery1 brad-5 luekmarker" src="RESOURCES/SHWHP_RES/mus/luek.jpg" alt="luek">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=n4RjJKxsamQ" target="_blank" title="Wind Of Change">
-                        <img class="imagery1 prommarker" src="RESOURCES/SHWHP_RES/mus/windofchange.jpeg" alt="scorpions">
+                        <img class="imagery1 brad-5 prommarker" src="RESOURCES/SHWHP_RES/mus/windofchange.jpeg" alt="scorpions">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=Qt2mbGP6vFI" target="_blank" title="Another Day In Paradise">
-                        <img class="imagery1 luekmarker" src="RESOURCES/SHWHP_RES/mus/philcollins.jpg" alt="phil collins">
+                        <img class="imagery1 brad-5 luekmarker" src="RESOURCES/SHWHP_RES/mus/philcollins.jpg" alt="phil collins">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="margin ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=I_izvAbhExY" target="_blank" title="Staying Alive">
-                        <img class="imagery1 luekmarker" src="RESOURCES/SHWHP_RES/mus/beegees.jpg" alt="bee gees">
+                        <img class="imagery1 brad-5 luekmarker" src="RESOURCES/SHWHP_RES/mus/beegees.jpg" alt="bee gees">
                     </a>
                 </div>
 
-                <hr>
+                <hr class="w-100per-cent">
 
-                <div class="margin">
+                <div>
                     <a class="clear" href="https://www.youtube.com/watch?v=eH3giaIzONA" target="_blank" title="I Wanna Dance With Somebody">
-                        <img class="imagery1 whitneymarker" src="RESOURCES/SHWHP_RES/mus/whitney.jpg" alt="whitney houston">
+                        <img class="imagery1 brad-5 whitneymarker" src="RESOURCES/SHWHP_RES/mus/whitney.jpg" alt="whitney houston">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=1w9DiGlZksU" target="_blank" title="Let's Get Ridiculous">
-                        <img class="imagery1 redfoomarker" src="RESOURCES/SHWHP_RES/mus/ridiculous.jpg" alt="redfoo">
+                        <img class="imagery1 brad-5 redfoomarker" src="RESOURCES/SHWHP_RES/mus/ridiculous.jpg" alt="redfoo">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=mMfxI3r_LyA" target="_blank" title="Lady (Hear Me Tonight)">
-                        <img class="imagery1 modjomarker" src="RESOURCES/SHWHP_RES/mus/modjo.jpg" alt="modjo">
+                        <img class="imagery1 brad-5 modjomarker" src="RESOURCES/SHWHP_RES/mus/modjo.jpg" alt="modjo">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=bnVUHWCynig" target="_blank" title="Halo">
-                        <img class="imagery1 luekmarker" src="RESOURCES/SHWHP_RES/mus/beyonce.png" alt="beyoncé">
+                        <img class="imagery1 brad-5 luekmarker" src="RESOURCES/SHWHP_RES/mus/beyonce.png" alt="beyoncé">
                     </a>
                 </div>
-                <div class="margin">
+                <div class="ml-2">
                     <a class="clear" href="https://www.youtube.com/watch?v=YF1R0hc5Q2I" target="_blank" title="Everywhere">
-                        <img class="imagery1 fleetwoodmarker" src="RESOURCES/SHWHP_RES/mus/everywhere.jpg" alt="fleetwood mac">
+                        <img class="imagery1 brad-5 fleetwoodmarker" src="RESOURCES/SHWHP_RES/mus/everywhere.jpg" alt="fleetwood mac">
                     </a>
                 </div>
             </div>
@@ -269,19 +284,19 @@
 
         </section>
         
-        <section class="mainelement netbanner positionedandcover white">
-            <div class="h1container">
-                <h1 class="english mainheading standardmargin computerfont lighter tcenter nomargin">Software</h1>
-                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto fsize-1p5">Stuff i work on, work with, you get the drill.</p>
+        <section class="mainelement netbanner positionedandcover white bdr-def ralewayfont">
+            <div class="h1container tcenter">
+                <h1 class="english mainheading standardmargin computerfont lighter nomargin">Software</h1>
+                <p class="english mainparagraph computerfont mb4 nomargin mauto fsize-1p5">Stuff i work on, work with, you get the drill.</p>
 
-                <h1 class="polish mainheading standardmargin tcenter nomargin">Software</h1>
-                <p class="polish mainparagraph mb4 tcenter nomargin mauto fsize-1p5">Najlepsze oprogramowanie, na którym pracuję.</p>
+                <h1 class="polish mainheading standardmargin nomargin">Software</h1>
+                <p class="polish mainparagraph mb4 nomargin mauto fsize-1p5">Najlepsze oprogramowanie, na którym pracuję.</p>
             </div>
-            <div class="flex full">
+            <div class="flex full inconsolata tcenter">
 
                 <a href="https://visualstudio.microsoft.com/vs/" target="_blank">
-                <div class="borderbox gradientvs bgfull z0 posrel">
-                    <div class="softbox paddingnet">
+                <div class="borderbox gradientvs bgfull  posrel white brad-2">
+                    <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                         <img src="RESOURCES/PRIMARY/visualstudio.png" alt="visual Studio logo">
                         <hr class="vscard nomargin">
                         <p class="carddefault english">VStudio 2022
@@ -299,8 +314,8 @@
                 </a>
 
                 <a href="https://code.visualstudio.com/" target="_blank">
-                <div class="borderbox gradientvsc bgfull z0 posrel">
-                    <div class="softbox paddingnet">
+                <div class="borderbox gradientvsc bgfull  posrel white brad-2">
+                    <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                         <img src="RESOURCES/PRIMARY/visualstudiocode.png" alt="visual Studio Code logo">
                         <hr class="vsccard nomargin">
                         <p class="carddefault english">VS Code
@@ -317,8 +332,8 @@
                 </a>
 
                 <a href="https://www.apachefriends.org/index.html" target="_blank">
-                <div class="borderbox gradientxampp bgfull z0 posrel">
-                    <div class="softbox paddingnet">
+                <div class="borderbox gradientxampp bgfull  posrel white brad-2">
+                    <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                         <img src="RESOURCES/PRIMARY/XAMPP.png" alt="XAMPP logo">
                         <hr class="xamppcard nomargin">
                         <p class="carddefault english">XAMPP
@@ -335,8 +350,8 @@
                 </a>
 
                 <a href="https://www.gimp.org/" target="_blank">
-                    <div class="borderbox gradientgimp bgfull z0 posrel">
-                        <div class="softbox paddingnet">
+                    <div class="borderbox gradientgimp bgfull  posrel white brad-2">
+                        <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                             <img src="RESOURCES/PRIMARY/gimp.png" alt="GIMP logo">
                             <hr class="gimpcard nomargin">
                             <p class="carddefault english">GIMP
@@ -353,8 +368,8 @@
                 </a>
 
                 <a href="https://desktop.github.com/" target="_blank">
-                <div class="borderbox gradientgit bgfull z0 posrel">
-                    <div class="softbox paddingnet">
+                <div class="borderbox gradientgit bgfull  posrel white brad-2">
+                    <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                         <img src="RESOURCES/PRIMARY/githubdesktop.png" alt="GitHub Desktop logo">
                         <hr class="gitdeskcard nomargin">
                         <p class="carddefault english">Github Desktop
@@ -372,18 +387,18 @@
             </div>
             <a id="langs"></a>
         </section>
-        <section class="mainelement gameboybanner positionedandcover white last">
-            <div class="h1container">
-                <h1 class="english mainheading standardmargin computerfont lighter tcenter nomargin nomargin">Languages</h1>
-                <p class="english mainparagraph computerfont mb4 tcenter nomargin mauto fsize-1p5">My very own keys to better future smithed by my relentlessness in self-discipline.</p>
+        <section class="mainelement gameboybanner positionedandcover white last ralewayfont">
+            <div class="h1container tcenter">
+                <h1 class="english mainheading standardmargin computerfont lighter nomargin nomargin">Languages</h1>
+                <p class="english mainparagraph computerfont mb4 nomargin mauto fsize-1p5">My very own keys to better future smithed by my relentlessness in self-discipline.</p>
 
-                <h1 class="polish mainheading standardmargin tcenter nomargin">Języki</h1>
-                <p class="polish mainparagraph mb4 tcenter nomargin mauto fsize-1p5">Moje własne klucze do przyszłości, wykuwane przez pracowitość i samodyscyplinę.</p>
+                <h1 class="polish mainheading standardmargin nomargin">Języki</h1>
+                <p class="polish mainparagraph mb4 nomargin mauto fsize-1p5">Moje własne klucze do przyszłości, wykuwane przez pracowitość i samodyscyplinę.</p>
             </div>
-            <div class="flex full">
+            <div class="flex full inconsolata tcenter">
                 <a href="https://www.w3.org/html/" target="_blank">
-                    <div class="borderbox gradienthtml bgfull z0 posrel">
-                        <div class="softbox paddingnet">
+                    <div class="borderbox gradienthtml bgfull  posrel white brad-2">
+                        <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                             <img src="RESOURCES/PRIMARY/html5.png" alt="HTML logo">
                             <hr class="htmlcard nomargin">
                             <p class="carddefault english">HTML
@@ -406,8 +421,8 @@
                 </a>
 
                 <a href="https://www.w3.org/Style/CSS/" target="_blank">
-                    <div class="borderbox gradientcss bgfull z0 posrel">
-                        <div class="softbox paddingnet">
+                    <div class="borderbox gradientcss bgfull  posrel white brad-2">
+                        <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                             <img src="RESOURCES/PRIMARY/css3.png" alt="CSS3 logo">
                             <hr class="csscard nomargin">
                             <p class="carddefault english">CSS
@@ -430,8 +445,8 @@
                 </a>
 
                 <a href="https://www.javascript.com/" target="_blank">
-                    <div class="borderbox gradientjs bgfull z0 posrel">
-                        <div class="softbox paddingnet">
+                    <div class="borderbox gradientjs bgfull  posrel white brad-2">
+                        <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                             <img src="RESOURCES/PRIMARY/javascript.png" class="cardrounded" alt="JS logo">
                             <hr class="jscard nomargin">
                             <p class="carddefault english">JavaScript
@@ -454,8 +469,8 @@
                 </a>
 
                 <a href="https://cplusplus.com/" target="_blank">
-                    <div class="borderbox gradientcpp bgfull z0 posrel">
-                        <div class="softbox paddingnet">
+                    <div class="borderbox gradientcpp bgfull  posrel white brad-2">
+                        <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                             <img src="RESOURCES/PRIMARY/cpp.png" class="cardrounded" alt="C++ logo">
                             <hr class="cppcard nomargin">
                             <p class="carddefault english">C++
@@ -479,8 +494,8 @@
                 </a>
 
                 <a href="https://www.python.org/" target="_blank">
-                    <div class="borderbox gradientpython bgfull z0 posrel">
-                        <div class="softbox paddingnet">
+                    <div class="borderbox gradientpython bgfull  posrel white brad-2">
+                        <div class="softbox pos-prop-top-50per-cent pos-abs paddingnet brad-2">
                             <img src="RESOURCES/PRIMARY/python.png" class="cardrounded" alt="Python logo">
                             <hr class="pythoncard nomargin">
                             <p class="carddefault english">Python
@@ -503,7 +518,7 @@
             </div>
         </section>
         <footer class="footer flex nowrap">
-            <div class="footerblock first flex full fsize-footer mnsp">
+            <div class="footerblock flex full fx-jc-l fx-ai-c fsize-footer mnsp">
                 <p class="english footertext-margin">
                     © 2023 Jakub Namyślak. All rights reserved.
                 </p>
@@ -511,25 +526,27 @@
                     © 2023 Jakub Namyślak. Wszelkie prawa zastrzeżone.
                 </p>
             </div>
-            <div class="footerblock second flex full">
-                <a href="mailto:kawkayt7@gmail.com" target="_blank">
-                    <img class="footerimage_mail footericon flex borderrad" src="RESOURCES/PRIMARY/mail.jpg" alt="spotify">
-                </a> 
-                <div class="discordicon c-pointer" id="dcicon" onclick="discordAnim()">
-                    <img id="footerimage_discord" class="footericon flex footerimage_discord borderrad" src="RESOURCES/PRIMARY/discord.png" alt="spotify">
-                    <p class="mvert fsize-footer mnsp white">soup can#7318</p>
-                </div>
-                <a href="https://open.spotify.com/user/31ytzqdvaeubfcjjitrinmaba52q" target="_blank">
-                    <img class="footerimage_spotify footericon flex borderrad" src="RESOURCES/PRIMARY/spotify.png" alt="spotify">
+            <div class="footerblock flex full fx-jc-r fx-ai-c mr-3">
+                <a href="mailto:kawkayt7@gmail.com" class="clear" target="_blank">
+                    <img class="footerimage_mail footericon h-1p75 mr-1p75 flex borderrad" src="RESOURCES/PRIMARY/mail.jpg" alt="spotify">
                 </a>
-                <a href="https://www.youtube.com/channel/UCkGfjx-MIcuONgvoYGDgP9w" target="_blank">
-                    <img class="footerimage_youtube footericon flex borderrad" src="RESOURCES/PRIMARY/youtube.png" alt="youtube">
+                <div class="mr-1p75 borderrad">
+                    <div class="discordicon c-pointer" id="dcicon" onclick="discordAnim()">
+                        <img id="footerimage_discord" class="footericon h-1p75 flex footerimage_discord borderrad" src="RESOURCES/PRIMARY/discord.png" alt="spotify">
+                        <p id="footerimage_discord_p" class="mvert fsize-footer mnsp white preload">soup can#7318</p>
+                    </div>
+                </div> 
+                <a href="https://open.spotify.com/user/31ytzqdvaeubfcjjitrinmaba52q" class="clear" target="_blank">
+                    <img class="footerimage_spotify footericon h-1p75 mr-1p75 flex borderrad" src="RESOURCES/PRIMARY/spotify.png" alt="spotify">
                 </a>
-                <a href="https://steamcommunity.com/id/wechanged" target="_blank">
-                    <img class="footerimage_steam footericon flex borderrad" src="RESOURCES/PRIMARY/steam.png" alt="steam">
+                <a href="https://www.youtube.com/channel/UCkGfjx-MIcuONgvoYGDgP9w" class="clear" target="_blank">
+                    <img class="footerimage_youtube footericon h-1p75 mr-1p75 flex borderrad" src="RESOURCES/PRIMARY/youtube.png" alt="youtube">
                 </a>
-                <a href="https://github.com/jakubekgranie/projecthub.github.io" target="_blank">
-                    <img class="footerimage_github footericon flex borderrad" src="RESOURCES/PRIMARY/github.png" alt="github">
+                <a href="https://steamcommunity.com/id/wechanged" class="clear" target="_blank">
+                    <img class="footerimage_steam footericon h-1p75 mr-1p75 flex borderrad" src="RESOURCES/PRIMARY/steam.png" alt="steam">
+                </a>
+                <a href="https://github.com/jakubekgranie/projecthub.github.io" class="clear" target="_blank">
+                    <img class="footerimage_github footericon h-1p75 mr-1p75 flex borderrad" src="RESOURCES/PRIMARY/github.png" alt="github">
                 </a>
             </div>
         </footer>
