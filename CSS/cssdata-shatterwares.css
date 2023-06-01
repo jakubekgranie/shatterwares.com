@@ -3,10 +3,6 @@
     src: url('../RESOURCES/CUSTOM-FONTS/computerfont.ttf');
 }
 @keyframes rainbow{
-    0%
-    {
-        color: #ffffff;
-    }
     12.5%
     {
         color: #FF0000;
@@ -35,9 +31,8 @@
     {
         color: #9400D3;
     }
-    100%
-    {
-        color: #ffffff;
+    100%{
+        color: white;
     }
 }
 @keyframes hue{
@@ -190,7 +185,7 @@ img.headerlogo{
 .yellowtail{
     font-family: Yellowtail, cursive;
 }
-.multiple{
+.d-inl-bl{
     display: inline-block;
 }
 .tcenter{
@@ -257,8 +252,8 @@ hr{
 .mb4{
     margin-bottom: 4vw;
 }
-.mainparagraph{
-    width: 40%;
+.m-w-40per-cent{
+    max-width: 40%;
 }
 .mauto{
     margin-left: auto;
@@ -395,24 +390,36 @@ div.gradientpython{
 div.gradientpython:hover{
     background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-python-end.png');
 }
+.gradientut{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-undertale-start.png');
+}
+.gradientut:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-undertale-end.png');
+}
 .pos-abs{
     position: absolute;
 }
 .pos-prop-top-50per-cent{
     top: 50%;
 }
-div.softbox{
+.softbox{
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.pos-prop-sbox{
     width: 11.75vw;
     height: 24.25vw;
-    background-color: rgb(39, 39, 39);
+}
+.bgc-sbox{
+    background-color: #272727;
 }
 .paddingnet{
     padding: 3.125vw;
+}
+.bs-bbox{   
     box-sizing: border-box;
 }
-div.softbox img{
+.sbox-img{
     width: 5.5vw;
     height: 5.5vw;
 }
@@ -422,10 +429,11 @@ div.borderbox div.softbox hr{
     margin: 1.5625vw auto;
     visibility: visible;
 }
-
-p.carddefault{
-    font-size: 1vw;
+.ws-pl{ 
     white-space: pre-line;
+}
+.fsize-1{
+    font-size: 1vw;
 }
 
 hr.gimpcard{
@@ -466,13 +474,10 @@ hr.pythoncard{
     border-radius: 0.5vw;
 }
 
-section.last{
-    border-bottom: 0.2vw #e5c499 ridge;
-}
-
 footer{
     height: 3vw;
     background-color: antiquewhite;
+    border-top: 0.2vw #e5c499 ridge;
 }
 div.footerblock{
     width: 50%;
@@ -633,4 +638,45 @@ div.england:hover{
 
 .preload{
     display: none;
+}
+
+.moonbanner{
+    background-image: url('../RESOURCES/bgs/unsplash-bg6.jpg');
+}
+.h-7{
+    height: 8vw;
+}
+.h-7p5{
+    height: 7.625vw;
+}
+.w-80per-cent{
+    width: 60vw;
+}
+.mtop-1{
+    width: 59.625vw;
+}
+.dmspack-imagemus{
+    width: 5.625vw;
+    height: 5.625vw;
+}
+.fx-dir-col{
+    flex-direction: column;
+}
+.fsize-0p8{
+    font-size: 0.8vw;
+}
+.fsize-1p25{
+    font-size: 1.25vw;
+}
+.fx-jc-c{
+    justify-content: center;
+}
+.pd-2{
+    padding: 1vw;
+}
+.m-b-0p5{
+    margin-bottom: 0.5vw;
+}
+.m-w-40{
+    max-width: 40vw;
 }
