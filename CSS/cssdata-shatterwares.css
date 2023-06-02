@@ -52,6 +52,9 @@
 .standardmargin{
     margin-bottom: 2vw !important;
 }
+.bd-clear{
+    border: none;
+}
 .mnsp{
     font-family: monospace;
 }
