@@ -114,6 +114,9 @@
         .fsize-1p3{
             font-size: 1.3vw;
         }
+        .fsize-3{
+            font-size: 3vw;
+        }
     /*!Sizes*/
     /*Colors*/
         .fc-black{
@@ -150,23 +153,80 @@
     .bg-white{
         background-color: white;
     }
-    .pointbg1{
-        background-image: radial-gradient(circle, #12ebbb, #00cde5, #00a9ff, #007aff, #1600ff);
+    .point1{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/1.png');
     }
-    .pointbg2{
-        background-image: radial-gradient(circle, #e9ff00, #ffcb00, #ff9500, #ff5d25, #eb1242);
+    .point2{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/2.png');
     }
-    .pointbg3{
-        background-image: radial-gradient(circle, #ffd3d3, #ffadbf, #ff83bb, #ff53c6, #ff00de);
+    .point3{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/3.png');
     }
-    .pointbg4{
-        background-image: radial-gradient(circle, #c68f14, #c3a900, #b3c500, #91e200, #43ff00);
+    .point4{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/4.png');
     }
-    .pointbg5{
-        background-image: radial-gradient(circle, #00e9ff, #00d8a6, #75bb2c, #c28a00, #ff0000);
+    .point5{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/5.png');
     }
-    .pointbg6{
-        background-image: radial-gradient(circle, #b100ff, #0082ff, #00b1ff, #00d1ff, #97e8f0);
+    .point6{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/6.png');
+    }
+    .point7{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/7.png');
+    }
+    .point8{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/8.png');
+    }
+    .point9{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/9.png');
+    }
+    .point10{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/10.png');
+    }
+    .point11{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/11.png');
+    }
+    .point12{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/12.png');
+    }
+    .point13{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/13.png');
+    }
+    .point14{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/14.png');
+    }
+    .point15{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/15.png');
+    }
+    .point16{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/16.png');
+    }
+    .point17{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/17.png');
+    }
+    .point18{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/18.png');
+    }
+    .point19{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/19.png');
+    }
+    .point20{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/20.png');
+    }
+    .point21{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/21.png');
+    }
+    .point22{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/22.png');
+    }
+    .point23{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/23.png');
+    }
+    .point24{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/24.png');
+    }
+    .point25{
+        background-image: url('../../RESOURCES/WLOKIETEK/map/points/25.png');
     }
     /*!Backgrounds*/
     /*Background sizes*/
@@ -189,7 +249,7 @@
     }
     /*!Transition presets*/
     /*Transform presets*/
-    .pointtransform:hover{
+    .point:hover{
         transform: scale(1.3, 1.3);
         z-index: 1;
     }
@@ -265,154 +325,95 @@
                 width: 0.8vw;
                 height: 0.8vw;
                 border-radius: 50%;
+                image-rendering: pixelated;
             }
-            .pointbg1:hover{
+            *[class~="point"]:hover{
                 box-shadow: 0vw 0vw 0.6vw 0.3vw #12ebbb;
             }
-            .pointbg2:hover{
-                box-shadow: 0vw 0vw 0.6vw 0.3vw #EB1242;
-            }
-            .pointbg3:hover{
-                box-shadow: 0vw 0vw 0.6vw 0.3vw #FF00DE;
-            }
-            .pointbg4:hover{
-                box-shadow: 0vw 0vw 0.6vw 0.3vw #43FF00;
-            }
-            .pointbg5:hover{
-                box-shadow: 0vw 0vw 0.6vw 0.3vw #75bb2c;
-            }
-            .pointbg6:hover{
-                box-shadow: 0vw 0vw 0.6vw 0.3vw #00b1ff;
-            }
-            .cracow{
+            .poczatki{
                 position: absolute;
                 left: 39%;
                 top: 67.3%;
             }
-            .nearmalopolska{
+            .wlkcr1{
                 position: absolute;
-                left: 44.7%;
-                top: 57.3%;
-            }
-            .malopolska{
-                position: absolute;
-                left: 47%;
-                top: 57.3%;
-            }
-            .nearmalopolska2{
-                position: absolute;
-                left: 44.7%;
-                top: 59.6%;
-            }
-            .pgd{
-                position: absolute;
-                left: 29.7%;
-                top: 13.8%;
-            }
-            .nearpgd{
-                position: absolute;
-                left: 27.4%;
-                top: 13.8%;
-            }
-            .kuj{
-                position: absolute;
-                left: 28.7%;
-                top: 29.2%;
-            }
-            .malbork{
-                position: absolute;
-                left: 33.3%;
-                top: 14.8%;
-            }
-            .brandemburgia{
-                position: absolute;
-                left: 3%;
-                top: 31.8%;
-            }
-            .nearbrandemburgia{
-                position: absolute;
-                left: 0.7%;
-                top: 31.8%;
-            }
-            .nearcr{
-                position: absolute;
-                left: 36.7%;
+                left: 41.4%;
                 top: 67.3%;
             }
-            .nearcr2{
-                position: absolute;
-                left: 36.7%;
-                top: 69.6%;
-            }
-            .nearcr3{
-                position: absolute;
-                left: 39%;
-                top: 69.6%;
-            }
-            .plock{
-                position: absolute;
-                left: 36.7%;
-                top: 35%;
-            }
-            .nearcr4{
-                position: absolute;
-                left: 36.7%;
-                top: 71.9%;
-            }
-            .nearcr5{
-                position: absolute;
-                left: 39%;
-                top: 71.9%;
-            }
-            .kalisz{
+            .wsp1{
                 position: absolute;
                 left: 26.3%;
-                top: 45.2%;
+                top: 45%;
             }
-            .wlkp{
+            .unnamed{
                 position: absolute;
-                left: 21%;
-                top: 42.2%;
+                left: 22%;
+                top: 44%;
             }
-            .czech{
-                position: absolute;
-                left: 13%;
-                top: 72%;
-            }
-            .sandomierz{
-                position: absolute;
-                left: 51.2%;
-                top: 57.3%;
-            }
-            .nearmlp3{
-                position: absolute;
-                left: 47%;
-                top: 59.6%;
-            }
-            .wegry{
+            .ucieczka{
                 position: absolute;
                 left: 53%;
                 top: 90%;
             }
+            .odzysk{
+                position: absolute;
+                left: 48%;
+                top: 57%;
+            }
+            .walka{
+                position: absolute;
+                left: 38%;
+                top: 13%;
+            }
+            .opozycja{
+                position: absolute;
+                left: 50.4%;
+                top: 57%;
+            }
+            .opanowanie{
+                position: absolute;
+                left: 24.4%;
+                top: 44%;
+            }
+            .koronacja{
+                position: absolute;
+                left: 39%;
+                top: 69.7%;
+            }
+            .sojusz{
+                position: absolute;
+                left: 55.4%;
+                top: 90%;
+            }
             .slask{
                 position: absolute;
-                left: 28%;
-                top: 56%;
+                left: 28.5%;
+                top: 56.6%;
             }
-            .rhalicka{
+            .rusibrandem{
                 position: absolute;
-                left: 67%;
-                top: 74%;
-            }
-            .litwa{
-                position: absolute;
-                left: 75%;
-                top: 30%;
+                left: 0.4%;
+                top: 33%;
             }
             .mazowsze{
                 position: absolute;
-                left: 45%;
-                top: 37%;
+                left: 45.4%;
+                top: 36%;
+            }
+            .dobrzyn{
+                position: absolute;
+                left: 40.4%;
+                top: 13%;
+            }
+            .last{
+                position: absolute;
+                left: 38%;
+                top: 15.4%;
+            }
+            .smierc{
+                position: absolute;
+                left: 41.4%;
+                top: 69.7%;
             }
             /*!Points*/
         .legend-content{
@@ -442,7 +443,6 @@
             font-family: Poppins;
             width: 75%;
             text-align: center;
-            font-size: 3vw;
         }
         .main{
             padding: 4vw;

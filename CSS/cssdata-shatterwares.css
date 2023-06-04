@@ -2,6 +2,10 @@
     font-family: "computer";
     src: url('../RESOURCES/CUSTOM-FONTS/computerfont.ttf');
 }
+@keyframes box{
+    100%{
+    }
+}
 @keyframes rainbow{
     12.5%
     {
@@ -399,6 +403,24 @@ div.gradientpython:hover{
 .gradientut:hover{
     background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-undertale-end.png');
 }
+.gradientasgore{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-asgore-start.png');
+}
+.gradientasgore:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-asgore-end.png');
+}
+.gradientppig{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-pixelpig-start.png');
+}
+.gradientppig:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-pixelpig-end.png');
+}
+.gradientttoacw{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-ttoacw-start.png');
+}
+.gradientttoacw:hover{
+    background-image: url('../RESOURCES/SHWHP_RES/gradients/gradient-ttoacw-end.png');
+}
 .pos-abs{
     position: absolute;
 }
@@ -652,11 +674,35 @@ div.england:hover{
 .h-7p5{
     height: 7.625vw;
 }
-.w-80per-cent{
+.w-60{
     width: 60vw;
+}
+.w-50{
+    width: 50vw;
+}
+.w-40{
+    width: 40vw;
+}
+.w-30{
+    width: 30vw;
+}
+.w-20{
+    width: 20vw;
 }
 .mtop-1{
     width: 59.625vw;
+}
+.mtop-2{
+    width: 49.625vw;
+}
+.mtop-3{
+    width: 39.625vw;
+}
+.mtop-4{
+    width: 29.625vw;
+}
+.mtop-5{
+    width: 19.625vw;
 }
 .dmspack-imagemus{
     width: 5.625vw;
