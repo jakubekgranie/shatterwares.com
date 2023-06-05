@@ -13,9 +13,9 @@ let correctAnswer = "",
 // przykładowe pytania
 const myQuestions = [
   {
-    question: "Kiedy Władysław Łokietek panował w Polsce?",
+    question: "Kiedy Władysław Łokietek sprawował rządy w Polsce?",
     category: "Historia",
-    options: ["1200-1230", "1307-1333", "1400-1420", "1500-1520"],
+    options: ["1200-1230", "1306-1333", "1400-1420", "1500-1520"],
     correctAnswer: "1306-1333"
   },
   {
@@ -28,7 +28,7 @@ const myQuestions = [
     question: "Kto był matką Władysława Łokietka?",
     category: "Historia",
     options: ["Rafał", "Elżbieta", "Anna", "Barbara"],
-    correctAnswer: "Helena"
+    correctAnswer: "Eufrozyna opolska"
   },
   {
     question: "Który władca zmarł, a następnie Władysław Łokietek objął rządy w Małopolsce?",
@@ -51,8 +51,8 @@ const myQuestions = [
   {
     question: "Jakie obszary Polska odzyskała za panowania Władysława Łokietka?",
     category: "Historia",
-    options: ["Pomorze Zachodnie", "Gańsk", "Wielkopolska", "Małopolska"],
-    correctAnswer: "Pomorze Gdańskie"
+    options: ["Pomorze Zachodnie", "Gdańsk", "Pomorze Gdańskie", "Małopolska"],
+    correctAnswer: "Wielkopolska"
   },
   {
     question: "Skąd pochodzi przydomek 'Łokietek'?",
