@@ -13,66 +13,99 @@ let correctAnswer = "",
 // przykładowe pytania
 const myQuestions = [
   {
-    question: "Kiedy Władysław Łokietek sprawował rządy w Polsce?",
     category: "Historia",
-    options: ["1200-1230", "1306-1333", "1400-1420", "1500-1520"],
-    correctAnswer: "1306-1333"
+    question: "Jakimi terenami powetował sobie Łokietek w 1314 r. w związku ze stratą Pomorza?",
+    options: ["Małopolską", "Kujawami", "Państwem Zakonu Krzyżackiego", "Śląskiem"],
+    correctAnswer: "Wielkopolską",
   },
   {
+    category: "Historia",
     question: "Kto był ojcem Władysława Łokietka?",
-    category: "Historia",
-    options: ["Kazimierz I Skibowski", "Bolesław Chrobry", "Kazimierz Wielki", "Władysław Jagiełło"],
-    correctAnswer: "Kazimierz I Kujawski"
+    options: [
+      "Kazimierz II Kujawski",
+      "Wacław II",
+      "Kazimierz I Opolski",
+      "Jan Luksemburczyk",
+    ],
+    correctAnswer: "Kazimierz I Kujawski",
   },
   {
-    question: "Kto był matką Władysława Łokietka?",
     category: "Historia",
-    options: ["Rafał", "Elżbieta", "Anna", "Barbara"],
-    correctAnswer: "Eufrozyna opolska"
-  },
-  {
-    question: "Który władca zmarł, a następnie Władysław Łokietek objął rządy w Małopolsce?",
-    category: "Historia",
-    options: ["Władysław Jagiełło", "Władysław II Jagiellończyk", "Władysław I Łokietek", "Bolesław III Krzywousty"],
-    correctAnswer: "Wacław II"
-  },
-  {
-    question: "W którym roku Władysław Łokietek został koronowany na króla Polski?",
-    category: "Historia",
-    options: ["1300", "1315", "1322", "1335"],
-    correctAnswer: "1320"
-  },
-  {
     question: "Jakie reformy przeprowadził Władysław Łokietek?",
-    category: "Historia",
-    options: ["Reformy gospodarcze", "Reformy administracyjne", "Reformy wojskowe", "Reformy szkolne"],
-    correctAnswer: "Wszystkie powyższe"
+    options: [
+      "Reformy gospodarcze",
+      "Reformy wojskowe i edukacyjne",
+      "Reformy religijne i kulturalne",
+      "Reformy polityczne i prawne",
+    ],
+    correctAnswer: "Reformy gospodarcze i administracyjne",
   },
   {
-    question: "Jakie obszary Polska odzyskała za panowania Władysława Łokietka?",
     category: "Historia",
-    options: ["Pomorze Zachodnie", "Gdańsk", "Pomorze Gdańskie", "Małopolska"],
-    correctAnswer: "Wielkopolska"
+    question: "W którym roku odbyła się koronacja Władysława Łokietka?",
+    options: ["w 1314 roku.", "w 1331 roku.", "w 1321 roku.", "w 1308 roku."],
+    correctAnswer: "w 1320 roku.",
   },
   {
-    question: "Skąd pochodzi przydomek 'Łokietek'?",
     category: "Historia",
-    options: ["Od jego szpiczastych łokci", "Od jego charakterystycznego gestu", "Od długiego nosa", "Od jego umiejętności walki na rękach"],
-    correctAnswer: "Od wzrostu Władysława"
+    question: "Kto koronował Władysława Łokietka na króla Polski?",
+    options: ["Jan Muskata", "Albert", "Janek", "Jan Luksemburczyk"],
+    correctAnswer: "Janisław",
   },
   {
-    question: "Jak zakończyła się wojna z krzyżakami i Czechami?",
     category: "Historia",
-    options: ["Remis", "Zwycięstwo Krzyżaków", "Zawarcie pokoju", "Traktat handlowy"],
-    correctAnswer: "Zwycięstwo Polski"
+    question:
+      "Jak na imię miał 'wódz' buntu mieszczan krakowskich (lata 1311 - 1312)?",
+    options: [
+      "Oliver",
+      "Piast",
+      "Karol",
+      "Honorata",
+    ],
+    correctAnswer: "Albert",
   },
   {
-    question: "Które terytorium Polska odzyskała ostatnie za panowania Władysława Łokietka?",
     category: "Historia",
-    options: ["Pomorze Gdańskie", "Wielkopolska", "Śląsk", "Warmia"],
-    correctAnswer: "Warmia"
-  }
-  
+    question: "Jak zakończyła się wojna z Krzyżakami dla Polski?",
+    options: [
+      "Zwycięstwem Polski.",
+      "Nie było żadnej wojny.",
+      "Zawieszeniem broni.",
+      "Pokojowym traktatem.",
+    ],
+    correctAnswer: "Porażką Polski",
+  },
+  {
+    category: "Historia",
+    question:
+      "Kto wystąpił z roszczeniami do korony polskiej i miał poparcie możnych małopolskich?",
+    options: ["Jan Muskata", "Albert", "Jakub Muskata", "Janisław"],
+    correctAnswer: "Wacław II",
+  },
+  {
+    category: "Historia",
+    question:
+      "Które z poniższych terytoriów było/y jednym ze zdobytych obszarów przez Krzyżaków w trakcie wojny z Władysławem Łokietkiem?",
+    options: [
+      "Malbork i okolice",
+      "Kraków",
+      "Ozimek",
+      "Krzyżacy nic nie zdobyli.",
+    ],
+    correctAnswer: "Ziemia dobrzyńska i Kujawy",
+  },
+  {
+    category: "Historia",
+    question: "Przydomek Władysława Łokietka - z jaką jego cechą miał powiązanie?",
+    options: [
+      "Z jego wysokim wzrostem.",
+      "Z jego inteligencją.",
+      "Z jego kurtuazją.",
+      "Z jego uczciwością.",
+    ],
+    correctAnswer: "Z jego niskim wzrostem.",
+  },
+
   // dodaj więcej własnych pytań tutaj
 ];
 
@@ -86,7 +119,7 @@ function shuffleAnswers(answers) {
 }
 
 // Wykorzystanie funkcji do tasowania odpowiedzi dla każdego pytania
-myQuestions.forEach(question => {
+myQuestions.forEach((question) => {
   question.options = shuffleAnswers(question.options);
 });
 
@@ -104,7 +137,7 @@ myQuestions.forEach((question, index) => {
 // zmodyfikowana funkcja loadQuestion() z własnymi pytaniami
 // zmodyfikowana funkcja loadQuestion() z własnymi pytaniami
 function loadQuestion() {
-  const availableQuestions = myQuestions.filter(question => !question.asked);
+  const availableQuestions = myQuestions.filter((question) => !question.asked);
   if (availableQuestions.length === 0) {
     // Wszystkie pytania zostały zadane, zakończ quiz lub podjęj odpowiednie działanie
     return;
@@ -113,12 +146,13 @@ function loadQuestion() {
   const question = availableQuestions[questionIndex];
   question.asked = true;
 
-  const optionsWithoutCorrectAnswer = question.options.filter(option => option !== question.correctAnswer);
+  const optionsWithoutCorrectAnswer = question.options.filter(
+    (option) => option !== question.correctAnswer
+  );
 
   _result.innerHTML = "";
   showQuestion(question, optionsWithoutCorrectAnswer);
 }
-
 
 // event listeners
 function eventListeners() {
