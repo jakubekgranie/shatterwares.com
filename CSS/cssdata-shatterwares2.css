@@ -1,0 +1,75 @@
+.w-100p{
+    width: 100%;
+}
+.navimage{
+    width: 14.75vw;
+    margin-left: 4vw;
+}
+.w-9p5{
+    width: 9.5vw;
+}
+.h-100p{
+    height: 100%;
+}
+.header{
+    background-image: url('../RESOURCES/bgs/unsplash-bg7.jpg');
+    height: 89.7vh;
+}
+.fx{
+    display: flex;
+}
+.fx-jc-spb{
+    justify-content: space-between;
+}
+.fx-center{
+    align-items: center;
+    justify-content: center;
+}
+.mg-none{
+    margin: 0;
+}
+.mg-b-1p2{
+    margin-bottom: 1.2vw;
+}
+.b-sh-def{
+    box-shadow: 0vw 0vw 0.3vw grey;
+}
+.bgs-full{
+    background-size: 100% 100%;
+}
+.headerimage{
+    width: 12vw;
+    image-rendering: pixelated;
+    margin: 3.25vw;
+}
+.fsz-3{
+    font-size: 3vw;
+}
+.ff-raleway{
+    font-family: Raleway;
+}
+.grd-firsth1{
+    background-image: linear-gradient(to right bottom, #000000, #202020, #3a3a3a, #565656, #747474);
+}
+.grd-sech1{
+    background-image: linear-gradient(to right bottom, #00e377, #00e395, #00e2af, #00e1c3, #00ded3);
+}
+.gradient-text{
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.fc-violet{
+    color: blueviolet;
+}
+
+
+.fsz-1{
+    font-size: 1vw;
+}
