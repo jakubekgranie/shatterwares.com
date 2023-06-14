@@ -1,9 +1,11 @@
 .w-100p{
     width: 100%;
 }
-.navimage{
+.w-97p{
+    width: 97%;
+}
+.w-14p75{
     width: 14.75vw;
-    margin-left: 4vw;
 }
 .w-9p5{
     width: 9.5vw;
@@ -13,7 +15,7 @@
 }
 .header{
     background-image: url('../RESOURCES/bgs/unsplash-bg7.jpg');
-    height: 89.7vh;
+    height: 100vh;
 }
 .fx{
     display: flex;
@@ -21,16 +23,25 @@
 .fx-jc-spb{
     justify-content: space-between;
 }
-.fx-center{
+.fx-ai-c{
     align-items: center;
+}
+.fx-jc-c{
     justify-content: center;
 }
 .mg-none{
     margin: 0;
 }
-.mg-b-1p2{
-    margin-bottom: 1.2vw;
+#headertext{
+    width: 0vw;
+    overflow: hidden;
 }
+.headertexttransformed{
+    width: 48.5709375vw !important;
+    margin-bottom: 1.2vw;
+    margin-right: 3vw;
+    transition: all 0.5s ease-in;
+}  
 .b-sh-def{
     box-shadow: 0vw 0vw 0.3vw grey;
 }
@@ -42,7 +53,8 @@
     image-rendering: pixelated;
     margin: 3.25vw;
 }
-.fsz-3{
+.headergradienttext{
+    white-space: nowrap;
     font-size: 3vw;
 }
 .ff-raleway{
@@ -50,9 +62,11 @@
 }
 .grd-firsth1{
     background-image: linear-gradient(to right bottom, #000000, #202020, #3a3a3a, #565656, #747474);
+    filter: drop-shadow(0.1vw 0.1vw 0.01vw #3a3a3a);
 }
 .grd-sech1{
     background-image: linear-gradient(to right bottom, #00e377, #00e395, #00e2af, #00e1c3, #00ded3);
+    filter: drop-shadow(0.1vw 0.1vw 0.01vw #00e377);
 }
 .gradient-text{
     background-clip: text;
@@ -68,8 +82,55 @@
 .fc-violet{
     color: blueviolet;
 }
-
+.nav{
+    position: fixed;
+    background-color: white;
+    top: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10vw;
+}
+.dp-none{
+    display: none;
+}
+.wh-animelem-1{
+    position: absolute;
+    z-index: 1;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+.wh-animelem-1-addr-1{
+    top: -2vw;
+    left: -2vw;
+}
+.wh-animelem-1-addr-2{
+    bottom: -2vw;
+    right: -2vw;
+    transform: rotate(180deg);
+}
+.headercontainer{
+    position: relative;
+}
 
 .fsz-1{
     font-size: 1vw;
+}
+
+@keyframes anim1{
+    0%{
+        opacity: 0;
+    }
+    33.3%{
+        opacity: 1;
+    }
+    66.6%{
+        opacity: 0;
+    }
+    99.9%{
+        opacity: 1;
+    }
+}
+
+.anim-1{
+    animation: anim1 0.25s ease-in-out;
 }
