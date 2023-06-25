@@ -22,7 +22,7 @@
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Belanosima&display=swap" rel="stylesheet">
 
         <title>ShatterWares: The future starts now.</title>
 
@@ -30,7 +30,25 @@
 
         <script src="JS/animationutil.js"></script>
     </head>
-    <body class="mg-none">
+    <body onload="startPrimeAnimationsWTimeout()" class="mg-none">
+
+    <!-- PRELOAD RESOURCES -->
+    <div class="dp-none">
+        <img src="RESOURCES/PRIMARY/logo3.png">
+        <img src="RESOURCES/bgs/bg12.gif">
+        <img src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
+        <img src="RESOURCES/SHWHP_RES/engineertf2_pfp.jpg">
+        <img src="RESOURCES/PRIMARY/promisenobg-slim.png">
+    </div>
+    <div class="nonstandard-draft">
+        <h1 class="nonstandard-draft-head grd-draft1 gradient-text"><b>DRAFT&nbsp;</b></h1><h1 class="nonstandard-draft-head grd-draft2 gradient-text">v. 6/25/2023</h1>
+        <p class="mg-none nonstandard-draft-data ">This version wasn't made complete, therefore its capabilities are limited. For more details, please head to GitHub.
+
+            Signed,
+            <span class="grd-sech1 gradient-text">Jacob</span>
+        </p>
+    </div>
+
         <nav class="fx fx-jc-spb w-97p b-sh-def nav">
             <img class="w-14p75" src="RESOURCES/PRIMARY/logo3.png" alt="logo">
             <div class="fx fsz-1">
@@ -51,7 +69,7 @@
                 </div>
             </div>
         </nav>
-        <header onmouseover='startAnimation1()' class="fx fx-ai-c fx-jc-c w-100p header bgs-full">
+        <header class="fx fx-ai-c fx-jc-c w-100p header bgs-full">
             <div class="fx fx-ai-c fx-jc-c headercontainer">
                 <img id="animelem1-1" class="dp-none wh-animelem-1 wh-animelem-1-addr-1" src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
                 <img id="animelem1-3" class="headerimage dp-none" src="RESOURCES/PRIMARY/promisenobg-slim.png" alt="logo">
@@ -62,5 +80,18 @@
                 <img id="animelem1-2" class="dp-none wh-animelem-1 wh-animelem-1-addr-2" src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
             </div>
         </header>
+        <section class="default-section w-100p fx fx-ai-c fx-jc-c">
+            <div class="nest-subsection fx fx-jc-spb fx-ai-c">
+                <div class="general-subsection add-text-subsection fx">
+                    <h1 class="mg-none t-ss-heading">The mission<span class="anim-blink">_</span></h1>
+                    <p class="t-ss-paragraph ff-raleway mg-none">
+                        <b>Jacob Namyslak</b>, aka <i>Starstruck</i> or jakubekgranie is a 16 year old apprentice at ZSEk Opole. Endeavouring for vast wisdom and brain power, he aims for becoming a perfection and attaining ultimate expertise by hard work.
+                    </p>
+                </div>
+                <div class="">
+                    <img src="RESOURCES/SHWHP_RES/engineertf2_pfp.jpg" class="pfp">
+                </div>
+            </div>
+        </section>
     </body>
 </html>
