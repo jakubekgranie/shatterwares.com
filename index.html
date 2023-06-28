@@ -80,11 +80,14 @@
                 <img id="animelem1-2" class="dp-none wh-animelem-1 wh-animelem-1-addr-2" src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
             </div>
         </header>
-        <section class="default-section w-100p fx fx-ai-c fx-jc-c">
+
+        <div class="w-100p border"></div>
+
+        <section onmouseover="startAnimationFadeInTR('headermission', 'headermission2')" class="default-section w-100p fx fx-ai-c fx-jc-c fx-dir-c abm-bgp">
             <div class="nest-subsection fx fx-jc-spb fx-ai-c">
-                <div class="general-subsection add-text-subsection fx">
-                    <h1 class="mg-none t-ss-heading">The mission<span class="anim-blink">_</span></h1>
-                    <p class="t-ss-paragraph ff-raleway mg-none">
+                <div class="general-subsection add-text-subsection fx fx-dir-c">
+                    <h1 id="headermission" class="mg-none t-ss-heading op-0">The mission<span class="anim-blink">_</span></h1>
+                    <p id="headermission2" class="t-ss-paragraph ff-raleway mg-none op-0">
                         <b>Jacob Namyslak</b>, aka <i>Starstruck</i> or jakubekgranie is a 16 year old apprentice at ZSEk Opole. Endeavouring for vast wisdom and brain power, he aims for becoming a perfection and attaining ultimate expertise by hard work.
                     </p>
                 </div>
@@ -93,5 +96,8 @@
                 </div>
             </div>
         </section>
+
+        <div class="w-100p border"></div>
+        
     </body>
 </html>

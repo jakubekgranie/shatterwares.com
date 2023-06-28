@@ -20,3 +20,7 @@ function htext(){
     const animelem14 = document.getElementById('headertext');
     animelem14.classList.add('headertexttransformed');
 }
+function startAnimationFadeInTR(identifier, identifier2){
+    document.getElementById(identifier).classList.add('anim-fadeintr');
+    setTimeout(() => {document.getElementById(identifier2).classList.add('anim-fadeintr')}, 50);
+}

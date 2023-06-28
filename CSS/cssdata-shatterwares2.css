@@ -44,7 +44,6 @@
 .header{
     background-image: url('../RESOURCES/bgs/bg12.gif');
     height: 100vh;
-    background-size: 100% 100%;
 }
 .fx{
     display: flex;
@@ -57,6 +56,9 @@
 }
 .fx-jc-c{
     justify-content: center;
+}
+.fx-dir-c{
+    flex-direction: column;
 }
 .mg-none{
     margin: 0;
@@ -171,8 +173,7 @@
     max-width: 1250px;
 }
 .general-subsection{
-    flex-direction: column;
-    max-height: 70vh;
+    max-height: calc(70vh - 80px);
 }
 .add-text-subsection{
     font-family: Belanosima;
@@ -184,6 +185,7 @@
 .t-ss-paragraph{
     font-size: 34px;
     max-width: 671.438px;
+    filter: drop-shadow(0.2vw 0.2vw 0.1vw #a6a6a6);
 }
 @keyframes blink{
     0%{
@@ -202,12 +204,37 @@
 .pfp{
     height: 340px;
     width: auto;
-    border-radius: 50%;
-    margin-left: 40px;
+    border-radius: 15%;
+    margin-left: 70px;
+}
+@keyframes fadeInTR{
+    from{
+        transform: translateX(-75px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+.anim-fadeintr{
+    animation: fadeInTR 0.75s ease-out forwards !important;
 }
 .scroll-alternative{
     overflow-y: scroll;
 }
 .scroll-alternative::-webkit-scrollbar{
     display: none;
+}
+.op-0{
+    opacity: 0;
+}
+.border{
+    height: 40px;
+    background-image: url('../RESOURCES/SHWHP_RES/greeceborder.png');
+    background-size: contain;
+}
+.abm-bgp{
+    background-image: url('../RESOURCES/SHWHP_RES/bg-content/bg-master.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
 }
