@@ -75,7 +75,7 @@
     box-shadow: 0vw 0vw 0.3vw grey;
 }
 .bgs-full{
-    background-size: 100% 100%;
+    background-size: 100% 100%, 100% 100%;
 }
 .headerimage{
     width: 12vw;
@@ -124,7 +124,6 @@
     display: none;
 }
 .wh-animelem-1{
-    position: absolute;
     width: 1.5vw;
     height: 1.5vw;
 }
@@ -138,7 +137,6 @@
     transform: rotate(180deg);
 }
 .headercontainer{
-    position: relative;
     margin: 3.25vw;
 }
 
@@ -161,8 +159,12 @@
     }
 }
 
-.default-section{
+.abm-section{
     height: 74vh;
+    padding: 10vh 0;
+}
+.bs-bb{
+    box-sizing: border-box;
 }
 
 .anim-1{
@@ -184,8 +186,10 @@
 }
 .t-ss-paragraph{
     font-size: 34px;
-    max-width: 671.438px;
     filter: drop-shadow(0.2vw 0.2vw 0.1vw #a6a6a6);
+}
+.t-ss-paragraph-modabm{
+    max-width: 671.438px;
 }
 @keyframes blink{
     0%{
@@ -229,12 +233,228 @@
 }
 .border{
     height: 40px;
-    background-image: url('../RESOURCES/SHWHP_RES/greeceborder.png');
+    background: url('../RESOURCES/SHWHP_RES/greeceborder.png'), white;
     background-size: contain;
 }
 .abm-bgp{
-    background-image: url('../RESOURCES/SHWHP_RES/bg-content/bg-master.png');
+    background: url('../RESOURCES/SHWHP_RES/bg-content/bg-master.png'), white;
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: bottom left;
+}
+.longsec-child-preset{
+    height: 70vh;
+    color: #f3f3f3;
+}
+.general-heading{
+    font-size: 54px;
+}
+.add-lang-paragraph{
+    text-align: left;
+    font-size: 24px;
+    margin-top: 30px;
+}
+@keyframes fadeInTB{
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+.anim-fadeintb{
+    animation: fadeInTB 0.75s ease-in-out forwards;
+}
+.bg-long{
+    background-image: url('../RESOURCES/bgs/bg14.jpg');
+}
+.longer-subsection{
+    max-height: 100%;
+}
+.lang-pick{
+    width: 225px;
+    height: 225px;
+    padding:20px;
+    flex-wrap: wrap;
+    transform: rotate(45deg);
+}
+.lang-pick-opt{
+    width: 94px;
+    height: 94px;
+    margin: 9.25px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+.cpp{
+    position: relative;
+    background-image: radial-gradient(circle, #5ffbf1, #64fcec, #69fde7, #6ffde1, #76fedc, #83fed7, #8fffd3, #9affcf, #abffcd, #baffcc, #c7ffcc, #d3ffce);
+}
+.cpp::before{
+    content: '';
+    width: 71.27659574468085%;
+    height: 6px;
+    transform: scaleX(0);
+    transform-origin: left;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: #08fcbc;
+    transition: transform 0.1s ease-in;
+}
+.lang-pick:hover .cpp::before{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.1s ease-out;
+}
+.cpp::after{
+    content: '';
+    width: 6px;
+    height: 71.27659574468085%;
+    transform: scaleY(0);
+    transform-origin: top;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: #08fcbc;
+    transition: transform 0.1s ease-in;
+}
+.lang-pick:hover .cpp::after{
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.1s ease-out;
+}
+.html{
+    background-image: radial-gradient(circle, #e28ef6, #d884f4, #ce7af2, #c470f0, #b867ef, #af66ef, #a564f0, #9b63f0, #9168f2, #876df4, #7d72f5, #7376f5);
+}
+.html::before{
+    content: '';
+    width: 71.27659574468085%;
+    height: 6px;
+    transform: scaleX(0);
+    transform-origin: right;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: #08fcbc;
+    transition: transform 0.1s ease-in;
+}
+.lang-pick:hover .html::before{
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.1s ease-out;
+}
+.html::after{
+    content: '';
+    width: 6px;
+    height: 71.27659574468085%;
+    transform: scaleY(0);
+    transform-origin: top;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: #08fcbc;
+    transition: transform 0.1s ease-in;
+}
+.lang-pick:hover .html::after{
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.1s ease-out;
+}
+.css{
+    background-image: radial-gradient(circle, #5ffbf1, #46eefa, #41dfff, #52cffe, #69bff8, #79b3f4, #8aa7ec, #9a9ae1, #aa8fd8, #ba83ca, #c777b9, #d16ba5);
+}
+.css::before{
+    content: '';
+    width: 71.27659574468085%;
+    height: 6px;
+    transform: scaleX(0);
+    transform-origin: left;
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background-color: #08fcbc;
+    transition: transform 0.1s ease-in;
+}
+.lang-pick:hover .css::before{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.1s ease-out;
+}
+.css::after{
+    content: '';
+    width: 6px;
+    height: 71.27659574468085%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background-color: #08fcbc;
+    transition: transform 0.1s ease-in;
+}
+.lang-pick:hover .css::after{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.1s ease-out;
+}
+.js{
+    background-image: radial-gradient(circle, #b1ff00, #90ff4e, #6eff76, #4dff97, #2affb4, #4bf6a6, #5eee98, #6ce58c, #8fcf5b, #a9b72f, #be9c05, #ce7e00);
+}
+.js::before{
+    content: '';
+    width: 71.27659574468085%;
+    height: 6px;
+    transform: scaleX(0);
+    transform-origin: right;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background-color: #08fcbc;
+    transition: transform 0.1s ease-out;
+}
+.lang-pick:hover .js::before{
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.1s ease-out;
+}
+.js::after{
+    content: '';
+    width: 6px;
+    height: 71.27659574468085%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background-color: #08fcbc;
+    transition: transform 0.1s ease-out;
+}
+.lang-pick:hover .js::after{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.1s ease-out;
+}
+.cur-sel{
+    cursor: pointer;
+}
+.whp-icon{
+    width: 75%;
+    height: 75%;
+    transition: all 0.15s;
+}
+.whp-icon:hover{
+    width: 80%;
+    height: 80%;
+    transition: all 0.15s;
+}
+.pos-abs{
+    position: absolute;
+}
+.p-ab-center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pos-rel{
+    position: relative;
 }
