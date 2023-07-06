@@ -189,7 +189,7 @@
     filter: drop-shadow(0.2vw 0.2vw 0.1vw #a6a6a6);
 }
 .t-ss-paragraph-modabm{
-    max-width: 671.438px;
+    width: 671.438px;
 }
 @keyframes blink{
     0%{
@@ -220,7 +220,7 @@
     }
 }
 .anim-fadeintr{
-    animation: fadeInTR 0.75s ease-out forwards !important;
+    animation: fadeInTR 0.75s ease-out forwards;
 }
 .scroll-alternative{
     overflow-y: scroll;
@@ -256,14 +256,14 @@
 }
 @keyframes fadeInTB{
     from{
-        transform: translateY(-20px);
+        transform: translateY(-30px);
     }
     to{
         opacity: 1;
     }
 }
 .anim-fadeintb{
-    animation: fadeInTB 0.75s ease-in-out forwards;
+    animation: fadeInTB 0.75s cubic-bezier(.2,1,1,1) forwards;
 }
 .bg-long{
     background-image: url('../RESOURCES/bgs/bg14.jpg');
@@ -286,7 +286,6 @@
     flex-shrink: 0;
 }
 .cpp{
-    position: relative;
     background-image: radial-gradient(circle, #5ffbf1, #64fcec, #69fde7, #6ffde1, #76fedc, #83fed7, #8fffd3, #9affcf, #abffcd, #baffcc, #c7ffcc, #d3ffce);
 }
 .cpp::before{
@@ -438,8 +437,8 @@
     cursor: pointer;
 }
 .whp-icon{
-    width: 75%;
-    height: 75%;
+    width: 74%;
+    height: 74%;
     transition: all 0.15s;
 }
 .whp-icon:hover{
@@ -457,4 +456,23 @@
 }
 .pos-rel{
     position: relative;
+}
+.animSwitchByFadeInLang{
+    animation: switchByFadeIn-lang 1s forwards;
+}
+@keyframes switchByFadeIn-lang{
+    50%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    50.001%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+#sectionlang1p2{
+    display: inline;
 }

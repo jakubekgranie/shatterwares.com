@@ -30,7 +30,7 @@
 
         <script src="JS/animationutil.js"></script>
     </head>
-    <body onload="startPrimeAnimationsWTimeout()" class="mg-none">
+    <body onload="setTimeout(startAnimation1, 200)" class="mg-none">
 
     <!-- PRELOAD RESOURCES -->
     <div class="dp-none">
@@ -41,7 +41,7 @@
         <img src="RESOURCES/PRIMARY/promisenobg-slim.png">
     </div>
     <div class="nonstandard-draft">
-        <h1 class="nonstandard-draft-head grd-draft1 gradient-text"><b>DRAFT&nbsp;</b></h1><h1 class="nonstandard-draft-head grd-draft2 gradient-text">v. 7/03/2023</h1>
+        <h1 class="nonstandard-draft-head grd-draft1 gradient-text"><b>DRAFT&nbsp;</b></h1><h1 class="nonstandard-draft-head grd-draft2 gradient-text">v. 7/06/2023</h1>
         <p class="mg-none nonstandard-draft-data ">This version wasn't made complete, therefore its capabilities are limited. For more details, please head to GitHub.
 
             Signed,
@@ -100,24 +100,26 @@
         <div class="w-100p border"></div>
 
         <div class="bg-long bgs-full">
-            <section onmouseover="animationForwarder('sectionlang1', 'sectionlang2', 'anim-fadeintb', 0)" class="longsec-child-preset w-100p fx fx-jc-c fx-ai-c fx-dir-c">
+            <section onmouseover="anFrwdPreset()" class="longsec-child-preset w-100p fx fx-jc-c fx-ai-c fx-dir-c">
                 <div class="nest-subsection fx fx-jc-spb fx-ai-c">
                     <div class="longer-subsection add-text-subsection fx-dir-c bs-bb">
-                        <h1 id="sectionlang1" class="mg-none general-heading underline-marker op-0">Languages: the keys</h1>
+                        <div id="sectionlang1" class="op-0">
+                            <span id="slash1-lang" class="mg-none general-heading">/</span><span id="slash2-lang" class="mg-none general-heading">/&nbsp;</span><h1 id="sectionlang1p2" class="mg-none general-heading">Languages: the keys</h1>
+                        </div>
                         <p id="sectionlang2"class="t-ss-paragraph t-ss-paragraph-modabm add-lang-paragraph ff-raleway mg-none op-0">Languages serve as my trump cards: they are like limbs for every programmer. And I am no exception! Here you can review the aforementioned.</p>
                     </div>
                     
                     <div class="lang-pick fx">
-                        <div class="lang-pick-opt bgs-full cpp pos-rel cur-sel">
+                        <div id="cpp" onclick="langPicker('cpp')" class="lang-pick-opt bgs-full cpp pos-rel cur-sel pickermarker">
                             <img src="RESOURCES/SHWHP_RES/cpp_b&w.png" class="whp-icon pos-abs p-ab-center" alt="C++">
                         </div>
-                        <div class="lang-pick-opt bgs-full html pos-rel cur-sel">
+                        <div id="html" onclick="langPicker('html')" class="lang-pick-opt bgs-full html pos-rel cur-sel pickermarker">
                             <img src="RESOURCES/SHWHP_RES/html_b&w.png" class="whp-icon pos-abs p-ab-center" alt="HTML">
                         </div>
-                        <div class="lang-pick-opt bgs-full css pos-rel cur-sel">
+                        <div id="css" onclick="langPicker('css')" class="lang-pick-opt bgs-full css pos-rel cur-sel pickermarker">
                             <img src="RESOURCES/SHWHP_RES/css_b&w.png" class="whp-icon pos-abs p-ab-center" alt="CSS">
                         </div>
-                        <div class="lang-pick-opt bgs-full js pos-rel cur-sel">
+                        <div id="js" onclick="langPicker('js')" class="lang-pick-opt bgs-full js pos-rel cur-sel pickermarker">
                             <img src="RESOURCES/SHWHP_RES/js_b&w.png" class="whp-icon pos-abs p-ab-center" alt="JS">
                         </div>
                     </div>
