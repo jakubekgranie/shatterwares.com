@@ -44,6 +44,8 @@ function langPicker(buttonid){
             html.style.cursor = null;
             js.style.cursor = null;
             css.style.cursor = null;
+
+            document.getElementById(buttonid).style.cursor = "not-allowed";
         }, 1000);
 
         if(langDiv.classList.contains('anim-fadeintb') == true){
