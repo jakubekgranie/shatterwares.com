@@ -476,3 +476,37 @@
 #sectionlang1p2{
     display: inline;
 }
+.lang-icon-onclick{
+    width: 80% !important;
+    height: 80% !important;
+}
+.icon-image{
+    width: 87px;
+    height: 87px;
+    transform: scale(0.87);
+    opacity: 0;
+}
+.bar-container-margin{
+    margin-bottom: 20px;
+}
+.brad-10px{
+    border-radius: 7px;
+}
+.bar{
+    width: 86px;
+    height: 36px;
+    filter: drop-shadow(10px 6px #369954);
+    transform: scaleX(1) skewX(-45deg);
+    background-image: linear-gradient(to left top, #b1ff00, #86ff5c, #5aff8c, #2affb4, #04ffd4);
+}
+.mg-l-100px{
+    margin-left: 100px;
+}
+.mg-l-20px{
+    margin-left: 20px;
+}
+.icon-image-transformations{
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.2s ease-out;
+}
