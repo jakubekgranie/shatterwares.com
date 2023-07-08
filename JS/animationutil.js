@@ -95,14 +95,26 @@ function langPicker(buttonid){
     }
 }
 function langStats(){
-    document.getElementById('baricon_html').classList.add('icon-image-transformations');
-    setTimeout(() => {document.getElementById('baricon_css').classList.add('icon-image-transformations')}, 100)
-    setTimeout(() => {document.getElementById('baricon_cpp').classList.add('icon-image-transformations')}, 200)
-    setTimeout(() => {document.getElementById('baricon_js').classList.add('icon-image-transformations')}, 300)
+    anFrwdDoubleExec('sectionlang12', 'sectionlang22', 'slash1-lang2', 'slash2-lang2', 'anim-fadeintb', 250, 'anim-blink', 100, 0);
     setTimeout(() => {
-        
-    
-    }, 350);
+        document.getElementById('baricon_html').classList.add('icon-image-transformations');
+        setTimeout(() => {unravelBars('html')}, 225);
+        setTimeout(() => {document.getElementById('baricon_css').classList.add('icon-image-transformations')}, 100);
+        setTimeout(() => {unravelBars('css')}, 325);
+        setTimeout(() => {document.getElementById('baricon_cpp').classList.add('icon-image-transformations')}, 200);
+        setTimeout(() => {unravelBars('cpp')}, 425);
+        setTimeout(() => {document.getElementById('baricon_js').classList.add('icon-image-transformations')}, 300);
+        setTimeout(() => {unravelBars('js')}, 525);
+    }, 500)
+}
+function unravelBars(langId){
+    for(let i = 0; i < 10; i++){
+        setTimeout(() => {
+        let bar = "bar_" + langId + (i + 1);
+        document.getElementById(bar).classList.add('anim-fadeintr2');
+        }
+        , (90 * i));
+    }
 }
 
 function anFrwdDoubleExec(identifier, identifier2, identifier3, identifier4 ,anim_id, wait_time, anim_id2, wait_time2, secondExecutionWaitTime){

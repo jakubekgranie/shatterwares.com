@@ -252,7 +252,6 @@
 .add-lang-paragraph{
     text-align: left;
     font-size: 24px;
-    margin-top: 30px;
 }
 @keyframes fadeInTB{
     from{
@@ -473,7 +472,7 @@
         opacity: 1;
     }
 }
-#sectionlang1p2{
+.dp-inline{
     display: inline;
 }
 .lang-icon-onclick{
@@ -481,8 +480,9 @@
     height: 80% !important;
 }
 .icon-image{
-    width: 87px;
-    height: 87px;
+    width: 77px;
+    height: 77px;
+    margin-right: 20px;
     transform: scale(0.87);
     opacity: 0;
 }
@@ -490,17 +490,38 @@
     margin-bottom: 20px;
 }
 .brad-10px{
-    border-radius: 7px;
+    border-radius: 3px;
 }
 .bar{
-    width: 86px;
-    height: 36px;
-    filter: drop-shadow(10px 6px #369954);
-    transform: scaleX(1) skewX(-45deg);
+    width: 66px;
+    height: 30px;
+}
+.bar-red{
+    background-image: linear-gradient(to right bottom, #ff0000, #ff4c00, #ff6f00, #ff8b00, #ffa500);
+    filter: drop-shadow(10px 6px #B24D00);
+}
+.bar-yellow{
+    background-image: linear-gradient(to right bottom, #ffa500, #ffbb00, #ffd100, #ffe800, #ffff00);
+    filter: drop-shadow(10px 6px #B29200);
+}
+.bar-lgreen{
+    background-image: linear-gradient(to right bottom, #ffff00, #edff00, #daff00, #c6ff00, #b1ff00);
+    filter: drop-shadow(10px 6px #98B200);
+}
+.bar-green{
     background-image: linear-gradient(to left top, #b1ff00, #86ff5c, #5aff8c, #2affb4, #04ffd4);
+    filter: drop-shadow(10px 6px #369954);
+}
+.bar-blue{
+    background-image: linear-gradient(to right bottom, #04ffd4, #00e4fa, #00c2ff, #0097ff, #5a5aff);
+    filter: drop-shadow(10px 6px #007BB2);
+}  
+.bar-empty{
+    background-image: linear-gradient(to right bottom, #45818e, #397481, #2d6775, #215b68, #134f5c);
+    filter: drop-shadow(10px 6px #122B30);
 }
 .mg-l-100px{
-    margin-left: 100px;
+    margin-left: 70px;
 }
 .mg-l-20px{
     margin-left: 20px;
@@ -509,4 +530,41 @@
     opacity: 1;
     transform: scale(1);
     transition: all 0.2s ease-out;
+}
+.mg-b-30px{
+    margin-bottom: 30px;
+}
+.add-lang-paragraph2{
+    text-align: center;
+}
+@keyframes fadeInTR2{
+    from{
+        transform: scaleX(0) skewX(-45deg);
+        transform-origin: left center;
+    }
+    to{
+        transform: scaleX(1) skewX(-45deg);
+        transform-origin: left center;
+        opacity: 1;
+    }
+}
+.anim-fadeintr2{
+    animation: fadeInTR2 0.125s ease-out forwards;
+}
+
+/*ENGI*/
+.engi-placeholder-wip{
+    z-index: 5;
+    width: 50px;
+    height: auto;
+}
+.engi-pos-draft{
+    position: fixed;
+    bottom: 1.5vw;
+    right: 8.7vw;
+}
+.engi-pos-nav{
+    position: fixed;
+    top: 1vw;
+    left: 12vw;
 }
