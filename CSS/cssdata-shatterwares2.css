@@ -1,8 +1,13 @@
+
+/*WINDOW GRADIENT CODE*/
+/*background-image: linear-gradient(to right bottom, #93b1ff, #89aaff, #80a3ff, #769cff, #6c95ff, #6c8efe, #6c87fd, #6e80fc, #7b77f9, #886df4, #9562ee, #a155e7);*/
+
 .nonstandard-draft{
     max-width: 15vw;
     position: fixed;
     bottom: 1.7vw;
     right: 1.7vw;
+    z-index: 1;
 }
 .nonstandard-draft-head{
     font-size: 1.7vw;
@@ -42,7 +47,7 @@
     height: 100%;
 }
 .header{
-    background-image: url('../RESOURCES/bgs/bg12.gif');
+    background-image: url('../RESOURCES/SHWHP_RES/nebula_poster.png');
     height: 100vh;
 }
 .fx{
@@ -243,8 +248,13 @@
     background-position: bottom left;
 }
 .longsec-child-preset{
-    height: 70vh;
-    color: #f3f3f3;
+    min-height: 70vh;
+}
+.longsec-child-preset-2{
+    min-height: 76vh;
+}
+.c-white{
+    color: white;
 }
 .general-heading{
     font-size: 54px;
@@ -275,7 +285,6 @@
     height: 225px;
     padding:20px;
     flex-wrap: wrap;
-    transform: rotate(45deg);
 }
 .lang-pick-opt{
     width: 94px;
@@ -534,6 +543,9 @@
 .mg-b-30px{
     margin-bottom: 30px;
 }
+.mg-b-60px{
+    margin-bottom: 60px;
+}
 .add-lang-paragraph2{
     text-align: center;
 }
@@ -567,4 +579,19 @@
     position: fixed;
     top: 1vw;
     left: 12vw;
+}
+@keyframes fadeInMod{
+    from{
+        transform: rotate(45deg);
+    } 
+    to{
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+}
+.anim-fadeinmod{
+    animation: fadeInMod 0.75s ease-out forwards;
+}
+.video-header{
+    object-fit: cover;
 }
