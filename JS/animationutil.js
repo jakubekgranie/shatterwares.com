@@ -2,6 +2,7 @@ var check = 0;
 var lastButton;
 
 function startAnimation1(){
+    document.getElementById('loading_header').classList.add('dp-none');
     animationForwarder('animelem1-1', 'animelem1-2', 'anim-1', 0)
     document.getElementById('animelem1-1').classList.remove('dp-none');
     document.getElementById('animelem1-2').classList.remove('dp-none');

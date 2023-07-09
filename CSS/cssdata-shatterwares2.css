@@ -2,9 +2,11 @@
 /*WINDOW GRADIENT CODE*/
 /*background-image: linear-gradient(to right bottom, #93b1ff, #89aaff, #80a3ff, #769cff, #6c95ff, #6c8efe, #6c87fd, #6e80fc, #7b77f9, #886df4, #9562ee, #a155e7);*/
 
+.pos-fxd{
+    position: fixed;
+}
 .nonstandard-draft{
     max-width: 15vw;
-    position: fixed;
     bottom: 1.7vw;
     right: 1.7vw;
     z-index: 1;
@@ -117,7 +119,6 @@
     color: blueviolet;
 }
 .nav{
-    position: fixed;
     background-color: white;
     top: 1vw;
     left: 50%;
@@ -571,12 +572,10 @@
     height: auto;
 }
 .engi-pos-draft{
-    position: fixed;
     bottom: 1.5vw;
     right: 8.7vw;
 }
 .engi-pos-nav{
-    position: fixed;
     top: 1vw;
     left: 12vw;
 }
@@ -594,4 +593,10 @@
 }
 .video-header{
     object-fit: cover;
+}
+.loadingicon-header{
+    bottom: 2vw;
+    left: 2vw;
+    width: 95px;
+    height: 95px;
 }
