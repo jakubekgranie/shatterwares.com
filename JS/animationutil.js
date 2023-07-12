@@ -2,6 +2,8 @@ var check = 0;
 var lastButton;
 
 function startAnimation1(){
+    document.getElementById("vid_bg").play();
+
     document.getElementById('loading_header').classList.add('dp-none');
     animationForwarder('animelem1-1', 'animelem1-2', 'anim-1', 0)
     document.getElementById('animelem1-1').classList.remove('dp-none');
@@ -98,16 +100,19 @@ function langPicker(buttonid){
 }
 function langStats(){
     anFrwdDoubleExec('sectionlang12', 'sectionlang22', 'slash1-lang2', 'slash2-lang2', 'anim-fadeintb', 250, 'anim-blink', 100, 0);
+
+    const ids = ['html', 'css', 'cpp', 'js'];
     setTimeout(() => {
-        document.getElementById('baricon_html').classList.add('icon-image-transformations');
-        setTimeout(() => {unravelBars('html')}, 225);
-        setTimeout(() => {document.getElementById('baricon_css').classList.add('icon-image-transformations')}, 100);
-        setTimeout(() => {unravelBars('css')}, 325);
-        setTimeout(() => {document.getElementById('baricon_cpp').classList.add('icon-image-transformations')}, 200);
-        setTimeout(() => {unravelBars('cpp')}, 425);
-        setTimeout(() => {document.getElementById('baricon_js').classList.add('icon-image-transformations')}, 300);
-        setTimeout(() => {unravelBars('js')}, 525);
-    }, 500)
+        for(let i = 0; i < 4; i++){
+            setTimeout(() => {document.getElementById('holder_' + ids[i]).classList.add('holder-transformations')}, (i * 25));
+        }
+    }, 500);
+    setTimeout(() => {
+        for(let i = 0; i < 4; i++){
+            setTimeout(() => {document.getElementById('baricon_' + ids[i]).classList.add('icon-image-transformations')}, (i * 100));
+            setTimeout(() => {unravelBars(ids[i])}, (i * 100 + 225));
+        }
+    }, 725)
 }
 function unravelBars(langId){
     for(let i = 0; i < 10; i++){

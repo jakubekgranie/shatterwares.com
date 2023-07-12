@@ -249,10 +249,10 @@
     background-position: bottom left;
 }
 .longsec-child-preset{
-    min-height: 70vh;
+    min-height: 65vh;
 }
 .longsec-child-preset-2{
-    min-height: 76vh;
+    min-height: 78vh;
 }
 .c-white{
     color: white;
@@ -489,17 +489,24 @@
     width: 80% !important;
     height: 80% !important;
 }
+.icon-holder{
+    background-image: linear-gradient(to right bottom, #ffffff, #eef9ff, #c5f9ff, #8efbff, #5ffbf1);
+    width: 100px;
+    height: 100px;
+    transform: scaleY(0);
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px cyan;
+}
 .icon-image{
-    width: 77px;
-    height: 77px;
-    margin-right: 20px;
+    width: 75%;
+    height: 75%;
     transform: scale(0.87);
     opacity: 0;
 }
 .bar-container-margin{
     margin-bottom: 20px;
 }
-.brad-10px{
+.brad-3px{
     border-radius: 3px;
 }
 .bar{
@@ -599,4 +606,9 @@
     left: 2vw;
     width: 95px;
     height: 95px;
+    z-index: 1;
+}
+.holder-transformations{
+    transform: scaleY(1);
+    transition: all 0.15s;
 }

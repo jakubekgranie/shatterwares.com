@@ -30,18 +30,40 @@
 
         <script src="JS/animationutil.js"></script>
     </head>
-    <body onload="setTimeout(startAnimation1, 200)" class="mg-none">
+    <body onload="startAnimation1()" class="mg-none">
+
+    <img id="loading_header" class="anim-blink pos-fxd loadingicon-header" src="RESOURCES/SHWHP_RES/loading_emblem.png" alt="loading icon">
 
     <!-- PRELOAD RESOURCES -->
     <div class="dp-none">
+        <img src="RESOURCES/SHWHP_RES/wip.gif">
+        <img src="RESOURCES/SHWHP_RES/engineer_emblem.png">
+
         <img src="RESOURCES/PRIMARY/logo3.png">
-        <img src="RESOURCES/bgs/bg12.gif">
-        <img src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
-        <img src="RESOURCES/SHWHP_RES/engineertf2_pfp.jpg">
+
         <img src="RESOURCES/PRIMARY/promisenobg-slim.png">
+        <img src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
+
         <video>
             <source src="RESOURCES/SHWHP_RES/nebulahigh.mp4">
         </video>
+        <img src="RESOURCES/SHWHP_RES/nebula_poster.png">
+        <img src="RESOURCES/SHWHP_RES/bg-content/bg-master.png">
+
+        <img src="RESOURCES/SHWHP_RES/engineertf2_pfp.jpg">
+        <img src="RESOURCES/SHWHP_RES/greeceborder.png">
+
+        <img src="RESOURCES/bgs/bg14.jpg">
+
+        <img src="RESOURCES/SHWHP_RES/cpp.png">
+        <img src="RESOURCES/SHWHP_RES/html.png">
+        <img src="RESOURCES/SHWHP_RES/js.png">
+        <img src="RESOURCES/SHWHP_RES/css.png">
+
+        <img src="RESOURCES/SHWHP_RES/cpp_b&w.png">
+        <img src="RESOURCES/SHWHP_RES/html_b&w.png">
+        <img src="RESOURCES/SHWHP_RES/js_b&w.png">
+        <img src="RESOURCES/SHWHP_RES/css_b&w.png">
     </div>
     <div class="nonstandard-draft pos-fxd">
         <img src="RESOURCES/SHWHP_RES/wip.gif" style="width: 80px;" class="engi-pos-draft pos-fxd engi-placeholder-wip" alt="enginearing my limit" title="ENGINEER-MARKED (NOT COMPLETE)">
@@ -75,9 +97,10 @@
             </div>
         </nav>
         <header class="fx fx-ai-c fx-jc-c header bgs-full pos-rel">
-            <video loop autoplay muted class="video-header w-100p h-100p pos-abs p-ab-center">
+            <video loop muted id="vid_bg" class="video-header w-100p h-100p pos-abs p-ab-center">
                 <source src="RESOURCES/SHWHP_RES/nebulahigh.mp4" type="video/mp4">
             </video>
+            <div class="w-100p h-100p pos-abs"></div>
             <div class="headercontainer">
                 <div class="pos-rel fx fx-ai-c fx-jc-c">
                     <img id="animelem1-1" class="dp-none pos-abs wh-animelem-1 wh-animelem-1-addr-1" src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
@@ -89,7 +112,6 @@
                     <img id="animelem1-2" class="dp-none pos-abs wh-animelem-1 wh-animelem-1-addr-2" src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
                 </div>
             </div>
-            <img id="loading_header" class="icon-image anim-blink pos-fxd loadingicon-header" src="RESOURCES/SHWHP_RES/loading_emblem.png" alt="loading icon">
         </header>
 
         <div class="w-100p border"></div>
@@ -104,7 +126,7 @@
                 </div>
                 <div class="pos-rel" title="ENGINEER-MARKED (NOT COMPLETE)">
                     <img src="RESOURCES/SHWHP_RES/engineer_emblem.png" class="pos-abs p-ab-center engi-placeholder-wip" alt="enginearing my limit" title="ENGINEER-MARKED (NOT COMPLETE)">
-                    <img src="RESOURCES/SHWHP_RES/engineertf2_pfp.jpg" class="pfp">
+                    <img src="RESOURCES/SHWHP_RES/pfp2.gif" class="pfp">
                 </div>
             </div>
         </section>
@@ -150,57 +172,65 @@
 
                     <div class="longer-subsection fx-dir-c bs-bb">
                         <div class="bar-container-margin fx fx-ai-c fx-jc-c">
-                            <img id="baricon_html" src="RESOURCES/SHWHP_RES/html.png" class="icon-image" alt="HTML icon" title="HTML">
-                            <div id="bar_html1" class="bar op-0 bar-red brad-10px bgs-full mg-l-100px"></div>
-                            <div id="bar_html2" class="bar op-0 bar-red brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_html3" class="bar op-0 bar-yellow brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_html4" class="bar op-0 bar-yellow brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_html5" class="bar op-0 bar-lgreen brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_html6" class="bar op-0 bar-lgreen brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_html7" class="bar op-0 bar-green brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_html8" class="bar op-0 bar-green brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_html9" class="bar op-0 bar-blue brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_html10" class="bar op-0 bar-blue brad-10px bgs-full mg-l-20px"></div>
+                            <div id="holder_html" class="icon-holder fx fx-ai-c fx-jc-c">
+                                <img id="baricon_html" src="RESOURCES/SHWHP_RES/html.png" class="icon-image" alt="HTML icon" title="HTML">
+                            </div>
+                            <div id="bar_html1" class="bar op-0 bar-red brad-3px bgs-full mg-l-100px"></div>
+                            <div id="bar_html2" class="bar op-0 bar-red brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_html3" class="bar op-0 bar-yellow brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_html4" class="bar op-0 bar-yellow brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_html5" class="bar op-0 bar-lgreen brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_html6" class="bar op-0 bar-lgreen brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_html7" class="bar op-0 bar-green brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_html8" class="bar op-0 bar-green brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_html9" class="bar op-0 bar-blue brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_html10" class="bar op-0 bar-blue brad-3px bgs-full mg-l-20px"></div>
                         </div>
                         <div class="bar-container-margin fx fx-ai-c fx-jc-c">
-                            <img id="baricon_css" src="RESOURCES/SHWHP_RES/css.png" class="icon-image" alt="CSS icon" title="CSS">
-                            <div id="bar_css1" class="bar op-0 bar-red brad-10px bgs-full mg-l-100px"></div>
-                            <div id="bar_css2" class="bar op-0 bar-red brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_css3" class="bar op-0 bar-yellow brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_css4" class="bar op-0 bar-yellow brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_css5" class="bar op-0 bar-lgreen brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_css6" class="bar op-0 bar-lgreen brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_css7" class="bar op-0 bar-green brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_css8" class="bar op-0 bar-green brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_css9" class="bar op-0 bar-blue brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_css10" class="bar op-0 bar-blue brad-10px bgs-full mg-l-20px"></div>
+                            <div id="holder_css" class="icon-holder fx fx-ai-c fx-jc-c">
+                                <img id="baricon_css" src="RESOURCES/SHWHP_RES/css.png" class="icon-image" alt="CSS icon" title="CSS">
+                            </div>
+                            <div id="bar_css1" class="bar op-0 bar-red brad-3px bgs-full mg-l-100px"></div>
+                            <div id="bar_css2" class="bar op-0 bar-red brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_css3" class="bar op-0 bar-yellow brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_css4" class="bar op-0 bar-yellow brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_css5" class="bar op-0 bar-lgreen brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_css6" class="bar op-0 bar-lgreen brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_css7" class="bar op-0 bar-green brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_css8" class="bar op-0 bar-green brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_css9" class="bar op-0 bar-blue brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_css10" class="bar op-0 bar-blue brad-3px bgs-full mg-l-20px"></div>
                         </div>
                         <div class="bar-container-margin fx fx-ai-c fx-jc-c">
-                            <img id="baricon_cpp" src="RESOURCES/SHWHP_RES/cpp.png" class="icon-image" alt="CPP icon" title="CPP">
-                            <div id="bar_cpp1" class="bar op-0 bar-red brad-10px bgs-full mg-l-100px"></div>
-                            <div id="bar_cpp2" class="bar op-0 bar-red brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_cpp3" class="bar op-0 bar-yellow brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_cpp4" class="bar op-0 bar-yellow brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_cpp5" class="bar op-0 bar-lgreen brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_cpp6" class="bar op-0 bar-empty brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_cpp7" class="bar op-0 bar-empty brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_cpp8" class="bar op-0 bar-empty brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_cpp9" class="bar op-0 bar-empty brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_cpp10" class="bar op-0 bar-empty brad-10px bgs-full mg-l-20px"></div>
+                            <div id="holder_cpp" class="icon-holder pos-rel fx fx-ai-c fx-jc-c">
+                                <img id="baricon_cpp" src="RESOURCES/SHWHP_RES/cpp.png" class="icon-image" alt="CPP icon" title="CPP">
+                            </div>
+                            <div id="bar_cpp1" class="bar op-0 bar-red brad-3px bgs-full mg-l-100px"></div>
+                            <div id="bar_cpp2" class="bar op-0 bar-red brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_cpp3" class="bar op-0 bar-yellow brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_cpp4" class="bar op-0 bar-yellow brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_cpp5" class="bar op-0 bar-lgreen brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_cpp6" class="bar op-0 bar-empty brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_cpp7" class="bar op-0 bar-empty brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_cpp8" class="bar op-0 bar-empty brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_cpp9" class="bar op-0 bar-empty brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_cpp10" class="bar op-0 bar-empty brad-3px bgs-full mg-l-20px"></div>
                             
                         </div>
                         <div class="fx fx-ai-c fx-jc-c">
-                            <img id="baricon_js" src="RESOURCES/SHWHP_RES/js.png" class="icon-image brad-10px" alt="JavaScript icon" title="JavaScript">
-                            <div id="bar_js1" class="bar op-0 bar-red brad-10px bgs-full mg-l-100px"></div>
-                            <div id="bar_js2" class="bar op-0 bar-red brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_js3" class="bar op-0 bar-yellow brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_js4" class="bar op-0 bar-yellow brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_js5" class="bar op-0 bar-lgreen brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_js6" class="bar op-0 bar-lgreen brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_js7" class="bar op-0 bar-green brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_js8" class="bar op-0 bar-empty brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_js9" class="bar op-0 bar-empty brad-10px bgs-full mg-l-20px"></div>
-                            <div id="bar_js10" class="bar op-0 bar-empty brad-10px bgs-full mg-l-20px"></div>
+                            <div id="holder_js" class="icon-holder pos-rel fx fx-ai-c fx-jc-c">
+                                <img id="baricon_js" src="RESOURCES/SHWHP_RES/js.png" class="icon-image brad-3px" alt="JavaScript icon" title="JavaScript">
+                            </div>
+                            <div id="bar_js1" class="bar op-0 bar-red brad-3px bgs-full mg-l-100px"></div>
+                            <div id="bar_js2" class="bar op-0 bar-red brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_js3" class="bar op-0 bar-yellow brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_js4" class="bar op-0 bar-yellow brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_js5" class="bar op-0 bar-lgreen brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_js6" class="bar op-0 bar-lgreen brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_js7" class="bar op-0 bar-green brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_js8" class="bar op-0 bar-empty brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_js9" class="bar op-0 bar-empty brad-3px bgs-full mg-l-20px"></div>
+                            <div id="bar_js10" class="bar op-0 bar-empty brad-3px bgs-full mg-l-20px"></div>
                         </div>
                     </div>
                 </div>
