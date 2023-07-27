@@ -1,6 +1,10 @@
 
 /*WINDOW GRADIENT CODE*/
 /*background-image: linear-gradient(to right bottom, #93b1ff, #89aaff, #80a3ff, #769cff, #6c95ff, #6c8efe, #6c87fd, #6e80fc, #7b77f9, #886df4, #9562ee, #a155e7);*/
+a{
+    text-decoration: none;
+    color: unset;
+}
 
 .pos-fxd{
     position: fixed;
@@ -43,7 +47,7 @@
     width: 14.75vw;
 }
 .w-9p5{
-    width: 9.5vw;
+    width: 182.4px;
 }
 .h-100p{
     height: 100%;
@@ -240,19 +244,23 @@
 .border{
     height: 40px;
     background: url('../RESOURCES/SHWHP_RES/greeceborder.png'), white;
+}
+.bgs-contain{
     background-size: contain;
 }
 .abm-bgp{
     background: url('../RESOURCES/SHWHP_RES/bg-content/bg-master.png'), white;
     background-size: auto 100%;
-    background-repeat: no-repeat;
     background-position: bottom left;
+}
+.bgr-no-r{
+    background-repeat: no-repeat;
 }
 .longsec-child-preset{
     min-height: 65vh;
 }
 .longsec-child-preset-2{
-    min-height: 78vh;
+    min-height: 84vh;
 }
 .c-white{
     color: white;
@@ -502,6 +510,7 @@
     height: 75%;
     transform: scale(0.87);
     opacity: 0;
+    mix-blend-mode: luminosity;
 }
 .bar-container-margin{
     margin-bottom: 20px;
@@ -544,9 +553,10 @@
     margin-left: 20px;
 }
 .icon-image-transformations{
-    opacity: 1;
+    opacity: 0.85;
     transform: scale(1);
     transition: all 0.2s ease-out;
+    border-radius: 5px;
 }
 .mg-b-30px{
     margin-bottom: 30px;
@@ -611,4 +621,35 @@
 .holder-transformations{
     transform: scaleY(1);
     transition: all 0.15s;
+}
+.menu-opt{
+    font-family: 'PT Sans';
+    font-weight: 600;
+    font-size: 19px;
+}
+@keyframes fadeInRainbow{
+    from{
+        filter: hue-rotate(0deg) blur(20px);
+    }
+    to{
+        filter: hue-rotate(365deg);
+        opacity: 1;
+    }
+}
+.anim-fadeinrainbow{
+    animation: fadeInRainbow 0.5s ease-out forwards;
+}
+.footer{
+    background-color: grey;
+}
+.true-footer{
+    height: 120px;
+    border-top: #4e4e4e 2px solid;
+    background-image: url('../RESOURCES/SHWHP_RES/footer-bg.png');
+    box-shadow: 0px 0px 30px 30px inset grey;
+    filter: grayscale(100%) brightness(90%);
+}
+.footer-text{
+    font-size: 20px;
+    filter: drop-shadow(3px 3px 3px #424242);
 }

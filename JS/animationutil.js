@@ -26,7 +26,6 @@ function langPicker(buttonid){
         const langParagraph = document.getElementById('sectionlang2');
         const langHeading = document.getElementById('sectionlang1p2');
         const langNames = ['cpp','html','js','css'];
-        const languageId = [document.getElementById('cpp'), document.getElementById('html'), document.getElementById('js'), document.getElementById('css')];
 
         if(lastButton != null){
             const lastImage = 'icon-' + lastButton;
@@ -40,12 +39,12 @@ function langPicker(buttonid){
         const n_a = "not-allowed";
 
         for(let i = 0; i < 4; i++){
-            languageId[i].onclick = "null";
-            languageId[i].style.cursor = n_a;
+            document.getElementById(langNames[i]).onclick = "null";
+            document.getElementById(langNames[i]).style.cursor = n_a;
         }
 
         setTimeout(() => {for(let i = 0; i < 4; i++){
-                languageId[i].style.cursor = null;
+                document.getElementById(langNames[i]).style.cursor = null;
             }
             document.getElementById(buttonid).style.cursor = n_a;
         }, 1000);
