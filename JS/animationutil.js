@@ -115,3 +115,8 @@ function animationForwarder(identifier, identifier2, anim_id, wait_time){
     }
     setTimeout(() => {document.getElementById(identifier2).classList.add(anim_id)}, wait_time);
 }
+function playEngiVoice(){
+    const path = document.getElementById('engivoice');
+    path.volume = 0.3;
+    path.play();
+}

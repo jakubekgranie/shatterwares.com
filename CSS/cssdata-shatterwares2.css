@@ -86,7 +86,7 @@ a{
     box-shadow: 0vw 0vw 0.3vw grey;
 }
 .bgs-full{
-    background-size: 100% 100%, 100% 100%;
+    background-size: 100% 100%;
 }
 .headerimage{
     width: 12vw;
@@ -218,7 +218,7 @@ a{
 .pfp{
     height: 340px;
     width: auto;
-    border-radius: 15%;
+    border-radius: 20px;
     margin-left: 70px;
 }
 @keyframes fadeInTR{
@@ -643,7 +643,7 @@ a{
     background-color: grey;
 }
 .true-footer{
-    height: 120px;
+    height: 100px;
     border-top: #4e4e4e 2px solid;
     background-image: url('../RESOURCES/SHWHP_RES/footer-bg.png');
     box-shadow: 0px 0px 30px 30px inset grey;
@@ -652,4 +652,47 @@ a{
 .footer-text{
     font-size: 20px;
     filter: drop-shadow(3px 3px 3px #424242);
+}
+.socials-section{
+    height: 75vh;
+    background: url('../RESOURCES/SHWHP_RES/bg2-content/engimedic-compressed.png') no-repeat, #251e47;
+    background-size: contain, 100% 100%;
+}
+.rotate-45deg{
+    transform: rotate(45deg);
+}
+.rhombusicon-border{
+    width: 135px;
+    height: 135px;
+}
+.rico-bd-discord{
+    background-image: linear-gradient(to right bottom, #7c9ff7, #6581c9, #4e649c, #394972, #252f4a);
+}
+.rico-bd-github{
+    background-image: linear-gradient(to left top, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);
+}
+.rico-bd-steam{
+    background-image: linear-gradient(to right bottom, #061938, #0e2f55, #144872, #166291, #137eaf);
+}
+.rico-bd-mail{
+    background-image: linear-gradient(to right bottom, #1de9b6, #00d4e4, #00b8ff, #0092ff, #7c54f4);
+}
+.mg-40px{
+    margin: 40px;
+}
+.rhombusicon-filling{
+    background-color: #251e47;
+    height: 110px;
+    width: 110px;
+}
+.rhombusicon{
+    width: 50%;
+    height: auto;
+    transform: rotate(-45deg);
+}
+.engivoice{
+    left: 147px;
+    bottom: 9vh;
+    width: 200px;
+    height: 220px;
 }
