@@ -4,6 +4,10 @@
 a{
     text-decoration: none;
     color: unset;
+    display: block;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 .pos-fxd{
@@ -171,6 +175,8 @@ a{
 
 .abm-section{
     height: 74vh;
+}
+.min-padding{
     padding: 10vh 0;
 }
 .bs-bb{
@@ -257,10 +263,10 @@ a{
     background-repeat: no-repeat;
 }
 .longsec-child-preset{
-    min-height: 65vh;
+    min-height: 55vh;
 }
 .longsec-child-preset-2{
-    min-height: 84vh;
+    min-height: 74vh;
 }
 .c-white{
     color: white;
@@ -622,8 +628,10 @@ a{
     transform: scaleY(1);
     transition: all 0.15s;
 }
-.menu-opt{
+.ff-pt-sans{
     font-family: 'PT Sans';
+}
+.menu-opt{
     font-weight: 600;
     font-size: 19px;
 }
@@ -654,8 +662,8 @@ a{
     filter: drop-shadow(3px 3px 3px #424242);
 }
 .socials-section{
-    height: 75vh;
-    background: url('../RESOURCES/SHWHP_RES/bg2-content/engimedic-compressed.png') no-repeat, #251e47;
+    height: 55vh;
+    background: url('../RESOURCES/SHWHP_RES/bg2-content/engimedic-small-compressed.png') no-repeat, #251e47;
     background-size: contain, 100% 100%;
 }
 .rotate-45deg{
@@ -684,15 +692,58 @@ a{
     background-color: #251e47;
     height: 110px;
     width: 110px;
+    transition: all 0.25s;
+}
+.rhombusicon-filling:hover{
+    background-color: unset;
+    transition: all 0.25s;
+}
+.rhombusicon-filling:hover .rhombusicon{
+    filter: drop-shadow(1.5px 1.5px 1px black);
+    transition: all 0.25s;
 }
 .rhombusicon{
     width: 50%;
     height: auto;
     transform: rotate(-45deg);
+    transition: all 0.25s;
 }
 .engivoice{
     left: 147px;
     bottom: 9vh;
     width: 200px;
     height: 220px;
+}
+.opt-hover::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: -15px;
+    background-image: url('../RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png');
+    transform: rotate(180deg);
+    background-size: 100% 100%;
+    width: 13px;
+    height: 13px;
+    opacity: 0;
+    transition: all 0.1s ease-in;
+}
+.menu-opt:hover .opt-hover::after{
+    opacity: 1;
+    transition: all 0.1s ease-in;
+}
+.opt-hover::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    background-image: url('../RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png');
+    background-size: 100% 100%;
+    width: 13px;
+    height: 13px;
+    opacity: 0;
+    transition: all 0.125s ease-in;
+}
+.menu-opt:hover .opt-hover:before{
+    opacity: 1;
+    transition: all 0.125s ease-in;
 }
