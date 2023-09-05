@@ -9,6 +9,9 @@ a{
 html{
     scroll-behavior: smooth;
 }
+*{
+    flex-shrink: 0;
+}
 
 .pos-fxd{
     position: fixed;
@@ -16,7 +19,7 @@ html{
 .nonstandard-draft{
     max-width: 15vw;
     bottom: 1.7vw;
-    right: 1.7vw;
+    left: 1.7vw;
     z-index: 1;
 }
 .nonstandard-draft-head{
@@ -80,6 +83,8 @@ html{
 }
 #headertext{
     width: 0vw;
+}
+.ov-h{
     overflow: hidden;
 }
 .headertexttransformed{
@@ -132,7 +137,6 @@ html{
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10vw;
-    z-index: 1;
 }
 .dp-none{
     display: none;
@@ -622,6 +626,8 @@ html{
     left: 2vw;
     width: 95px;
     height: 95px;
+}
+.z-1{
     z-index: 1;
 }
 .holder-transformations{
@@ -661,53 +667,14 @@ html{
     font-size: 20px;
     filter: drop-shadow(3px 3px 3px #424242);
 }
-.socials-section{
-    height: 55vh;
-    background: url('../RESOURCES/SHWHP_RES/bg2-content/engimedic-small-compressed.png') no-repeat, #251e47;
-    background-size: contain, 100% 100%;
-}
 .rotate-45deg{
     transform: rotate(45deg);
 }
-.rhombusicon-border{
-    width: 135px;
-    height: 135px;
-}
-.rico-bd-discord{
-    background-image: linear-gradient(to right bottom, #7c9ff7, #6581c9, #4e649c, #394972, #252f4a);
-}
-.rico-bd-github{
-    background-image: linear-gradient(to left top, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);
-}
-.rico-bd-steam{
-    background-image: linear-gradient(to right bottom, #061938, #0e2f55, #144872, #166291, #137eaf);
-}
-.rico-bd-mail{
-    background-image: linear-gradient(to right bottom, #1de9b6, #00d4e4, #00b8ff, #0092ff, #7c54f4);
-}
+
 .mg-40px{
     margin: 40px;
 }
-.rhombusicon-filling{
-    background-color: #251e47;
-    height: 110px;
-    width: 110px;
-    transition: all 0.25s;
-}
-.rhombusicon-filling:hover{
-    background-color: unset;
-    transition: all 0.25s;
-}
-.rhombusicon-filling:hover .rhombusicon{
-    filter: drop-shadow(1.5px 1.5px 1px black);
-    transition: all 0.25s;
-}
-.rhombusicon{
-    width: 50%;
-    height: auto;
-    transform: rotate(-45deg);
-    transition: all 0.25s;
-}
+
 .engivoice{
     left: 147px;
     bottom: 9vh;
@@ -743,7 +710,74 @@ html{
     opacity: 0;
     transition: all 0.125s ease-in;
 }
+
+.socials-button{
+    right: 1.7vw;
+    bottom: 1.7vw;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0vw 0vw 0.2vw #363636);
+    transition: all 0.1s ease-in;
+}
+.socials-button:hover{
+    transition: all 0.1s ease-in;
+    filter: drop-shadow(0vw 0vw 0.45vw #363636);
+}
+
 .menu-opt:hover .opt-hover:before{
     opacity: 1;
     transition: all 0.125s ease-in;
+}
+@media screen and (max-width: 1335px){
+    .bar{
+        width: 60px;
+        height: 28px;
+    }
+    .mg-l-100px{
+        margin-left: 65px;
+    }
+    .min-padding{
+        padding: 6vh 0;
+    }
+}
+@media screen and (max-width: 1220px){
+    .headerimage{
+        width: 14VW;
+    }
+    .bar{
+        width: 58px;
+        height: 25px;
+    }
+    .icon-holder{
+        width: 90px;
+        height: 90px;
+    }
+    .min-padding{
+        padding: 4.5vh 0;
+    }
+}
+@media screen and (max-width: 1040px){
+    .bar{
+        width: 50px;
+        height: 23px;
+    }
+    .mg-l-100px{
+        margin-left: 55px;
+    }
+    .icon-holder{
+        width: 85px;
+        height: 85px;;
+    }
+}
+@media screen and (max-width: 970px){
+    .bar{
+        width: 47px;
+        height: 21px;
+    }
+    .icon-holder{
+        width: 80px;
+        height: 80px;
+    }
 }

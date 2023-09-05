@@ -32,7 +32,7 @@
     </head>
     <body onload="startAnimation1()" class="mg-none">
 
-    <img id="loading_header" class="anim-blink pos-fxd loadingicon-header" src="RESOURCES/SHWHP_RES/loading_emblem.png" alt="loading icon">
+    <img id="loading_header" class="anim-blink pos-fxd loadingicon-header z-1" src="RESOURCES/SHWHP_RES/loading_emblem.png" alt="loading icon">
 
     <!-- PRELOAD RESOURCES -->
     <div class="dp-none">
@@ -66,7 +66,6 @@
         <img src="RESOURCES/SHWHP_RES/css_b&w.png">
     </div>
     <div class="nonstandard-draft pos-fxd">
-        <img src="RESOURCES/SHWHP_RES/wip.gif" style="width: 80px;" class="engi-pos-draft pos-fxd engi-placeholder-wip" alt="enginearing my limit" title="ENGINEER-MARKED (NOT COMPLETE)">
         <h1 class="nonstandard-draft-head grd-draft1 gradient-text"><b>DRAFT&nbsp;</b></h1><h1 class="nonstandard-draft-head grd-draft2 gradient-text">v. 7/29/2023</h1>
         <p class="mg-none nonstandard-draft-data">This version wasn't completed, therefore its capabilities are limited. For more details, please head to GitHub.
 
@@ -75,7 +74,7 @@
         </p>
     </div>
 
-        <nav class="fx fx-jc-spb w-97p b-sh-def nav pos-fxd" title="ENGINEER-MARKED (NOT COMPLETE)">
+        <nav class="fx fx-jc-spb w-97p b-sh-def nav pos-fxd z-1" title="ENGINEER-MARKED (NOT COMPLETE)">
             <img src="RESOURCES/SHWHP_RES/engineer_emblem.png" class="engi-pos-nav pos-fxd engi-placeholder-wip" alt="enginearing my limit" title="ENGINEER-MARKED (NOT COMPLETE)">
             <img class="w-14p75" src="RESOURCES/PRIMARY/logo3.png" alt="logo">
             <div class="fx fsz-1">
@@ -110,7 +109,7 @@
                 <div class="pos-rel fx fx-ai-c fx-jc-c">
                     <img id="animelem1-1" class="dp-none pos-abs wh-animelem-1 wh-animelem-1-addr-1" src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
                     <img id="animelem1-3" class="headerimage dp-none" src="RESOURCES/PRIMARY/promisenobg-slim.png" alt="logo">
-                    <div id="headertext" class="fx fx-ai-c ff-raleway">
+                    <div id="headertext" class="fx fx-ai-c ff-raleway ov-h">
                         <h1 class="headergradienttext mg-none grd-firsth1 gradient-text">Shatterwares:&nbsp;</h1>
                         <h1 class="headergradienttext mg-none grd-sech1 gradient-text">the future starts now.</h1>
                     </div>
@@ -240,50 +239,13 @@
         </div>
         </section>
 
-        <section class="socials-section bgs-contain fx fx-jc-c fx-ai-c pos-rel">
-
-            <audio preload="auto" id="engivoice">
-                <source src="RESOURCES/SHWHP_RES/engivoice.wav" type="audio/wav">
-            </audio>
-
-            <div class="pos-abs engivoice cur-sel" onclick="playEngiVoice()"></div>
-            
-            <a name="contact"></a>
-
-            <div class="rhombusicon-border rico-bd-discord brad-3px mg-40px fx fx-ai-c fx-jc-c cur-sel rotate-45deg" onclick="alert('My Discord name is jakubekgranie.')">
-                <div class="rhombusicon-filling fx fx-ai-c fx-jc-c">
-                    <img class="rhombusicon" src="RESOURCES/SHWHP_RES/discord.png" alt="Discord icon">
-                </div>
-            </div>
-
-            <a target="_blank" class="rotate-45deg mg-40px" href="https://github.com/jakubekgranie">
-                <div class="rhombusicon-border rico-bd-github brad-3px fx fx-ai-c fx-jc-c">
-                    <div class="rhombusicon-filling fx fx-ai-c fx-jc-c">
-                        <img class="rhombusicon" src="RESOURCES/SHWHP_RES/github.png" alt="Github icon">
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="rotate-45deg mg-40px" href="https://steamcommunity.com/id/wechanged">
-                <div class="rhombusicon-border rico-bd-steam brad-3px fx fx-ai-c fx-jc-c">
-                    <div class="rhombusicon-filling fx fx-ai-c fx-jc-c">
-                        <img class="rhombusicon" src="RESOURCES/SHWHP_RES/steam.png" alt="Steam icon">
-                    </div>
-                </div>
-            </a>
-
-            <a href="mailto:eirvekoa@gmail.com" class="rotate-45deg mg-40px">
-                <div class="rhombusicon-border rico-bd-mail brad-3px fx fx-ai-c fx-jc-c">
-                    <div class="rhombusicon-filling fx fx-ai-c fx-jc-c">
-                        <img class="rhombusicon" src="RESOURCES/SHWHP_RES/message.png" alt="Mail icon">
-                    </div>
-                </div>
-            </a>
-        </section>
+        <div class="socials-button pos-fxd z-1 ov-h">
+            <img class="w-100p h-100p" src="RESOURCES/SHWHP_RES/chat.png" alt="chat icon">
+        </div>
         
         <footer class="footer">
             <div class="true-footer w-100p fx fx-ai-c fx-jc-c">
-                <p class="footer-text mg-none ff-raleway">© Jacob Namyslak. All rights for content reserved by their respective authors.</p>
+                <p class="footer-text mg-none ff-raleway">© Jacob Namyslak. All rights for content reserved by its respective authors.</p>
             </div>
         </footer>
     </body>
