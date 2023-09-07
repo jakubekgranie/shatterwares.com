@@ -515,9 +515,11 @@ html{
     border-radius: 10px;
     box-shadow: 1px 1px 7px cyan;
 }
-.icon-image{
+.insides-wh-pack{
     width: 75%;
     height: 75%;
+}
+.icon-image{
     transform: scale(0.87);
     opacity: 0;
     mix-blend-mode: luminosity;
@@ -650,8 +652,19 @@ html{
         opacity: 1;
     }
 }
+@keyframes trueFadeInRainbow{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(365deg);
+    }
+}
 .anim-fadeinrainbow{
     animation: fadeInRainbow 0.5s ease-out forwards;
+}
+.anim-truefadeinrainbow{
+    animation: trueFadeInRainbow 0.5s ease-out;
 }
 .footer{
     background-color: grey;
@@ -711,21 +724,6 @@ html{
     transition: all 0.125s ease-in;
 }
 
-.socials-button{
-    right: 1.7vw;
-    bottom: 1.7vw;
-    border-radius: 50%;
-    background-color: whitesmoke;
-    width: 100px;
-    height: 100px;
-    filter: drop-shadow(0vw 0vw 0.2vw #363636);
-    transition: all 0.1s ease-in;
-}
-.socials-button:hover{
-    transition: all 0.1s ease-in;
-    filter: drop-shadow(0vw 0vw 0.45vw #363636);
-}
-
 .menu-opt:hover .opt-hover:before{
     opacity: 1;
     transition: all 0.125s ease-in;
@@ -780,4 +778,26 @@ html{
         width: 80px;
         height: 80px;
     }
+}
+.socials-opt{
+    width: 130px;
+    height: 130px;
+    background-color: black;
+    background-image: url("../RESOURCES/SHWHP_RES/buttongif.gif");
+    box-shadow: 0px 0px 75px inset black;
+}
+.socialsbutton-wrapper{
+    box-shadow: 0px 0px 20px 3px black;
+    transform: rotate(45deg);
+    right: 3vw;
+    bottom: 3vw;
+}
+.socials-opt-inside-decor{
+    background-color: #031a1f;
+    box-shadow: 0px 0px 25px inset #030D10;
+}
+.icon-image-socials{
+    width: 66%;
+    height: 66%;
+    transform: rotate(-45deg);
 }

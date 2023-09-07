@@ -120,4 +120,13 @@ function playEngiVoice(){
     path.volume = 0.3;
     path.play();
 }
+function rainbow(){
+    //Remove the onmouseover event to prevent the button from flickering
+    const socials = document.getElementById('socials');
+    const socials_trigger = document.getElementById('socials_trigger')
+    socials_trigger.onmouseover = null;
+    setTimeout(() => socials_trigger.onmouseover = function() {rainbow()}, 500);
 
+    socials.classList.add('anim-truefadeinrainbow');
+    setTimeout(() => socials.classList.remove('anim-truefadeinrainbow'), 500); //Replay the animation
+}
