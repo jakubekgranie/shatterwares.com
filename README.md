@@ -1,4 +1,4 @@
-# ShatterWares Project Hub
+# ShatterWares Homepage
 
 See "about" for more information and see the news, we'll be there sometime soon.
 
@@ -17,3 +17,6 @@ All rights reserved
 ShatterWares Homepage
 (C) J. Namyślak
 All rights reserved
+
+Authors of unmentioned assets might reserve any copyright, if npt fitting any of cases below.
+Co-authors of projects, assets and all alike might share partial or full copyright of the given.
