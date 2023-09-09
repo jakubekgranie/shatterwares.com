@@ -130,3 +130,9 @@ function rainbow(){
     socials.classList.add('anim-truefadeinrainbow');
     setTimeout(() => socials.classList.remove('anim-truefadeinrainbow'), 500); //Replay the animation
 }
+function toggleUpdateScreenVisibility(){
+    const toToggle = [document.getElementById('socials_trigger'), document.getElementById('updateScreen')];
+    for(let i = 0; i < 2; i++){
+        toToggle[i].classList.toggle("dp-none");
+    }
+}

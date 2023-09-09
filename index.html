@@ -66,13 +66,38 @@
         <img src="RESOURCES/SHWHP_RES/css_b&w.png">
     </div>
     <div class="nonstandard-draft pos-fxd">
-        <h1 class="nonstandard-draft-head grd-draft1 gradient-text"><b>DRAFT&nbsp;</b></h1><h1 class="nonstandard-draft-head grd-draft2 gradient-text">v. 9/07/2023</h1>
+        <h1 class="nonstandard-draft-head grd-draft1 gradient-text"><b>DRAFT&nbsp;</b></h1><h1 class="nonstandard-draft-head grd-draft2 gradient-text">v. 9/09/2023</h1>
         <p class="mg-none nonstandard-draft-data">This version wasn't completed, therefore its capabilities are limited. For more details, please head to GitHub.
 
             Signed,
             <span class="grd-sech1 gradient-text">Jacob</span>
         </p>
     </div>
+
+        <!--Update Notif Screen-->
+        <div id="updateScreen" onclick="toggleUpdateScreenVisibility()" class="w-100p h-100p pos-fxd w-100p update-frame fx fx-ai-c fx-jc-c dp-none">
+            <div class="w-100p h-100p update-section-bg"></div>
+            <div class="render-pixel update-star-emblem bgr-no-r bgs-additional-elem-input pos-fxd" alt="A star"></div>
+            <div class="update-notes pos-fxd bs-bb brad-40px">
+                <div class="fx fx-ai-c mg-b-45px">
+                    <img class="update-github-thumbnail" src="RESOURCES/SHWHP_RES/github.png" alt="github icon">
+                    <div class="add-text-subsection">
+                        <h2 class="mg-none fw-500 mg-b-8px">(Github) Update Log</h2>
+                        <h2 class="mg-none fw-500 fc-grayed">RegUpd 51 [09.09.2023]</h2>
+                    </div>
+                </div>
+                <div class="brad-40px w-100p update-notes-text ov-h bs-bb scroll-alternative">
+                    <h1 class="header-notes">// ShWHP</h1>
+                    <p class="mg-none paragraph-notes">
+                        - Moved the update button lower in the code for priority changes;
+                        - Changed a class name: "footer" to "bg-gray";
+                        - Added a local update data view;
+                        - Removed the current update anchor.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <nav class="fx fx-jc-spb w-97p b-sh-def nav pos-fxd z-1" title="ENGINEER-MARKED (NOT COMPLETE)">
             <img src="RESOURCES/SHWHP_RES/engineer_emblem.png" class="engi-pos-nav pos-fxd engi-placeholder-wip" alt="enginearing my limit" title="ENGINEER-MARKED (NOT COMPLETE)">
             <img class="w-14p75" src="RESOURCES/PRIMARY/logo3.png" alt="logo">
@@ -98,15 +123,15 @@
                 </a>
             </div>
         </nav>
-        <a href="https://github.com/jakubekgranie" title="Current update source" target="_blank">
-            <div id="socials_trigger" class="socialsbutton-wrapper z-1 pos-fxd" onmouseover="rainbow()">
-                <div class="socials-opt gradient-social bgs-full fx fx-ai-c fx-jc-c">
-                    <div class="socials-opt-inside-decor insides-wh-pack fx fx-ai-c fx-jc-c">
-                        <img id="socials" class="icon-image-socials" src="RESOURCES/SHWHP_RES/antenna.png">
-                    </div>
+
+        <div id="socials_trigger" class="socialsbutton-wrapper z-1 pos-fxd" onmouseover="rainbow()" onclick="toggleUpdateScreenVisibility()">
+            <div class="socials-opt gradient-social bgs-full fx fx-ai-c fx-jc-c">
+                <div class="socials-opt-inside-decor insides-wh-pack fx fx-ai-c fx-jc-c">
+                    <img id="socials" class="icon-image-socials" src="RESOURCES/SHWHP_RES/antenna.png">
                 </div>
             </div>
-        </a>
+        </div>
+
         <header class="fx fx-ai-c fx-jc-c header bgs-full pos-rel">
             <video autoplay loop muted id="vid_bg" class="video-header w-100p h-100p pos-abs p-ab-center">
                 <source src="RESOURCES/SHWHP_RES/nebulahigh.mp4" type="video/mp4">
@@ -127,7 +152,7 @@
 
         <div class="w-100p border bgs-contain"></div>
 
-        <section onmouseover="anFrwdDoubleExec('headermission', 'headermission2', 'skip', 'pfp', 'anim-fadeintr', 100, 'anim-fadeinrainbow', 640)" class="abm-section min-padding w-100p fx fx-ai-c fx-jc-c fx-dir-c abm-bgp bgr-no-r bs-bb">
+        <section onmouseover="anFrwdDoubleExec('headermission', 'headermission2', 'skip', 'pfp', 'anim-fadeintr', 100, 'anim-fadeinrainbow', 640)" class="abm-section min-padding w-100p fx fx-ai-c fx-jc-c fx-dir-c abm-bgp bgr-no-r bs-bb bgs-additional-elem-input">
             <div class="nest-subsection fx fx-jc-spb fx-ai-c">
                 <div class="add-text-subsection fx fx-dir-c">
                     <h1 id="headermission" class="mg-none t-ss-heading op-0">The mission<span class="anim-blink">_</span></h1>
@@ -258,7 +283,7 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="bgc-grey">
             <div class="true-footer w-100p fx fx-ai-c fx-jc-c">
                 <p class="footer-text mg-none ff-raleway">© Jacob Namyslak. All rights for content reserved by its respective authors.</p>
             </div>

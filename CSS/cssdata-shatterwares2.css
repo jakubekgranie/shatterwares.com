@@ -1,6 +1,10 @@
 
 /*WINDOW GRADIENT CODE*/
 /*background-image: linear-gradient(to right bottom, #93b1ff, #89aaff, #80a3ff, #769cff, #6c95ff, #6c8efe, #6c87fd, #6e80fc, #7b77f9, #886df4, #9562ee, #a155e7);*/
+
+/*MAX Z-INDEX: 3 AS OF 09.09.2023*/
+/*MAX Z-INDEX (NON-STANDARD): 10 AS OF 09.09.2023*/
+
 a{
     text-decoration: none;
     color: unset;
@@ -20,7 +24,7 @@ html{
     max-width: 15vw;
     bottom: 1.7vw;
     left: 1.7vw;
-    z-index: 1;
+    z-index: 10;
 }
 .nonstandard-draft-head{
     font-size: 1.7vw;
@@ -262,8 +266,10 @@ html{
 }
 .abm-bgp{
     background: url('../RESOURCES/SHWHP_RES/bg-content/bg-master.png'), white;
-    background-size: auto 100%;
     background-position: bottom left;
+}
+.bgs-additional-elem-input{
+    background-size: auto 100%;
 }
 .bgr-no-r{
     background-repeat: no-repeat;
@@ -598,7 +604,7 @@ html{
 
 /*ENGI*/
 .engi-placeholder-wip{
-    z-index: 5;
+    z-index: 2;
     width: 50px;
     height: auto;
 }
@@ -642,8 +648,11 @@ html{
     font-family: 'PT Sans';
 }
 .menu-opt{
-    font-weight: 600;
     font-size: 19px;
+    font-weight: 600;
+}
+.fw-500{
+    font-weight: 500;
 }
 @keyframes fadeInRainbow{
     from{
@@ -668,12 +677,11 @@ html{
 .anim-truefadeinrainbow{
     animation: trueFadeInRainbow 0.5s ease-out;
 }
-.footer{
+.bgc-grey{
     background-color: grey;
 }
 .true-footer{
     height: 100px;
-    border-top: #4e4e4e 2px solid;
     background-image: url('../RESOURCES/SHWHP_RES/footer-bg.png');
     box-shadow: 0px 0px 30px 30px inset grey;
     filter: grayscale(100%) brightness(90%);
@@ -802,4 +810,61 @@ html{
     width: 66%;
     height: 66%;
     transform: rotate(-45deg);
+}
+.update-section-bg{
+    background-color: #4C997F;
+    opacity: 0.95;
+}
+.update-star-emblem{
+    width: 25vw;
+    height: 40vw;
+    background-image: url('../RESOURCES/SHWHP_RES/star.png');
+    z-index: 4;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.update-frame{
+    height: 100vh;
+    z-index: 3;
+}
+.update-notes{
+    background-image: linear-gradient(to right bottom, #ffffff, #f1f1f1, #e3e3e3, #d5d5d5, #c7c7c7);
+    width: 600px;
+    height: 80%;
+    box-shadow: 0px 0px 30px #535353;
+    padding: 50px;
+}
+.update-github-thumbnail{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+.brad-40px{
+    border-radius: 40px;
+}
+.update-notes-text{
+    height: calc(100% - 105px);
+    background-color: #d1d1d1;
+    border: 3px solid #BBBBBB;
+    font-family: monospace;
+    padding: 30px;
+}
+.mg-b-45px{
+    margin-bottom: 45px;
+}
+.mg-b-8px{
+    margin-bottom: 8px;
+}
+.fc-grayed{
+    color: #5c5c5c;
+}
+.header-notes{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.paragraph-notes{
+    font-size: 20px;
+    white-space: pre-line;
 }
