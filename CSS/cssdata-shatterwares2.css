@@ -859,10 +859,18 @@ html{
 .fc-grayed{
     color: #5c5c5c;
 }
+
 .header-notes{
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 25px;
+}
+.header-notes-subsequent{
+    font-size: 27.5px !important;
+    color: #00AF91;
+    text-shadow: 2px 2px 2px #007965;
+    font-variant: small-caps;
+    margin-top: 20px !important;
 }
 .paragraph-notes{
     font-size: 20px;
