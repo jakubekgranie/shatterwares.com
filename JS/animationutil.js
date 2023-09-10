@@ -131,8 +131,10 @@ function rainbow(){
     setTimeout(() => socials.classList.remove('anim-truefadeinrainbow'), 500); //Replay the animation
 }
 function toggleUpdateScreenVisibility(){
-    const toToggle = [document.getElementById('socials_trigger'), document.getElementById('updateScreen')];
-    for(let i = 0; i < 2; i++){
-        toToggle[i].classList.toggle("dp-none");
-    }
-}
+    const updateScreen = document.getElementById('updateScreen');
+    const animOShift = "anim-opacityShift";
+    updateScreen.classList.toggle("dp-none");
+    updateScreen.classList.toggle(animOShift);
+
+    anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
+} 

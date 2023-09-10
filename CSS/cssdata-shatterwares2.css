@@ -92,7 +92,7 @@ html{
     overflow: hidden;
 }
 .headertexttransformed{
-    width: 48.5709375vw !important;
+    width: 49.63625vw !important;
     transition: all 0.5s ease-in;
 }  
 .b-sh-def{
@@ -822,7 +822,7 @@ html{
     z-index: 4;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(25vw);
 }
 .update-frame{
     height: 100vh;
@@ -870,9 +870,31 @@ html{
     color: #00AF91;
     text-shadow: 2px 2px 2px #007965;
     font-variant: small-caps;
-    margin-top: 20px !important;
 }
 .paragraph-notes{
     font-size: 20px;
     white-space: pre-line;
+    margin-bottom: 20px;
+}
+@keyframes opacityShift{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.anim-opacityShift{
+    animation: opacityShift 0.2s forwards;
+}
+@keyframes fadeInTL{
+    from{
+        transform: translateY(-50%) translateX(25vw);
+    }
+    to{
+        transform: translateY(-50%);
+    }
+}
+.anim-fadeInTL{
+    animation: fadeInTL 0.6s ease forwards;
 }
