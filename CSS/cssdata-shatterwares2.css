@@ -116,12 +116,12 @@ html{
     font-family: Raleway;
 }
 .grd-firsth1{
-    background-image: linear-gradient(to right bottom, #000000, #202020, #3a3a3a, #565656, #747474);
-    filter: drop-shadow(0.1vw 0.1vw 0.01vw #3a3a3a);
-}
-.grd-sech1{
     background-image: linear-gradient(to right bottom, #00e377, #00e395, #00e2af, #00e1c3, #00ded3);
     filter: drop-shadow(0.1vw 0.1vw 0.01vw #00e377);
+}
+.grd-sech1{
+    background-image: linear-gradient(to right bottom, #7c52f1, #6c47d3, #5c3bb6, #4c3099, #3d267e);
+    filter: drop-shadow(0.1vw 0.1vw 0.01vw #5c3bb6,);
 }
 .gradient-text{
     background-clip: text;
