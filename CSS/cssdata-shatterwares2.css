@@ -5,6 +5,11 @@
 /*MAX Z-INDEX: 3 AS OF 09.09.2023*/
 /*MAX Z-INDEX (NON-STANDARD): 10 AS OF 09.09.2023*/
 
+@font-face{
+    font-family: vcr;
+    src: url('../RESOURCES/fonts/vcr_osd_mono.ttf');
+}
+
 a{
     text-decoration: none;
     color: unset;
@@ -92,7 +97,7 @@ html{
     overflow: hidden;
 }
 .headertexttransformed{
-    width: 49.63625vw !important;
+    width: 65.0390625vw !important;
     transition: all 0.5s ease-in;
 }  
 .b-sh-def{
@@ -110,6 +115,8 @@ html{
 }
 .headergradienttext{
     white-space: nowrap;
+    font-family: vcr;
+    font-weight: 100;
     font-size: 3vw;
 }
 .ff-raleway{
@@ -117,11 +124,9 @@ html{
 }
 .grd-firsth1{
     background-image: linear-gradient(to right bottom, #00e377, #00e395, #00e2af, #00e1c3, #00ded3);
-    filter: drop-shadow(0.1vw 0.1vw 0.01vw #00e377);
 }
 .grd-sech1{
     background-image: linear-gradient(to right bottom, #7c52f1, #6c47d3, #5c3bb6, #4c3099, #3d267e);
-    filter: drop-shadow(0.1vw 0.1vw 0.01vw #5c3bb6,);
 }
 .gradient-text{
     background-clip: text;
