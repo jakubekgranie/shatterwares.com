@@ -903,3 +903,6 @@ html{
 .anim-fadeInTL{
     animation: fadeInTL 0.6s ease forwards;
 }
+.bg-shwph{
+    background-image: url('../RESOURCES/bgs/bg15.jpg');
+}
