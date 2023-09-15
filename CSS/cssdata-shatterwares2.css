@@ -906,3 +906,21 @@ html{
 .bg-shwph{
     background-image: url('../RESOURCES/bgs/bg15.jpg');
 }
+.shwph-tab{
+    background-image: linear-gradient(to right bottom, #ffffff, #f0fbff, #ccfdff, #a4ffff, #94ffe3);
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+    padding: 40px;
+}
+.shwph-tab-separator{
+    width: 3px;
+    background-color: #00979c;
+    margin: 0 20px;
+}
+.shwph-tab-left-side{
+    width: 30%;
+}
+.shwph-tab-right-side{
+    width: calc(70% - 43px)
+}
