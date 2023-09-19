@@ -908,10 +908,11 @@ html{
 }
 .shwph-tab{
     background-image: linear-gradient(to right bottom, #ffffff, #f0fbff, #ccfdff, #a4ffff, #94ffe3);
+    background-size: cover, cover;
     width: 600px;
     height: 300px;
-    border-radius: 20px;
-    padding: 40px;
+    border: 5px grey ridge;
+    padding: 0 40px 40px 40px;
 }
 .shwph-tab-separator{
     width: 3px;
@@ -923,4 +924,7 @@ html{
 }
 .shwph-tab-right-side{
     width: calc(70% - 43px)
+}
+.h-90p{
+    height: 90%;
 }
