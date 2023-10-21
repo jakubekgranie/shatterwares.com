@@ -2,12 +2,20 @@
 /*WINDOW GRADIENT CODE*/
 /*background-image: linear-gradient(to right bottom, #93b1ff, #89aaff, #80a3ff, #769cff, #6c95ff, #6c8efe, #6c87fd, #6e80fc, #7b77f9, #886df4, #9562ee, #a155e7);*/
 
-/*MAX Z-INDEX: 3 AS OF 09.09.2023*/
+/*MAX Z-INDEX: 4 AS OF 10.20.2023*/
 /*MAX Z-INDEX (NON-STANDARD): 10 AS OF 09.09.2023*/
 
 @font-face{
     font-family: vcr;
     src: url('../RESOURCES/fonts/vcr_osd_mono.ttf');
+}
+@font-face{
+    font-family: aldrich;
+    src: url('../RESOURCES/fonts/aldrich.ttf');
+}
+@font-face{
+    font-family: magellan;
+    src: url('../RESOURCES/fonts/computerfont.ttf');
 }
 
 a{
@@ -68,9 +76,11 @@ html{
 .h-100p{
     height: 100%;
 }
+.h-100vh{
+    height: 100vh;
+}
 .header{
     background-image: url('../RESOURCES/SHWHP_RES/galaxy-poster.jpg');
-    height: 100vh;
 }
 .fx{
     display: flex;
@@ -116,8 +126,10 @@ html{
 .headergradienttext{
     white-space: nowrap;
     font-family: vcr;
-    font-weight: 100;
     font-size: 3vw;
+}
+.fw-100{
+    font-weight: 100;
 }
 .ff-raleway{
     font-family: Raleway;
@@ -252,6 +264,9 @@ html{
 }
 .anim-fadeintr{
     animation: fadeInTR 0.75s ease-out forwards;
+}
+.anim-fadeintr3{
+    animation: fadeInTR 0.6s ease-in-out forwards;
 }
 .scroll-alternative{
     overflow-y: scroll;
@@ -537,7 +552,7 @@ html{
     opacity: 0;
     mix-blend-mode: luminosity;
 }
-.bar-container-margin{
+.mg-b-20px{
     margin-bottom: 20px;
 }
 .brad-3px{
@@ -794,10 +809,12 @@ html{
         height: 80px;
     }
 }
+.bgc-black{
+    background-color: black;
+}
 .socials-opt{
     width: 130px;
     height: 130px;
-    background-color: black;
     background-image: url("../RESOURCES/SHWHP_RES/buttongif.gif");
     box-shadow: 0px 0px 75px inset black;
 }
@@ -824,13 +841,11 @@ html{
     width: 25vw;
     height: 40vw;
     background-image: url('../RESOURCES/SHWHP_RES/star.png');
-    z-index: 4;
     right: 0;
     top: 50%;
     transform: translateY(-50%) translateX(25vw);
 }
 .update-frame{
-    height: 100vh;
     z-index: 3;
 }
 .update-notes{
@@ -852,8 +867,10 @@ html{
     height: calc(100% - 105px);
     background-color: #d1d1d1;
     border: 3px solid #BBBBBB;
-    font-family: monospace;
     padding: 30px;
+}
+.ff-monospace{
+    font-family: monospace;
 }
 .mg-b-45px{
     margin-bottom: 45px;
@@ -867,7 +884,6 @@ html{
 
 .header-notes{
     margin-top: 0;
-    margin-bottom: 20px;
     font-size: 25px;
 }
 .header-notes-subsequent{
@@ -878,8 +894,9 @@ html{
 }
 .paragraph-notes{
     font-size: 20px;
+}
+.wsp-p-l{
     white-space: pre-line;
-    margin-bottom: 20px;
 }
 @keyframes opacityShift{
     from{
@@ -927,4 +944,117 @@ html{
 }
 .h-90p{
     height: 90%;
+}
+
+.z-4{
+    z-index: 4;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.loadStats-container::before{
+    content: "";
+    background: url('../RESOURCES/SHWHP_RES/animation-assets/corner-anim2.png');
+    background-size: 100% 100%;
+    width: 2vw;
+    height: 2vw;
+    animation: fadeIn 0.3s ease-in forwards;
+    position: absolute;
+    top: -4.5vw;
+    left: -10vw;
+}
+.loadStats-container::after{
+    content: "";
+    background: url('../RESOURCES/SHWHP_RES/animation-assets/corner-anim2.png');
+    background-size: 100% 100%;
+    width: 2vw;
+    height: 2vw;
+    animation: fadeIn 0.3s ease-in forwards;
+    position: absolute;
+    bottom: -4.5vw;
+    right: -10vw;
+    transform: rotate(180deg);
+}
+.loadStats-upperrow{
+    height: 18.79680989583333vw;
+    margin-bottom: 1.736979166666667vw;
+}
+.loadStats-lowerrow{
+    height: 12.3759765625vw;
+}
+
+/*DELETE AFTER COMPLETION*/
+.loadStats-button-h{
+    background-color: antiquewhite;
+}
+
+.loadStats-cmd_button_wh{
+    width: 29.749375vw;
+    margin-right: 2.337442708333333vw;
+}
+.loadStats-dump_panel_wh{
+    width: 16.99953125vw;
+}
+.loadStats-cmd-text{
+    font-size: 30px;
+}
+.loadStats-dump-text{
+    font-size: 15px;
+}
+.loadStats-ff-aldrich{
+    font-family: aldrich;
+}
+.loadStats-cmd-tag{
+    height: 3vw;
+}
+.loadStats-cmd-tag-padding{
+    padding-left: 2vw;
+}
+.loadStats-dump-tag{
+    height: 1.5vw;
+}
+.loadStats-dump-feed{
+    height: calc(100% - 4.5vw);
+}
+.loadStats-dump-padding{
+    padding: 1.75vw;
+}
+.loadStats-window-border{
+    border: 0.175vw #cfed58 solid;
+}
+.loadStats-cmd-feed{
+    height: calc(100% - 3vw);
+}
+.loadStats-icon{
+    height: 65%;
+    margin-right: 0.5vw;
+}
+.bgc-neonyellow{
+    background-color: #cfed58;
+}
+.c-neonyellow{
+    color: #cfed58;
+}
+.loadStats-button-h{
+    height: 5.5vw;
+}
+.loadStats-energy-text{
+    font-family: magellan;
+}
+.loadStats-panel{
+    width: 57%;
+    height: 1.7vw;
+    border: #BAD54F 0.2vw solid;
+}
+.mg-b-panels{
+    margin-bottom: 0.7vw;
+}
+.pd-l-0p25vw{
+    padding-left: 0.25vw;
 }

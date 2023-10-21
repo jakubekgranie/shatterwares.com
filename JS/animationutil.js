@@ -133,3 +133,11 @@ function toggleUpdateScreenVisibility(){
 
     anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
 } 
+function loadStats(){
+    const ids = ['cmd', 'dump', 'button', 'panel'];
+    for(let i = 0; i < ids.length; i++){
+        animationForwarder('skip', ids[i], 'anim-fadeintr3', 125 * i + 25);
+    }
+}
+
+loadStats();

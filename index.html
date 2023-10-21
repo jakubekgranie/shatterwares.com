@@ -11,6 +11,7 @@
         <meta name="coverage" content="Worldwide">
         <meta name="rating" content="General">
         <meta name='HandheldFriendly' content='True'>
+        <meta name='copyright' content='Jakub Namyślak (for some assets their respective owners)'>
 
         <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -71,6 +72,9 @@
         <img src="RESOURCES/SHWHP_RES/antenna.png">
 
         <img src="RESOURCES/bgs/bg15.jpg">
+
+        <img src="RESOURCES/SHWHP_RES/triangle.png">
+        <img src="RESOURCES/SHWHP_RES/triangle2.png">
     </div>
     <div class="nonstandard-draft pos-fxd">
         <h1 class="nonstandard-draft-head grd-draft1 gradient-text"><b>DRAFT&nbsp;</b></h1><h1 class="nonstandard-draft-head grd-draft2 gradient-text">v. 9/10/2023</h1>
@@ -80,26 +84,81 @@
             <span class="grd-firsth1 gradient-text">Jacob</span>
         </p>
     </div>
+        <!--Start Status Screen-->
+        <div id="temp"       class="bgc-black w-100p h-100vh z-4 pos-fxd fx fx-ai-c fx-jc-c          cur-sel"        onclick="document.getElementById('temp').style.display = 'none'">
+            <div class="loadStats-container pos-rel">
+                <div class="loadStats-upperrow w-100p fx fx-jc-c">
+                    <div id="cmd" class="loadStats-cmd_button_wh loadStats-window-border h-100p bs-bb op-0">
+                        <div class="loadStats-cmd-tag loadStats-cmd-tag-padding fx fx-ai-c bgc-neonyellow">
+                            <img src="RESOURCES/SHWHP_RES/triangle.png" class="loadStats-icon" alt="Triangle">
+                            <p class="loadStats-cmd-text loadStats-ff-aldrich mg-none">CMD</p>
+                        </div>
+                        <div class="loadStats-cmd-feed">
+                            
+                        </div>
+                    </div>
+                    <div id="dump" class="loadStats-dump_panel_wh loadStats-window-border h-100p bs-bb op-0">
+                        <div class="loadStats-cmd-tag">
+                            <div class="loadStats-dump-tag pd-l-0p25vw fx fx-ai-c bgc-neonyellow">
+                                <img src="RESOURCES/SHWHP_RES/triangle2.png" class="loadStats-icon" alt="Triangle">
+                                <p class="loadStats-dump-text loadStats-ff-aldrich mg-none">DUMP</p> 
+                            </div>
+                        </div>
+                        <div class="loadStats-dump-feed loadStats-dump-padding bs-bb">
+                            
+                        </div>
+                        <div class="loadStats-dump-tag bgc-neonyellow fx fx-ai-c fx-jc-c">
+                            <p class="loadStats-dump-text loadStats-ff-aldrich mg-none"><span id="validCount">0</span> of <span id="totalCount">0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="loadStats-lowerrow fx fx-jc-c">
+                    <div id="button" class="loadStats-cmd_button_wh h-100p fx fx-ai-c op-0">
+                        <div class="loadStats-button-h w-100p">
+                            
+                        </div>
+                    </div>
+                    <div id="panel" class="loadStats-dump_panel_wh h-100p fx fx-jc-spb fx-dir-c op-0">
+                        <div class="fx fx-dir-c loadStats-cmd-text loadStats-ff-aldrich">
+                            <p class="loadStats-energy-text mg-none fw-100 c-neonyellow wsp-p-l"><b>(✧)</b> ShatterWares [LOAD]
+                                <b>(C)</b> Jakub Namyslak
+                            </p>
+                        </div>
+                        <div class="w-100p loadStats-dump-text ff-monospace">
+                            <div class="loadStats-panel bs-bb bgc-neonyellow fx fx-ai-c pd-l-0p25vw mg-b-panels">
+                                <b><p class="mg-none">BETA</p></b>
+                            </div>
+                            <div class="loadStats-panel bs-bb bgc-neonyellow fx fx-ai-c pd-l-0p25vw mg-b-panels">
+                                <b><p class="mg-none">v-pre-1</p></b>
+                            </div>
+                            <div class="loadStats-panel bs-bb bgc-neonyellow fx fx-ai-c pd-l-0p25vw">
+                                <b><p class="mg-none">10/21/2023</p></b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--Update Notif Screen-->
-        <div id="updateScreen" onclick="toggleUpdateScreenVisibility()" class="w-100p pos-fxd w-100p update-frame fx fx-ai-c fx-jc-c dp-none op-0-timed">
+        <div id="updateScreen" onclick="toggleUpdateScreenVisibility()" class="w-100p pos-fxd w-100p update-frame h-100vh fx fx-ai-c fx-jc-c dp-none op-0-timed">
             <div class="w-100p h-100p update-section-bg"></div>
-            <div id="updateStar" class="render-pixel update-star-emblem bgr-no-r bgs-additional-elem-input pos-fxd" alt="A star"></div>
+            <div id="updateStar" class="render-pixel update-star-emblem z-4 bgr-no-r bgs-additional-elem-input pos-fxd" alt="A star"></div>
             <div id="updateNotes" class="update-notes pos-fxd bs-bb brad-40px op-0">
                 <div class="fx fx-ai-c mg-b-45px">
                     <img class="update-github-thumbnail" src="RESOURCES/SHWHP_RES/github.png" alt="github icon">
                     <!-- Update Data - Name-->
                     <div class="add-text-subsection">
                         <h2 class="mg-none fw-500 mg-b-8px">(Github) Update Log - shatterwares.com</h2>
-                        <h2 class="mg-none fw-500 fc-grayed">RegUpd 55 [9.16.2023]</h2>
+                        <h2 class="mg-none fw-500 fc-grayed">RegUpd 57 [10.11.2023]</h2>
                     </div>
                     <!-- Update Data - Name-->
                 </div>
                 <!-- Update Data - must be kept updated! -->
-                <div class="brad-40px w-100p update-notes-text ov-h bs-bb scroll-alternative">
-                    <h1 class="header-notes">// ShWHP</h1>
-                    <p class="mg-none paragraph-notes">- Added a file to the preload section;
-                        - Started the development of the ShWHP section.
+                <div class="brad-40px w-100p update-notes-text ff-monospace ov-h bs-bb scroll-alternative">
+                    <h1 class="mg-b-20px">// ShWHP</h1>
+                    <p class="mg-none paragraph-notes mg-b-20px wsp-p-l">- Started making the loading section;
+                        - Archived certain .js files.
                     </p>
 
                     <!--
@@ -144,14 +203,14 @@
         </nav>
 
         <div id="socials_trigger" class="socialsbutton-wrapper z-1 pos-fxd" onmouseover="rainbow()" onclick="toggleUpdateScreenVisibility()">
-            <div class="socials-opt gradient-social bgs-full fx fx-ai-c fx-jc-c">
+            <div class="socials-opt bgc-black gradient-social bgs-full fx fx-ai-c fx-jc-c">
                 <div class="socials-opt-inside-decor insides-wh-pack fx fx-ai-c fx-jc-c">
                     <img id="socials" class="icon-image-socials" src="RESOURCES/SHWHP_RES/antenna.png">
                 </div>
             </div>
         </div>
 
-        <header class="fx fx-ai-c fx-jc-c header bgs-full pos-rel">
+        <header class="fx fx-ai-c fx-jc-c header h-100vh bgs-full pos-rel">
             <video autoplay loop muted id="vid_bg" class="video-header w-100p h-100p pos-abs p-ab-center">
                 <source src="RESOURCES/SHWHP_RES/galaxy.mp4" type="video/mp4">
             </video>
@@ -161,8 +220,8 @@
                     <img id="animelem1-1" class="dp-none pos-abs wh-animelem-1 wh-animelem-1-addr-1" src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
                     <img id="animelem1-3" class="headerimage render-pixel dp-none" src="RESOURCES/PRIMARY/promisenobg-slim.png" alt="logo">
                     <div id="headertext" class="fx fx-ai-c ff-raleway ov-h">
-                        <h1 class="headergradienttext mg-none grd-firsth1 gradient-text">Shatterwares:&nbsp;</h1>
-                        <h1 class="headergradienttext mg-none grd-sech1 gradient-text">the future starts soon.</h1>
+                        <h1 class="headergradienttext fw-100 mg-none grd-firsth1 gradient-text">Shatterwares:&nbsp;</h1>
+                        <h1 class="headergradienttext fw-100 mg-none grd-sech1 gradient-text">the future starts soon.</h1>
                     </div>
                     <img id="animelem1-2" class="dp-none pos-abs wh-animelem-1 wh-animelem-1-addr-2" src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
                 </div>
@@ -223,7 +282,7 @@
                     </div>
 
                     <div class="longer-subsection bs-bb">
-                        <div class="bar-container-margin fx fx-ai-c fx-jc-c">
+                        <div class="mg-b-20px fx fx-ai-c fx-jc-c">
                             <div id="holder_html" class="icon-holder fx fx-ai-c fx-jc-c" title="HTMl">
                                 <img id="baricon_html" src="RESOURCES/SHWHP_RES/html.png" class="icon-image insides-wh-pack" alt="HTML icon" title="HTML">
                             </div>
@@ -238,7 +297,7 @@
                             <div id="bar_html9" class="bar op-0 bar-blue brad-3px bgs-full mg-l-20px"></div>
                             <div id="bar_html10" class="bar op-0 bar-blue brad-3px bgs-full mg-l-20px"></div>
                         </div>
-                        <div class="bar-container-margin fx fx-ai-c fx-jc-c">
+                        <div class="mg-b-20px fx fx-ai-c fx-jc-c">
                             <div id="holder_css" class="icon-holder fx fx-ai-c fx-jc-c" title="CSS">
                                 <img id="baricon_css" src="RESOURCES/SHWHP_RES/css.png" class="icon-image insides-wh-pack" alt="CSS icon" title="CSS">
                             </div>
@@ -253,7 +312,7 @@
                             <div id="bar_css9" class="bar op-0 bar-blue brad-3px bgs-full mg-l-20px"></div>
                             <div id="bar_css10" class="bar op-0 bar-blue brad-3px bgs-full mg-l-20px"></div>
                         </div>
-                        <div class="bar-container-margin fx fx-ai-c fx-jc-c">
+                        <div class="mg-b-20px fx fx-ai-c fx-jc-c">
                             <div id="holder_cpp" class="icon-holder pos-rel fx fx-ai-c fx-jc-c" title="C++">
                                 <img id="baricon_cpp" src="RESOURCES/SHWHP_RES/cpp.png" class="icon-image insides-wh-pack" alt="CPP icon" title="CPP">
                             </div>
@@ -290,6 +349,7 @@
         </div>
         </section>
 
+        <!--Broken until further notice-->
         <section class="longsec-child-preset-2 c-white w-100p fx fx-jc-c fx-ai-c fx-dir-c min-padding bg-shwph bgs-full">
             <div class="shwph-tab fx fx-ai-c fx-dir-c bs-bb">
                 <div>
