@@ -22,11 +22,13 @@ function anFrwdPreset(){
 }
 function langPicker(buttonid){
     if(lastButton != buttonid){
+        // For ease of use
         const langDiv = document.getElementById('sectionlang1');
         const langParagraph = document.getElementById('sectionlang2');
         const langHeading = document.getElementById('sectionlang1p2');
         const langNames = ['cpp','html','js','css'];
 
+        // If exists, remove the highlight of an icon and add it to the latest clicked one
         if(lastButton != null){
             const lastImage = 'icon-' + lastButton;
             document.getElementById(lastImage).classList.remove('lang-icon-onclick');
@@ -36,19 +38,23 @@ function langPicker(buttonid){
 
         lastButton = buttonid;
     
+        // Specify the style of the unavailable cursor
         const n_a = "not-allowed";
 
+        // Prevent user from interacting with the module while changing and indicate it via a suitable cursor change
         for(let i = 0; i < 4; i++){
             document.getElementById(langNames[i]).onclick = "null";
             document.getElementById(langNames[i]).style.cursor = n_a;
         }
 
+        // After execution (1s), rollback the changes
         setTimeout(() => {for(let i = 0; i < 4; i++){
                 document.getElementById(langNames[i]).style.cursor = null;
             }
             document.getElementById(buttonid).style.cursor = n_a;
         }, 1000);
 
+        // To prevent style conflicts
         if(langDiv.classList.contains('anim-fadeintb') == true){
             langDiv.classList.remove('anim-fadeintb');
             langParagraph.classList.remove('anim-fadeintb');
@@ -57,10 +63,13 @@ function langPicker(buttonid){
             langDiv.classList.remove('op-0');
             langParagraph.classList.remove('op-0');
         }
+
+        // Commence the animation, notice the cascade-like injections
         langDiv.classList.add('animSwitchByFadeInLang');
         setTimeout(() => {langParagraph.classList.add('animSwitchByFadeInLang')}, 100);
+
+        // Remove animations to allow replay
         setTimeout(() => {
-    
             setTimeout(() => {
                 langDiv.classList.remove('animSwitchByFadeInLang');
                 langParagraph.classList.remove('animSwitchByFadeInLang');
@@ -68,6 +77,7 @@ function langPicker(buttonid){
                     document.getElementById(langNames[i]).onclick = function() {langPicker(langNames[i])};
                 }}, 490);
 
+            // Add suitable text
             const titles = ['C++','HTML','Javascript','CSS'];
             const descriptions = ["C++ is one of the most renowned programming languages in the world, used in making a wide variety of programs/apps, mostly direct executables. I want to be fully competent at it, even though it is not one of the languages I'll need as a webmaster.","HTML's my personal favorite for obvious reasons: its potential for shaping something creative when associated, nesting style and overall not limiting my imagination. I just love doing stuff in it.","Javascript is one of my recent 'discoveries'. Immediately after I dived into it, determination sprung into action. Being very powerful, my persona constantly tries to learn something new about it to empower my web developer adventures with fancy techniques.","There's not much to say here except for that it's a critical extension of html, or at least I perceive it as. Being a key to expressing one's power, I admire the fact that I'll carry it between the palms of my hand till the very end."]
             for(let i = 0; i < 4; i++){
@@ -135,6 +145,10 @@ function toggleUpdateScreenVisibility(){
 } 
 function loadStats(){
     const ids = ['cmd', 'dump', 'button', 'panel'];
+
+    const message_titles = ['Inept']; //daily message
+    const message = ['What are memories? A shard? A waypoint? A fading truth? Are we memories?']; //daily message
+
     for(let i = 0; i < ids.length; i++){
         animationForwarder('skip', ids[i], 'anim-fadeintr3', 125 * i + 25);
     }

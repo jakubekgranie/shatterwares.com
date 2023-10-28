@@ -513,7 +513,7 @@ html{
     position: relative;
 }
 .animSwitchByFadeInLang{
-    animation: switchByFadeIn-lang 1s forwards;
+    animation: switchByFadeIn-lang 1s;
 }
 @keyframes switchByFadeIn-lang{
     50%{
@@ -990,7 +990,7 @@ html{
 }
 
 /*DELETE AFTER COMPLETION*/
-.loadStats-button-h{
+.loadStats-button{
     background-color: antiquewhite;
 }
 
@@ -1041,8 +1041,9 @@ html{
 .c-neonyellow{
     color: #cfed58;
 }
-.loadStats-button-h{
+.loadStats-button{
     height: 5.5vw;
+    transform: skewX(-25deg);
 }
 .loadStats-energy-text{
     font-family: magellan;
