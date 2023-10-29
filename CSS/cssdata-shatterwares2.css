@@ -82,7 +82,7 @@ html{
     height: 100vh;
 }
 .header{
-    background-image: url('../RESOURCES/SHWHP_RES/galaxy-poster.jpg');
+    background-image: url('../RESOURCES/SHWHP_RES/header.gif');
 }
 .fx{
     display: flex;
