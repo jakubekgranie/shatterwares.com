@@ -3,9 +3,9 @@ var lastButton;
 
 function startAnimation1(){
     //after full site load -> remove user interaction limitations
-    /*document.getElementsByTagName("style")[0].remove();
+    document.getElementsByTagName("style")[0].remove();
     animationForwarder('skip', 'load', 'anim-alternateOpacityShift', 0);
-    animationForwarder('skip', 'load', 'dp-none', 500);*/
+    animationForwarder('skip', 'load', 'dp-none', 500);
 
     const anim_elements = ['animelem1-1', 'animelem1-2'];
     animationForwarder(anim_elements[0], anim_elements[1], 'anim-1', 0)
