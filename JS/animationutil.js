@@ -2,7 +2,11 @@ var check = 0;
 var lastButton;
 
 function startAnimation1(){
-    document.getElementById('loading_header').classList.add('dp-none');
+    //after full site load -> remove user interaction limitations
+    /*document.getElementsByTagName("style")[0].remove();
+    animationForwarder('skip', 'load', 'anim-alternateOpacityShift', 0);
+    animationForwarder('skip', 'load', 'dp-none', 500);*/
+
     const anim_elements = ['animelem1-1', 'animelem1-2'];
     animationForwarder(anim_elements[0], anim_elements[1], 'anim-1', 0)
     for(let i = 0; i < 2; i++){
@@ -143,15 +147,24 @@ function toggleUpdateScreenVisibility(){
 
     anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
 } 
-function loadStats(){
-    const ids = ['cmd', 'dump', 'button', 'panel'];
 
-    const message_titles = ['Inept']; //daily message
-    const message = ['What are memories? A shard? A waypoint? A fading truth? Are we memories?']; //daily message
-
+/*
+async function getLoadState(_id){
+    const errorResponse = "<span class='failed'>FAILED</span>";
+    return new Promise((resolve) => {
+        if(document.getElementById(_id)){
+            resolve("<span class='loaded'>LOADED</span>");
+        }
+        else{
+            resolve("<span class='failed'>FAILED</span>");
+        }
+    });
+}
+async function commandSpawn(){
+    const ids = ['updateScreen', 'bar_j1'];
     for(let i = 0; i < ids.length; i++){
-        animationForwarder('skip', ids[i], 'anim-fadeintr3', 125 * i + 25);
+        const state = await getLoadState(ids[i]);
+        document.getElementById("cmd").innerHTML += "<p class='c-white mg-none'>[LOAD] State of '" + ids[i] + "' module: " + state + "</p>";
     }
 }
-
-loadStats();
+*/

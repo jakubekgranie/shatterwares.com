@@ -10,10 +10,6 @@
     src: url('../RESOURCES/fonts/vcr_osd_mono.ttf');
 }
 @font-face{
-    font-family: aldrich;
-    src: url('../RESOURCES/fonts/aldrich.ttf');
-}
-@font-face{
     font-family: magellan;
     src: url('../RESOURCES/fonts/computerfont.ttf');
 }
@@ -73,6 +69,12 @@ html{
 .w-9p5{
     width: 182.4px;
 }
+.w-75p{
+    width: 75%;
+}
+.w-20p{
+    width: 20%;
+}
 .h-100p{
     height: 100%;
 }
@@ -120,13 +122,10 @@ html{
     width: 12vw;
     margin-right: 3.25vw;
 }
-.render-pixel{
-    image-rendering: pixelated;
-}
 .headergradienttext{
     white-space: nowrap;
-    font-family: vcr;
     font-size: 3vw;
+    font-family: vcr;
 }
 .fw-100{
     font-weight: 100;
@@ -544,12 +543,10 @@ html{
     box-shadow: 1px 1px 7px cyan;
 }
 .insides-wh-pack{
-    width: 75%;
     height: 75%;
 }
 .icon-image{
     transform: scale(0.87);
-    opacity: 0;
     mix-blend-mode: luminosity;
 }
 .mg-b-20px{
@@ -651,12 +648,6 @@ html{
 .video-header{
     object-fit: cover;
 }
-.loadingicon-header{
-    bottom: 2vw;
-    left: 2vw;
-    width: 95px;
-    height: 95px;
-}
 .z-1{
     z-index: 1;
 }
@@ -696,6 +687,9 @@ html{
 }
 .anim-truefadeinrainbow{
     animation: trueFadeInRainbow 0.5s ease-out;
+}
+.anim-infRainbow{
+    animation: trueFadeInRainbow 4.5s linear infinite;
 }
 .bgc-grey{
     background-color: grey;
@@ -844,6 +838,7 @@ html{
     right: 0;
     top: 50%;
     transform: translateY(-50%) translateX(25vw);
+    image-rendering: pixelated;
 }
 .update-frame{
     z-index: 3;
@@ -958,104 +953,10 @@ html{
         opacity: 1;
     }
 }
-.loadStats-container::before{
-    content: "";
-    background: url('../RESOURCES/SHWHP_RES/animation-assets/corner-anim2.png');
-    background-size: 100% 100%;
-    width: 2vw;
-    height: 2vw;
-    animation: fadeIn 0.3s ease-in forwards;
-    position: absolute;
-    top: -4.5vw;
-    left: -10vw;
+.load{
+    background-image: linear-gradient(to right bottom, #1de9b6, #46eede, #7ff1f7, #b5f3ff, #e1f5ff, #e7f3ff, #f2f0ff, #ffedff, #ffdcef, #ffd2bb, #ffdb79, #ddf152);
+    cursor: none;
 }
-.loadStats-container::after{
-    content: "";
-    background: url('../RESOURCES/SHWHP_RES/animation-assets/corner-anim2.png');
-    background-size: 100% 100%;
-    width: 2vw;
-    height: 2vw;
-    animation: fadeIn 0.3s ease-in forwards;
-    position: absolute;
-    bottom: -4.5vw;
-    right: -10vw;
-    transform: rotate(180deg);
-}
-.loadStats-upperrow{
-    height: 18.79680989583333vw;
-    margin-bottom: 1.736979166666667vw;
-}
-.loadStats-lowerrow{
-    height: 12.3759765625vw;
-}
-
-/*DELETE AFTER COMPLETION*/
-.loadStats-button{
-    background-color: antiquewhite;
-}
-
-.loadStats-cmd_button_wh{
-    width: 29.749375vw;
-    margin-right: 2.337442708333333vw;
-}
-.loadStats-dump_panel_wh{
-    width: 16.99953125vw;
-}
-.loadStats-cmd-text{
-    font-size: 30px;
-}
-.loadStats-dump-text{
-    font-size: 15px;
-}
-.loadStats-ff-aldrich{
-    font-family: aldrich;
-}
-.loadStats-cmd-tag{
-    height: 3vw;
-}
-.loadStats-cmd-tag-padding{
-    padding-left: 2vw;
-}
-.loadStats-dump-tag{
-    height: 1.5vw;
-}
-.loadStats-dump-feed{
-    height: calc(100% - 4.5vw);
-}
-.loadStats-dump-padding{
-    padding: 1.75vw;
-}
-.loadStats-window-border{
-    border: 0.175vw #cfed58 solid;
-}
-.loadStats-cmd-feed{
-    height: calc(100% - 3vw);
-}
-.loadStats-icon{
-    height: 65%;
-    margin-right: 0.5vw;
-}
-.bgc-neonyellow{
-    background-color: #cfed58;
-}
-.c-neonyellow{
-    color: #cfed58;
-}
-.loadStats-button{
-    height: 5.5vw;
-    transform: skewX(-25deg);
-}
-.loadStats-energy-text{
-    font-family: magellan;
-}
-.loadStats-panel{
-    width: 57%;
-    height: 1.7vw;
-    border: #BAD54F 0.2vw solid;
-}
-.mg-b-panels{
-    margin-bottom: 0.7vw;
-}
-.pd-l-0p25vw{
-    padding-left: 0.25vw;
+.anim-alternateOpacityShift{
+    animation: opacityShift 0.5s ease forwards alternate-reverse;
 }
