@@ -102,9 +102,6 @@ html{
 .mg-none{
     margin: 0;
 }
-#headertext{
-    width: 0vw;
-}
 .ov-h{
     overflow: hidden;
 }
@@ -184,21 +181,6 @@ html{
     font-size: 1vw;
 }
 
-@keyframes anim1{
-    0%{
-        opacity: 0;
-    }
-    33.3%{
-        opacity: 1;
-    }
-    66.6%{
-        opacity: 0;
-    }
-    99.9%{
-        opacity: 1;
-    }
-}
-
 .abm-section{
     height: 74vh;
 }
@@ -209,9 +191,6 @@ html{
     box-sizing: border-box;
 }
 
-.anim-1{
-    animation: anim1 0.25s ease-in-out;
-}
 .nest-subsection{
     width: 80vw;
     max-width: 1250px;
@@ -246,6 +225,9 @@ html{
 }
 .anim-blink{
     animation: blink 1.25s infinite;
+}
+.anim-slowBlink{
+    animation: blink 3s infinite;
 }
 .pfp{
     height: 340px;

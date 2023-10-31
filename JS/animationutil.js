@@ -7,15 +7,25 @@ function startAnimation1(){
     animationForwarder('skip', 'load', 'anim-alternateOpacityShift', 0);
     animationForwarder('skip', 'load', 'dp-none', 500);
 
-    const anim_elements = ['animelem1-1', 'animelem1-2'];
-    animationForwarder(anim_elements[0], anim_elements[1], 'anim-1', 0)
-    for(let i = 0; i < 2; i++){
-        document.getElementById(anim_elements[i]).classList.remove('dp-none');
+    //scramble animation
+    const waitTime = 50; //defines animation's length (waitTime * length + 0.2s)
+    const slogan =  "ShatterWares: the future starts now.";
+    const length = slogan.length;
+    letterRandomizer(0, length);
+    setTimeout(() => {
+        for(let i = 0; i < length; i++){ //for each letter
+            setTimeout(() => {
+                letterRandomizer(i, length);
+                document.getElementById("headerLetter" + (i + 1)).innerHTML = slogan[i]; //separated so all symbols would be scrambled initially (look up)
+            }, waitTime * i);
+        }
+    }, 200); //setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
+}
+function letterRandomizer(i, length){
+    for(; i < length; i++){
+        const letter = document.getElementById("headerLetter" + (i + 1));
+        letter.innerHTML = String.fromCharCode(Math.floor((Math.random() * 100))%33 + 94);
     }
-    const animelem13 = document.getElementById('animelem1-3');
-    animelem13.classList.add('anim-1');
-    animelem13.classList.remove('dp-none');
-    animationForwarder('skip', 'headertext', 'headertexttransformed', 330);
 }
 function anFrwdPreset(){
     if(check == 0){
