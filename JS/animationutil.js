@@ -9,23 +9,32 @@ function startAnimation1(){
 
     //scramble animation
     const waitTime = 50; //defines animation's length (waitTime * length + 0.2s)
-    const slogan =  "ShatterWares: the future starts now.";
+    const slogan =  "ShatterWares: the future starts now."; 
     const length = slogan.length;
-    letterRandomizer(0, length);
+    const nodeList = document.querySelectorAll(".headerLetter");
+
+    function loopedLetterRand(i){
+        for(let j = i; j < length; j++){
+            letterRandomizer(nodeList[j]);
+        }
+    }
+    
+    loopedLetterRand(0);
     setTimeout(() => {
+        for(let i = 0; i < document.querySelectorAll(".nav-button").length; i++){
+            animationForwarder('navSlash' + (i + 1) + '-1', 'navSlash' + (i + 1) + '-2', 'anim-navBlink', 90);      //Guest animation
+        }
+
         for(let i = 0; i < length; i++){ //for each letter
             setTimeout(() => {
-                letterRandomizer(i, length);
-                document.getElementById("headerLetter" + (i + 1)).innerHTML = slogan[i]; //separated so all symbols would be scrambled initially (look up)
+                loopedLetterRand(i)
+                nodeList[i].innerHTML = slogan[i]; //separated so all symbols would be scrambled initially (look up)
             }, waitTime * i);
         }
-    }, 200); //setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
+    }, 250); //setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
 }
-function letterRandomizer(i, length){
-    for(; i < length; i++){
-        const letter = document.getElementById("headerLetter" + (i + 1));
-        letter.innerHTML = String.fromCharCode(Math.floor((Math.random() * 100))%33 + 94);
-    }
+function letterRandomizer(elem){
+    elem.innerHTML = String.fromCharCode(Math.floor((Math.random() * 100))%95 + 32); // 32 - 126
 }
 function anFrwdPreset(){
     if(check == 0){
@@ -122,8 +131,8 @@ function langStats(){
 function unravelBars(langId){
     for(let i = 0; i < 10; i++){
         setTimeout(() => {
-        let bar = "bar_" + langId + (i + 1);
-        document.getElementById(bar).classList.add('anim-fadeintr2');
+            let bar = "bar_" + langId + (i + 1);
+            document.getElementById(bar).classList.add('anim-fadeintr2');
         }
         , (90 * i));
     }
@@ -157,24 +166,3 @@ function toggleUpdateScreenVisibility(){
 
     anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
 } 
-
-/*
-async function getLoadState(_id){
-    const errorResponse = "<span class='failed'>FAILED</span>";
-    return new Promise((resolve) => {
-        if(document.getElementById(_id)){
-            resolve("<span class='loaded'>LOADED</span>");
-        }
-        else{
-            resolve("<span class='failed'>FAILED</span>");
-        }
-    });
-}
-async function commandSpawn(){
-    const ids = ['updateScreen', 'bar_j1'];
-    for(let i = 0; i < ids.length; i++){
-        const state = await getLoadState(ids[i]);
-        document.getElementById("cmd").innerHTML += "<p class='c-white mg-none'>[LOAD] State of '" + ids[i] + "' module: " + state + "</p>";
-    }
-}
-*/
