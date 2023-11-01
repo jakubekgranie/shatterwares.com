@@ -150,6 +150,51 @@ html{
     width: 12.5vw;
     font-size: 1.1vw;
 }
+.nav-button-paragraph::before{
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-image: url('../RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: -0.6vw;
+    left: -0.6vw;
+    z-index: 2;
+    opacity: 0;
+    display: none;
+}
+.nav-button-paragraph::after{
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-image: url('../RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png');
+    background-size: 100% 100%;
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: -0.6vw;
+    right: -0.6vw;
+    z-index: 2;
+    opacity: 0;
+    display: none;
+}
+@keyframes anim-cornerNav{
+    0%{
+        opacity: 0.2;
+        filter: blur(1.6vw);
+        bottom: 0vw;
+        right: 0vw;
+    }
+    100%{
+        opacity: 1;
+        bottom: -0.6vw;
+        right: -0.6vw;
+    }
+}
+
+.nav-button:hover .nav-button-paragraph::after, .nav-button:hover .nav-button-paragraph::before{
+    animation: anim-cornerNav 0.2s ease-in forwards;
+    display: block;
+}
 .nav-button:hover .hover-color{
     color: #7d51f1;
 }
@@ -484,7 +529,7 @@ html{
     height: 74%;
     transition: all 0.15s;
 }
-.whp-icon:hover{
+.lang-pick-opt:hover .whp-icon{
     width: 80%;
     height: 80%;
     transition: all 0.15s;

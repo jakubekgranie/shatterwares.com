@@ -13,13 +13,13 @@ function startAnimation1(){
     const length = slogan.length;
     const nodeList = document.querySelectorAll(".headerLetter");
 
-    function loopedLetterRand(i){
+    function loopedLetterRand(i){ // for every external loop call, start from one letter further.
         for(; i < length; i++){
             nodeList[i].innerHTML = String.fromCharCode(Math.floor((Math.random() * 100))%95 + 32); // 32 - 126
         }
     }
     
-    loopedLetterRand(0);
+    loopedLetterRand(0); // randomize everything once befote the process begins
     setTimeout(() => {
         for(let i = 0; i < document.querySelectorAll(".nav-button").length; i++){
             animationForwarder('navSlash' + (i + 1) + '-1', 'navSlash' + (i + 1) + '-2', 'anim-navBlink', 90); //Guest animation
