@@ -14,15 +14,15 @@ function startAnimation1(){
     const nodeList = document.querySelectorAll(".headerLetter");
 
     function loopedLetterRand(i){
-        for(let j = i; j < length; j++){
-            letterRandomizer(nodeList[j]);
+        for(; i < length; i++){
+            nodeList[i].innerHTML = String.fromCharCode(Math.floor((Math.random() * 100))%95 + 32); // 32 - 126
         }
     }
     
     loopedLetterRand(0);
     setTimeout(() => {
         for(let i = 0; i < document.querySelectorAll(".nav-button").length; i++){
-            animationForwarder('navSlash' + (i + 1) + '-1', 'navSlash' + (i + 1) + '-2', 'anim-navBlink', 90);      //Guest animation
+            animationForwarder('navSlash' + (i + 1) + '-1', 'navSlash' + (i + 1) + '-2', 'anim-navBlink', 90); //Guest animation
         }
 
         for(let i = 0; i < length; i++){ //for each letter
@@ -33,9 +33,7 @@ function startAnimation1(){
         }
     }, 250); //setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
 }
-function letterRandomizer(elem){
-    elem.innerHTML = String.fromCharCode(Math.floor((Math.random() * 100))%95 + 32); // 32 - 126
-}
+
 function anFrwdPreset(){
     if(check == 0){
         check = 1;
