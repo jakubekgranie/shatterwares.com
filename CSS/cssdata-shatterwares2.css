@@ -360,7 +360,7 @@ html{
     animation: fadeInTB 0.75s cubic-bezier(.2,1,1,1) forwards;
 }
 .bg-long{
-    background-image: url('../RESOURCES/bgs/bg14.avif');
+    background-image: url('../RESOURCES/bgs/bg14.jpg');
 }
 .longer-subsection{
     max-height: 100%;
@@ -894,7 +894,7 @@ html{
     animation: fadeInTL 0.6s ease forwards;
 }
 .bg-shwph{
-    background-image: url('../RESOURCES/bgs/bg15.avif');
+    background-image: url('../RESOURCES/bgs/bg15.jpg');
 }
 .shwph-tab{
     background-image: linear-gradient(to right bottom, #ffffff, #f0fbff, #ccfdff, #a4ffff, #94ffe3);
