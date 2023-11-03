@@ -1,13 +1,23 @@
 var check = 0;
 var lastButton;
 
+// setHeader nad preloadBackground's shared variables.
+const bgImages = ["dbh-1.png", "dbh-2.jpg", "deltarune-2.jpg", "deltarune-4.jpg", "hk-1.jpg", "hk-2.jpg", "tf-1.jpg", "tf-2.png", "deltarune-5.jpg", "deltarune-6.jpg"];
+const path = "RESOURCES/SHWHP_RES/";
+let random = Math.floor((Math.random()*100))%bgImages.length;
+
+if(sessionStorage.getItem("lastRandomNum")) while(random == sessionStorage.getItem("lastRandomNum")){ // Prevent duplicates upon reloads
+    random = Math.floor((Math.random()*100))%bgImages.length;
+    sessionStorage.setItem("lastRandomNum", random);
+}
+
 function startAnimation1(){
-    //after full site load -> remove user interaction limitations
+    // after full site load -> remove user interaction limitations
     document.getElementsByTagName("style")[0].remove();
     animationForwarder('skip', 'load', 'anim-alternateOpacityShift', 0);
     animationForwarder('skip', 'load', 'dp-none', 500);
 
-    //scramble animation
+    // scramble animation
     const waitTime = 50; //defines animation's length (waitTime * length + 0.2s)
     const slogan =  "ShatterWares: the future starts now."; 
     const length = slogan.length;
@@ -22,16 +32,16 @@ function startAnimation1(){
     loopedLetterRand(0); // randomize everything once befote the process begins
     setTimeout(() => {
         for(let i = 0; i < document.querySelectorAll(".nav-button").length; i++){
-            animationForwarder('navSlash' + (i + 1) + '-1', 'navSlash' + (i + 1) + '-2', 'anim-navBlink', 90); //Guest animation
+            animationForwarder('navSlash' + (i + 1) + '-1', 'navSlash' + (i + 1) + '-2', 'anim-navBlink', 90); // Guest animation
         }
 
-        for(let i = 0; i < length; i++){ //for each letter
+        for(let i = 0; i < length; i++){ // for each letter
             setTimeout(() => {
                 loopedLetterRand(i)
-                nodeList[i].innerHTML = slogan[i]; //separated so all symbols would be scrambled initially (look up)
+                nodeList[i].innerHTML = slogan[i]; // separated so all symbols would be scrambled initially (look up)
             }, waitTime * i);
         }
-    }, 250); //setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
+    }, 250); // setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
 }
 
 function anFrwdPreset(){
@@ -164,3 +174,12 @@ function toggleUpdateScreenVisibility(){
 
     anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
 } 
+function preloadBackground(){
+    const displayPreload = document.createElement("img");
+
+    displayPreload.setAttribute("src", path + bgImages[random]);
+    document.getElementById("preload").appendChild(displayPreload);
+}
+function setHeader(){
+    document.getElementById("header").setAttribute("style", "background-image: url('" + path + bgImages[random] + "')");
+}

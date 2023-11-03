@@ -41,7 +41,7 @@
     </head>
     <body onload="startAnimation1()" class="mg-none">
     <!-- PRELOAD RESOURCES -->
-    <div class="dp-none">
+    <div id="preload" class="dp-none">
         <img src="RESOURCES/PRIMARY/alternatepromise-min.png">
         <img src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
 
@@ -70,11 +70,11 @@
 
         <img src="RESOURCES/PRIMARY/alternatepromise-min.png">
 
-        <img src="RESOURCES/SHWHP_RES/header.gif">
+        <script type="text/javascript">preloadBackground()</script>
     </div>
     <div class="nonstandard-draft pos-fxd">
         <h1 class="nonstandard-draft-head grd-draft1 gradient-text"><b>DRAFT&nbsp;</b></h1><h1 class="nonstandard-draft-head grd-draft2 gradient-text"></h1>
-        <p class="mg-none nonstandard-draft-data">This site was not completed, therefore its capabilities are limited. For more details, please head to GitHub or see the current update source.
+        <p class="mg-none nonstandard-draft-data">This site was not completed, therefore its capabilities are limited. For more details, please head to my GitHub or consult the current update source.
 
             Signed,
             <span class="grd-firsth1 gradient-text">Jacob</span>
@@ -94,18 +94,16 @@
                     <!-- Update Data - Name-->
                     <div class="ff-belanosima">
                         <h2 class="mg-none fw-500 mg-b-8px">(Github) Update Log - shatterwares.com</h2>
-                        <h2 class="mg-none fw-500 fc-grayed">RegUpd 61 [11.1.2023]</h2>
+                        <h2 class="mg-none fw-500 fc-grayed">RegUpd 62 [11.3.2023]</h2>
                     </div>
                     <!-- Update Data - Name-->
                 </div>
                 <!-- Update Data - must be kept updated! -->
                 <div class="brad-40px w-100p update-notes-text ff-monospace ov-h bs-bb scroll-alternative">
                     <h1 class="mg-b-20px">// ShWHP</h1>
-                    <p class="mg-none paragraph-notes mg-b-20px wsp-p-l">- Completed the nav rehaul;
-                        - Added a few comments to the letter randomizer JavaScript;
-                        - Removed artifacts.
-                        
-                        // [NAV] deployed and primed for usage.
+                    <p class="mg-none paragraph-notes mg-b-20px wsp-p-l">- Added new header backgrounds (randomized);
+                        - Optimized css;
+                        - Addressed the presence of old logo assets.
                     </p>
 
                     <!--
@@ -121,7 +119,7 @@
         </div>
         <!--Update Notif Screen-->
 
-        <nav class="fx nav pos-fxd z-1 w-100p nav-transition">
+        <nav class="nav nav-transition fx pos-fxd z-1 w-100p">
             <div class="w-100p fx fx-jc-spb ff-belanosima">
                 <a href="https://www.github.com/jakubekgranie" target="_blank" title="Featured">
                     <div class="nav-button-image fx fx-ai-c fx-jc-c h-100p cur-sel">
@@ -161,7 +159,7 @@
             </div>
         </div>
 
-        <header id="header" class="fx fx-ai-c fx-jc-c header h-100vh bgs-full pos-rel">
+        <header id="header" class="fx fx-ai-c fx-jc-c header h-100vh">
             <div class="headercontainer">
                 <div class="pos-rel fx fx-ai-c fx-jc-c">
                     <img class=" pos-abs wh-animelem-1 wh-animelem-1-addr-1 anim-slowBlink" src="RESOURCES/SHWHP_RES/animation-assets/corner-anim1.png">
@@ -180,6 +178,7 @@
                 </div>
             </div>
         </header>
+        <script type="text/javascript">setHeader()</script>
 
         <div class="w-100p border bgs-contain"></div>
 

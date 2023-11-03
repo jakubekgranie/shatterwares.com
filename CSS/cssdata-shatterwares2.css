@@ -73,7 +73,10 @@ html{
     height: 100vh;
 }
 .header{
-    background-image: url('../RESOURCES/SHWHP_RES/header.gif');
+    background-image: url('../RESOURCES/SHWHP_RES/dbh-1.png');
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0vw 0vw 7vw 0.45vw inset rgba(31, 31, 31, 0.75);
 }
 .fx{
     display: flex;
@@ -120,9 +123,11 @@ html{
 }
 .grd-firsth1{
     background-image: linear-gradient(to right bottom, #00e377, #00e395, #00e2af, #00e1c3, #00ded3);
+    filter: drop-shadow(0.15vw 0.15vw 0.2vw #004736);
 }
 .grd-sech1{
     background-image: linear-gradient(to right bottom, #7c52f1, #6c47d3, #5c3bb6, #4c3099, #3d267e);
+    filter: drop-shadow(0.15vw 0.15vw 0.2vw #241748);
 }
 .gradient-text{
     background-clip: text;
@@ -665,9 +670,6 @@ html{
 .anim-fadeinmod{
     animation: fadeInMod 0.75s ease-out forwards;
 }
-.video-header{
-    object-fit: cover;
-}
 .z-1{
     z-index: 1;
 }
@@ -897,7 +899,6 @@ html{
 }
 .shwph-tab{
     background-image: linear-gradient(to right bottom, #ffffff, #f0fbff, #ccfdff, #a4ffff, #94ffe3);
-    background-size: cover, cover;
     width: 600px;
     height: 300px;
     border: 5px grey ridge;
