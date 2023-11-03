@@ -2,7 +2,7 @@ var check = 0;
 var lastButton;
 
 // setHeader nad preloadBackground's shared variables.
-const bgImages = ["dbh-1.png", "dbh-2.jpg", "deltarune-2.jpg", "deltarune-4.jpg", "hk-1.jpg", "hk-2.jpg", "tf-1.jpg", "tf-2.png", "deltarune-5.jpg", "deltarune-6.jpg"];
+const bgImages = ["dbh-1.webp", "dbh-2.avif", "deltarune-2.avif", "deltarune-4.avif", "hk-1.avif", "hk-2.avif", "tf-1.avif", "tf-2.webp", "deltarune-5.avif", "deltarune-6.avif"];
 const path = "RESOURCES/SHWHP_RES/";
 let random = Math.floor((Math.random()*100))%bgImages.length;
 
