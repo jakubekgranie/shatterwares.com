@@ -7,11 +7,8 @@ const path = "RESOURCES/SHWHP_RES/";
 let random = Math.floor((Math.random()*100))%bgImages.length;
 
 function startAnimation1(){
-    if(typeof sessionStorage.getItem("lastRandomNum") !== undefined){
-        while(random == sessionStorage.getItem("lastRandomNum")){ // Prevent duplicates upon reloads
-            random = Math.floor((Math.random()*100))%bgImages.length;
-        }
-    }
+    if(typeof sessionStorage.getItem("lastRandomNum") !== undefined) while(random == sessionStorage.getItem("lastRandomNum")) random = Math.floor((Math.random()*100))%bgImages.length;
+
     sessionStorage.setItem("lastRandomNum", random);
     document.getElementById("header").setAttribute("style", "background-image: url('" + path + bgImages[random] + "')");
 
@@ -177,9 +174,3 @@ function toggleUpdateScreenVisibility(){
 
     anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
 } 
-function preloadBackground(){
-    const displayPreload = document.createElement("img");
-
-    displayPreload.setAttribute("src", path + bgImages[random]);
-    document.getElementById("preload").appendChild(displayPreload);
-}
