@@ -7,8 +7,10 @@ const path = "RESOURCES/SHWHP_RES/";
 let random = Math.floor((Math.random()*100))%bgImages.length;
 
 function startAnimation1(){
-    if(typeof sessionStorage.getItem("lastRandomNum") !== undefined) while(random == sessionStorage.getItem("lastRandomNum")){ // Prevent duplicates upon reloads
-        random = Math.floor((Math.random()*100))%bgImages.length;
+    if(typeof sessionStorage.getItem("lastRandomNum") !== undefined){
+        while(random == sessionStorage.getItem("lastRandomNum")){ // Prevent duplicates upon reloads
+            random = Math.floor((Math.random()*100))%bgImages.length;
+        }
     }
     sessionStorage.setItem("lastRandomNum", random);
     document.getElementById("header").setAttribute("style", "background-image: url('" + path + bgImages[random] + "')");
