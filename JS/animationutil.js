@@ -6,12 +6,12 @@ const bgImages = ["dbh-1.png", "dbh-2.jpg", "deltarune-2.jpg", "deltarune-4.jpg"
 const path = "RESOURCES/SHWHP_RES/";
 let random = Math.floor((Math.random()*100))%bgImages.length;
 
-if(sessionStorage.getItem("lastRandomNum")) while(random == sessionStorage.getItem("lastRandomNum")){ // Prevent duplicates upon reloads
-    random = Math.floor((Math.random()*100))%bgImages.length;
-    sessionStorage.setItem("lastRandomNum", random);
-}
-
 function startAnimation1(){
+    if(sessionStorage.getItem("lastRandomNum")) while(random == sessionStorage.getItem("lastRandomNum")){ // Prevent duplicates upon reloads
+        random = Math.floor((Math.random()*100))%bgImages.length;
+        sessionStorage.setItem("lastRandomNum", random);
+    }
+    
     // after full site load -> remove user interaction limitations
     document.getElementsByTagName("style")[0].remove();
     animationForwarder('skip', 'load', 'anim-alternateOpacityShift', 0);
