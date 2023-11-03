@@ -7,11 +7,12 @@ const path = "RESOURCES/SHWHP_RES/";
 let random = Math.floor((Math.random()*100))%bgImages.length;
 
 function startAnimation1(){
-    if(sessionStorage.getItem("lastRandomNum")) while(random == sessionStorage.getItem("lastRandomNum")){ // Prevent duplicates upon reloads
+    if(typeof sessionStorage.getItem("lastRandomNum") !== undefined) while(random == sessionStorage.getItem("lastRandomNum")){ // Prevent duplicates upon reloads
         random = Math.floor((Math.random()*100))%bgImages.length;
-        sessionStorage.setItem("lastRandomNum", random);
     }
-    
+    sessionStorage.setItem("lastRandomNum", random);
+    document.getElementById("header").setAttribute("style", "background-image: url('" + path + bgImages[random] + "')");
+
     // after full site load -> remove user interaction limitations
     document.getElementsByTagName("style")[0].remove();
     animationForwarder('skip', 'load', 'anim-alternateOpacityShift', 0);
@@ -179,7 +180,4 @@ function preloadBackground(){
 
     displayPreload.setAttribute("src", path + bgImages[random]);
     document.getElementById("preload").appendChild(displayPreload);
-}
-function setHeader(){
-    document.getElementById("header").setAttribute("style", "background-image: url('" + path + bgImages[random] + "')");
 }
