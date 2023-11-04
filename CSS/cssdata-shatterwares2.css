@@ -13,7 +13,6 @@
 a{
     text-decoration: none;
     color: unset;
-    display: block;
 }
 html{
     scroll-behavior: smooth;
@@ -926,14 +925,14 @@ html{
 .shwph-bar{
     height: 7%;
     font-family: Tahoma;
+    text-shadow: 0.07vw 0.07vw #00308f;
     font-size: 0.7vw;
     padding: calc(17vw * 0.07 * 0.125);
     background-image: linear-gradient(to bottom, #003cde, #0046e6, #004fef, #0058f7, #0061ff);
 }
 .shwph-content{
     height: 93%;
-    /*background-color: #f4f1e9;*/
-    background-image: url("../RESOURCES/SHWHP_RES/jj-placeholder.jpg");
+    background-color: black;
     border-radius: 0 0 0.3vw 0.3vw;
 }
 .xp-item-title{
@@ -968,4 +967,11 @@ html{
 .bgs-adjustable{
     background-position: center;
     background-size: cover;
+}
+.dp-ib{
+    display: inline-block;
+}
+iframe{
+    width: 100% !important;
+    height: 100% !important;
 }
