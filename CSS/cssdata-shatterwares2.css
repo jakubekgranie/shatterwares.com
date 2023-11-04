@@ -921,6 +921,7 @@ html{
     height: 17vw;
     border-radius: 0.3vw;
     border: #003cde 2px solid;
+    box-shadow: 0vw 0vw 0.7vw 0.15vw #1a1531;
 }
 .shwph-bar{
     height: 7%;
@@ -933,6 +934,7 @@ html{
     height: 93%;
     /*background-color: #f4f1e9;*/
     background-image: url("../RESOURCES/SHWHP_RES/jj-placeholder.jpg");
+    border-radius: 0 0 0.3vw 0.3vw;
 }
 .xp-item-title{
     text-overflow: ellipsis;

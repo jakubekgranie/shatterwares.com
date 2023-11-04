@@ -6,7 +6,7 @@ const bgImages = ["dbh-1.webp", "dbh-2.jpg", "deltarune-2.jpg", "deltarune-4.jpg
 const path = "RESOURCES/SHWHP_RES/";
 let random = Math.floor((Math.random()*100))%bgImages.length;
 
-function startAnimation1(){
+window.onload = () => {
     if(typeof sessionStorage.getItem("lastRandomNum") !== undefined) while(random == sessionStorage.getItem("lastRandomNum")) random = Math.floor((Math.random()*100))%bgImages.length;
 
     sessionStorage.setItem("lastRandomNum", random);
