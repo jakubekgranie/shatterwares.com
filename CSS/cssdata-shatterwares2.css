@@ -157,7 +157,7 @@ html{
     position: absolute;
     top: -0.6vw;
     left: -0.6vw;
-    z-index: 2;
+    z-index: 4;
     opacity: 0;
     display: none;
 }
@@ -171,7 +171,7 @@ html{
     position: absolute;
     bottom: -0.6vw;
     right: -0.6vw;
-    z-index: 2;
+    z-index: 4;
     opacity: 0;
     display: none;
 }
@@ -812,7 +812,7 @@ html{
     image-rendering: pixelated;
 }
 .update-frame{
-    z-index: 3;
+    z-index: 5;
 }
 .update-notes{
     background-image: linear-gradient(to right bottom, #ffffff, #f1f1f1, #e3e3e3, #d5d5d5, #c7c7c7);
@@ -893,8 +893,8 @@ html{
     height: 90%;
 }
 
-.z-4{
-    z-index: 4;
+.z-5{
+    z-index: 5;
 }
 
 @keyframes fadeIn{
@@ -921,6 +921,8 @@ html{
     border-radius: 0.3vw;
     border: #003cde 2px solid;
     box-shadow: 0vw 0vw 0.7vw 0.15vw #1a1531;
+    transition: all 0.15s ease-in;
+    transform-origin: bottom left;
 }
 .shwph-bar{
     height: 7%;
@@ -941,7 +943,6 @@ html{
 .xp-icon{
     width: 0.8925vw;
     height: 0.8925vw;
-    transition: background-image 0.1s;
 }
 .xp-margin{
     margin-left: 0.15vw;
@@ -974,4 +975,26 @@ html{
 iframe{
     width: 100% !important;
     height: 100% !important;
+}
+.first{
+    transform: translate(-40px, -40px);
+}
+.second{
+    z-index: 2;
+}
+.third{
+    z-index: 3;
+    transform: translate(40px, 40px);
+}
+.first-minimize{
+    transform: translate(-40px, -40px) scale(0, 0);
+}
+.second-minimize{
+    transform: scale(0, 0);
+}
+.third-minimize{
+    transform: translate(40px, 40px) scale(0, 0);
+}
+.z-4{
+    z-index: 4;
 }

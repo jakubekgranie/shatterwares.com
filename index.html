@@ -81,7 +81,6 @@
         <img src="RESOURCES/SHWHP_RES/hk-2.jpg">
         <img src="RESOURCES/SHWHP_RES/tf-1.jpg">
         <img src="RESOURCES/SHWHP_RES/tf-2.webp">
-        <img src="RESOURCES/SHWHP_RES/jj-placeholder.jpg">
     </div>
     <div class="nonstandard-draft pos-fxd">
         <h1 class="nonstandard-draft-head grd-draft1 gradient-text"><b>DRAFT&nbsp;</b></h1><h1 class="nonstandard-draft-head grd-draft2 gradient-text"></h1>
@@ -92,13 +91,13 @@
         </p>
     </div>
         <!--Start Status Screen-->
-        <div id="load" class="load z-4 pos-fxd w-100p h-100p fx fx-ai-c fx-jc-c">
+        <div id="load" class="load z-5 pos-fxd w-100p h-100p fx fx-ai-c fx-jc-c">
             <img src="RESOURCES/PRIMARY/alternatepromise-min.png" class="w-20p anim-infRainbow" alt="logo">
         </div>
         <!--Update Notif Screen-->
         <div id="updateScreen" onclick="toggleUpdateScreenVisibility()" class="w-100p pos-fxd w-100p update-frame h-100vh fx fx-ai-c fx-jc-c dp-none op-0-timed">
             <div class="w-100p h-100p update-section-bg"></div>
-            <div id="updateStar" class="update-star-emblem z-4 bgr-no-r bgs-additional-elem-input pos-fxd" alt="A star"></div>
+            <div id="updateStar" class="update-star-emblem z-5 bgr-no-r bgs-additional-elem-input pos-fxd" alt="A star"></div>
             <div id="updateNotes" class="update-notes pos-fxd bs-bb brad-40px op-0">
                 <div class="fx fx-ai-c mg-b-45px">
                     <img class="update-github-thumbnail" src="RESOURCES/SHWHP_RES/github.webp" alt="github icon">
@@ -125,13 +124,18 @@
                         - Fixed the anchors not behaving correctly.
 
                     </p>
+
+                    <h1 class="header-notes header-notes-subsequent">.3</h1>
+                    <h1 class="header-notes">// ShWHP</h1>
+                    <p class="mg-none paragraph-notes mg-b-20px wsp-p-l">- Countinuing development of the xp/ShWPH tabs.
+                    </p>
                 </div>
                 <!-- Update Data - must be kept updated! -->
             </div>
         </div>
         <!--Update Notif Screen-->
 
-        <nav class="nav nav-transition fx pos-fxd z-1 w-100p">
+        <nav class="nav nav-transition fx pos-fxd z-4 w-100p">
             <div class="w-100p fx fx-jc-spb ff-belanosima">
                 <a href="https://www.github.com/jakubekgranie" target="_blank" title="Featured">
                     <div class="nav-button-image fx fx-ai-c fx-jc-c h-100p cur-sel">
@@ -316,23 +320,59 @@
         </section>
 
         <a id="ShWPH"></a>
-        <section class="longsec-child-preset-2 c-white w-100p fx fx-jc-c fx-ai-c fx-dir-c min-padding bg-shwph bgs-full">
-            <div class="shwph-tab">
+        <section class="longsec-child-preset-2 c-white w-100p fx fx-jc-c fx-ai-c fx-dir-c min-padding bg-shwph bgs-full pos-rel">
+            <div id="xp-1" class="shwph-tab pos-abs z-1 first">
                 <div class="shwph-bar bs-bb">
                     <div class="fx fx-jc-spb">
                         <div class="fx">
                             <img src="RESOURCES/SHWHP_RES/promisenobg-slim.png" class="xp-icon" alt="Old ShatterWares icon">
-                            <p class="xp-item-title xp-margin mg-none">Internet Explorer - www.shatterwares.com/shwph/index.html</p>
+                            <p id="xp-item-title-1" class="xp-item-title xp-margin mg-none">Internet Explorer - www.shatterwares.com/shwph/index.html</p>
                         </div>
                         <div class="fx">
-                            <div class="xp-icon xp-margin minimize cur-sel"></div>
+                            <div id="xp-minimize-1" class="xp-icon xp-margin minimize cur-sel" onclick="xpWindow(1, 1)"></div>
                             <div class="xp-icon xp-margin maximize cur-sel"></div>
-                            <div class="xp-icon xp-margin close cur-sel"></div>
+                            <div id="xp-close-1" class="xp-icon xp-margin close cur-sel" onclick="xpWindow(1, 2)"></div>
                         </div>
                     </div>
                 </div>
-                <div class="shwph-content bgs-adjustable">
-                    <iframe class="shwph-content bgs-adjustable" src="https://www.youtube.com/embed/0I7vyNtcuV8" title="Jazz Jackrabbit 2 Longplay (PC) [60 FPS]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                <div id="xp-content-1" class="shwph-content bgs-adjustable">
+                    <iframe src="https://www.youtube.com/embed/0I7vyNtcuV8" title="Jazz Jackrabbit 2 Longplay (PC) [60 FPS]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+            </div>
+            <div id="xp-2" class="shwph-tab pos-abs second">
+                <div class="shwph-bar bs-bb">
+                    <div class="fx fx-jc-spb">
+                        <div class="fx">
+                            <img src="RESOURCES/SHWHP_RES/promisenobg-slim.png" class="xp-icon" alt="Old ShatterWares icon">
+                            <p id="xp-item-title-2" class="xp-item-title xp-margin mg-none">Internet Explorer - www.shatterwares.com/shwph/index.html</p>
+                        </div>
+                        <div class="fx">
+                            <div id="xp-minimize-2" class="xp-icon xp-margin minimize cur-sel" onclick="xpWindow(2, 1)"></div>
+                            <div class="xp-icon xp-margin maximize cur-sel"></div>
+                            <div id="xp-close-2" class="xp-icon xp-margin close cur-sel" onclick="xpWindow(2, 2)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="xp-content-2" class="shwph-content bgs-adjustable">
+                    <iframe src="https://www.youtube.com/embed/0I7vyNtcuV8" title="Jazz Jackrabbit 2 Longplay (PC) [60 FPS]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+            </div>
+            <div id="xp-3" class="shwph-tab pos-abs third">
+                <div class="shwph-bar bs-bb">
+                    <div class="fx fx-jc-spb">
+                        <div class="fx">
+                            <img src="RESOURCES/SHWHP_RES/promisenobg-slim.png" class="xp-icon" alt="Old ShatterWares icon">
+                            <p id="xp-item-title-3" class="xp-item-title xp-margin mg-none">Internet Explorer - www.shatterwares.com/shwph/index.html</p>
+                        </div>
+                        <div class="fx">
+                            <div id="xp-minimize-3" class="xp-icon xp-margin minimize cur-sel" onclick="xpWindow(3, 1)"></div>
+                            <div class="xp-icon xp-margin maximize cur-sel"></div>
+                            <div id="xp-close-3" class="xp-icon xp-margin close cur-sel" onclick="xpWindow(3, 2)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="xp-content-3" class="shwph-content bgs-adjustable">
+                    <iframe src="https://www.youtube.com/embed/0I7vyNtcuV8" title="Jazz Jackrabbit 2 Longplay (PC) [60 FPS]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                 </div>
             </div>
         </section>

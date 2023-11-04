@@ -174,3 +174,18 @@ function toggleUpdateScreenVisibility(){
 
     anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
 } 
+function xpWindow(id, button = 0){
+    const xp = [document.getElementById("xp-" + id), document.getElementById("xp-item-title-" + id), document.getElementById("xp-content-" + id), document.getElementById("xp-minimize-" + id), document.getElementById("xp-close-" + id)];
+    const minimize = ["first", "second", "third"]; //all variations
+    const trueMinimize = minimize[id - 1] + "-minimize"; //tailor to the window id
+
+    if(button == 1){
+        xp[3].onclick = function() {null};
+        xp[0].classList.add(trueMinimize);
+        setTimeout(() => {xp[0].classList.remove(trueMinimize)}, 150);
+        setTimeout(() => {xp[3].onclick = function() {xpWindow(id, true)}}, 300);
+    }
+    if(button == 2){
+        xp[0].style.display = "none";
+    }
+}
