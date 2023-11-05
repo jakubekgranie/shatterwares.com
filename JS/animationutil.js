@@ -42,6 +42,18 @@ window.onload = () => {
             }, waitTime * i);
         }
     }, 150); // setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
+
+
+    let root = ["theMission"];
+
+    root.forEach((value) => {
+        let observeData = {
+            root: document.getElementById(value),
+            rootMargin: "0px",
+            threshold: 0.35,
+        };
+    });
+    //onmouseover="anFrwdDoubleExec('headermission', 'headermission2', 'skip', 'pfp', 'anim-fadeintr', 100, 'anim-fadeinrainbow', 640)"
 }
 
 function anFrwdPreset(){
@@ -183,7 +195,7 @@ function xpWindow(id, button){
         xp[3].onclick = function() {null};
         xp[0].classList.add(trueMinimize);
         setTimeout(() => {xp[0].classList.remove(trueMinimize)}, 150);
-        setTimeout(() => {xp[3].onclick = function() {xpWindow(id, true)}}, 300);
+        setTimeout(() => {xp[3].onclick = function() {xpWindow(id, 0)}}, 300);
     }
     if(button == 1){
         xp[0].style.display = "none";
