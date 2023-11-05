@@ -913,7 +913,7 @@ html{
     cursor: none;
 }
 .anim-alternateOpacityShift{
-    animation: opacityShift 0.5s ease forwards alternate-reverse;
+    animation: opacityShift 0.25s ease forwards alternate-reverse;
 }
 .shwph-tab{
     width: 32vw;

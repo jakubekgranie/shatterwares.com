@@ -15,7 +15,7 @@ window.onload = () => {
     // after full site load -> remove user interaction limitations
     document.getElementsByTagName("style")[0].remove();
     animationForwarder('skip', 'load', 'anim-alternateOpacityShift', 0);
-    animationForwarder('skip', 'load', 'dp-none', 500);
+    animationForwarder('skip', 'load', 'dp-none', 250);
 
     // scramble animation
     const waitTime = 50; //defines animation's length (waitTime * length + 0.2s)
@@ -41,7 +41,7 @@ window.onload = () => {
                 nodeList[i].innerHTML = slogan[i]; // separated so all symbols would be scrambled initially (look up)
             }, waitTime * i);
         }
-    }, 250); // setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
+    }, 150); // setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
 }
 
 function anFrwdPreset(){
@@ -174,18 +174,18 @@ function toggleUpdateScreenVisibility(){
 
     anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
 } 
-function xpWindow(id, button = 0){
+function xpWindow(id, button){
     const xp = [document.getElementById("xp-" + id), document.getElementById("xp-item-title-" + id), document.getElementById("xp-content-" + id), document.getElementById("xp-minimize-" + id), document.getElementById("xp-close-" + id)];
     const minimize = ["first", "second", "third"]; //all variations
     const trueMinimize = minimize[id - 1] + "-minimize"; //tailor to the window id
 
-    if(button == 1){
+    if(button == 0){
         xp[3].onclick = function() {null};
         xp[0].classList.add(trueMinimize);
         setTimeout(() => {xp[0].classList.remove(trueMinimize)}, 150);
         setTimeout(() => {xp[3].onclick = function() {xpWindow(id, true)}}, 300);
     }
-    if(button == 2){
+    if(button == 1){
         xp[0].style.display = "none";
     }
 }
