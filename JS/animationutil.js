@@ -43,19 +43,30 @@ window.onload = () => {
         }
     }, 150); // setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
 
+     // intersection animations
+    let root = ["theMission", "langs1", "langStats"]; //ids
+    let func = [() => {anFrwdDoubleExec('headermission', 'headermission2', 'skip', 'pfp', 'anim-fadeintr', 100, 'anim-fadeinrainbow', 640)}, () => {anFrwdPreset()}, () => {langStats()}]; //animations
 
-    let root = ["theMission"];
-
-    root.forEach((value) => {
-        let observeData = {
-            root: document.getElementById(value),
-            rootMargin: "0px",
-            threshold: 0.35,
-        };
+    function callback(entries, observer, index){
+        entries.forEach((entry) => {
+            if(entry.isIntersecting){
+                func[index]();
+                observer.disconnect();
+            }
+        })
+    }
+    let observeDataSmall = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+    };
+    root.forEach((value, index) => {
+        let observer = new IntersectionObserver((entries, observer) => {
+            callback(entries, observer, index);
+        }, observeDataSmall);
+        observer.observe(document.getElementById(value));
     });
-    //onmouseover="anFrwdDoubleExec('headermission', 'headermission2', 'skip', 'pfp', 'anim-fadeintr', 100, 'anim-fadeinrainbow', 640)"
 }
-
 function anFrwdPreset(){
     if(check == 0){
         check = 1;
@@ -191,6 +202,8 @@ function xpWindow(id, button){
     const minimize = ["first", "second", "third"]; //all variations
     const trueMinimize = minimize[id - 1] + "-minimize"; //tailor to the window id
 
+    const item_title = ["wladyslawlokietek", "LEGACY/historia-kazimierz-wielki", "alergie"];
+
     if(button == 0){
         xp[3].onclick = function() {null};
         xp[0].classList.add(trueMinimize);
@@ -198,6 +211,6 @@ function xpWindow(id, button){
         setTimeout(() => {xp[3].onclick = function() {xpWindow(id, 0)}}, 300);
     }
     if(button == 1){
-        xp[0].style.display = "none";
+        xp[0].remove();
     }
 }
