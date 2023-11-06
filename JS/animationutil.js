@@ -41,31 +41,36 @@ window.onload = () => {
                 nodeList[i].innerHTML = slogan[i]; // separated so all symbols would be scrambled initially (look up)
             }, waitTime * i);
         }
-    }, 150); // setTimeout used to belate the main animation (loading screen's fadeOut might make it partially invisible)
+    }, 150); // setTimeout used to belate the animations (loading screen's fadeOut might make them partially invisible)
 
-     // intersection animations
-    let root = ["theMission", "langs1", "langStats"]; //ids
-    let func = [() => {anFrwdDoubleExec('headermission', 'headermission2', 'skip', 'pfp', 'anim-fadeintr', 100, 'anim-fadeinrainbow', 640)}, () => {anFrwdPreset()}, () => {langStats()}]; //animations
+    setTimeout(() => {
+        // intersection animations
+        let root = ["theMission", "langs1", "langStats"]; //ids
+        let func = [() => {anFrwdDoubleExec('headermission', 'headermission2', 'skip', 'pfp', 'anim-fadeintr', 100, 'anim-fadeinrainbow', 640)}, 
+                    () => {anFrwdPreset()}, 
+                    () => {langStats()}
+                   ]; //animations
 
-    function callback(entries, observer, index){
-        entries.forEach((entry) => {
-            if(entry.isIntersecting){
-                func[index]();
-                observer.disconnect();
-            }
-        })
-    }
-    let observeDataSmall = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
-    };
-    root.forEach((value, index) => {
-        let observer = new IntersectionObserver((entries, observer) => {
-            callback(entries, observer, index);
-        }, observeDataSmall);
-        observer.observe(document.getElementById(value));
-    });
+        function callback(entries, observer, index){
+            entries.forEach((entry) => {
+                if(entry.isIntersecting){
+                    func[index]();
+                    observer.disconnect();
+                }
+            })
+        }
+        let observeDataSmall = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5,
+        };
+        root.forEach((value, index) => {
+            let observer = new IntersectionObserver((entries, observer) => {
+                callback(entries, observer, index);
+            }, observeDataSmall);
+            observer.observe(document.getElementById(value));
+        });
+    }, 250); // prevent invisibility as in the case above
 }
 function anFrwdPreset(){
     if(check == 0){
