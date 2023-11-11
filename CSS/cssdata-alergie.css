@@ -53,8 +53,10 @@ body{
 	z-index: 1;
 }
 .back{
-	background: url('../RESOURCES/PRIMARY/promise.png');
-	background-size: cover;
+	background: url('../RESOURCES/PRIMARY/alternatepromise.png'), rgba(255, 255, 255, 0.8);
+	background-size: 80% 80%;
+	background-position: center;
+	background-repeat: no-repeat;
 	width: calc(2vw + 2vh);
 	height: calc(2vw + 2vh);
 	border-radius: 50%;

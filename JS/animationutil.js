@@ -1,20 +1,22 @@
-var check = 0;
 var lastButton;
 
-// setHeader nad preloadBackground's shared variables.
-const bgImages = ["dbh-1.webp", "dbh-2.jpg", "deltarune-2.jpg", "deltarune-4.jpg", "hk-1.jpg", "hk-2.jpg", "tf-1.jpg", "tf-2.webp", "deltarune-5.jpg", "deltarune-6.jpg"];
-const path = "RESOURCES/SHWHP_RES/";
-let random = Math.floor((Math.random()*100))%bgImages.length;
-
 window.onload = () => {
-    if(typeof sessionStorage.getItem("lastRandomNum") !== undefined) while(random == sessionStorage.getItem("lastRandomNum")) random = Math.floor((Math.random()*100))%bgImages.length;
+    //regulateScroll(); INCOMPATIBLE WITH THE UPDATE LOG
+
+    const bgImages = ["dbh-1.webp", "dbh-2.jpg", "deltarune-2.jpg", "deltarune-4.jpg", "hk-1.jpg", "hk-2.jpg", "tf-1.jpg", "tf-2.webp", "deltarune-5.jpg", "deltarune-6.jpg"];
+    const path = "RESOURCES/SHWHP_RES/";
+    let random = Math.floor((Math.random()*100))%bgImages.length;
+
+    if(typeof sessionStorage.getItem("lastRandomNum") !== undefined) 
+        while(random == sessionStorage.getItem("lastRandomNum")) 
+            random = Math.floor((Math.random()*100))%bgImages.length;
 
     sessionStorage.setItem("lastRandomNum", random);
     document.getElementById("header").setAttribute("style", "background-image: url('" + path + bgImages[random] + "')");
 
     // after full site load -> remove user interaction limitations
     document.getElementsByTagName("style")[0].remove();
-    animationForwarder('skip', 'load', 'anim-alternateOpacityShift', 0);
+    animationForwarder('skip', 'load', 'anim-alternateOpacityShift');
     animationForwarder('skip', 'load', 'dp-none', 250);
 
     // scramble animation
@@ -45,10 +47,11 @@ window.onload = () => {
 
     setTimeout(() => {
         // intersection animations
-        let root = ["theMission", "langs1", "langStats"]; //ids
+        let ids = ["theMission", "langs1", "langStats", "ShWPH"]; //ids
         let func = [() => {anFrwdDoubleExec('headermission', 'headermission2', 'skip', 'pfp', 'anim-fadeintr', 100, 'anim-fadeinrainbow', 640)}, 
-                    () => {anFrwdPreset()}, 
-                    () => {langStats()}
+                    () => {anLangPreset()}, 
+                    () => {langStats()},
+                    () => {anShWPHPreset()}
                    ]; //animations
 
         function callback(entries, observer, index){
@@ -64,21 +67,30 @@ window.onload = () => {
             rootMargin: "0px",
             threshold: 0.5,
         };
-        root.forEach((value, index) => {
+        ids.forEach((value, index) => {
             let observer = new IntersectionObserver((entries, observer) => {
                 callback(entries, observer, index);
             }, observeDataSmall);
             observer.observe(document.getElementById(value));
         });
-    }, 250); // prevent invisibility as in the case above
+    }, 300); // prevent invisibility as in the case above
 }
-function anFrwdPreset(){
-    if(check == 0){
-        check = 1;
-        anFrwdDoubleExec('sectionlang1', 'sectionlang2', 'slash1-lang', 'slash2-lang', 'anim-fadeintb', 250, 'anim-blink', 100);
-        animationForwarder('skip', 'langCentral', 'anim-fadeinmod', 650)
-    }
+function regulateScroll(){
+    const ratio = 1 / devicePixelRatio;
+    document.getElementsByTagName("body")[0].setAttribute("style", "transform: scale(" + ratio + ", " + ratio + "); width: " + devicePixelRatio * 100 + "%; height: " + devicePixelRatio * 100 + "%;");
 }
+
+function anLangPreset(){
+    anFrwdDoubleExec('sectionlang1', 'sectionlang2', 'slash1-lang', 'slash2-lang', 'anim-fadeintb', 250, 'anim-blink', 100);
+    animationForwarder('skip', 'langCentral', 'anim-fadeinmod', 650);
+}
+function anShWPHPreset(){
+    animationForwarder('skip', 'xp-1', 'anim-fadeintl2');
+    setTimeout(() => {anFrwdDoubleExec('sectionxp1', 'sectionxp2', 'slash1-xp', 'slash2-xp', 'anim-fadeintt', 250, 'anim-blink', 100)}, 350);
+    animationForwarder('skip', 'new', 'op-0', 1300);
+    animationForwarder('skip', 'new', 'dp-none', 1800);
+}
+
 function langPicker(buttonid){
     if(lastButton != buttonid){
         // For ease of use
@@ -178,12 +190,13 @@ function anFrwdDoubleExec(identifier, identifier2, identifier3, identifier4 ,ani
     animationForwarder(identifier, identifier2, anim_id, wait_time);
     animationForwarder(identifier3, identifier4, anim_id2, wait_time2);
 }
-function animationForwarder(identifier, identifier2, anim_id, wait_time){
+function animationForwarder(identifier, identifier2, anim_id, wait_time = 0){
     if(identifier != 'skip'){
         document.getElementById(identifier).classList.add(anim_id);
     }
     setTimeout(() => {document.getElementById(identifier2).classList.add(anim_id)}, wait_time);
 }
+
 function rainbow(){
     //Remove the onmouseover event to prevent the button from flickering
     const socials = document.getElementById('socials');
@@ -194,6 +207,7 @@ function rainbow(){
     socials.classList.add('anim-truefadeinrainbow');
     setTimeout(() => socials.classList.remove('anim-truefadeinrainbow'), 500); //Replay the animation
 }
+
 function toggleUpdateScreenVisibility(){
     const updateScreen = document.getElementById('updateScreen');
     const animOShift = "anim-opacityShift";
@@ -201,21 +215,4 @@ function toggleUpdateScreenVisibility(){
     updateScreen.classList.toggle(animOShift);
 
     anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
-} 
-function xpWindow(id, button){
-    const xp = [document.getElementById("xp-" + id), document.getElementById("xp-item-title-" + id), document.getElementById("xp-content-" + id), document.getElementById("xp-minimize-" + id), document.getElementById("xp-close-" + id)];
-    const minimize = ["first", "second", "third"]; //all variations
-    const trueMinimize = minimize[id - 1] + "-minimize"; //tailor to the window id
-
-    const item_title = ["wladyslawlokietek", "LEGACY/historia-kazimierz-wielki", "alergie"];
-
-    if(button == 0){
-        xp[3].onclick = function() {null};
-        xp[0].classList.add(trueMinimize);
-        setTimeout(() => {xp[0].classList.remove(trueMinimize)}, 150);
-        setTimeout(() => {xp[3].onclick = function() {xpWindow(id, 0)}}, 300);
-    }
-    if(button == 1){
-        xp[0].remove();
-    }
 }
