@@ -97,7 +97,7 @@ function langPicker(buttonid){
         const langDiv = document.getElementById('sectionlang1');
         const langParagraph = document.getElementById('sectionlang2');
         const langHeading = document.getElementById('sectionlang1p2');
-        const langNames = ['cpp','html','js','css'];
+        const langNames = ['cpp','html','js','php'];
 
         // If exists, remove the highlight of an icon and add it to the latest clicked one
         if(lastButton != null){
@@ -149,8 +149,8 @@ function langPicker(buttonid){
                 }}, 490);
 
             // Add suitable text
-            const titles = ['C++','HTML','Javascript','CSS'];
-            const descriptions = ["C++ is one of the most renowned programming languages in the world, used in making a wide variety of programs/apps, mostly direct executables. I want to be fully competent at it, even though it is not one of the languages I'll need as a webmaster.","HTML's my personal favorite for obvious reasons: its potential for shaping something creative when associated, nesting style and overall not limiting my imagination. I just love doing stuff in it.","Javascript is one of my recent 'discoveries'. Immediately after I dived into it, determination sprung into action. Being very powerful, my persona constantly tries to learn something new about it to empower my web developer adventures with fancy techniques.","There's not much to say here except for that it's a critical extension of html, or at least I perceive it as. Being a key to expressing one's power, I admire the fact that I'll carry it between the palms of my hand till the very end."]
+            const titles = ['C++', 'HTML & CSS', 'Javascript', 'PHP'];
+            const descriptions = ["C++ is one of the most renowned programming languages in the world, used in making a wide variety of programs/apps, mostly direct executables. I want to be fully competent at it, even though it is not one of the languages I'll need as a webmaster.","They are my personal favorites for obvious reasons: their potential for shaping something creative when associated, nesting style and overall not limiting my imagination. I just love doing stuff in 'em.","Javascript is one of my recent 'discoveries'. Immediately after I dived into it, determination sprung into action. Being very powerful, my persona constantly tries to learn something new about it to empower my web developer adventures with fancy techniques.", "Ah, php. Despite not being fun to code in and superior alternatives being around, it still shines in some data management utility potential. Of secondary priority."]
             for(let i = 0; i < 4; i++){
                 if(buttonid == langNames[i]){
                     langHeading.textContent = titles[i];
@@ -163,7 +163,7 @@ function langPicker(buttonid){
 function langStats(){
     anFrwdDoubleExec('sectionlang12', 'sectionlang22', 'slash1-lang2', 'slash2-lang2', 'anim-fadeintb', 250, 'anim-blink', 100);
 
-    const ids = ['html', 'css', 'cpp', 'js'];
+    const ids = ['html', 'php', 'cpp', 'js'];
     setTimeout(() => {
         for(let i = 0; i < 4; i++){
             setTimeout(() => {document.getElementById('holder_' + ids[i]).classList.add('holder-transformations')}, (i * 25));

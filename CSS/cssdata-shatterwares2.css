@@ -441,10 +441,10 @@ abbr{
     transform-origin: top;
     transition: transform 0.1s ease-out;
 }
-.css{
+.php{
     background-image: radial-gradient(circle, #5ffbf1, #46eefa, #41dfff, #52cffe, #69bff8, #79b3f4, #8aa7ec, #9a9ae1, #aa8fd8, #ba83ca, #c777b9, #d16ba5);
 }
-.css::before{
+.php::before{
     content: '';
     width: 71.27659574468085%;
     height: 6px;
@@ -456,12 +456,12 @@ abbr{
     background-color: #08fcbc;
     transition: transform 0.1s ease-in;
 }
-.lang-pick:hover .css::before{
+.lang-pick:hover .php::before{
     transform: scaleX(1);
     transform-origin: left;
     transition: transform 0.1s ease-out;
 }
-.css::after{
+.php::after{
     content: '';
     width: 6px;
     height: 71.27659574468085%;
@@ -473,7 +473,7 @@ abbr{
     background-color: #08fcbc;
     transition: transform 0.1s ease-in;
 }
-.lang-pick:hover .css::after{
+.lang-pick:hover .php::after{
     transform: scaleY(1);
     transform-origin: bottom;
     transition: transform 0.1s ease-out;
@@ -1007,8 +1007,8 @@ abbr{
 .mg-slash-artificial{
     margin: 0 16px;
 }
-.shwph-program-row{
-    height: 45%;
+.shwph-program-row-mg-b{
+    margin-bottom: 2.5%;
 }
 .shwph-program{
     width: 15%;
@@ -1024,7 +1024,7 @@ abbr{
     border: 2px grey dotted;
 }
 .shwph-program:active{
-    background-color: rgba(51, 153, 255, 0.6);
+    background-color: rgba(51, 153, 255, 0.55);
 }
 .placehloder-program:hover{
     border: none;
@@ -1033,8 +1033,6 @@ abbr{
     width: 2.15vw;
     height: auto;
     margin-bottom: 0.5vw;
-    align-content: space-between;
-    image-rendering: initial; /*Change after making all icons*/
 }
 .shwph-program-mg-r{
     margin-right: 2%
