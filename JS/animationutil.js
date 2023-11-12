@@ -65,7 +65,7 @@ window.onload = () => {
         let observeDataSmall = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.5,
+            threshold: 0.4,
         };
         ids.forEach((value, index) => {
             let observer = new IntersectionObserver((entries, observer) => {

@@ -135,7 +135,7 @@ abbr{
     filter: drop-shadow(0vw 0vw 0.3vw #979797);
     height: 4vw;
     box-shadow: 0vw 0vw 7vw 3px white inset;
-    z-index: 4;
+    z-index: 2;
 }
 .nav:hover{
     background-color: rgba(255, 255, 255, 0.6);
@@ -153,7 +153,7 @@ abbr{
     position: absolute;
     top: -0.6vw;
     left: -0.6vw;
-    z-index: 4;
+    z-index: 2;
     opacity: 0;
     display: none;
 }
@@ -167,7 +167,7 @@ abbr{
     position: absolute;
     bottom: -0.6vw;
     right: -0.6vw;
-    z-index: 4;
+    z-index: 2;
     opacity: 0;
     display: none;
 }
@@ -198,6 +198,8 @@ abbr{
 .nav-logo-image{
     filter: drop-shadow(0.1vw 0.1vw 0.4vw #696969);
     width: 2.4vw;
+}
+.h-auto{
     height: auto;
 }
 .nav-button-image:hover .nav-logo-image{
@@ -808,9 +810,6 @@ abbr{
     top: 50%;
     transform: translateY(-50%) translateX(25vw);
 }
-.update-frame{
-    z-index: 5;
-}
 .update-notes{
     background-image: linear-gradient(to right bottom, #ffffff, #f1f1f1, #e3e3e3, #d5d5d5, #c7c7c7);
     width: 600px;
@@ -891,7 +890,7 @@ abbr{
 }
 
 .z-5{
-    z-index: 5;
+    z-index: 3;
 }
 
 @keyframes fadeIn{
@@ -1026,12 +1025,11 @@ abbr{
 .shwph-program:active{
     background-color: rgba(51, 153, 255, 0.55);
 }
-.placehloder-program:hover{
+.placeholder-program:hover{
     border: none;
 }
 .shwph-program-icon{
     width: 2.15vw;
-    height: auto;
     margin-bottom: 0.5vw;
 }
 .shwph-program-mg-r{
@@ -1045,4 +1043,24 @@ abbr{
 .grd-shwph{
     background-image: linear-gradient(to right bottom, #1de9b6, #00eafb, #55e2ff, #bfd5ff, #f7ccff);
     filter: drop-shadow(0.01vw 0.01vw 0.025vw #00d3ff);
+}
+.error-javascript{
+    top: 2.5vw;
+    left: 2.5vw;
+    height: 3.5vw;
+    background-color: red;
+    border-radius: 0.3vw;
+    z-index: 4;
+    padding: 0.6vw;
+    box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.2);
+}
+.error-circle{
+    border-radius: 50%;
+    background-color: white;
+    width: 2.3vw;
+    margin-right: 0.5vw;
+}
+.error-image{
+    width: 55%;
+    height: 55%;
 }
