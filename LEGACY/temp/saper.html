@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet">
+    <link href="favicon.ico" rel="favicon">
+    <title>Saper - JN</title>
+    <script type="text/javascript">
+        let uncovered = 0, max = 0, flagMode = false;
+        window.onload = () => {
+            function revealAll(win, id = null){
+                let element;
+                if(id){
+                    element = document.getElementById(id);
+                }
+                if((flagMode === false && element !== undefined) || win === true)
+                    if((element !== undefined && !element.classList.contains("td-flag")) || win === true){
+                        for(let i = 1; i < trueSize -1; i++)
+                            for(let j = 1; j < trueSize - 1; j++){
+                                const cellkey = document.getElementById("cell-" + i + "-" + j);
+                                cellkey.classList.remove("td-unclicked");
+                                if(sapper[i][j] != 'b')
+                                    cellkey.innerHTML = sapper[i][j];
+                                else if(!cellkey.classList.contains("td-flag"))
+                                    cellkey.classList.add("td-bomb");
+                                flag.onclick = null;
+                            }
+                        if(win === false) setTimeout(() => {location.reload()}, 3000);
+                    }
+                if(flagMode) element.classList.toggle("td-flag");
+            }
+            function parseInput(id, i, j){
+                let element = document.getElementById(id);
+                if(flagMode === true) element.classList.toggle("td-flag");
+                else if(sapper[i][j] != 'b' && !element.classList.contains("td-flag")){
+                    element.onclick = null;
+                    element.classList.remove("td-unclicked");
+                    element.innerHTML = sapper[i][j];
+                    uncovered++;
+                    if(uncovered == max){
+                        for(let i = 1; i < trueSize - 1; i++)
+                            for(let j = 1; j < trueSize - 1; j++)
+                                document.getElementById("cell-" + i + "-" + j).classList.add("anim-rainbow");
+                        revealAll(true);
+                    }
+                }
+            }
+            function returnRand(){
+                return Math.floor(Math.random() * (trueSize - 2) + 1);
+            }
+            let size = prompt("Size: ", 10);
+            if(size == null) size = 10;
+            let parsedPrompt = parseInt(size), trueSize = parsedPrompt + 2, maxBombs = Math.floor(parsedPrompt*parsedPrompt*0.2);
+            max = size * size - Math.floor(size * size * 0.2);
+            let sapper = [];
+            for(let i = 0; i < trueSize; i++){
+                sapper[i] = [];
+                for(let j = 0; j < trueSize; j++)
+                    sapper[i][j] = 0;
+            }
+            console.log(sapper);
+            for(let i = 1; i < trueSize - 1; i++){
+                let row = document.createElement("tr"), rowkey = "row-" + i;
+                row.classList.add("fx");
+                row.id = rowkey;
+                document.getElementById("sapper-core").appendChild(row)
+                for(let j = 1; j < trueSize - 1; j++){
+                    let cell = document.createElement("td"), cellkey = "cell-" + i + "-" + j, cellClasses = ["td", "fx-center", "fx", "td-unclicked", "bg-full", "button"], size = 40 / parsedPrompt;
+                    cell.setAttribute("style", "width: " + size + "vw; height: " + size + "vw;")
+                    for(let k = 0; k < cellClasses.length; k++)
+                        cell.classList.add(cellClasses[k]);
+                    cell.id = cellkey;
+                    document.getElementById(rowkey).appendChild(cell);
+                }
+            }
+            for(let i = 0; i < maxBombs; i++){
+                let x = returnRand(), y = returnRand();
+                while(document.getElementById("cell-" + x + "-" + y).classList.contains("td-bomb")){
+                    x = returnRand();
+                    y = returnRand();
+                }
+                const cellkey = document.getElementById("cell-" + x + "-" + y);
+                sapper[x][y] = 'b';
+                cellkey.innerHTML = null;
+                cellkey.onclick = () => {revealAll(false, cellkey.id)};
+            }
+            console.log(sapper);
+            for(let i = 1; i < trueSize - 1; i++)
+                for(let j = 1; j < trueSize - 1; j++){
+                    const cellkey = document.getElementById("cell-" + i + "-" + j);
+                    if(sapper[i][j] != 'b'){
+                        let number = 0;
+                        if(sapper[i - 1][j - 1] == 'b') number++;
+                        if(sapper[i - 1][j] == 'b') number++;
+                        if(sapper[i - 1][j + 1] == 'b') number++;
+                        if(sapper[i][j - 1] == 'b') number++;
+                        if(sapper[i][j + 1] == 'b') number++;
+                        if(sapper[i + 1][j - 1] == 'b') number++;
+                        if(sapper[i + 1][j] == 'b') number++;
+                        if(sapper[i + 1][j + 1] == 'b') number++;
+                        sapper[i][j] = number;
+                        if(number > 0) cellkey.classList.add("td-" + number);
+                        cellkey.onclick = () => {parseInput(cellkey.id, i, j)};
+                    }
+                }
+            console.log(sapper);
+
+            const flag = document.getElementById("flag")
+            function toggleFlag(){
+                if(flagMode) flagMode = false;
+                else flagMode = true;
+
+                for(let i = 1; i < trueSize - 1; i++)
+                    for(let j = 1; j < trueSize - 1; j++){
+                        const cellkey = document.getElementById("cell-" + i + "-" + j);
+                        if(cellkey.classList.contains("td-flag") && !flagMode)
+                            cellkey.classList.remove("td-unclicked");
+                        else if(flagMode && cellkey.classList.contains("td-flag"))
+                            cellkey.classList.add("td-unchecked");
+                    }  
+                    
+                flag.classList.toggle("td-flag");
+                flag.classList.toggle("td-flag2");
+            }
+            flag.onclick = () => {toggleFlag()};
+        }
+    </script>
+</head>
+<body class="body fx fx-center">
+    <img style="display: none;" src="flag2.png" alt="flaga 2">
+    <table id="sapper-core" class="table"></table>
+    <div id="flag" class="table flag bg-full td-unclicked"></div>
+</body>
+</html>

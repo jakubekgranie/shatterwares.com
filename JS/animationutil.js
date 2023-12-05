@@ -2,17 +2,25 @@ var lastButton;
 
 window.onload = () => {
     //regulateScroll(); INCOMPATIBLE WITH THE UPDATE LOG
+    function sessionRandExchange(sessionName, len){
+        let rand = Math.floor((Math.random()*100))%len;
+
+        if(typeof sessionStorage.getItem(sessionName) !== undefined) 
+            while(rand == sessionStorage.getItem(sessionName)) 
+                rand = Math.floor((Math.random()*100))%len;
+
+        sessionStorage.setItem(sessionName, rand);
+    }
+
+    const names = ["Delve", "Explore", "Reveal", "Decode", "Uncover", "Discover", "Enhance", "Iterate"];
+    sessionRandExchange("lastRandomName", names.length);
+    document.getElementById("navSpec").innerHTML = " " + names[sessionStorage.getItem("lastRandomName")];
 
     const bgImages = ["dbh-1.webp", "dbh-2.jpg", "deltarune-2.jpg", "deltarune-4.jpg", "hk-1.jpg", "hk-2.jpg", "tf-1.jpg", "tf-2.webp", "deltarune-5.jpg", "deltarune-6.jpg"];
     const path = "RESOURCES/SHWHP_RES/";
-    let random = Math.floor((Math.random()*100))%bgImages.length;
+    sessionRandExchange("lastRandomNum", bgImages.length);
 
-    if(typeof sessionStorage.getItem("lastRandomNum") !== undefined) 
-        while(random == sessionStorage.getItem("lastRandomNum")) 
-            random = Math.floor((Math.random()*100))%bgImages.length;
-
-    sessionStorage.setItem("lastRandomNum", random);
-    document.getElementById("header").setAttribute("style", "background-image: url('" + path + bgImages[random] + "')");
+    document.getElementById("header").setAttribute("style", "background-image: url('" + path + bgImages[sessionStorage.getItem("lastRandomNum")] + "')");
 
     // after full site load -> remove user interaction limitations
     document.getElementsByTagName("style")[0].remove();
@@ -26,20 +34,18 @@ window.onload = () => {
     const nodeList = document.querySelectorAll(".headerLetter");
 
     function loopedLetterRand(i){ // for every external loop call, start from one letter further.
-        for(; i < length; i++){
+        for(; i < length; i++)
             nodeList[i].innerHTML = String.fromCharCode(Math.floor((Math.random() * 100))%95 + 32); // 32 - 126
-        }
     }
     
     loopedLetterRand(0); // randomize everything once befote the process begins
     setTimeout(() => {
-        for(let i = 0; i < document.querySelectorAll(".nav-button").length; i++){
+        for(let i = 0; i < document.querySelectorAll(".nav-button").length; i++)
             animationForwarder('navSlash' + (i + 1) + '-1', 'navSlash' + (i + 1) + '-2', 'anim-navBlink', 90); // Guest animation
-        }
 
         for(let i = 0; i < length; i++){ // for each letter
             setTimeout(() => {
-                loopedLetterRand(i)
+                loopedLetterRand(i);
                 nodeList[i].innerHTML = slogan[i]; // separated so all symbols would be scrambled initially (look up)
             }, waitTime * i);
         }
@@ -90,6 +96,16 @@ function anShWPHPreset(){
     animationForwarder('skip', 'new', 'op-0', 1300);
     animationForwarder('skip', 'new', 'dp-none', 1800);
 }
+function anNavButtonPreset(){
+    const spec = document.getElementById("spec")
+    if(spec.classList.contains('locked')){
+        const classes = ['locked', 'hover-color-forced'];
+        for(let i = 0; i < 2; i++)
+            spec.classList.remove(classes[i]);
+    }
+    else
+        anFrwdDoubleExec('skip', 'spec', 'skip', 'spec', 'locked', 0, 'hover-color-forced')
+}
 
 function langPicker(buttonid){
     if(lastButton != buttonid){
@@ -119,9 +135,9 @@ function langPicker(buttonid){
         }
 
         // After execution (1s), rollback the changes
-        setTimeout(() => {for(let i = 0; i < 4; i++){
+        setTimeout(() => {
+            for(let i = 0; i < 4; i++)
                 document.getElementById(langNames[i]).style.cursor = null;
-            }
             document.getElementById(buttonid).style.cursor = n_a;
         }, 1000);
 
@@ -144,9 +160,9 @@ function langPicker(buttonid){
             setTimeout(() => {
                 langDiv.classList.remove('animSwitchByFadeInLang');
                 langParagraph.classList.remove('animSwitchByFadeInLang');
-                for(let i = 0; i < 4; i++){
+                for(let i = 0; i < 4; i++)
                     document.getElementById(langNames[i]).onclick = function() {langPicker(langNames[i])};
-                }}, 490);
+                }, 490);
 
             // Add suitable text
             const titles = ['C++', 'HTML & CSS', 'Javascript', 'PHP'];
@@ -165,9 +181,8 @@ function langStats(){
 
     const ids = ['html', 'php', 'cpp', 'js'];
     setTimeout(() => {
-        for(let i = 0; i < 4; i++){
+        for(let i = 0; i < 4; i++)
             setTimeout(() => {document.getElementById('holder_' + ids[i]).classList.add('holder-transformations')}, (i * 25));
-        }
     }, 500);
     setTimeout(() => {
         for(let i = 0; i < 4; i++){
@@ -177,23 +192,20 @@ function langStats(){
     }, 725)
 }
 function unravelBars(langId){
-    for(let i = 0; i < 10; i++){
+    for(let i = 0; i < 10; i++)
         setTimeout(() => {
-            let bar = "bar_" + langId + (i + 1);
-            document.getElementById(bar).classList.add('anim-fadeintr2');
+            document.getElementById("bar_" + langId + (i + 1)).classList.add('anim-fadeintr2');
         }
-        , (90 * i));
-    }
+        , 90 * i);
 }
 
-function anFrwdDoubleExec(identifier, identifier2, identifier3, identifier4 ,anim_id, wait_time, anim_id2, wait_time2){
+function anFrwdDoubleExec(identifier, identifier2, identifier3, identifier4 ,anim_id, wait_time, anim_id2, wait_time2 = 0){
     animationForwarder(identifier, identifier2, anim_id, wait_time);
     animationForwarder(identifier3, identifier4, anim_id2, wait_time2);
 }
 function animationForwarder(identifier, identifier2, anim_id, wait_time = 0){
-    if(identifier != 'skip'){
+    if(identifier != 'skip')
         document.getElementById(identifier).classList.add(anim_id);
-    }
     setTimeout(() => {document.getElementById(identifier2).classList.add(anim_id)}, wait_time);
 }
 

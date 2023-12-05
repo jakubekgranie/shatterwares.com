@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /.git/
+Disallow: /LEGACY/temp/
