@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../CSS/MICRO/css-minesweeper.css" rel="stylesheet">
+    <link href="../../RESOURCES/MICRO/MineSweeper/favicon.ico" rel="favicon">
+    <title>◈&nbsp;MineSweeper</title>
+    <script type="text/javascript">
+        let uncovered = 0, max = 0, flagMode = false;
+        window.onload = () => {
+            function revealAll(win, id = null){
+                let element;
+                if(id)
+                    element = document.getElementById(id);
+                if((!flagMode && element !== undefined && !element.classList.contains("td-flag")) || win){
+                    for(let i = 1; i < trueSize - 1; i++)
+                        for(let j = 1; j < trueSize - 1; j++){
+                            const cellkey = document.getElementById("cell-" + i + "-" + j);
+                            cellkey.classList.remove("td-unclicked");
+                            if(!cellkey.classList.contains("td-flag")){
+                                if(sapper[i][j] != 'b')
+                                    cellkey.innerHTML = sapper[i][j];                                    
+                                else
+                                    cellkey.classList.add("td-bomb");
+                                flag.onclick = null;
+                                }
+                            else if(sapper[i][j] != 'b')
+                                setInterval(() => {
+                                    cellkey.classList.toggle("td-flag");
+                                    if(cellkey.innerHTML == '') cellkey.innerHTML = sapper[i][j];
+                                    else cellkey.innerHTML = '';
+                                }, 1000);
+                            else
+                                setInterval(() => {
+                                    cellkey.classList.toggle("td-flag");
+                                    cellkey.classList.toggle("td-bomb");
+                                }, 1000);
+                        }
+                    if(win === false) setTimeout(() => {location.reload()}, 6000);
+                }
+                if(flagMode) element.classList.toggle("td-flag");
+            }
+            function revealDeadSpaces(i, j){
+                const cellkey = document.getElementById('cell-' + i + '-' + j);
+                uncovered++;
+                cellkey.innerHTML = sapper[i][j];
+                if(i == 0 || i == trueSize - 1 || j === 0 || j == trueSize - 1 || !cellkey.classList.contains("td-unclicked")){
+                    cellkey.classList.remove("td-unclicked");
+                    return;
+                }
+                cellkey.classList.remove("td-unclicked");
+                for(let x = i - 1; x < i + 2; x++)
+                    for(let y = j - 1; y < j + 2; y++){
+                        if(document.getElementById("cell-" + x + "-" + y).classList.contains("td-unclicked")){
+                            if(sapper[x][y] == 0)
+                                revealDeadSpaces(x, y);
+                            else
+                                parseInput(x, y);
+                        }
+                    }
+            }
+            function parseInput(i, j){
+                let element = document.getElementById("cell-" + i + "-" + j);
+                if(flagMode && element.innerHTML == '') element.classList.toggle("td-flag");
+                if(!flagMode && sapper[i][j] != 'b' && !element.classList.contains("td-flag")){
+                    element.onclick = null;
+                    uncovered++;
+                    element.innerHTML = sapper[i][j];
+                    if(uncovered == max){
+                        for(let i = 1; i < trueSize - 1; i++)
+                            for(let j = 1; j < trueSize - 1; j++)
+                                setTimeout(() => {document.getElementById("cell-" + i + "-" + j).classList.add("anim-rainbow")}, 10 * 2*i + 0.2*j);
+                        revealAll(true);
+                    }
+                    else if(sapper[i][j] == 0){
+                        uncovered--;
+                        revealDeadSpaces(i, j);
+                    }
+                    else element.classList.remove("td-unclicked");
+                }
+            }
+            function returnRand(){
+                return Math.floor(Math.random() * (trueSize - 2) + 1);
+            }
+            let size = prompt("Size: ", 10);
+            if(size == null) size = 10;
+            let parsedPrompt = parseInt(size), trueSize = parsedPrompt + 2, maxBombs = Math.floor(parsedPrompt*parsedPrompt*0.2);
+            max = size * size - Math.floor(size * size * 0.2);
+            let sapper = [];
+            for(let i = 0; i < trueSize; i++){
+                sapper[i] = [];
+                for(let j = 0; j < trueSize; j++)
+                    sapper[i][j] = 0;
+            }
+            console.log("PRE");
+            console.log(sapper);
+            for(let i = 0; i < trueSize; i++){
+                let row = document.createElement("tr"), rowkey = "row-" + i;
+                row.classList.add("fx");
+                row.id = rowkey;
+                document.getElementById("sapper-core").appendChild(row);
+                for(let j = 0; j < trueSize; j++){
+                    let cell = document.createElement("td"), cellkey = "cell-" + i + "-" + j, cellClasses = ["td", "fx-center", "fx", "bg-full", "button"], size = 40 / parsedPrompt;
+                    cell.setAttribute("style", "width: " + size + "vw; height: " + size + "vw;")
+                    for(let k = 0; k < cellClasses.length; k++)
+                        cell.classList.add(cellClasses[k]);
+                    if(j == 0 || j == trueSize - 1 || i == 0 || i == trueSize - 1)
+                        cell.classList.add("dp-none");
+                    else
+                        cell.classList.add("td-unclicked");
+                    cell.id = cellkey;
+                    document.getElementById(rowkey).appendChild(cell);
+                }
+            }
+            function generate(initX = false, initY = false){
+                if(!initX)
+                    for(let j = 1; j < trueSize - 1; j++)
+                        for(let k = 1; k < trueSize - 1; k++)
+                            document.getElementById("cell-" + j + '-' + k).onclick = () => {generate(j, k)};
+                else if(!flagMode){
+                    for(let i = 0; i < maxBombs; i++){
+                        let x = returnRand(), y = returnRand();
+                        while(sapper[x][y] == 'b' || (initX && ((x + 1 == initX && y + 1 == initY) || (x + 1 == initX && y == initY) || (x + 1 == initX && y - 1 == initY) || (x == initX && y + 1 == initY) || (x == initX && y == initY) || (x == initX && y - 1 == initY) || (x - 1 == initX && y + 1 == initY) || (x - 1 == initX && y == initY) || (x - 1 == initX && y - 1 == initY)))){
+                            x = returnRand();
+                            y = returnRand();
+                        }
+                        const cellkey = document.getElementById("cell-" + x + "-" + y);
+                        sapper[x][y] = 'b';
+                        cellkey.onclick = () => {revealAll(false, cellkey.id)};
+                    }
+                    console.log("GEN");
+                    console.log(sapper);
+                    numberize();
+                    parseInput(initX, initY);
+                }
+                else
+                    parseInput(initX, initY);
+            }
+            generate();
+
+            function numberize(){
+                for(let i = 1; i < trueSize - 1; i++)
+                    for(let j = 1; j < trueSize - 1; j++){
+                        const cellkey = document.getElementById("cell-" + i + "-" + j);
+                        if(sapper[i][j] != 'b'){
+                            let number = 0;
+                            for(let x = i - 1; x < i + 2; x++)
+                                for(let y = j - 1; y < j + 2; y++)
+                                    if(sapper[x][y] == 'b')
+                                        number++;
+                            sapper[i][j] = number;
+                            if(number > 0) cellkey.classList.add("td-" + number);
+                            cellkey.onclick = () => {parseInput(i, j)};
+                        }
+                    }
+                console.log("NUM");
+                console.log(sapper);
+            }
+            const flag = document.getElementById("flag")
+            function toggleFlag(){
+                if(flagMode) flagMode = false;
+                else flagMode = true;
+                for(let i = 1; i < trueSize - 1; i++)
+                    for(let j = 1; j < trueSize - 1; j++){
+                        const cellkey = document.getElementById("cell-" + i + "-" + j);
+                        if(cellkey.classList.contains("td-flag"))
+                            cellkey.classList.toggle("td-unclicked");
+                    }  
+                flag.classList.toggle("td-flag");
+                flag.classList.toggle("td-flag2");
+            }
+            flag.onclick = () => {toggleFlag()};
+        }
+    </script>
+</head>
+<body class="body fx fx-center">
+    <img class="dp-none" src="../../RESOURCES/MICRO/MineSweeper/flag2.png" alt="flaga 2">
+    <table id="sapper-core" class="table"></table>
+    <div id="flag" class="table flag bg-full td-unclicked"></div>
+</body>
+</html>

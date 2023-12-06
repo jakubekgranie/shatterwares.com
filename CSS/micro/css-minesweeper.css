@@ -11,12 +11,12 @@
     font-weight: bold;
 }
 .button{
-    background-image: url("un.png");
+    background-image: url("../../RESOURCES/MICRO/MineSweeper/un.png");
 }
 .flag{
     width: 6vw;
     height: 6vw;
-    background-image: url("flag.png");
+    background-image: url("../../RESOURCES/MICRO/MineSweeper/flag.png");
     position: fixed;
     top: 3vw;
     right: 3vw;
@@ -28,10 +28,10 @@
     cursor: pointer;
 }
 .td-flag{
-    background-image: url("flag.png");
+    background-image: url("../../RESOURCES/MICRO/MineSweeper/flag.png");
 }
 .td-flag2{
-    background-image: url("flag2.png");
+    background-image: url("../../RESOURCES/MICRO/MineSweeper/flag2.png");
 }
 .td-1{
     color: blue;
@@ -58,7 +58,7 @@
     color: slategray;
 }
 .td-bomb{
-    background: url("bomb.png"), url("un.png");
+    background: url("../../RESOURCES/MICRO/MineSweeper/bomb.png"), url("../../RESOURCES/MICRO/MineSweeper/un.png");
     background-size: 60%, cover;
     background-repeat: no-repeat;
     background-position: center center, center center;
@@ -75,7 +75,7 @@
 }
 @keyframes rainbow{
     12.5%{
-        color: red !important;
+        color: red;
     }
     25%{
         color: orange;
@@ -98,4 +98,7 @@
     100%{
         color: red !important;
     }
+}
+.dp-none{
+    display: none;
 }
