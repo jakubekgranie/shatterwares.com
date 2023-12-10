@@ -104,8 +104,8 @@
         <div id="load" class="load z-5 pos-fxd w-100p h-100p fx fx-ai-c fx-jc-c fx-dir-c">
             <img src="RESOURCES/PRIMARY/alternatepromise-min.png" class="w-20p anim-infRainbow" alt="logo">
             <noscript>
-                <div id="jsError" class="pos-fxd error-javascript nav-button-image bs-bb fx fx-jc-c fx-ai-c">
-                    <div class="bgc-white error-circle h-100p fx fx-ai-c fx-jc-c">
+                <div class="pos-fxd error-javascript nav-button-image bs-bb fx fx-jc-c fx-ai-c">
+                    <div class="bgc-white error-circle bgc-white dp-none h-100p fx fx-ai-c fx-jc-c">
                         <img src="RESOURCES/SHWHP_RES/warning.png" class="error-image" alt="A warning sign">
                     </div>
                     <p class="mg-none c-white ff-belanosima">Error: JavaScript is required for<br>basic functionality.</p>
@@ -320,45 +320,70 @@
         <section id="ShWPH" class="c-white w-100p fx fx-jc-c fx-ai-c fx-dir-c min-padding bg-shwph bgs-full">
             <div class="nest-subsection ff-belanosima fx fx-dir-c">
                 <div class="longer-subsection bs-bb fx fx-jc-c">
-                    <div id="xp-1" class="shwph-tab w-100p op-0 pos-rel">
+                    <div id="xp-1" class="shwph-tab op-0 pos-rel">
 
                         <!--New tab-->
                         <div id="new" class="pos-abs new-coords fx fx-ai-c fx-jc-c">
-                            <div class="new-bg w-100p h-100p bs-bb">
-
-                            </div>
+                            <div class="new-bg w-100p h-100p bs-bb"></div>
                             <p class="new-title pos-abs mg-none"><b>✧</b> New</p>
                         </div>
 
-                        <div class="shwph-bar bs-bb fx">
-                            <img src="RESOURCES/SHWHP_RES/promisenobg-slim.png" class="xp-icon" alt="Old ShatterWares icon">
-                            <p class="xp-item-title xp-margin mg-none">Internet Explorer - www.shatterwares.com/shwph/index.html</p>
+                        <div class="shwph-bar bs-bb fx fx-ai-c">
+                            <img src="RESOURCES/SHWHP_RES/promisenobg-slim.png" class="h-100p" alt="Old ShatterWares icon">
+                            <p class="xp-item-title tw-nowrap xp-margin mg-none">Internet Explorer - www.shatterwares.com/shwph/index.html</p>
                         </div>
-                        <div class="shwph-content bgs-adjustable bgp-shwph render-pixel bs-bb fx fx-dir-c">
+                        <div class="shwph-content bgs-adjustable bgp-shwph render-pixel bs-bb fx fx-dir-c pos-rel">
+                            <div id="micro" class="pos-abs p-ab-center dp-none folder-border">
+                                <div id="micro-bar" class="shwph-bar bs-bb fx fx-ai-c fx-jc-spb op-0">
+                                    <div class="fx h-100p">
+                                        <img src="RESOURCES/SHWHP_RES/promisenobg-slim.png" class="h-100p" alt="Old ShatterWares icon">
+                                        <p class="xp-item-title tw-nowrap xp-margin mg-none">Command prompt</p>
+                                    </div>
+                                    <div class="micro-close cur-sel h-100p" onclick="micro()"></div>
+                                </div>
+                                <div id="micro-cmd" class="micro-cmd bs-bb">
+                                    <div>
+
+                                    </div>
+                                    <div class="ff-micro-cmd">
+                                        <label for="micro-cmd-input" class="dp-inline-b mg-r-micro-cmd-pointer">&gt;</label><form action="javascript:console.log('1')" method="POST" class="dp-inline-b">
+                                            <input id="micro-cmd-input" type="text" autocomplete="off" spellcheck="false" class="micro-cmd-input c-white ff-micro-cmd"></input>
+                                            <button type="submit" hidden></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="fx shwph-program-row-mg-b">
                                 <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="alergie/">
-                                    <img src="RESOURCES/SHWHP_RES/vbs.png" class="shwph-program-icon h-auto render-pixel" alt="Placeholder icon (Promise)">
+                                    <img src="RESOURCES/SHWHP_RES/vbs.png" class="shwph-program-icon h-auto render-pixel" alt="VBS icon">
                                     <p class="shwph-flavor-text mg-none">Allergies_<br>full_compedium<br>.vbs</p>
                                 </a>
                                 <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="wladyslawlokietek/">
-                                    <img src="RESOURCES/SHWHP_RES/rar.png" class="shwph-program-icon h-auto" alt="Placeholder icon (Promise)">
+                                    <img src="RESOURCES/SHWHP_RES/rar.png" class="shwph-program-icon h-auto" alt="RAR icon">
                                     <p class="shwph-flavor-text mg-none">history_w_<br>lokietek.rar</p>
                                 </a>
                                 <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="LEGACY/historia-kazimierz-wielki/Historia.html">
-                                    <img src="RESOURCES/SHWHP_RES/rtf.png" class="shwph-program-icon h-auto" alt="Placeholder icon (Promise)">
+                                    <img src="RESOURCES/SHWHP_RES/rtf.png" class="shwph-program-icon h-auto" alt="RTF icon">
                                     <p class="shwph-flavor-text mg-none">legacy_casimir<br>_the_great.rtf</p>
                                 </a>
                                 <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="https://github.com/jakubekgranie?tab=repositories">
-                                    <img src="RESOURCES/SHWHP_RES/computer.png" class="shwph-program-icon h-auto" alt="Placeholder icon (Promise)">
+                                    <img src="RESOURCES/SHWHP_RES/computer.png" class="shwph-program-icon h-auto" alt="Cogs icon">
                                     <p class="shwph-flavor-text mg-none">datahub.exe</p>
                                 </a>
-                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb xp-item-title" href="#header">
-                                    <img src="RESOURCES/SHWHP_RES/lnk.png" class="shwph-program-icon h-auto" alt="Placeholder icon (Promise)">
+                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="#header">
+                                    <img src="RESOURCES/SHWHP_RES/lnk.png" class="shwph-program-icon h-auto" alt="LNK icon">
                                     <p class="shwph-flavor-text mg-none">home.lnk</p>
                                 </a>
-                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c ff-monospace bs-bb xp-item-title" href="micro/minesweeper/index.html">
-                                    <img src="RESOURCES/MICRO/MineSweeper/favicon.ico" class="shwph-program-icon h-auto" alt="Placeholder icon (Promise)">
+                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c ff-monospace bs-bb" href="micro/minesweeper/">
+                                    <img src="RESOURCES/MICRO/MineSweeper/favicon.ico" class="shwph-program-icon h-auto" alt="Mine icon">
                                     <p class="shwph-flavor-text mg-none">mines.tmp</p>
+                                </a>
+                            </div>
+                            <div class="fx temp-shwph-program-right">
+                                <a class="shwph-program fx fx-dir-c fx-ai-c ff-monospace bs-bb cur-sel" onclick="micro()">
+                                    <img src="RESOURCES/SHWHP_RES/addr.png" class="shwph-program-icon h-auto" alt="Address book icon">
+                                    <p class="shwph-flavor-text mg-none">micro.wsf</p>
                                 </a>
                             </div>
                         </div>
@@ -375,7 +400,7 @@
 
         <footer class="bgc-grey">
             <div class="true-footer w-100p fx fx-ai-c fx-jc-c fx-dir-c">
-                <p class="footer-text mg-none ff-raleway"><a href="#header" title="My site"><b>© Jacob Namyslak.</b></a> All rights for foreign assets reserved by their respective authors.</p>
+                <p class="footer-text mg-none ff-raleway"><a href="#header" title="My site"><b>© Jacob Namyslak.</b></a> All rights reserved, for foreign assets by their respective authors.</p>
             </div>
         </footer>
     </body>

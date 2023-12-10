@@ -41,14 +41,23 @@
                 }
                 if(flagMode) element.classList.toggle("td-flag");
             }
+            function checkUncovered(){
+                if(uncovered == max){
+                    for(let i = 1; i < trueSize - 1; i++)
+                        for(let j = 1; j < trueSize - 1; j++)
+                            setTimeout(() => {document.getElementById("cell-" + i + "-" + j).classList.add("anim-rainbow")}, 10 * 2*i + 0.2*j);
+                    revealAll(true);
+                    return 1;
+                }
+            }
             function revealDeadSpaces(i, j){
                 const cellkey = document.getElementById('cell-' + i + '-' + j);
-                uncovered++;
                 cellkey.innerHTML = sapper[i][j];
                 if(i == 0 || i == trueSize - 1 || j === 0 || j == trueSize - 1 || !cellkey.classList.contains("td-unclicked")){
                     cellkey.classList.remove("td-unclicked");
                     return;
                 }
+                uncovered++;
                 cellkey.classList.remove("td-unclicked");
                 for(let x = i - 1; x < i + 2; x++)
                     for(let y = j - 1; y < j + 2; y++){
@@ -59,6 +68,7 @@
                                 parseInput(x, y);
                         }
                     }
+                checkUncovered();
             }
             function parseInput(i, j){
                 let element = document.getElementById("cell-" + i + "-" + j);
@@ -67,13 +77,8 @@
                     element.onclick = null;
                     uncovered++;
                     element.innerHTML = sapper[i][j];
-                    if(uncovered == max){
-                        for(let i = 1; i < trueSize - 1; i++)
-                            for(let j = 1; j < trueSize - 1; j++)
-                                setTimeout(() => {document.getElementById("cell-" + i + "-" + j).classList.add("anim-rainbow")}, 10 * 2*i + 0.2*j);
-                        revealAll(true);
-                    }
-                    else if(sapper[i][j] == 0){
+                    const winState = checkUncovered();
+                    if(sapper[i][j] == 0 && !winState){
                         uncovered--;
                         revealDeadSpaces(i, j);
                     }
@@ -175,7 +180,10 @@
     </script>
 </head>
 <body class="body fx fx-center">
-    <img class="dp-none" src="../../RESOURCES/MICRO/MineSweeper/flag2.png" alt="flaga 2">
+    <div class="dp-none">
+        <img src="../../RESOURCES/MICRO/MineSweeper/flag2.png" alt="flag 2">
+        <img src="../../RESOURCES/MICRO/MineSweeper/bomb.png" alt="bomb">
+    </div>
     <table id="sapper-core" class="table"></table>
     <div id="flag" class="table flag bg-full td-unclicked"></div>
 </body>

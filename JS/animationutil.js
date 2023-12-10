@@ -228,3 +228,21 @@ function toggleUpdateScreenVisibility(){
 
     anFrwdDoubleExec('updateScreen', 'updateNotes', 'skip', 'updateStar', animOShift, 100, 'anim-fadeInTL', 100);
 }
+
+function micro(){
+    const micro = document.getElementById("micro");
+    let cycle2;
+    if(micro.classList.contains("anim-micro"))
+        cycle2 = true;
+    micro.classList.toggle("dp-none");
+    micro.classList.toggle("anim-micro");
+    if(cycle2){
+        micro.classList.remove("bgc-white");
+        Array.from(micro.children).forEach((val) => {val.classList.add("op-0")}); // HTMLCollection
+    }
+    else{
+        setTimeout(() => {document.getElementById("micro-bar").classList.remove("op-0")}, 200);
+        setTimeout(() => {micro.classList.add("bgc-black")}, 210);
+        setTimeout(() => {document.getElementById("micro-cmd").classList.remove("op-0")}, 220);
+    }
+}

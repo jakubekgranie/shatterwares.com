@@ -59,6 +59,7 @@
 }
 .td-bomb{
     background: url("../../RESOURCES/MICRO/MineSweeper/bomb.png"), url("../../RESOURCES/MICRO/MineSweeper/un.png");
+    image-rendering: pixelated;
     background-size: 60%, cover;
     background-repeat: no-repeat;
     background-position: center center, center center;
