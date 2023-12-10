@@ -336,17 +336,15 @@
                             <div id="micro" class="pos-abs p-ab-center dp-none folder-border">
                                 <div id="micro-bar" class="shwph-bar bs-bb fx fx-ai-c fx-jc-spb op-0">
                                     <div class="fx h-100p">
-                                        <img src="RESOURCES/SHWHP_RES/promisenobg-slim.png" class="h-100p" alt="Old ShatterWares icon">
+                                        <img src="RESOURCES/SHWHP_RES/ms-dos.png" class="h-100p" alt="MS-DOS prompt icon">
                                         <p class="xp-item-title tw-nowrap xp-margin mg-none">Command prompt</p>
                                     </div>
                                     <div class="micro-close cur-sel h-100p" onclick="micro()"></div>
                                 </div>
-                                <div id="micro-cmd" class="micro-cmd bs-bb">
-                                    <div>
-
-                                    </div>
+                                <div id="micro-cmd" class="micro-cmd bs-bb fx fx-jc-spb fx-dir-c op-0">
+                                    <div id="micro-cmd-feed" class="micro-cmd-feed ff-micro-cmd scroll-alternative"></div>
                                     <div class="ff-micro-cmd">
-                                        <label for="micro-cmd-input" class="dp-inline-b mg-r-micro-cmd-pointer">&gt;</label><form action="javascript:console.log('1')" method="POST" class="dp-inline-b">
+                                        <label for="micro-cmd-input" id="micro-cmd-pointer" class="dp-inline-b mg-r-micro-cmd-pointer">&gt;</label><form id="micro-cmd-core" action="javascript:parseCMDCommands(document.getElementById('micro-cmd-input').value)" method="POST" class="dp-inline-b">
                                             <input id="micro-cmd-input" type="text" autocomplete="off" spellcheck="false" class="micro-cmd-input c-white ff-micro-cmd"></input>
                                             <button type="submit" hidden></button>
                                         </form>

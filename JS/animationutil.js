@@ -2,6 +2,7 @@ var lastButton;
 
 window.onload = () => {
     //regulateScroll(); INCOMPATIBLE WITH THE UPDATE LOG
+
     function sessionRandExchange(sessionName, len){
         let rand = Math.floor((Math.random()*100))%len;
 
@@ -80,6 +81,9 @@ window.onload = () => {
             observer.observe(document.getElementById(value));
         });
     }, 300); // prevent invisibility as in the case above
+
+    document.getElementById('micro-cmd-feed').addEventListener('scroll', () => {document.getElementById('micro-cmd-feed').scrollTop = document.getElementById('micro-cmd-feed').scrollHeight;}); // prevent CMD scrolling, apparently onscroll doesn't work
+    parseCMDCommands('CLS', true);
 }
 function regulateScroll(){
     const ratio = 1 / devicePixelRatio;
@@ -237,12 +241,92 @@ function micro(){
     micro.classList.toggle("dp-none");
     micro.classList.toggle("anim-micro");
     if(cycle2){
-        micro.classList.remove("bgc-white");
+        micro.classList.remove("bgc-black");
         Array.from(micro.children).forEach((val) => {val.classList.add("op-0")}); // HTMLCollection
     }
     else{
+        // [BUG] Clicking rapidly causes text to flicker out of bounds (setTimeout).
         setTimeout(() => {document.getElementById("micro-bar").classList.remove("op-0")}, 200);
         setTimeout(() => {micro.classList.add("bgc-black")}, 210);
-        setTimeout(() => {document.getElementById("micro-cmd").classList.remove("op-0")}, 220);
+        setTimeout(() => {document.getElementById("micro-cmd").classList.remove("op-0"); const feed = document.getElementById("micro-cmd-feed"); feed.scrollTop = feed.scrollHeight;}, 220);
     }
+}
+
+function parseCMDCommands(input, ext){
+    class micron{
+        constructor(regex, url, fileNameRegex, fileName, name, author, addDate, desc){
+            this.regex = regex;
+            this.url = url;
+            this.fileNameRegex = fileNameRegex;
+            this.fileName = fileName;
+            this.name = name;
+            this.author = author;
+            this.addDate = addDate;
+            this.desc = desc;
+        }
+        describe(){
+            return "------ " + this.name + "<br><br>&nbsp;File: " + this.fileName + "<br>&nbsp;URL: " + this.url + "<br>&nbsp;Author: " + this.author + "<br>&nbsp;Submitted at: " + this.addDate + "<br>&nbspDescription:<br><br>&nbsp" + this.desc + "<br><br>-----------";
+        }
+    }
+    const feed = document.getElementById("micro-cmd-feed");
+    if(input.replace(/\s/g, '').length){
+        const openReferences = [new micron(/^MineSweeper$/i, "https://shatterwares.com/micro/minesweeper", /^MineSweeper.jar$/i, "MineSweeper.jar", "MineSweeper", "Jacob Namyslak", "12/10/23", "MineSweeper is a mathematical puzzle game about uncovering non-rigged tiles<br>&nbsp;while only equipped with their limited immediate victinity data. Can you defuse<br>&nbsp;the whole field on first try?")], open = /^OPEN\s/i, describe = /^DESCRIBE\s/i;
+        feed.innerHTML += document.getElementById("micro-cmd-pointer").innerHTML + " " + input + "<br>";
+        input = input.replace(/^\s*/g, '').replace(/\s*$/g, '');
+        if(/^HELP$/i.test(input))
+            feed.innerHTML += "Available commands:<br>&nbsp;- [HELP] - Show this list.<br>&nbsp;- [PING] - Response test. Of no practical use.<br>&nbsp;- [CLS] - Flush console feedback.<br>&nbsp;- [DIR] - List available resources.<br>&nbsp;- [OPEN] - Executes the micron (file).<br>&nbsp;&nbsp;&nbsp;SYNTAX: OPEN [reference]<br>&nbsp;- [DESCRIBE] - Shows the micron's data.<br>&nbsp;&nbsp;&nbsp;Syntax: DESCRIBE [name/filename]<br>&nbsp;- [EXIT] - Closes the prompt.";
+        else if(/^PING$/i.test(input))
+            feed.innerHTML += "Ping received. Core operational.";
+        else if(/^CLS$/i.test(input))
+            feed.innerHTML = "ShWMicro CMD v12/10/23<br> [HELP] [PING] [CLS] [DIR] [OPEN] [DESCRIBE] [EXIT]<br> This 'program' does not interfere with your computer's data.";
+        else if(/^DIR$/i.test(input)){
+            feed.innerHTML += "M:&bsol;<br>";
+            openReferences.forEach((val) => {
+                feed.innerHTML += "| - " + val.fileName;
+                feed.innerHTML += "<br>|&nbsp;&nbsp;&nbsp;NAME: " + val.name;
+            });
+        }
+        else if(/^OPEN$/i.test(input))
+            feed.innerHTML += "Correct usage:<br>OPEN [reference]";
+        else if(open.test(input)){
+            input = input.replace(open, '');
+            for(let micron of openReferences)
+                if(micron.regex.test(input) || micron.fileNameRegex.test(input)){
+                    feed.innerHTML +=  "Opening [" + micron.url + "]...";
+                    sessionStorage.setItem("CMDFeedback", feed.innerHTML);
+                    window.location.href = micron.url;
+                    break;
+                }
+        }
+        else if(/^DESCRIBE$/i.test(input))
+            feed.innerHTML += "Correct usage:<br>DESCRIBE [name/filename]";
+        else if(describe.test(input)){
+            input = input.replace(describe, '');
+            let found;
+            for(let micron of openReferences){
+                console.log(input + " " + micron.name + " " + micron.fileName);
+                if(micron.regex.test(input) || micron.fileNameRegex.test(input)){
+                    found = true;
+                    feed.innerHTML += micron.describe();
+                    break;
+                }
+            }
+            if(!found)
+                feed.innerHTML += "Micron not found. Use [DIR] to fetch file names and name references.";
+        }
+        else if(/^EXIT$/i.test(input)){
+            feed.innerHTML += "Closing...";
+            micro();
+        }
+        else
+            feed.innerHTML += "Unknown command/incorrect syntax. Check syntax and/or use 'HELP'.";
+        feed.innerHTML += "<br><br>";
+        if(ext){
+            const CMDFeedback = sessionStorage.getItem("CMDFeedback");
+            if(CMDFeedback) document.getElementById("micro-cmd-feed").innerHTML = CMDFeedback;
+        }
+        sessionStorage.setItem("CMDFeedback", feed.innerHTML);
+    }
+    document.getElementById("micro-cmd-core").reset();
+    feed.scrollTop = feed.scrollHeight;
 }
