@@ -123,17 +123,20 @@
                     <!-- Update Data - Name-->
                     <div class="ff-belanosima">
                         <h2 class="mg-none fw-500 mg-b-8px">(Github) Update Log - shatterwares.com</h2>
-                        <h2 class="mg-none fw-500 fc-grayed">RegUpd 69 [11.12.2023]</h2>
+                        <h2 class="mg-none fw-500 fc-grayed">RegUpd 74 [12.17.2023]</h2>
                     </div>
                     <!-- Update Data - Name-->
                 </div>
                 <!-- Update Data - must be kept updated! -->
                 <div class="brad-40px w-100p update-notes-text ff-monospace ov-h bs-bb scroll-alternative wsp-p-l">
-                    <h1 class="mg-b-20px">// ShWHP</h1>
-                    <p class="mg-none paragraph-notes mg-b-20px">- Optimized z-indexes and overall css;
-                        - Added a no-script prompt;
-                        - Added a link to my GitHub (ShWPH);
-                        - Added a note meant to inform unaware users about the 'programs'' true behavior.
+                    <h1 class="mg-b-20px">// ✧ ShWHP</h1>
+                    <p class="mg-none paragraph-notes mg-b-20px">- Started making context menus for ShWPH.
+                    </p>
+                    <h1 class="mg-b-20px">// ⧉ ShWMicro</h1>
+                    <p class="mg-none paragraph-notes mg-b-20px">- Minor adjustments.
+                    </p>
+                    <h1 class="mg-b-20px">// ⧉◈ MineSweeper</h1>
+                    <p class="mg-none paragraph-notes mg-b-20px">- Removed console logs.
                     </p>
                 </div>
                 <!-- Update Data - must be kept updated! -->
@@ -332,8 +335,8 @@
                             <img src="RESOURCES/SHWHP_RES/promisenobg-slim.png" class="h-100p" alt="Old ShatterWares icon">
                             <p class="xp-item-title tw-nowrap xp-margin mg-none">Internet Explorer - www.shatterwares.com/shwph/index.html</p>
                         </div>
-                        <div class="shwph-content bgs-adjustable bgp-shwph render-pixel bs-bb fx fx-dir-c pos-rel">
-                            <div id="micro" class="pos-abs p-ab-center dp-none folder-border">
+                        <div id="shwph-container" class="shwph-content bgs-adjustable bgp-shwph render-pixel bs-bb fx fx-dir-c pos-rel" onclick="removePastMenu(event)" oncontextmenu="spawnContextMenu(event)">
+                            <div id="micro" class="pos-abs p-ab-center dp-none folder-border t-r-gP">
                                 <div id="micro-bar" class="shwph-bar bs-bb fx fx-ai-c fx-jc-spb op-0">
                                     <div class="fx h-100p">
                                         <img src="RESOURCES/SHWHP_RES/ms-dos.png" class="h-100p" alt="MS-DOS prompt icon">
@@ -353,33 +356,29 @@
                             </div>
 
                             <div class="fx shwph-program-row-mg-b">
-                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="alergie/">
+                                <a id="shwph-program-1" class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="alergie/">
                                     <img src="RESOURCES/SHWHP_RES/vbs.png" class="shwph-program-icon h-auto render-pixel" alt="VBS icon">
                                     <p class="shwph-flavor-text mg-none">Allergies_<br>full_compedium<br>.vbs</p>
                                 </a>
-                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="wladyslawlokietek/">
+                                <a id="shwph-program-2" class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="wladyslawlokietek/">
                                     <img src="RESOURCES/SHWHP_RES/rar.png" class="shwph-program-icon h-auto" alt="RAR icon">
                                     <p class="shwph-flavor-text mg-none">history_w_<br>lokietek.rar</p>
                                 </a>
-                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="LEGACY/historia-kazimierz-wielki/Historia.html">
+                                <a id="shwph-program-3" class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="LEGACY/historia-kazimierz-wielki/Historia.html">
                                     <img src="RESOURCES/SHWHP_RES/rtf.png" class="shwph-program-icon h-auto" alt="RTF icon">
                                     <p class="shwph-flavor-text mg-none">legacy_casimir<br>_the_great.rtf</p>
                                 </a>
-                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="https://github.com/jakubekgranie?tab=repositories">
+                                <a id="shwph-program-4" class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="https://github.com/jakubekgranie?tab=repositories">
                                     <img src="RESOURCES/SHWHP_RES/computer.png" class="shwph-program-icon h-auto" alt="Cogs icon">
                                     <p class="shwph-flavor-text mg-none">datahub.exe</p>
                                 </a>
-                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="#header">
+                                <a id="shwph-program-5" class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c shwph-program-mg-r ff-monospace bs-bb" href="#header">
                                     <img src="RESOURCES/SHWHP_RES/lnk.png" class="shwph-program-icon h-auto" alt="LNK icon">
                                     <p class="shwph-flavor-text mg-none">home.lnk</p>
                                 </a>
-                                <a class="shwph-program fx fx-dir-c fx-jc-c fx-ai-c ff-monospace bs-bb" href="micro/minesweeper/">
-                                    <img src="RESOURCES/MICRO/MineSweeper/favicon.ico" class="shwph-program-icon h-auto" alt="Mine icon">
-                                    <p class="shwph-flavor-text mg-none">mines.tmp</p>
-                                </a>
                             </div>
                             <div class="fx temp-shwph-program-right">
-                                <a class="shwph-program fx fx-dir-c fx-ai-c ff-monospace bs-bb cur-sel" onclick="micro()">
+                                <a id="shwph-program-micro" class="shwph-program fx fx-dir-c fx-ai-c ff-monospace bs-bb cur-sel" onclick="micro()">
                                     <img src="RESOURCES/SHWHP_RES/addr.png" class="shwph-program-icon h-auto" alt="Address book icon">
                                     <p class="shwph-flavor-text mg-none">micro.wsf</p>
                                 </a>

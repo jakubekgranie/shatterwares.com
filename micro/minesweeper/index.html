@@ -98,8 +98,6 @@
                 for(let j = 0; j < trueSize; j++)
                     sapper[i][j] = 0;
             }
-            console.log("PRE");
-            console.log(sapper);
             for(let i = 0; i < trueSize; i++){
                 let row = document.createElement("tr"), rowkey = "row-" + i;
                 row.classList.add("fx");
@@ -134,8 +132,6 @@
                         sapper[x][y] = 'b';
                         cellkey.onclick = () => {revealAll(false, cellkey.id)};
                     }
-                    console.log("GEN");
-                    console.log(sapper);
                     numberize();
                     parseInput(initX, initY);
                 }
@@ -159,8 +155,6 @@
                             cellkey.onclick = () => {parseInput(i, j)};
                         }
                     }
-                console.log("NUM");
-                console.log(sapper);
             }
             const flag = document.getElementById("flag")
             function toggleFlag(){

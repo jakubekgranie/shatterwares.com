@@ -270,7 +270,7 @@ function parseCMDCommands(input, ext){
     }
     const feed = document.getElementById("micro-cmd-feed");
     if(input.replace(/\s/g, '').length){
-        const openReferences = [new micron(/^MineSweeper$/i, "https://shatterwares.com/micro/minesweeper", /^MineSweeper.jar$/i, "MineSweeper.jar", "MineSweeper", "Jacob Namyslak", "12/10/23", "MineSweeper is a mathematical puzzle game about uncovering non-rigged tiles<br>&nbsp;while only equipped with their limited immediate victinity data. Can you defuse<br>&nbsp;the whole field on first try?")], open = /^OPEN\s/i, describe = /^DESCRIBE\s/i;
+        const openReferences = [new micron(/^MineSweeper$/i, "https://shatterwares.com/micro/minesweeper", /^MineSweeper.jar$/i, "MineSweeper.jar", "MineSweeper", "Jacob Namyslak", "12/10/23", "MineSweeper is a mathematical puzzle game about uncovering non-rigged tiles<br>&nbsp;while only equipped with their limited immediate victinity data. Can you defuse<br>&nbsp;the whole field on first try?")], open = /^OPEN\s/i, describe = /^DESCRIBE\s/i, CMDFeedback = sessionStorage.getItem("CMDFeedback");;
         feed.innerHTML += document.getElementById("micro-cmd-pointer").innerHTML + " " + input + "<br>";
         input = input.replace(/^\s*/g, '').replace(/\s*$/g, '');
         if(/^HELP$/i.test(input))
@@ -321,12 +321,68 @@ function parseCMDCommands(input, ext){
         else
             feed.innerHTML += "Unknown command/incorrect syntax. Check syntax and/or use 'HELP'.";
         feed.innerHTML += "<br><br>";
-        if(ext){
-            const CMDFeedback = sessionStorage.getItem("CMDFeedback");
-            if(CMDFeedback) document.getElementById("micro-cmd-feed").innerHTML = CMDFeedback;
-        }
+        if(ext && CMDFeedback) document.getElementById("micro-cmd-feed").innerHTML = CMDFeedback;
         sessionStorage.setItem("CMDFeedback", feed.innerHTML);
     }
     document.getElementById("micro-cmd-core").reset();
     feed.scrollTop = feed.scrollHeight;
+}
+function removePastMenu(event){
+    const cId = "contextMenu", oldMenu = document.getElementById(cId);
+    if(!event || (oldMenu && event.target.id != cId && event.target.parentElement.id != cId && event.target.parentElement.parentElement.id != cId)) oldMenu.remove();
+}
+function spawnContextMenu(event){
+    event.preventDefault(); //no default menu
+    const element = event.target, isProgram = /^shwph-program-/;
+    removePastMenu(event);
+    if(isProgram.test(element.id) || isProgram.test(element.parentElement.id)){
+        const contextMenu = document.createElement("div"), container = document.getElementById("shwph-container"), pos = container.getBoundingClientRect();
+        contextMenu.setAttribute("class", "shwph-context-menu bgc-grey pos-abs bgc-white c-black");
+        contextMenu.setAttribute("style", "top: " + (event.clientY - pos.top) + "px; left: " + (event.clientX - pos.left) + "px;");
+        contextMenu.id = "contextMenu";
+        class buttons{
+            constructor(text, click_ = null, image = false){
+                this.text = text;
+                this.click_ = click_;
+                this.image = image;
+            }
+            construct(){
+                if(this.text != "semiborder"){
+                    const button = document.createElement("div");
+                    button.setAttribute("class", "shwph-context-menu-button cur-sel t-r-gP fx fx-ai-c");
+                    let buttonImage;
+                    if(this.image){
+                        buttonImage = document.createElement("img");
+                        buttonImage.setAttribute("src", "../RESOURCES/SHWHP_RES/" + this.image);
+                    }
+                    else buttonImage = document.createElement("div");
+                    buttonImage.classList.add("shwph-button-image");
+                    button.appendChild(buttonImage);
+                    button.innerHTML += this.text;
+                    if(this.click_){ // used anyways for limiting memory usage
+                        button.addEventListener("click", this.click_);
+                        button.addEventListener("click", () => {removePastMenu(false)});
+                    }
+                    contextMenu.appendChild(button);
+                }
+                else{
+                    const semiborder = document.createElement("div");
+                    semiborder.setAttribute("class", "shwph-semiborder shwph-context-menu-button");
+                    contextMenu.appendChild(semiborder);
+                }
+            }
+        }
+        const buttonsArray = {"shwph-program-micro" : [new buttons("<b>Open</b>", () => {micro()}), new buttons("Help"), new buttons("See tags", null, "book.png"), new buttons("semiborder"), new buttons("Describe")]};
+        let contextList;
+        if(event.target.id) contextList = buttonsArray[event.target.id];
+        else contextList = buttonsArray[event.target.parentElement.id];
+        try{
+            for(let button of contextList)
+                button.construct();
+        }
+        catch{
+            console.warn("Developer notice: this function's limited as of 12/17/2023 and cannot handle this input yet. If you don't understand this message, ignore it. If you believe this is an error, contact the webmaster at https://github.com/jakubekgranie/shatterwares.com/issues.")
+        }
+        container.appendChild(contextMenu);
+    }
 }
