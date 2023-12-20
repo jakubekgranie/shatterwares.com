@@ -7,23 +7,22 @@
     <link href="../../RESOURCES/MICRO/MineSweeper/favicon.ico" rel="favicon">
     <title>◈&nbsp;MineSweeper</title>
     <script type="text/javascript">
-        let uncovered = 0, max = 0, flagMode = false;
+        let uncovered = 0, max = 0;
         window.onload = () => {
             function revealAll(win, id = null){
                 let element;
                 if(id)
                     element = document.getElementById(id);
-                if((!flagMode && element !== undefined && !element.classList.contains("td-flag")) || win){
+                if((element !== undefined && !element.classList.contains("td-flag")) || win){
                     for(let i = 1; i < trueSize - 1; i++)
                         for(let j = 1; j < trueSize - 1; j++){
                             const cellkey = document.getElementById("cell-" + i + "-" + j);
                             cellkey.classList.remove("td-unclicked");
                             if(!cellkey.classList.contains("td-flag")){
-                                if(sapper[i][j] != 'b')
+                                if(sapper[i][j] != 'b' && sapper[i][j] != 0)
                                     cellkey.innerHTML = sapper[i][j];                                    
-                                else
+                                if(sapper[i][j] == 'b')
                                     cellkey.classList.add("td-bomb");
-                                flag.onclick = null;
                                 }
                             else if(sapper[i][j] != 'b')
                                 setInterval(() => {
@@ -39,7 +38,6 @@
                         }
                     if(win === false) setTimeout(() => {location.reload()}, 6000);
                 }
-                if(flagMode) element.classList.toggle("td-flag");
             }
             function checkUncovered(){
                 if(uncovered == max){
@@ -52,8 +50,10 @@
             }
             function revealDeadSpaces(i, j){
                 const cellkey = document.getElementById('cell-' + i + '-' + j);
-                cellkey.innerHTML = sapper[i][j];
-                if(i == 0 || i == trueSize - 1 || j === 0 || j == trueSize - 1 || !cellkey.classList.contains("td-unclicked")){
+                cellkey.oncontextmenu = null;
+                cellkey.onclick = null;
+                if(sapper[i][j] != 0) cellkey.innerHTML = sapper[i][j];
+                if((i == 0 || i == trueSize - 1 || j === 0 || j == trueSize - 1 || (!cellkey.classList.contains("td-unclicked") && sapper[i][j] != 0))){
                     cellkey.classList.remove("td-unclicked");
                     return;
                 }
@@ -61,7 +61,8 @@
                 cellkey.classList.remove("td-unclicked");
                 for(let x = i - 1; x < i + 2; x++)
                     for(let y = j - 1; y < j + 2; y++){
-                        if(document.getElementById("cell-" + x + "-" + y).classList.contains("td-unclicked")){
+                        const subject = document.getElementById("cell-" + x + "-" + y).classList;
+                        if(subject.contains("td-unclicked") && !subject.contains("td-flag")){
                             if(sapper[x][y] == 0)
                                 revealDeadSpaces(x, y);
                             else
@@ -72,11 +73,11 @@
             }
             function parseInput(i, j){
                 let element = document.getElementById("cell-" + i + "-" + j);
-                if(flagMode && element.innerHTML == '') element.classList.toggle("td-flag");
-                if(!flagMode && sapper[i][j] != 'b' && !element.classList.contains("td-flag")){
+                if(!element.classList.contains("td-flag")){ //sapper[i][j] != 'b' && 
                     element.onclick = null;
+                    element.oncontextmenu = null;
                     uncovered++;
-                    element.innerHTML = sapper[i][j];
+                    if(sapper[i][j] != 0) element.innerHTML = sapper[i][j];
                     const winState = checkUncovered();
                     if(sapper[i][j] == 0 && !winState){
                         uncovered--;
@@ -113,6 +114,7 @@
                     else
                         cell.classList.add("td-unclicked");
                     cell.id = cellkey;
+                    cell.oncontextmenu = () => {toggleFlag(event)};
                     document.getElementById(rowkey).appendChild(cell);
                 }
             }
@@ -121,7 +123,7 @@
                     for(let j = 1; j < trueSize - 1; j++)
                         for(let k = 1; k < trueSize - 1; k++)
                             document.getElementById("cell-" + j + '-' + k).onclick = () => {generate(j, k)};
-                else if(!flagMode){
+                else{
                     for(let i = 0; i < maxBombs; i++){
                         let x = returnRand(), y = returnRand();
                         while(sapper[x][y] == 'b' || (initX && ((x + 1 == initX && y + 1 == initY) || (x + 1 == initX && y == initY) || (x + 1 == initX && y - 1 == initY) || (x == initX && y + 1 == initY) || (x == initX && y == initY) || (x == initX && y - 1 == initY) || (x - 1 == initX && y + 1 == initY) || (x - 1 == initX && y == initY) || (x - 1 == initX && y - 1 == initY)))){
@@ -135,8 +137,6 @@
                     numberize();
                     parseInput(initX, initY);
                 }
-                else
-                    parseInput(initX, initY);
             }
             generate();
 
@@ -156,29 +156,18 @@
                         }
                     }
             }
-            const flag = document.getElementById("flag")
-            function toggleFlag(){
-                if(flagMode) flagMode = false;
-                else flagMode = true;
-                for(let i = 1; i < trueSize - 1; i++)
-                    for(let j = 1; j < trueSize - 1; j++){
-                        const cellkey = document.getElementById("cell-" + i + "-" + j);
-                        if(cellkey.classList.contains("td-flag"))
-                            cellkey.classList.toggle("td-unclicked");
-                    }  
-                flag.classList.toggle("td-flag");
-                flag.classList.toggle("td-flag2");
+            function toggleFlag(event){
+                event.preventDefault();
+                document.getElementById(event.target.id).classList.toggle("td-flag");
             }
-            flag.onclick = () => {toggleFlag()};
         }
     </script>
 </head>
 <body class="body fx fx-center">
     <div class="dp-none">
-        <img src="../../RESOURCES/MICRO/MineSweeper/flag2.png" alt="flag 2">
+        <img src="../../RESOURCES/MICRO/MineSweeper/flag.png" alt="flag">
         <img src="../../RESOURCES/MICRO/MineSweeper/bomb.png" alt="bomb">
     </div>
     <table id="sapper-core" class="table"></table>
-    <div id="flag" class="table flag bg-full td-unclicked"></div>
 </body>
 </html>

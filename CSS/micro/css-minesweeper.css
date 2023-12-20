@@ -13,14 +13,6 @@
 .button{
     background-image: url("../../RESOURCES/MICRO/MineSweeper/un.png");
 }
-.flag{
-    width: 6vw;
-    height: 6vw;
-    background-image: url("../../RESOURCES/MICRO/MineSweeper/flag.png");
-    position: fixed;
-    top: 3vw;
-    right: 3vw;
-}
 .bg-full{
     background-size: cover;
 }
@@ -29,9 +21,6 @@
 }
 .td-flag{
     background-image: url("../../RESOURCES/MICRO/MineSweeper/flag.png");
-}
-.td-flag2{
-    background-image: url("../../RESOURCES/MICRO/MineSweeper/flag2.png");
 }
 .td-1{
     color: blue;
