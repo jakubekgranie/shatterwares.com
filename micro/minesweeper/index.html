@@ -6,9 +6,10 @@
     <link href="../../CSS/micro/css-minesweeper.css" rel="stylesheet">
     <link href="../../RESOURCES/MICRO/MineSweeper/favicon.ico" rel="favicon">
     <title>◈&nbsp;MineSweeper</title>
+    <meta name="description" content="MineSweeper is Jacob Namyslak's implementation of the famous mathematical puzzle game about uncovering non-rigged tiles while only equipped with their limited immediate victinity data. Can you defuse the whole field on first try?">
     <script type="text/javascript">
         window.onload = () => {
-            let uncovered = 0, max = 0, flags = 0;
+            let uncovered = 0, max = 0;
             function revealAll(win, id = null){
                 let element;
                 if(id)
@@ -27,8 +28,10 @@
                             else if(sapper[i][j] != 'b')
                                 setInterval(() => {
                                     cellkey.classList.toggle("td-flag");
-                                    if(cellkey.innerHTML == '') cellkey.innerHTML = sapper[i][j];
-                                    else cellkey.innerHTML = '';
+                                    if(sapper[i][j] != 0){
+                                        if(cellkey.innerHTML == '') cellkey.innerHTML = sapper[i][j];
+                                        else cellkey.innerHTML = '';
+                                    }
                                 }, 1000);
                             else
                                 setInterval(() => {
@@ -48,6 +51,7 @@
                     return 1;
                 }
             }
+            const counter = document.getElementById("flags");
             function revealDeadSpaces(i, j){
                 const cellkey = document.getElementById('cell-' + i + '-' + j);
                 cellkey.oncontextmenu = null;
@@ -63,8 +67,11 @@
                     for(let y = j - 1; y < j + 2; y++){
                         const subject = document.getElementById("cell-" + x + "-" + y).classList;
                         if(subject.contains("td-unclicked")){
-                            if(subject.contains("td-flag"))
+                            if(subject.contains("td-flag")){
+                                const amount = counter.innerHTML;
                                 subject.remove("td-flag");
+                                counter.innerHTML = parseInt(amount) + 1;
+                            }
                             if(sapper[x][y] == 0)
                                 revealDeadSpaces(x, y);
                             else
@@ -94,7 +101,6 @@
             let size = prompt("Size: ", 10);
             if(size == null) size = 10;
             const parsedPrompt = parseInt(size), trueSize = parsedPrompt + 2, maxBombs = Math.floor(parsedPrompt*parsedPrompt*0.2);
-            flags = maxBombs;
             max = size * size - Math.floor(size * size * 0.2);
             let sapper = [];
             for(let i = 0; i < trueSize; i++){
@@ -103,9 +109,9 @@
                     sapper[i][j] = 0;
             }
 
-            const vwSize = 40 / (parsedPrompt + 1), anim = "anim-alert", counter = document.getElementById("flags");
+            const vwSize = 40 / (parsedPrompt + 1), anim = "anim-alert";
             document.getElementById("counter").setAttribute("style", "height: " + vwSize + "vw");
-            counter.innerHTML = flags;
+            counter.innerHTML = maxBombs;
             counter.addEventListener("animationend", () => {counter.classList.remove(anim)});
             document.getElementById("img-flag-count").classList.remove("dp-none");
             for(let i = 0; i < trueSize; i++){
