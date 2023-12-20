@@ -270,7 +270,7 @@ function parseCMDCommands(input, ext){
     }
     const feed = document.getElementById("micro-cmd-feed");
     if(input.replace(/\s/g, '').length){
-        const openReferences = [new micron(/^MineSweeper$/i, "https://shatterwares.com/micro/minesweeper", /^MineSweeper.jar$/i, "MineSweeper.jar", "MineSweeper", "Jacob Namyslak", "12/10/23", "MineSweeper is a mathematical puzzle game about uncovering non-rigged tiles<br>&nbsp;while only equipped with their limited immediate victinity data. Can you defuse<br>&nbsp;the whole field on first try?")], open = /^OPEN\s/i, describe = /^DESCRIBE\s/i, CMDFeedback = sessionStorage.getItem("CMDFeedback");;
+        const openReferences = [new micron(/^MineSweeper$/i, "https://shatterwares.com/micro/minesweeper", /^MineSweeper.jar$/i, "MineSweeper.jar", "MineSweeper", "Jacob Namyslak", "12/10/23", "MineSweeper is a mathematical puzzle game about uncovering non-rigged tiles<br>&nbsp;while only equipped with their limited immediate victinity data. Can you defuse<br>&nbsp;the whole field on first try?")], open = /^OPEN\s*/i, describe = /^DESCRIBE\s*/i, CMDFeedback = sessionStorage.getItem("CMDFeedback");;
         feed.innerHTML += document.getElementById("micro-cmd-pointer").innerHTML + " " + input + "<br>";
         input = input.replace(/^\s*/g, '').replace(/\s*$/g, '');
         if(/^HELP$/i.test(input))

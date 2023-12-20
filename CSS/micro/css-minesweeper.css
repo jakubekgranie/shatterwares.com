@@ -7,11 +7,17 @@
     border: 4px grey ridge;
 }
 .td{
-    font: 1.5vw monospace;
+    font: 1.35vw monospace;
+}
+.td-counter{
+    font: 1.25vw monospace;
+}
+.td-bold{
     font-weight: bold;
 }
 .button{
     background-image: url("../../RESOURCES/MICRO/MineSweeper/un.png");
+    background-size: cover;
 }
 .bg-full{
     background-size: cover;
@@ -48,7 +54,6 @@
 }
 .td-bomb{
     background: url("../../RESOURCES/MICRO/MineSweeper/bomb.png"), url("../../RESOURCES/MICRO/MineSweeper/un.png");
-    image-rendering: pixelated;
     background-size: 60%, cover;
     background-repeat: no-repeat;
     background-position: center center, center center;
@@ -59,6 +64,9 @@
 .fx-center{
     align-items: center;
     justify-content: center;
+}
+.fx-dir-c{
+    flex-direction: column;
 }
 .anim-rainbow{
     animation: rainbow 3s ease-in-out infinite;
@@ -91,4 +99,29 @@
 }
 .dp-none{
     display: none;
+}
+.counter{
+    border-bottom: 4px grey ridge;
+    background-image: linear-gradient(to right bottom, #787878, #848484, #919191, #9d9d9d, #aaaaaa);
+}
+.true-counter{
+    height: 70%;
+    padding: 0.35vw 1.25vw;
+    box-sizing: border-box;
+    background-color: darkgrey;
+}
+.img-flag-count{
+    height: 100%;
+    margin-right: 0.5vw;
+}
+@keyframes alert-number{
+    25%, 75%{
+        color: red;
+    }
+    50%, 100%{
+        color: initial;
+    }
+}
+.anim-alert{
+    animation: alert-number 0.8s ease-in-out;
 }
